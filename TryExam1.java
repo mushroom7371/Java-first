@@ -1,4 +1,4 @@
-package section8;
+package ch08;
 
 public class TryExam1 {
 
