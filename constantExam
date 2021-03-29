@@ -1,0 +1,10 @@
+public class ConstantExam {
+    public static void main(String[] args) {
+        
+final double PI = 3.14159; // 실수 타입의 변수 double을 상수로 선언하고 실수 3.14159로 초기화
+
+        int radius = 5; //정수 타입 변수 radius를 선언하고 숫자 5를 대입
+        double result = radius * 2 * PI; //상수 타입 변수 result 를 선언하고 여기에 변수 radius * 2 * 변수 PI 의 결과를 대입함.
+        System.out.println(result); //출력
+    }
+}
