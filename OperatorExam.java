@@ -1,27 +1,28 @@
-package JavaStudy;
+package Study;
 
 public class OperatorExam {
-	public int [] calculate() {	//int타입의 배열 calculate를 선언하고 초기화블럭으로 초기화
-		int a = 7; //정수형 int 타입의 변수 a를 선언하고 이에 값7을 입력함.
-		int b = 3;
+	public boolean[] calculate(int a, int b) {	
+		//범위가 넓은 접근제어자 public을 사용하여 논리형 타입의 배열을 반환값으로 가지는
+		//메서드 calculate를 선언 calculate는 정수형 타입의 매개변수 두개를 가진다.
 		
-		int c = a + b;	//연산자를 이용한 사칙연산
-		int d = a - b;
-		int e = a * b;
-		int f = a % b;	//%는 나머지 연산자로 a를 b로 나눈 나머지를 반환함
+		boolean c = a > b;	//논리형 타입 변수 c를 선언하고 비교연산자로 매개변수를 비교
 		
-		System.out.println(c); //출력
-		System.out.println(d);
-		System.out.println(e);
-		System.out.println(f);
+		boolean d = a == b;
 		
-		int [] rat = {c,d,e,f};	//int 타입의 배열에 c,d,e,f를 저장하고 참조변수 rat에 이 배열의 주소값을 저장
+		boolean e = a != b;
 		
-		return rat;	//	rat을 반환한다.
+		boolean ret[] = {c, d, e};	//논리형 타입의 배열 참조변수 ret을 선언하고 c,d,e의 주소값을 저장함
 		
+		return ret;	//메서드의 반환값이 참조변수 ret임
 	}
 	
-	public static void main(String [] args) {
-		new OperatorExam().calculate();	//new를 통하여 인스턴스를 생성하고 인스턴스 속의 메서드를 호출한다.
+	public static void main(String[] args) {
+		int a = (int)(Math.random() * 10);	//정수형 타입 변수a를 선언하고 0~1의 실수값을 반환하는 메서드
+											//10을 곱하여 1~9로 범위를 설정하며 이를 정수형으로 형변환한다.
+		int b = (int)(Math.random() * 10);
+		
+		new OperatorExam().calculate(a, b);	//클래스로 부터 인스턴스를 생성하고 인스턴의의 메서드를 호출한다.
+
 	}
+
 }
