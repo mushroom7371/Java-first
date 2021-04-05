@@ -1,0 +1,8 @@
+public class VariableExam {
+    public static void main(String[] args) {
+
+        int number = 3;   //정수형 변수 number를 선언 하고 여기에 숫자3을 대입함
+
+        System.out.println(number); //출력
+    }
+}
