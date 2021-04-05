@@ -1,9 +1,0 @@
-public class TypeCastingExam {
-    public static void main(String[] args) {
-        int intValue = 200; // 정수형 int 타입의 변수 intValue를 선언하고 200을 대입함.
-        
-long longValue = intValue;  // 정수형 long 타입의 변수 longValue를 선언하고 200의 값을 가지는 변수 intValue를 대입함.
-
-        System.out.println(longValue); // 출력
-    }
-}
