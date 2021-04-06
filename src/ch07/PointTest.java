@@ -16,11 +16,11 @@ class Point{
 	}
 	
 	
-	/*
-	Point (){
+
+	Point (){	// 하단의 주석내용과 연관됨 오류메세지로 인하여 주석 해제
 		
 	}
-	*/
+
 	
 	String getLocation() {
 		return "x :" + x + ", y :" + y;
