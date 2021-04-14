@@ -7,7 +7,7 @@ public class ArrayListEx {
 	public static void main(String [] args) {
 		ArrayList<String> al = new ArrayList<>();
 		//ArrayList 타입의 참조변수 al을 선언하는데, <String>으로 인하여 문자열 값만 받도록 하겠다는 의미. 컬렉션 객체를 생성할때 저장되는 데이터의 값을 미리 지정하는것.
-		//new로 인하여 ArrayList를 생성하고 al에 그 주소값을 저장. ArrayList는 배열의 종류이다 순서가 있고, 반복이 되지 않음	
+		//new로 인하여 ArrayList를 생성하고 al에 그 주소값을 저장. ArrayList는 배열의 종류이다 순서가 있고, 반복을 허용함
 		
 		al.add("hello");	//ArrayList는 List 인터페이스를 상속받아서 구현한 것이고, List 인터페이스는 Collection 인터페이스를 상속받는다.
 		al.add("java");		//Collection 인터페이스에는 여러가지 메서드가 있는데 Collection 인터페이스를 상속받은 List 인터페이스를 구현한 ArrayList에서 사용가능하다.
