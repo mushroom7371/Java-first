@@ -2,7 +2,7 @@ package AlgorithmStudy;
 
 import java.util.Scanner; // 키보드로 부터 입력 받을 값을 사용하기 위한 Scanner 클래스를 불러온다.
 
-public class MaxMin {
+public class MaxInt {
 	public static void main(String args []) {
 		Scanner sc = new Scanner(System.in);
 		// Scanner 타입의 참조변수 sc를 선언 하고 Scanner 클래스로부터 객체를 생성하여 그 주소값을 참조변수 sc에 저장한다.
