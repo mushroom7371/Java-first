@@ -1,4 +1,4 @@
-package JavaStudy;
+package CollectionsFramework;
 
 import java.util.ArrayList;	//java.util 에 있는 클래스를 현 클래스에서 사용하겠다는 의미
 import java.util.Iterator;	//마찬가지, 내용은 하단에 설명

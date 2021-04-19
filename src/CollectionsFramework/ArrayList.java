@@ -1,4 +1,4 @@
-package JavaStudy;
+package CollectionsFramework;
 
 public class ArrayList {
 	
