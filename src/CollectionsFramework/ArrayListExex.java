@@ -1,6 +1,6 @@
 package CollectionsFramework;
 
-public class ArrayList {
+public class ArrayListExex {
 	
 	private int size = 0;	//private 접근제어자로 인하여 현재 클래스에서만 접근 가능하다.
 	private Object[] elementData = new Object[50];
