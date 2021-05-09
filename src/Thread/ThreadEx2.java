@@ -5,6 +5,7 @@ public class ThreadEx2 {
 	public static void main(String[] args) {
 		ThreadEx2_1 t1 = new ThreadEx2_1();	//밑에서 정의한 ThreadEx2_1클래스로 부터 객체를 생성하여 ThreadEx2_1타입의 참조변수 t1에 주소값을 저장한다.
 		t1.start();	//Thread클래스를 상속받았기에 Thread의 start()메서드를 통하여 고의로 발생시킨 예외의 호출스택을 출력한다.
+					//호출스택의 맨 첫 번재 메서드가 main메서드가 아닌 run()메서드이고 그 위로 throwException()메서드가 호출된다.
 	}
 
 }
