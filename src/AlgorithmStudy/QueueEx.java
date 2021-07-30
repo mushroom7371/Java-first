@@ -1,7 +1,6 @@
 package AlgorithmStudy;
 
 public class QueueEx {
-	//큐에 대한 공부중 뭔가 이상함 pop push는 스택 개념 아닌가? 참고를 잘못한듯
 	
 	int MAX = 1000;
 	int front;	//큐의 첫번째에 위치할 index값 pop할때 참고한다.
@@ -44,7 +43,7 @@ public class QueueEx {
 			return -1;
 		}
 		
-		int popValue = queue[front++];	//데이터가 있다면 새로
+		int popValue = queue[front++];	//데이터가 있다면 새로 선언한 변수에 queue 번지수의 데이터를 담은 다음 번지수를 증가시킨다.
 		return popValue;
 	}
 	
