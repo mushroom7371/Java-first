@@ -33,5 +33,19 @@ public class ArrayConjugation1 {
 		
 		System.out.println("max = " + max);
 		System.out.println("min = " + min);
+		
+		int sum2d = 0;
+		int [][] array2d = {	//2차원 배열 선언 및 초기화
+				{32, 64, 54, 83, 77,},
+				{23, 45, 32, 26, 56,}	
+		};
+		
+		for(int [] temp : array2d) {	//향상된 for 문을 통하여 2차원 배열의 첫번째 배열의 주소값들을 다시 1차원 배열에 저장한다.
+			for(int i : temp) {	//temp에 저장된 각 번지수의 데이터를 다시 int형 변수에 담아서 sum2d에 담아준다.
+				sum2d = sum2d + i;
+			}
+		}
+		
+		System.out.println("sum2d = " + sum2d);
 	}
 }
