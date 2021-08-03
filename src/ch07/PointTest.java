@@ -17,7 +17,7 @@ class Point{
 	
 	
 
-	Point (){	// 하단의 주석내용과 연관됨 오류메세지로 인하여 주석 해제
+	Point (){	//Point 클래스를 상속받는 클래스에선 컴파일러가 super() 생성자를 자동으로 넣어주기 때문에 없으면 오류가 발생한다.
 		
 	}
 
@@ -43,6 +43,7 @@ class Point3D extends Point{
 	}
 	
 	String getLocation() {
-		return "x :" + x + ", y :" + y + ", z :" + z;
+		return super.getLocation() + ", z :" + z;
+		//"x :" + x + ", y :" + y의 내용은 부모클래스에 작성된 getLocation()과 동일하기 때문에 super를 통하여 작성할 수 있다.
 	}
 }
