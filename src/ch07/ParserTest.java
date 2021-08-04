@@ -23,7 +23,7 @@ class ParserManager{
 
 class XMLParser implements Parseable{
 	//각각 인터페이스를 구현한 클래스로 미구현 메서드를 완성해야된다.
-	//만일 해당 메서드로 일부 구현으로 완성하지 못한다면 class에 abstrac를 붙혀 추상클래스로 만들어야된다.
+	//만일 해당 메서드로 일부 구현으로 완성하지 못한다면 class에 abstract를 붙혀 추상클래스로 만들어야된다.
 	public void parse(String fileName) {
 		System.out.println(fileName + " - XML parsing completed.");
 	}
