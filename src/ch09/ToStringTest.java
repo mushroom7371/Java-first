@@ -2,7 +2,7 @@ package ch09;
 
 import java.util.Date;
 
-public class ToStringTest {
+class ToStringTest {
 	public static void main(String[] args) {
 		String str = new String("KOREA");
 		Date today = new Date();
