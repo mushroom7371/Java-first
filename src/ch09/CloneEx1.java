@@ -12,7 +12,7 @@ class Point implements Cloneable{	//Cloneable 인터페이스를 구현한 클래스에서만 c
 		return "x = " + x + ", y = " + y;
 	}
 	
-	public Object clone() {	//마찬가지로 Object 타입을 반환하는 Object 클래스의 clone() 메서드를 오버라이딩 하였다. 다만 원본 클래스의 접근제어자인 protected 에서 public으로 변경한다.
+	public Point clone() {	//공변환 반환타입을 사용해서 Object 클래스의 clone() 메서드를 오버라이딩 하였다. 다만 원본 클래스의 접근제어자인 protected 에서 public으로 변경한다.
 		Object obj = null;
 		
 		//clone() 메서드를 정의 할때는 꼭 try-catch문장으로 예외처리를 해야된다. 
@@ -22,14 +22,14 @@ class Point implements Cloneable{	//Cloneable 인터페이스를 구현한 클래스에서만 c
 			ex.printStackTrace();
 		}
 		
-		return obj;
+		return (Point)obj;	//반환타입을 Object에서 Point로 바꿨기 때문에 형변환을 실시하였다.
 	}
 }
 
 class CloneEx1 {
 	public static void main(String[] args) {
 		Point original = new Point(3, 5);
-		Point copy = (Point)original.clone();	//참조변수 original이 가리키는 객체의 clone()메서드를 호출하여 반환된 객체의 주소값을 참조변수 copy에 저장하되, Object 타입이므로 이를 다시 해당 클래스 타입에 맞게 형변환 하였다.
+		Point copy = original.clone();	//참조변수 original이 가리키는 객체의 clone()메서드를 호출하여 반환된 객체의 주소값을 참조변수 copy에 저장한다. 메서드에서 형변환이 되었기에 따로 형변환이 필요 없다.
 		
 		System.out.println(original);
 		System.out.println(copy);
