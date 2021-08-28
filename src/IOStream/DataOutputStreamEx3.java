@@ -4,7 +4,7 @@ import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class DataOutputStreamEx3 {
+class DataOutputStreamEx3 {
 	public static void main(String[] args) {
 		int [] score = {100, 90, 95, 85, 50};
 		//기본형 배열선언 및 초기화
