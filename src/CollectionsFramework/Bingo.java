@@ -10,7 +10,7 @@ public class Bingo {
 		int [][] board = new int[5][5];	//int 타입의 크기가 각각 5인 2차원 배열을 생성한 후 참조변수 board에 주소를 저장한다.
 		
 		for(int i = 0; set.size() < 25; i++) {	//set이 가리키는 인스턴스의 길이만큼 반복한다. 2차원 배열이므로 0번지 0번지~4번지, 1번지~0~4번지 식으로 25번을 반복
-			set.add((int)(Math.random()*50)+1);	//set의 인스턴스에 난수값을 저장하는데 1~50까지의 수를 임의로 저장한다.
+			set.add((int)(Math.random()*50)+1 + "");	//set의 인스턴스에 난수값을 저장하는데 1~50까지의 수를 임의로 저장한다.
 		}
 		
 		Iterator it = set.iterator();	// 컬렉션에 저장된 요소를 불러오기 위해 Iterator 타입의 참조변수를 선언하고 set의 iterator() 메서드를 호출하여 저장하였다.
