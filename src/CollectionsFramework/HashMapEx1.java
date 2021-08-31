@@ -17,7 +17,7 @@ public class HashMapEx1 {
 		while(true) {	//반복문 while의 조건값이 true이므로 무한히 반복한다.
 			System.out.println("id와 password를 입력해 주세요");
 			System.out.print("id : ");
-			String id = sc.nextLine().trim();	//String 타입의 참조변수 id를 선언하고, Scanner 객체의 nextLine()메서드로 문자열을 받아온 후, tirm()메서드로 공백을 제가한 후 이 값을 저장한다.
+			String id = sc.nextLine().trim();	//String 타입의 참조변수 id를 선언하고, Scanner 객체의 nextLine()메서드로 문자열을 받아온 후, trim()메서드로 공백을 제거한 후 이 값을 저장한다.
 			
 			System.out.print("password : ");
 			String password = sc.nextLine().trim(); //위와 마찬가지
