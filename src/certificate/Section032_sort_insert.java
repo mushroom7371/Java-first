@@ -16,12 +16,12 @@ class Section033_sort_insert {
 			a[j] = sc.nextInt();
 		} while (j < 9);	//j가 8이 될때까지 반복, j가 8이된다는 말은 do문장의 j++로 인하여 9번지의 자리에 저장되므로 8번지까지가 아니다.
 		for (i = 1; i <= 9; i++) {	//key값을 앞뒤로 비교하기 위해 1번지의 데이터를 가지고 시작함
-			key = a[i];
-			for (k = i - 1; k >= 0; k--) {
+			key = a[i];	//key값을 기준으로 비교하기위해 i번지의 데이터를 key에 대입
+			for (k = i - 1; k >= 0; k--) {	//key의 값과 배열의 이전 값을 비교
 				if (a[k] > key)
 					a[k + 1] = a[k];
 				else
-					break;
+					break;	//비교할 값이 없으면 종료
 			}
 			a[k + 1] = key;
 		}
