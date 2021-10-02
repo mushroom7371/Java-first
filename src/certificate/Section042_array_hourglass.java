@@ -3,7 +3,7 @@ package certificate;
 import java.util.Scanner;
 
 class Section042_array_hourglass {
-	//배열로 모래시계 모양 만들기
+	//배열로 모래시계 모양 만들기 5X5 모양의 배열로 가정
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in); 
 		int x, m, L, i, j, k;
