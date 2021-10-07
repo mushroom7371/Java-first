@@ -8,7 +8,7 @@ import java.util.Scanner;
 class Section050_money {
 	//우리나라 화폐의 종류별 매수 계산
 	
-	//static 상수와 내부 클래스를 선언하여 객체 생성없이 클래스가 메모리에 올라가면 바로 사용가능하다.
+	//static 상수와 내부 클래스를 선언하여 객체 생성없이 클래스가 메모리에 적재되면 사용가능(단, 내부 클래스는 클래스이기 때문에 객체를 만들고 참조변수로 가리켜야됨)
 	static final int LENGTH = 10;	//상수로 선언하여 변하지 않도록 설정했다.
 	static class member {	//내부 클래스
 		String n;	//이름이 저장될 변수
