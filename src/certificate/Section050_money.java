@@ -37,20 +37,21 @@ class Section050_money {
 		data.p = sc.nextInt();
 		
 		while (true) {
-			t = data.p;
-			m = 50000;
-			sw = 1;
+			t = data.p;	//남은 화폐의 단위를 구하기위해 최초로 출장비를 저장
+			m = 50000;	//화폐의 단위, 우리나라 최고 화폐는 5만원으로 이를 이용하여 2과 5로 나눠 모든 지폐의 단위를 확인할수있다
+			sw = 1;	//2 또는 5로 나눌지에 대한 스위치 변수
 			
-			for (k = 0; k <= LENGTH - 1; k++) {
-				data.pm[k] = t / m;
-				t -= data.pm[k] * m;
-				if (sw == 1) {
-					m /= 5;
-					sw = 0;
+			//첫시행을 기준으로 주석처리 이후의 반복은 실제로 작성하면 로직 이해 가능
+			for (k = 0; k <= LENGTH - 1; k++) {	//배열의 길이를 10으로 설정하였기에 0번지 부터 9번지까지 반복
+				data.pm[k] = t / m;	//출장비를 5만원으로 나눠 몫으로 5만원 지폐의 갯수를 저장 int 타입의 특성상 나머지는 버려진다.
+				t -= data.pm[k] * m;	//출장비를 5만원권 * 몫으로 하여 재설정
+				if (sw == 1) {	//스위치 변수가 1이라면
+					m /= 5;	//5만원권을 5만원으로 나눠 1만원권이 되는데 이는 두번째로 높은 화폐단위이다.
+					sw = 0;	//이후 스위치 변수를 0으로 설정
 				}
-				else {
-					m /= 2;
-					sw = 1;
+				else {	//스위치 변수가 0이 아니면
+					m /= 2;	//화폐의 단위를 2로 나누게 되는데 이는 5천원권이 되며 이는 3번째로 높은 화폐단위가 된다.
+					sw = 1;	//화폐의 단위를 바꿨기에 다시 스위치 변수를 1로 설정한다.
 				}
 			}
 			
@@ -63,13 +64,13 @@ class Section050_money {
 			
 			System.out.printf("\n");
 			
-			if(!sc.hasNext()) break;
+			if(!sc.hasNext()) break;	//해당 로직은 while문의 종료 지점을 표현하며 txt파일로 부터 이후의 데이터가 없다면 종료하겠다는 의미
 			
-			data.n = sc.next();
-			data.p = sc.nextInt();
+			data.n = sc.next();	//데이터가 남아있다면 해당 데이터는 txt파일의 이름, 즉 next()메서드로 받은 string값을 받는다
+			data.p = sc.nextInt();	//마찬가지로 int값을 받으므로 이는 출장비가 된다.
 		}
 		
-		System.out.printf("전체 화폐 매수        ");
+		System.out.printf("전체 화폐 매수        ");	//최종 합산 지폐수
 		for (k = 0; k <= LENGTH - 1; k++)
 			System.out.printf("%5d", tm[k]);
 		sc.close();
