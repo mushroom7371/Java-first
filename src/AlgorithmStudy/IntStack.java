@@ -23,8 +23,8 @@ public class IntStack {
 		max = capacity;	//인자값으로 받은 int 변수의 값으로 용량이 정해짐
 		try {
 			stk = new int[max];				// 스택으로 사용할 배열
-		} catch (OutOfMemoryError e) {		// 메모리 누수(leak) 상황시 발생하는 예외 발생 시 스택트레이스가 출력됨
-			//자바는 개체를 힙(Heap) 공간에 생성하고 이 생성 위치의 주소값을 개체를 참조하는 방식으로 사용함.
+		} catch (OutOfMemoryError e) {		// 메모리 누수(leak) 상황에서 발생하는 예외일 경우 스택트레이스가 출력됨
+			//자바는 개체를 힙(Heap) 공간에 생성하고 이 생성 위치에 대한 주소값을 가지고 개체 참조하는 방식으로 사용함.
 			//개체를 생성하는 과정에서 힙공간에 개체를 할당할 공간이 부족할 시 발생함.
 			max = 0;
 		}
