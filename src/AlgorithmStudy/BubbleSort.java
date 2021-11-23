@@ -25,6 +25,20 @@ public class BubbleSort {
 		//반복문을 활용하여 a배열의 j-1 번지수가 j 번지수의 값보다 크다면 swap()메서드를 활용하여 값을 치환하는 작업을 실행한다.
 	}
 	
+	//버블정렬 개선2
+	static void bubbleSortVer2(int[] a, int n) {
+		int k = 0;								//a[k] 보다 앞쪽은 정렬이 끝난 상태, 0으로 초기화 한 이유는 최초 반복시 모든 요소를 확인해야 되기 때문
+		while(k < n-1) {						//k는 비교 대상 바로 이전의 번지 이므로 n-1 까지 반복을 조건으로 준다.
+			int last = n-1;						//last는 각 패스에서 마지막으로 교환한 두 요소중 오른쪽 요소의 인덱스를 저장할 변수
+			for(int j = n-1; j > k; j--)
+				if(a[j - 1] > a[j]) {
+					swap(a, j-1,j);				//교환할 수가 있다면 교환하고
+					last = j;					//비교 요소중 오른쪽의 값을 last에 담는다.
+				}
+			k = last;							//k에 last를 저장하므로 k이전의 값은 비교하지 않는다.
+		}
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
