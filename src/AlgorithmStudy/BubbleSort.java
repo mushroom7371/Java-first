@@ -39,6 +39,17 @@ public class BubbleSort {
 		}
 	}
 	
+	//단순 선택 정렬(배열의 가장 작은 요소와 정렬하지 않은 부분의 첫 요소를 비교)
+	static void selectionSort(int [] a, int n) {
+		for(int i = 0; i < n-1; i++) {
+			int min = i;						//반복을 통하여 가장 작은 요소의 인덱스를 기록함.
+			for(int j = i + 1; j < n; j++)
+				if(a[j] < a[min])	//j번지의 데이터가 가장 작은 요소인 a[min]보다 작다면
+					min = j;		//작은 요소의 인덱스는 j로 설정한다.
+			swap(a, i, min);		//치환을 통하여 값을 바꾼다.
+		}
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
