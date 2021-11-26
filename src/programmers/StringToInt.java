@@ -7,8 +7,8 @@ s의 맨앞에는 부호(+, -)가 올 수 있습니다.
 s는 부호와 숫자로만 이루어져있습니다.
 s는 "0"으로 시작하지 않습니다.*/
 
-public class StringToInt {
-	public int solution(String s) {
+class StringToInt {
+	private int solution(String s) {
 		//solution() 메서드를 호출 할 때 String 타입의 참조변수 s를 인자로 받는다.
 		return Integer.parseInt(s);
 		
