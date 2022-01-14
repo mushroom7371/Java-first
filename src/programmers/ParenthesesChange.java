@@ -1,28 +1,17 @@
 package programmers;
 
+//°ýÈ£ º¯È¯
 class ParenthesesChange {
 	static String solution(String p) {
 		String answer = "";
-		String balance = "";
-		String unbalance = "";
-		int balanceChk = 0;
-		StringBuilder sb = new StringBuilder();
 		
-		for(int i = 0; i < p.length(); i++) {
-			sb.append(p.charAt(i));
-		}
+		int index = splitString(p);
+		String u = p.substring(0, index);
+		String v = p.substring(index);
 		
-		for(int i = 0; i < p.length(); i++) {
-			if(p.charAt(i) == "(".charAt(0)) {
-				balanceChk++;
-			}else if(p.charAt(i) == ")".charAt(0)) {
-				balanceChk--;
-			}
-			
-			balance += p.charAt(i);
-			sb.deleteCharAt(i);
-			
-		}
+		
+		
+		
 		
 		
 		return answer;
@@ -32,5 +21,36 @@ class ParenthesesChange {
 		String p = ")()((()))(()()(";
 		
 		solution(p);
+	}
+	
+	static int splitString(String p) {
+		int balanceChk = 0;
+		int index = 0;
+		
+		for(int i = 0; i < p.length(); i++){
+			
+			if(p.charAt(i) == "(".charAt(0)) {
+				balanceChk++;
+				index++;
+			}else if(p.charAt(i) == ")".charAt(0)) {
+				balanceChk--;
+				index++;
+			}
+			
+			if(balanceChk == 0) {
+				break;
+			}
+		}
+		
+		return index;
+	}
+	
+	static boolean validateString(String p) {
+		
+		if(p.charAt(0) != "(".charAt(0)) {
+			return false;
+		}
+		
+		return true;		
 	}
 }
