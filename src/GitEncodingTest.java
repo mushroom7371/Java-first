@@ -1,6 +1,6 @@
 
 public class GitEncodingTest {
 	public static void main(String[] args) {
-		System.out.println("ÇÑ±Û ±úÁü?");
+		System.out.println("í•œê¸€ ì„¤ì •???");
 	}
 }
