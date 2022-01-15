@@ -2,28 +2,32 @@ package programmers;
 
 //°ýÈ£ º¯È¯
 class ParenthesesChange {
-	static String solution(String p) {
-		String answer = "";
-		
+	public String solution(String p) {
 		int index = splitString(p);
-		String u = p.substring(0, index);
-		String v = p.substring(index);
-		
-		
-		
-		
-		
-		
-		return answer;
+        String u = p.substring(0, index);
+        String v = p.substring(index);
+        StringBuilder sb = new StringBuilder();
+
+        if(validateString(u)) {
+        	sb.append(u);
+        }
+        else {
+            sb.append("(");
+            if(!v.equals("")){
+            	solution(v);
+               v = "";
+            }
+            sb.append(")");
+            sb.append(setValidateGrammer(u));
+        }
+        if(!v.equals("")){
+        	solution(v);
+        }
+
+        return sb.toString();
 	}
 	
-	public static void main(String[] args) {
-		String p = ")()((()))(()()(";
-		
-		solution(p);
-	}
-	
-	static int splitString(String p) {
+	public int splitString(String p) {
 		int balanceChk = 0;
 		int index = 0;
 		
@@ -45,7 +49,7 @@ class ParenthesesChange {
 		return index;
 	}
 	
-	static boolean validateString(String p) {
+	public boolean validateString(String p) {
 		
 		if(p.charAt(0) != "(".charAt(0)) {
 			return false;
@@ -53,4 +57,19 @@ class ParenthesesChange {
 		
 		return true;		
 	}
+	
+	public String setValidateGrammer(String p){
+	      String [] split = p.split("");
+	      StringBuilder sb = new StringBuilder();
+	      
+	      for(int i = 1; i < split.length - 1; i++) {
+	          if(split[i].equals("(")) {
+	        	  sb.append(")");
+	          }else {
+	        	  sb.append("(");
+	          }
+	      }
+	      
+	      return sb.toString();
+	  }
 }
