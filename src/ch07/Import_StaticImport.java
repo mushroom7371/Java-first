@@ -1,4 +1,4 @@
-package ch07;
+ï»¿package ch07;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,13 +10,13 @@ public class Import_StaticImport {
 		
 		SimpleDateFormat date = new SimpleDateFormat("yyyy/MM/dd");
 		SimpleDateFormat time = new SimpleDateFormat("hh:mm:ss a");
-		//java.text.SimpleDateFormat date = new java.text.SimpleDateFormat()¿Í °°ÀÌ ¾²Áö ¾Ê´Â ÀÌÀ¯´Â »ó´Ü¿¡ import¸¦ ÅëÇÏ¿© ¸í½ÃÇØÁá±â ¶§¹®
+		//java.text.SimpleDateFormat date = new java.text.SimpleDateFormat()ì™€ ê°™ì´ ì“°ì§€ ì•ŠëŠ” ì´ìœ ëŠ” ìƒë‹¨ì— importë¥¼ í†µí•˜ì—¬ ëª…ì‹œí•´ì¤¬ê¸° ë•Œë¬¸
 		
 		System.out.println(date.format(today));
 		System.out.println(time.format(today));
 		
 		System.out.println("random = " + random());
-		//Math.random()°ú °°ÀÌ ½á¾ß ÇÏ³ª Å¬·¡½º¸¦ import ÇÒ ¶§ staticÀ¸·Î ÇÏ¿´±â¿¡ °£·«È­ ÇÒ ¼ö ÀÖ´Ù.
-		//¸¶Âù°¡Áö·Î import static java.lang.System.out;À» import ÇÒ ½Ã¿£ out.println()À¸·Î »ç¿ëÇÒ ¼ö ÀÖ´Ù.
+		//Math.random()ê³¼ ê°™ì´ ì¨ì•¼ í•˜ë‚˜ í´ë˜ìŠ¤ë¥¼ import í•  ë•Œ staticìœ¼ë¡œ í•˜ì˜€ê¸°ì— ê°„ëµí™” í•  ìˆ˜ ìˆë‹¤.
+		//ë§ˆì°¬ê°€ì§€ë¡œ import static java.lang.System.out;ì„ import í•  ì‹œì—” out.println()ìœ¼ë¡œ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤.
 	}
 }

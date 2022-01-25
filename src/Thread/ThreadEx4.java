@@ -1,23 +1,23 @@
-package Thread;
+ï»¿package Thread;
 
 public class ThreadEx4 {
 
 	public static void main(String[] args) {
 		long startTime = System.currentTimeMillis();
-		//½Ì±Û¾²·¹µå ½ÇÇà ½Ã°£À» ÃøÁ¤ÇÏ±âÀ§ÇØ »ı¼ºÇÑ ¸Ş¼­µå¸¦ º¯¼ö¿¡ ´ã¾Ò´Ù
+		//ì‹±ê¸€ì“°ë ˆë“œ ì‹¤í–‰ ì‹œê°„ì„ ì¸¡ì •í•˜ê¸°ìœ„í•´ ìƒì„±í•œ ë©”ì„œë“œë¥¼ ë³€ìˆ˜ì— ë‹´ì•˜ë‹¤
 		
 		for(int i = 0; i < 300; i++)
 			System.out.printf("%s", new String("-"));
-		//for ¹İº¹¹®À» ÀÌ¿ëÇÏ¿© "-"¸¦ Ãâ·ÂÇÏµµ·Ï ÇÏ¸é¼­ ½Ã°£ Áö¿¬À» À§ÇØ new String()À¸·Î ¹İº¹½Ã ¸¶´Ù »õ·Î °´Ã¼°¡ »ı¼ºµÇµµ·Ï Á¶ÀıÇÔ
+		//for ë°˜ë³µë¬¸ì„ ì´ìš©í•˜ì—¬ "-"ë¥¼ ì¶œë ¥í•˜ë„ë¡ í•˜ë©´ì„œ ì‹œê°„ ì§€ì—°ì„ ìœ„í•´ new String()ìœ¼ë¡œ ë°˜ë³µì‹œ ë§ˆë‹¤ ìƒˆë¡œ ê°ì²´ê°€ ìƒì„±ë˜ë„ë¡ ì¡°ì ˆí•¨
 		
-		System.out.print("¼Ò¿ä½Ã°£ : " + (System.currentTimeMillis() - startTime));
-		//Ãâ·Â¸Ş¼­µå ³»ºÎ¿¡¼­ ÈÖ¹ß¼º ½Ã°£ÃøÁ¤ ¸Ş¼­µå - startTime À» ÅëÇÏ¿© ½Ã°£ÀÇ °æ°ú¸¦ È®ÀÎÇÔ
+		System.out.print("ì†Œìš”ì‹œê°„ : " + (System.currentTimeMillis() - startTime));
+		//ì¶œë ¥ë©”ì„œë“œ ë‚´ë¶€ì—ì„œ íœ˜ë°œì„± ì‹œê°„ì¸¡ì • ë©”ì„œë“œ - startTime ì„ í†µí•˜ì—¬ ì‹œê°„ì˜ ê²½ê³¼ë¥¼ í™•ì¸í•¨
 		
 		for(int i = 0; i< 300; i++)
 			System.out.printf("%s", new String("|"));
 		
-		System.out.print("¼Ò¿ä½Ã°£2 : " + (System.currentTimeMillis() - startTime));
-		//¸ŞÀÎ ¸Ş¼­µå°¡ ³¡¸¶Ä¥¶§ ±îÁöÀÇ ÃÑ ¼Ò¿ä½Ã°£À» È®ÀÎ
+		System.out.print("ì†Œìš”ì‹œê°„2 : " + (System.currentTimeMillis() - startTime));
+		//ë©”ì¸ ë©”ì„œë“œê°€ ëë§ˆì¹ ë•Œ ê¹Œì§€ì˜ ì´ ì†Œìš”ì‹œê°„ì„ í™•ì¸
 	}
 
 }

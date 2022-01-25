@@ -1,4 +1,4 @@
-import java.util.*;    // Scanner¸¦ »ç¿ëÇÏ±â À§ÇØ Ãß°¡
+ï»¿import java.util.*;    // Scannerë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ ì¶”ê°€
 
 class ScannerExDivide { 
 	public static void main(String[] args) {
@@ -7,17 +7,17 @@ class ScannerExDivide {
 		
 		static void inputMethod(){
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("µÎÀÚ¸® Á¤¼ö¸¦ ÇÏ³ª ÀÔ·ÂÇØÁÖ¼¼¿ä.>");
+		System.out.print("ë‘ìë¦¬ ì •ìˆ˜ë¥¼ í•˜ë‚˜ ì…ë ¥í•´ì£¼ì„¸ìš”.>");
 
 		String input = scanner.nextLine();
-		int num = Integer.parseInt(input); // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­À» ¼ıÀÚ·Î º¯È¯
+		int num = Integer.parseInt(input); // ì…ë ¥ë°›ì€ ë¬¸ìì—´ì„ ìˆ«ìë¡œ ë³€í™˜
 
 		outMethod(input,num);
-		//System.out.print("num="+(num+1));  ÀÔ·Â³»¿ë Á¤¼ö°ª È®ÀÎ
+		//System.out.print("num="+(num+1));  ì…ë ¥ë‚´ìš© ì •ìˆ˜ê°’ í™•ì¸
 		}
 		
 		static void outMethod(String input,int num) {
-		System.out.println("ÀÔ·Â³»¿ë :"+input);
+		System.out.println("ì…ë ¥ë‚´ìš© :"+input);
 		System.out.printf("num=%d%n", num);
 		}
 	} 

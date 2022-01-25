@@ -1,4 +1,4 @@
-package ch05;
+ï»¿package ch05;
 
 import java.util.Arrays;
 
@@ -9,20 +9,20 @@ public class ArrayConjugation2 {
 		
 		for(int i = 0; i < shuffle1.length; i++) {
 			shuffle1[i] = i;
-		}// ¹è¿­ÃÊ±âÈ­ 0~9
+		}// ë°°ì—´ì´ˆê¸°í™” 0~9
 		
 		for(int i = 0; i < shuffle1.length; i++) {
 			int n = (int)(Math.random() * 10);
-			//¹øÁö¼ö¸¦ ÀúÀåÇÒ º¯¼ö¸¦ ÀÓÀÇ·Î ¼±¾ðÇÑ´Ù.
+			//ë²ˆì§€ìˆ˜ë¥¼ ì €ìž¥í•  ë³€ìˆ˜ë¥¼ ìž„ì˜ë¡œ ì„ ì–¸í•œë‹¤.
 			
 			temp = shuffle1[i];
 			shuffle1[i] = shuffle1[n];
 			shuffle1[n] = temp;
-			//Áßº¹°ªÀÌ »ý±æ°Í °°Áö¸¸ »ç½ÇÀº ¹øÁö¼öÀÇ °ªµéÀ» Ä¡È¯À» ÅëÇÏ¿© ¹Ù²Û°ÍÀÌ±â ¶§¹®¿¡ Áßº¹¹ß»ýÀº ¾ø´Ù.
+			//ì¤‘ë³µê°’ì´ ìƒê¸¸ê²ƒ ê°™ì§€ë§Œ ì‚¬ì‹¤ì€ ë²ˆì§€ìˆ˜ì˜ ê°’ë“¤ì„ ì¹˜í™˜ì„ í†µí•˜ì—¬ ë°”ê¾¼ê²ƒì´ê¸° ë•Œë¬¸ì— ì¤‘ë³µë°œìƒì€ ì—†ë‹¤.
 		}
 		System.out.println(Arrays.toString(shuffle1));
 		
-		//À§ÀÇ ¼ÅÇÃ°úÁ¤À» ÅëÇÑ ·Î¶Ç¹øÈ£ ÃßÃ·
+		//ìœ„ì˜ ì…”í”Œê³¼ì •ì„ í†µí•œ ë¡œë˜ë²ˆí˜¸ ì¶”ì²¨
 		int []	lotto = new int[45];
 		int ran;
 		

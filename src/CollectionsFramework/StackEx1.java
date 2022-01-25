@@ -1,59 +1,59 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.Stack;
 
 public class StackEx1 {
-	public static Stack back = new Stack(); //main ³»ºÎ¿¡¼­ ¼±¾ğÇÑ °ÍÀÌ ¾Æ´Ï¶ó public À¸·Î Àü¿ª¿¡¼­ Á¢±Ù °¡´ÉÇÏµµ·Ï ÇÏ°í,
-	public static Stack forward = new Stack();	//static À¸·Î ÀÎÇØ¼­ Å¬·¡½º°¡ ¸Ş¸ğ¸®¿¡ ¿Ã¶ó°¥¶§ »ı¼ºÀÌ µÇ´Â Stack Å¬·¡½º¸¦ ÀÎ½ºÅÏ½ºÈ­ ÇÑ´Ù.
+	public static Stack back = new Stack(); //main ë‚´ë¶€ì—ì„œ ì„ ì–¸í•œ ê²ƒì´ ì•„ë‹ˆë¼ public ìœ¼ë¡œ ì „ì—­ì—ì„œ ì ‘ê·¼ ê°€ëŠ¥í•˜ë„ë¡ í•˜ê³ ,
+	public static Stack forward = new Stack();	//static ìœ¼ë¡œ ì¸í•´ì„œ í´ë˜ìŠ¤ê°€ ë©”ëª¨ë¦¬ì— ì˜¬ë¼ê°ˆë•Œ ìƒì„±ì´ ë˜ëŠ” Stack í´ë˜ìŠ¤ë¥¼ ì¸ìŠ¤í„´ìŠ¤í™” í•œë‹¤.
 	
 	public static void main(String [] args) {
-		goURL("1.³×ÀÌÆ®");	//goURL ¸Ş¼­µå·Î ÀÎÇØ ÆÄ¶ó¸ŞÅÍ °ªÀÌ back¿¡ Â÷°îÂ÷°î ½×ÀÌ°Ô µÈ´Ù.
-		goURL("2.¾ßÈÄ");
-		goURL("3.³×ÀÌ¹ö");
-		goURL("4.´ÙÀ½");
+		goURL("1.ë„¤ì´íŠ¸");	//goURL ë©”ì„œë“œë¡œ ì¸í•´ íŒŒë¼ë©”í„° ê°’ì´ backì— ì°¨ê³¡ì°¨ê³¡ ìŒ“ì´ê²Œ ëœë‹¤.
+		goURL("2.ì•¼í›„");
+		goURL("3.ë„¤ì´ë²„");
+		goURL("4.ë‹¤ìŒ");
 		
-		printStatus();	//Ãâ·Â
+		printStatus();	//ì¶œë ¥
 		
-		goBack();	//goBack ¸Ş¼­µå°¡ È£ÃâµÇ¸é, backÀÇ ¸¶Áö¸· °´Ã¼°¡ forward¿¡ ÀúÀåµÈ´Ù.
-		System.out.println(" = µÚ·Î ¹öÆ°À» ´©¸¥ ÈÄ = ");
-		printStatus();	//ÀÌ ¶§¹®¿¡ backÀÇ ¸¶Áö¸· µ¥ÀÌÅÍ 3.³×ÀÌ¹ö °¡ Ç¥½ÃµÈ´Ù.
-						//¶ÇÇÑ forward¿¡´Â 4.´ÙÀ½ ÀÌ ÀúÀåµÇ¾îÀÖ´Ù.
+		goBack();	//goBack ë©”ì„œë“œê°€ í˜¸ì¶œë˜ë©´, backì˜ ë§ˆì§€ë§‰ ê°ì²´ê°€ forwardì— ì €ì¥ëœë‹¤.
+		System.out.println(" = ë’¤ë¡œ ë²„íŠ¼ì„ ëˆ„ë¥¸ í›„ = ");
+		printStatus();	//ì´ ë•Œë¬¸ì— backì˜ ë§ˆì§€ë§‰ ë°ì´í„° 3.ë„¤ì´ë²„ ê°€ í‘œì‹œëœë‹¤.
+						//ë˜í•œ forwardì—ëŠ” 4.ë‹¤ìŒ ì´ ì €ì¥ë˜ì–´ìˆë‹¤.
 		
 		goBack();
-		System.out.println(" = µÚ·Î ¹öÆ°À» ´©¸¥ ÈÄ = ");
-		printStatus();	//backÀÇ 3.³×ÀÌ¹ö °¡ forward·Î ¿Å°ÜÁö¸ç
-						//forward´Â stackÀÇ Æ¯¼º»ó 4.´ÙÀ½ 3.³×ÀÌ¹ö ÀÇ ¼ø¼­·Î ÀúÀåµÇ¾î ÀÖ´Ù.
+		System.out.println(" = ë’¤ë¡œ ë²„íŠ¼ì„ ëˆ„ë¥¸ í›„ = ");
+		printStatus();	//backì˜ 3.ë„¤ì´ë²„ ê°€ forwardë¡œ ì˜®ê²¨ì§€ë©°
+						//forwardëŠ” stackì˜ íŠ¹ì„±ìƒ 4.ë‹¤ìŒ 3.ë„¤ì´ë²„ ì˜ ìˆœì„œë¡œ ì €ì¥ë˜ì–´ ìˆë‹¤.
 		
-		goForward();	//ÀÌ ¸Ş¼­µå·Î ÅëÇØ¼­ forwardÀÇ 3.³×ÀÌ¹ö °¡ backÀÇ ¸¶Áö¸· À§Ä¡·Î ÀÌµ¿ÇÏ°Ô µÈ´Ù.
-		System.out.println(" = ¾ÕÀ¸·Î ¹öÆ°À» ´©¸¥ ÈÄ = ");
+		goForward();	//ì´ ë©”ì„œë“œë¡œ í†µí•´ì„œ forwardì˜ 3.ë„¤ì´ë²„ ê°€ backì˜ ë§ˆì§€ë§‰ ìœ„ì¹˜ë¡œ ì´ë™í•˜ê²Œ ëœë‹¤.
+		System.out.println(" = ì•ìœ¼ë¡œ ë²„íŠ¼ì„ ëˆ„ë¥¸ í›„ = ");
 		printStatus();
 		
-		goURL("github.com/mushroom7371");	//»õ·Î¿î ÆÄ¶ó¸ŞÅÍ°ªÀÌ back  ¿¡ ÀúÀåµÇ°í forward¿¡´Â clear ¸Ş¼­µå·Î ÀÎÇØ 4.´ÙÀ½ ÀÇ µ¥ÀÌÅÍ°¡ »èÁ¦µÈ´Ù.
-		System.out.println(" = »õ·Î¿î ÁÖ¼Ò¸¦ ÀÔ·Â ÈÄ = ");
+		goURL("github.com/mushroom7371");	//ìƒˆë¡œìš´ íŒŒë¼ë©”í„°ê°’ì´ back  ì— ì €ì¥ë˜ê³  forwardì—ëŠ” clear ë©”ì„œë“œë¡œ ì¸í•´ 4.ë‹¤ìŒ ì˜ ë°ì´í„°ê°€ ì‚­ì œëœë‹¤.
+		System.out.println(" = ìƒˆë¡œìš´ ì£¼ì†Œë¥¼ ì…ë ¥ í›„ = ");
 		printStatus();
 		
 	}
 	
-	public static void printStatus() {	//Ãâ·Â ¸Ş¼­µå
+	public static void printStatus() {	//ì¶œë ¥ ë©”ì„œë“œ
 		System.out.println("back : " + back);
 		System.out.println("forward : " + forward);
-		System.out.println("ÇöÀç È­¸éÀº " + back.peek() + " ÀÔ´Ï´Ù.");	//Áö±İ ÇöÀç back¿¡ ÀúÀåµÈ ¸¶Áö¸· °ªÀ» ÀĞ¾î¿Â´Ù.
+		System.out.println("í˜„ì¬ í™”ë©´ì€ " + back.peek() + " ì…ë‹ˆë‹¤.");	//ì§€ê¸ˆ í˜„ì¬ backì— ì €ì¥ëœ ë§ˆì§€ë§‰ ê°’ì„ ì½ì–´ì˜¨ë‹¤.
 		System.out.println();
 	}
 	
-	public static void goURL(String url) {	//String Å¸ÀÔÀ» ¸Å°³º¯¼ö·Î goURL()¸¦ ¼±¾ğÇÏ´Âµ¥ À§ÀÇ ÀÎ½ºÅÏ½º »ı¼º°ú ¸¶Âù°¡Áö·Î public À¸·Î Àü¿ª¿¡¼­ Á¢±Ù°¡´ÉÇÏ°í, staticÀ¸·Î °´Ã¼ »ı¼ºÀÌ ÇÊ¿ä¾øÀÌ Á¢±Ù °¡´ÉÇÑ ¸Ş¼­µå
-		back.push(url);	//¸Ş¼­µå¸¦ È£ÃâÇÏ¸é »ı¼ºÇÑ Stack Å¸ÀÔÀÇ back¿¡ ÆÄ¶ó¸ŞÅÍ¸¦ °´Ã¤·Î ÀúÀåÇÑ´Ù.
-		if(!forward.empty())	//¸¸¾à forward ÀÎ½ºÅÏ½º¿¡ µ¥ÀÌÅÍ°¡ ÀúÀåµÇ¾îÀÖ´Ù¸é
-			forward.clear();	//forwardÀÇ ¸ğµç µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÑ´Ù.
+	public static void goURL(String url) {	//String íƒ€ì…ì„ ë§¤ê°œë³€ìˆ˜ë¡œ goURL()ë¥¼ ì„ ì–¸í•˜ëŠ”ë° ìœ„ì˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±ê³¼ ë§ˆì°¬ê°€ì§€ë¡œ public ìœ¼ë¡œ ì „ì—­ì—ì„œ ì ‘ê·¼ê°€ëŠ¥í•˜ê³ , staticìœ¼ë¡œ ê°ì²´ ìƒì„±ì´ í•„ìš”ì—†ì´ ì ‘ê·¼ ê°€ëŠ¥í•œ ë©”ì„œë“œ
+		back.push(url);	//ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ë©´ ìƒì„±í•œ Stack íƒ€ì…ì˜ backì— íŒŒë¼ë©”í„°ë¥¼ ê°ì±„ë¡œ ì €ì¥í•œë‹¤.
+		if(!forward.empty())	//ë§Œì•½ forward ì¸ìŠ¤í„´ìŠ¤ì— ë°ì´í„°ê°€ ì €ì¥ë˜ì–´ìˆë‹¤ë©´
+			forward.clear();	//forwardì˜ ëª¨ë“  ë°ì´í„°ë¥¼ ì‚­ì œí•œë‹¤.
 	}
 	
-	public static void goForward() {	//¹İÈ¯°ªÀÌ ¾ø´Â ¸Ş¼­µå¼±¾ğ.
-		if(!forward.empty())	//¸¸¾à forward¿¡ µ¥ÀÌÅÍ°¡ ÀÖ´Ù¸é,
-			back.push(forward.pop());	//back¿¡´Ù°¡ forward¿¡ ÀúÀåµÇ¾îÀÖ´Â ¸¶Áö¸· µ¥ÀÌÅÍ¸¦ »Ì¾Æ³»¼­ ÀúÀåÇÑ´Ù.(stackÀÇ µ¥ÀÌÅÍ ÀúÀå¹æ½ÄÀÌ ¸·Èù±æÀÌ±â¿¡ ¸¶Áö¸· ÀúÀå µ¥ÀÌÅÍ°¡ ²¨³»Áö°Ô µÇ´Â°ÍÀÌ´Ù.)
+	public static void goForward() {	//ë°˜í™˜ê°’ì´ ì—†ëŠ” ë©”ì„œë“œì„ ì–¸.
+		if(!forward.empty())	//ë§Œì•½ forwardì— ë°ì´í„°ê°€ ìˆë‹¤ë©´,
+			back.push(forward.pop());	//backì—ë‹¤ê°€ forwardì— ì €ì¥ë˜ì–´ìˆëŠ” ë§ˆì§€ë§‰ ë°ì´í„°ë¥¼ ë½‘ì•„ë‚´ì„œ ì €ì¥í•œë‹¤.(stackì˜ ë°ì´í„° ì €ì¥ë°©ì‹ì´ ë§‰íŒê¸¸ì´ê¸°ì— ë§ˆì§€ë§‰ ì €ì¥ ë°ì´í„°ê°€ êº¼ë‚´ì§€ê²Œ ë˜ëŠ”ê²ƒì´ë‹¤.)
 			
 	}
 	
-	public static void goBack() {	//goForward ¸Ş¼­µå¿Í ¸¶Âù°¡Áö ¹æ½ÄÀ¸·Î ±â´ÉÀÌ ±¸ÇöµÈ´Ù.
+	public static void goBack() {	//goForward ë©”ì„œë“œì™€ ë§ˆì°¬ê°€ì§€ ë°©ì‹ìœ¼ë¡œ ê¸°ëŠ¥ì´ êµ¬í˜„ëœë‹¤.
 		if(!back.empty())
 			forward.push(back.pop());
 	}

@@ -1,25 +1,25 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.Arrays;
 
-//¿ÏÁÖÇÏÁö ¸øÇÑ ¼±¼ö Ã£±â
+//ì™„ì£¼í•˜ì§€ ëª»í•œ ì„ ìˆ˜ ì°¾ê¸°
 class NotCompletion {
 	private String solution(String [] participant, String [] completion) {
 		Arrays.sort(participant);
 		Arrays.sort(completion);
-		//Âü°¡ÀÚ¿Í ¿ÏÁÖÀÚÀÇ Á¤º¸°¡ ´ã±ä ¹è¿­À» °°Àº ¹æ½ÄÀ¸·Î Á¤·Ä ÇÑ´Ù.
+		//ì°¸ê°€ìì™€ ì™„ì£¼ìì˜ ì •ë³´ê°€ ë‹´ê¸´ ë°°ì—´ì„ ê°™ì€ ë°©ì‹ìœ¼ë¡œ ì •ë ¬ í•œë‹¤.
 		
 		String answer = null;
-		//¿ÏÁÖÇÏÁö ¸øÇÑ »ç¶÷ÀÌ ´ã±æ º¯¼ö
+		//ì™„ì£¼í•˜ì§€ ëª»í•œ ì‚¬ëŒì´ ë‹´ê¸¸ ë³€ìˆ˜
 		
-		int i = 0;	//¹è¿­Àº 0¹øÁöºÎÅÍ ½ÃÀÛÇÏ¹Ç·Î
-		while(i < completion.length) {	//¿ÏÁÖÀÚÀÇ Á¤º¸°¡ ´ã±ä ¹è¿­ÀÇ ±æÀÌ Àü±îÁö ¹İº¹
-			if(!participant[i].equals(completion[i])) {	//Âü°¡ÀÚ¿Í ¿ÏÁÖÀÚ°¡ °°Áö ¾Ê´Ù¸é
-				answer = participant[i];	//Âü°¡ÀÚ´Â ¿ÏÁÖÇÏÁö ¸øÇÑ ÀÎ¿øÀÌ¹Ç·Î ÀÌ¸¦ ¹İÈ¯
+		int i = 0;	//ë°°ì—´ì€ 0ë²ˆì§€ë¶€í„° ì‹œì‘í•˜ë¯€ë¡œ
+		while(i < completion.length) {	//ì™„ì£¼ìì˜ ì •ë³´ê°€ ë‹´ê¸´ ë°°ì—´ì˜ ê¸¸ì´ ì „ê¹Œì§€ ë°˜ë³µ
+			if(!participant[i].equals(completion[i])) {	//ì°¸ê°€ìì™€ ì™„ì£¼ìê°€ ê°™ì§€ ì•Šë‹¤ë©´
+				answer = participant[i];	//ì°¸ê°€ìëŠ” ì™„ì£¼í•˜ì§€ ëª»í•œ ì¸ì›ì´ë¯€ë¡œ ì´ë¥¼ ë°˜í™˜
 				return answer;
 			}
 			i++;
-		}	//ÇØ´çÇÏ´Â ¹İº¹¿¡¼­ Á¶°Ç¿¡ ¸Â´Â ÀÎ¿øÀÌ ¾øÀ¸¸é ¸ğµÎ ¿ÏÁÖ
+		}	//í•´ë‹¹í•˜ëŠ” ë°˜ë³µì—ì„œ ì¡°ê±´ì— ë§ëŠ” ì¸ì›ì´ ì—†ìœ¼ë©´ ëª¨ë‘ ì™„ì£¼
 		
 		return participant[i];
 	}

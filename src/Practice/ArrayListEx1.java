@@ -1,11 +1,11 @@
-package Practice;
+ï»¿package Practice;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class ArrayListEx1 {
 	public static void main(String args []) {
-		ArrayList list1 = new ArrayList(10); //Å©±â°¡ 10ÀÎ ArrayList »ı¼º
+		ArrayList list1 = new ArrayList(10); //í¬ê¸°ê°€ 10ì¸ ArrayList ìƒì„±
 		list1.add(new Integer(5));
 		list1.add(new Integer(4));
 		list1.add(new Integer(2));
@@ -13,33 +13,33 @@ public class ArrayListEx1 {
 		list1.add(new Integer(1));
 		list1.add(new Integer(3));
 		
-		ArrayList list2 = new ArrayList(list1.subList(1, 4)); //subListÀÇ »ı¼ºÀÚ¾ÈÀÇ ÀÇ¹Ì´Â 1Æ÷ÇÔ 4¹ÌÆ÷ÇÔÀÓ.
+		ArrayList list2 = new ArrayList(list1.subList(1, 4)); //subListì˜ ìƒì„±ìì•ˆì˜ ì˜ë¯¸ëŠ” 1í¬í•¨ 4ë¯¸í¬í•¨ì„.
 		print(list1, list2);
 		
-		Collections.sort(list1); //Collections.sort·Î ¹è¿­ ¾ÈÀÇ ¼ıÀÚ¸¦ Á¤·ÄÇÑ´Ù.
+		Collections.sort(list1); //Collections.sortë¡œ ë°°ì—´ ì•ˆì˜ ìˆ«ìë¥¼ ì •ë ¬í•œë‹¤.
 		Collections.sort(list2);
 		print(list1, list2);
 
 		System.out.println("list1.containsAll(list2) : " + list1.containsAll(list2));
-		// list1ÀÌ list2ÀÇ ¸ğµç ¿ä¼Ò¸¦ Æ÷ÇÔ ÇÏ°í ÀÖÀ»¶§¸¸ true¸¦ Ãâ·ÂÇÑ´Ù.
+		// list1ì´ list2ì˜ ëª¨ë“  ìš”ì†Œë¥¼ í¬í•¨ í•˜ê³  ìˆì„ë•Œë§Œ trueë¥¼ ì¶œë ¥í•œë‹¤.
 		
 		list2.add("B");
 		list2.add("C");
-		list2.add(3, "A"); //list2 ÀÇ 3¹øÁö ÁÖ¼Ò¿¡ A¸¦ Ãß°¡(add(Object obj))¸¦ ÀÌ¿ëÇÔ.
+		list2.add(3, "A"); //list2 ì˜ 3ë²ˆì§€ ì£¼ì†Œì— Aë¥¼ ì¶”ê°€(add(Object obj))ë¥¼ ì´ìš©í•¨.
 		print(list1, list2);
 		
-		list2.set(3, "AA"); //list2ÀÇ 3¹øÁö ÁÖ¼ÒÀÇ °ªÀ» AA·Î º¯°æ
+		list2.set(3, "AA"); //list2ì˜ 3ë²ˆì§€ ì£¼ì†Œì˜ ê°’ì„ AAë¡œ ë³€ê²½
 		print(list1, list2);
 		
 		System.out.println("list1.retainAll(list2) : " + list1.retainAll(list2));
-		//list1¿¡¼­ list2¿Í ÈÄ¡´Â ºÎºĞ¸¸ ³²±â°í ³ª¸ÓÁö¸¦ »èÁ¦ÇÔ.
+		//list1ì—ì„œ list2ì™€ Âí›„ã€ˆ?ë¶€ë¶„ë§Œ ë‚¨ê¸°ê³  ë‚˜ë¨¸ì§€ë¥¼ ì‚­ì œí•¨.
 		
 		print(list1, list2);
 		
 		for(int i = list2.size()-1; i >=0; i--) {
 			if(list1.contains(list2.get(i)))
 				list2.remove(i);
-		} //list2 ¿¡¼­ list1ÀÌ Æ÷ÇÔµÈ °´Ã¼µéÀ» »èÁ¦ÇÏ´Â ±â´É
+		} //list2 ì—ì„œ list1ì´ í¬í•¨ëœ ê°ì²´ë“¤ì„ ì‚­ì œí•˜ëŠ” ê¸°ëŠ¥
 		
 		print(list1, list2);
 		

@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -10,12 +10,12 @@ class HashSetEx5 {
 		HashSet setHab	= new HashSet();
 		HashSet setKyo	= new HashSet();
 		HashSet setCha	= new HashSet();
-		//HashSetÀÇ Æ¯¼ºÀ» ÀÌÇØÇÏ±â À§ÇÑ ÁıÇÕ ¼±¾ğ
+		//HashSetì˜ íŠ¹ì„±ì„ ì´í•´í•˜ê¸° ìœ„í•œ ì§‘í•© ì„ ì–¸
 		
 //		setA.add("1");	setA.add("2");	setA.add("3");
 //		setA.add("4");	setA.add("5");
 		
-		for(int i = 1; i < 6; i++) {	//¾îÂ÷ÇÇ ¹İº¹ÀÌ¶ó ±×³É for¹®À¸·Î µ¥ÀÌÅÍ ÀÔ·ÂÇÔ
+		for(int i = 1; i < 6; i++) {	//ì–´ì°¨í”¼ ë°˜ë³µì´ë¼ ê·¸ëƒ¥ forë¬¸ìœ¼ë¡œ ë°ì´í„° ì…ë ¥í•¨
 			setA.add(i);
 		}
 		
@@ -33,19 +33,19 @@ class HashSetEx5 {
 		Iterator it = setB.iterator();
 		while(it.hasNext()) {
 			Object tmp = it.next();
-			if(setA.contains(tmp))	//±³ÁıÇÕÀ» ¾Ë±âÀ§ÇØ setB¿Í setA¸¦ ÅëÇÏ¿© tmpÀÇ ³»¿ë(setb)À» setA°¡ contain(Æ÷ÇÔ)ÇÏ°í ÀÖ´Ù¸é ±× °ªÀ» setKyo¿¡ ÀúÀåÇÑ´Ù.
+			if(setA.contains(tmp))	//êµì§‘í•©ì„ ì•Œê¸°ìœ„í•´ setBì™€ setAë¥¼ í†µí•˜ì—¬ tmpì˜ ë‚´ìš©(setb)ì„ setAê°€ contain(í¬í•¨)í•˜ê³  ìˆë‹¤ë©´ ê·¸ ê°’ì„ setKyoì— ì €ì¥í•œë‹¤.
 				setKyo.add(tmp);
 		}
 		
 		it = setA.iterator();
 		while(it.hasNext()) {
 			Object tmp = it.next();
-			if(!setB.contains(tmp))	//±³ÁıÇÕ°ú´Â ¹İ´ë·Î !¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¿© ¾ø´Â °ªÀÌ¶ó¸é ±× °ªÀ» setCha¿¡ ÀúÀåÇÏ¿´´Ù.
+			if(!setB.contains(tmp))	//êµì§‘í•©ê³¼ëŠ” ë°˜ëŒ€ë¡œ !ì—°ì‚°ìë¥¼ ì´ìš©í•˜ì—¬ ì—†ëŠ” ê°’ì´ë¼ë©´ ê·¸ ê°’ì„ setChaì— ì €ì¥í•˜ì˜€ë‹¤.
 				setCha.add(tmp);
 		}
 		
 		it = setA.iterator();
-		while(it.hasNext()) {	//ÇÕÁıÇÕÀº Áßº¹ ¾øÀÌ µÎ ÁıÇÕÀÇ ³»¿ëÀ» ¸ğµÎ °¡Áö¹Ç·Î HashSetÀ» ÀÌ¿ëÇÏ¿© ½±°Ô µ¥ÀÌÅÍ¸¦ ÀúÀåÇÒ ¼ö ÀÖ´Ù.
+		while(it.hasNext()) {	//í•©ì§‘í•©ì€ ì¤‘ë³µ ì—†ì´ ë‘ ì§‘í•©ì˜ ë‚´ìš©ì„ ëª¨ë‘ ê°€ì§€ë¯€ë¡œ HashSetì„ ì´ìš©í•˜ì—¬ ì‰½ê²Œ ë°ì´í„°ë¥¼ ì €ì¥í•  ìˆ˜ ìˆë‹¤.
 			setHab.add(it.next());
 		}
 		
@@ -54,8 +54,8 @@ class HashSetEx5 {
 			setHab.add(it.next());
 		}
 		
-		System.out.println("A ¡û B = " + setKyo);
-		System.out.println("A ¡ú B = " + setHab);
+		System.out.println("A âˆ© B = " + setKyo);
+		System.out.println("A âˆª B = " + setHab);
 		System.out.println("A - B = " + setCha);
 		
 	}

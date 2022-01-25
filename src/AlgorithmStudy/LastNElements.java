@@ -1,35 +1,35 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 import java.util.Scanner;
-//¿øÇÏ´Â °¹¼öÀÇ µ¥ÀÌÅÍ¸¦ ÀÔ·Â ¹Þ¾Æ ¿ä¼Ú¼ö°¡ NÀÎ ¹è¿­¿¡ ¸¶Áö¸· N°³¸¦ ÀúÀå
+//ì›í•˜ëŠ” ê°¯ìˆ˜ì˜ ë°ì´í„°ë¥¼ ìž…ë ¥ ë°›ì•„ ìš”ì†Ÿìˆ˜ê°€ Nì¸ ë°°ì—´ì— ë§ˆì§€ë§‰ Nê°œë¥¼ ì €ìž¥
 
-//¸µ ¹öÆÛ È°¿ë Å¬·¡½º
+//ë§ ë²„í¼ í™œìš© í´ëž˜ìŠ¤
 class LastNElements {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		
-		final int N = 10;			//ÀúÀåÇÒ °¹¼ö¸¦ »ó¼ö·Î ¼±¾ðÇÔ.
-		int [] a = new int[N];		//NÀÇ Å©±â¸¸Å­ ¹è¿­ »ý¼º
-		int cnt = 0;				//ÀÔ·Â ¹ÞÀº ÃÑ µ¥ÀÌÅÍ °¹¼ö
-		int retry;					//Àç½Ãµµ
+		final int N = 10;			//ì €ìž¥í•  ê°¯ìˆ˜ë¥¼ ìƒìˆ˜ë¡œ ì„ ì–¸í•¨.
+		int [] a = new int[N];		//Nì˜ í¬ê¸°ë§Œí¼ ë°°ì—´ ìƒì„±
+		int cnt = 0;				//ìž…ë ¥ ë°›ì€ ì´ ë°ì´í„° ê°¯ìˆ˜
+		int retry;					//ìž¬ì‹œë„
 
-		System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”.");
 
-		do {	//do whlie ¹®À» ÀÌ¿ëÇÏ¿© ÃÖ¼Ò ÇÑ¹øÀÇ ½ÇÇàÀ» º¸ÀåÇÑ´Ù.
+		do {	//do whlie ë¬¸ì„ ì´ìš©í•˜ì—¬ ìµœì†Œ í•œë²ˆì˜ ì‹¤í–‰ì„ ë³´ìž¥í•œë‹¤.
 			
-			System.out.printf("%d¹øÂ° Á¤¼ö£º", cnt + 1);	//cntÀÇ ÃÊ±â ¼³Á¤Àº 0 ÀÌ¹Ç·Î Ã¹¹øÂ° Á¤¼öºÎÅÍ ½ÃÀÛµÊ.
-			a[cnt++ % N] = stdIn.nextInt();				//³ª¸ÓÁö ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¿© 10À» ³ª´« ³ª¸ÓÁö¿¡ ´ëÇÑ ¹øÁöÀÇ µ¥ÀÌÅÍ¸¦ Å°º¸µå·Î ÀÔ·Â¹ÞÀº ¼ýÀÚ·Î ¼³Á¤ÇÑ´Ù.
-			//¿¹¸¦ µé¾î Ã¹¹øÂ° ½ÃÇàÀÇ °æ¿ì a[0 % 10] Áï, a[0]ÀÇ °ªÀ» ÀÔ·Â¹ÞÀº ¼ö·Î ÀúÀåÇÏ°í cntÀÇ °ªÀ» 1 Áõ°¡½ÃÅ²´Ù.
-			// % 10 À» ÅëÇÏ¿© ¹Ýº¹ ½ÃÇà½Ã ¸¶´Ù 0~9¹øÁö¿¡ ´ëÇÑ µ¥ÀÌÅÍ¸¦ ¼³Á¤ÇÑ´Ù.
+			System.out.printf("%dë²ˆì§¸ ì •ìˆ˜ï¼š", cnt + 1);	//cntì˜ ì´ˆê¸° ì„¤ì •ì€ 0 ì´ë¯€ë¡œ ì²«ë²ˆì§¸ ì •ìˆ˜ë¶€í„° ì‹œìž‘ë¨.
+			a[cnt++ % N] = stdIn.nextInt();				//ë‚˜ë¨¸ì§€ ì—°ì‚°ìžë¥¼ ì´ìš©í•˜ì—¬ 10ì„ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ì— ëŒ€í•œ ë²ˆì§€ì˜ ë°ì´í„°ë¥¼ í‚¤ë³´ë“œë¡œ ìž…ë ¥ë°›ì€ ìˆ«ìžë¡œ ì„¤ì •í•œë‹¤.
+			//ì˜ˆë¥¼ ë“¤ì–´ ì²«ë²ˆì§¸ ì‹œí–‰ì˜ ê²½ìš° a[0 % 10] ì¦‰, a[0]ì˜ ê°’ì„ ìž…ë ¥ë°›ì€ ìˆ˜ë¡œ ì €ìž¥í•˜ê³  cntì˜ ê°’ì„ 1 ì¦ê°€ì‹œí‚¨ë‹¤.
+			// % 10 ì„ í†µí•˜ì—¬ ë°˜ë³µ ì‹œí–‰ì‹œ ë§ˆë‹¤ 0~9ë²ˆì§€ì— ëŒ€í•œ ë°ì´í„°ë¥¼ ì„¤ì •í•œë‹¤.
 
-			System.out.print("°è¼Ó ÇÒ±î¿ä? (¿¹.1£¯¾Æ´Ï¿À.0£©£º");
+			System.out.print("ê³„ì† í• ê¹Œìš”? (ì˜ˆ.1ï¼ì•„ë‹ˆì˜¤.0ï¼‰ï¼š");
 			retry = stdIn.nextInt();
 		} while (retry == 1);
 		
-		//Ãâ·Â¿ë ·ÎÁ÷
+		//ì¶œë ¥ìš© ë¡œì§
 		int i = cnt - N;
 		if (i < 0) i = 0;
 
 		for ( ; i < cnt; i++)
-			System.out.printf("%2d¹øÂ°ÀÇ Á¤¼ö £½ %d\n", i + 1, a[i % N]);
+			System.out.printf("%2dë²ˆì§¸ì˜ ì •ìˆ˜ ï¼ %d\n", i + 1, a[i % N]);
 	}
 }

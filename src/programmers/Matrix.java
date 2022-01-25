@@ -1,13 +1,13 @@
-package programmers;
+ï»¿package programmers;
 
 class Matrix {
 	private int [][] solution(int [][] arr1, int [][] arr2) {
 		int [][] answer = {};
-        answer = new int [arr1.length][arr1[0].length];	//ÀÎÀÚ·Î µé¾î¿Â ÂüÁ¶º¯¼ö°¡ °¡¸®Å°´Â 1Â÷¿ø ¹è¿­ÀÇ Å©±â¸¸Å­, ±× 1Â÷ ¹è¿­ÀÌ °¡¸®Å°´Â 2Â÷ ¹è¿­ÀÇ Å©±â¸¸Å­À¸·Î Å©±â Àç¼³Á¤
+        answer = new int [arr1.length][arr1[0].length];	//ì¸ìë¡œ ë“¤ì–´ì˜¨ ì°¸ì¡°ë³€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” 1ì°¨ì› ë°°ì—´ì˜ í¬ê¸°ë§Œí¼, ê·¸ 1ì°¨ ë°°ì—´ì´ ê°€ë¦¬í‚¤ëŠ” 2ì°¨ ë°°ì—´ì˜ í¬ê¸°ë§Œí¼ìœ¼ë¡œ í¬ê¸° ì¬ì„¤ì •
         
         for(int i = 0; i <arr1.length; i++) {
         	for(int j = 0; j < arr1[0].length; j++) {
-        		answer[i][j] = arr1[i][j] + arr2[i][j];	//Á¤´äÀÇ ÇØ´ç ¹øÁö¿¡ ÀÔ·Â¹ŞÀº ¹è¿­ÀÇ ¼ıÀÚ¸¦ ´õÇÏ¿© ÀúÀåÇÔ
+        		answer[i][j] = arr1[i][j] + arr2[i][j];	//ì •ë‹µì˜ í•´ë‹¹ ë²ˆì§€ì— ì…ë ¥ë°›ì€ ë°°ì—´ì˜ ìˆ«ìë¥¼ ë”í•˜ì—¬ ì €ì¥í•¨
         	}
         }
         

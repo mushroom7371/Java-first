@@ -1,17 +1,17 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.lang.reflect.GenericSignatureFormatError;
 
 public class GenericClassTester {
 	
-	static class GenericClass<T>{	//static Å¬·¡½º·Î ¼±¾ğÇÏ¿© ¸Ş¸ğ¸®¿¡ ÀûÀç µÉ¶§ ¼±¾ğµÈ´Ù.
+	static class GenericClass<T>{	//static í´ë˜ìŠ¤ë¡œ ì„ ì–¸í•˜ì—¬ ë©”ëª¨ë¦¬ì— ì ì¬ ë ë•Œ ì„ ì–¸ëœë‹¤.
 		
-		private T xyz;	//private Á¦¾îÀÚ·Î ÇöÀç Å¬·¡½º¿¡¼­¸¸ »ç¿ë °¡´ÉÇÏµµ·Ï ÇÔ
+		private T xyz;	//private ì œì–´ìë¡œ í˜„ì¬ í´ë˜ìŠ¤ì—ì„œë§Œ ì‚¬ìš© ê°€ëŠ¥í•˜ë„ë¡ í•¨
 		GenericClass(T t){
-			this.xyz = t;	//»ı¼ºÀÚ¸¦ ÅëÇØ ¸Å°³º¯¼ö·Î ¹ŞÀº °ªÀ» º¯¼ö·Î ÁöÁ¤ÇÑ´Ù.
+			this.xyz = t;	//ìƒì„±ìë¥¼ í†µí•´ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ê°’ì„ ë³€ìˆ˜ë¡œ ì§€ì •í•œë‹¤.
 		}
 		
-		T getXyz() {	//get ¸Ş¼­µå¸¦ ÅëÇÏ¿© ´Ù¸¥ °÷¿¡¼­ °ªÀ» ÀĞÀ» ¼ö ÀÖµµ·Ï ÇÔ
+		T getXyz() {	//get ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ë‹¤ë¥¸ ê³³ì—ì„œ ê°’ì„ ì½ì„ ìˆ˜ ìˆë„ë¡ í•¨
 			return xyz;
 		}
 		
@@ -22,7 +22,7 @@ public class GenericClassTester {
 		GenericClass<String> s = new GenericClass<String>("ABC");
 		GenericClass<Integer> n = new GenericClass<Integer>(15);
 		
-		System.out.println(s.getXyz());	//°´Ã¼¸¦ »ı¼ºÇÒ¶§ Á¦³Ê¸¯À¸·Î ¼³Á¤ÇÑ Å¸ÀÔ¸¸ ÀúÀåÇÒ ¼ö ÀÖµµ·Ï ÇÏ¿´°í, ¸Ş¼­µå¸¦ ÅëÇÏ¿© °ªÀ» ºÒ¾î¿Ã ¼ö ÀÖµµ·Ï ÇÏ¿´´Ù.
+		System.out.println(s.getXyz());	//ê°ì²´ë¥¼ ìƒì„±í• ë•Œ ì œë„ˆë¦­ìœ¼ë¡œ ì„¤ì •í•œ íƒ€ì…ë§Œ ì €ì¥í•  ìˆ˜ ìˆë„ë¡ í•˜ì˜€ê³ , ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ê°’ì„ ë¶ˆì–´ì˜¬ ìˆ˜ ìˆë„ë¡ í•˜ì˜€ë‹¤.
 		System.out.println(n.getXyz());
 	}
 	

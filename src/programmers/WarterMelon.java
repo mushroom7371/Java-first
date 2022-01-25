@@ -1,17 +1,17 @@
-package programmers;
+ï»¿package programmers;
 
-//¼ö¹Ú¼ö¹Ú¼ö¹Ú¼ö
+//ìˆ˜ë°•ìˆ˜ë°•ìˆ˜ë°•ìˆ˜
 class WarterMelon {
 	private String solution(int n) {
 		String answer = "";
 		
-		for(int i = 0; i < n; i++) {	//ÀÎÀÚ°ªÀ¸·Î ¹ÞÀº Á¤¼ö ±îÁö 1¾¿ Áõ°¡ÇÏ¸é¼­ ¹Ýº¹
-			if(i % 2 == 0) {	//Â¦¼öÀÇ °æ¿ì
-				answer = answer + "¼ö";	//answer ¿¡ "¼ö" ¸¦ ´õÇÑ´Ù.
+		for(int i = 0; i < n; i++) {	//ì¸ìžê°’ìœ¼ë¡œ ë°›ì€ ì •ìˆ˜ ê¹Œì§€ 1ì”© ì¦ê°€í•˜ë©´ì„œ ë°˜ë³µ
+			if(i % 2 == 0) {	//ì§ìˆ˜ì˜ ê²½ìš°
+				answer = answer + "ìˆ˜";	//answer ì— "ìˆ˜" ë¥¼ ë”í•œë‹¤.
 			}
 			
-			if(i % 2 == 1) {	//È¦¼öÀÏ °æ¿ì
-				answer = answer + "¹Ú";	//answer ¿¡ "¹Ú" À» ´õÇÑ´Ù.
+			if(i % 2 == 1) {	//í™€ìˆ˜ì¼ ê²½ìš°
+				answer = answer + "ë°•";	//answer ì— "ë°•" ì„ ë”í•œë‹¤.
 			}
 		}
 		

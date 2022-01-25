@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -7,23 +7,23 @@ import java.util.Map;
 class HashMapEx4 {
 	public static void main(String[] args) {
 		String [] data = {"A", "K", "A", "K", "D", "K", "A", "K", "K", "K", "Z", "D"};
-		//String Å¸ÀÔÀÇ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ´Â ¹è¿­À» »ı¼ºÇÏ°í ÂüÁ¶º¯¼ö¿¡ ÁÖ¼Ò°ªÀ» ´ã¾Ò´Ù.
+		//String íƒ€ì…ì˜ ë°ì´í„°ë¥¼ ì €ì¥í•˜ëŠ” ë°°ì—´ì„ ìƒì„±í•˜ê³  ì°¸ì¡°ë³€ìˆ˜ì— ì£¼ì†Œê°’ì„ ë‹´ì•˜ë‹¤.
 		
 		HashMap map = new HashMap();
-		//HashMap °´Ã¼¸¦ »ı¼º
+		//HashMap ê°ì²´ë¥¼ ìƒì„±
 		
-		for(int i = 0; i < data.length; i++) {	//ÂüÁ¶º¯¼ö data°¡ °¡¸®Å°´Â ¹è¿­ÀÇ ±æÀÌ¸¸Å­ ¹İº¹
-			if(map.containsKey(data[i])) {	//HashMap°´Ã¼°¡ data°¡ °¡¸®Å°´Â ¹è¿­ÀÇ °¢¹øÁö¼öÀÇ µ¥ÀÌÅÍ¸¦ °¡Áö°í ÀÖ´Ù¸é
-				Integer value = (Integer)map.get(data[i]);	//HashMap°´Ã¼°¡ °¡Áö°íÀÖ´Â ÇØ´ç µ¥ÀÌÅÍ¸¦ ¾ò¾î¿Í¼­ Çüº¯È¯À» ÅëÇØ Å¸ÀÔÀ» ÀÏÄ¡ ½ÃÅ² ÈÄ, º¯¼ö value¿¡ ±× °ªÀ» ÀúÀåÇÑ´Ù.
-				map.put(data[i], new Integer(value.intValue() + 1));	//HashMap°´Ã¼¿¡ ÇØ´ç µ¥ÀÌÅÍÀÇ °ªÀÇ value¸¦ 1Áõ°¡ ½ÃÅ² ÈÄ ÀúÀåÇÑ´Ù.
+		for(int i = 0; i < data.length; i++) {	//ì°¸ì¡°ë³€ìˆ˜ dataê°€ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì˜ ê¸¸ì´ë§Œí¼ ë°˜ë³µ
+			if(map.containsKey(data[i])) {	//HashMapê°ì²´ê°€ dataê°€ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì˜ ê°ë²ˆì§€ìˆ˜ì˜ ë°ì´í„°ë¥¼ ê°€ì§€ê³  ìˆë‹¤ë©´
+				Integer value = (Integer)map.get(data[i]);	//HashMapê°ì²´ê°€ ê°€ì§€ê³ ìˆëŠ” í•´ë‹¹ ë°ì´í„°ë¥¼ ì–»ì–´ì™€ì„œ í˜•ë³€í™˜ì„ í†µí•´ íƒ€ì…ì„ ì¼ì¹˜ ì‹œí‚¨ í›„, ë³€ìˆ˜ valueì— ê·¸ ê°’ì„ ì €ì¥í•œë‹¤.
+				map.put(data[i], new Integer(value.intValue() + 1));	//HashMapê°ì²´ì— í•´ë‹¹ ë°ì´í„°ì˜ ê°’ì˜ valueë¥¼ 1ì¦ê°€ ì‹œí‚¨ í›„ ì €ì¥í•œë‹¤.
 			}else {
-				map.put(data[i], new Integer(1));	//°¡Áö°í ÀÖÁö ¾Ê´Ù¸é 1·Î ÁöÁ¤ÇÑ´Ù.
+				map.put(data[i], new Integer(1));	//ê°€ì§€ê³  ìˆì§€ ì•Šë‹¤ë©´ 1ë¡œ ì§€ì •í•œë‹¤.
 			}
 		}
 		
-		Iterator it = map.entrySet().iterator();	//HashMapÀÇ µ¥ÀÌÅÍ¸¦ ÀĞ¾î¿À±âÀ§ÇÑ ÁØºñ.
+		Iterator it = map.entrySet().iterator();	//HashMapì˜ ë°ì´í„°ë¥¼ ì½ì–´ì˜¤ê¸°ìœ„í•œ ì¤€ë¹„.
 		
-		while(it.hasNext()){	//ÇÏ´ÜÀÇ ¸Ş¼­µå¸¦ ÅëÇÏ¿© Ãâ·ÂÀ» ½Ç½ÃÇÑ´Ù.
+		while(it.hasNext()){	//í•˜ë‹¨ì˜ ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ì¶œë ¥ì„ ì‹¤ì‹œí•œë‹¤.
 			Map.Entry entry = (Map.Entry)it.next();
 			int value = ((Integer)entry.getValue()).intValue();
 			System.out.println(entry.getKey() + " : " + printBar('#', value) + " " + value);
@@ -31,7 +31,7 @@ class HashMapEx4 {
 		}
 	}
 	
-	public static String printBar(char ch, int value) {	//±×·¡ÇÁ Çü½ÄÀ¸·Î Ãâ·ÂÇÏ±â À§ÇÑ ¸Ş¼­µå
+	public static String printBar(char ch, int value) {	//ê·¸ë˜í”„ í˜•ì‹ìœ¼ë¡œ ì¶œë ¥í•˜ê¸° ìœ„í•œ ë©”ì„œë“œ
 		char[] bar = new char[value];
 		
 		for(int i = 0; i < bar.length; i++)

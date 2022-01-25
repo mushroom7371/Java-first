@@ -1,4 +1,4 @@
-package ch04;
+ï»¿package ch04;
 
 import java.util.Scanner;
 
@@ -10,16 +10,16 @@ public class FlowEx13 {
 		Scanner scanner = new Scanner(System.in);
 		
 		do {
-			System.out.print("1°ú 100»çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.>");
+			System.out.print("1ê³¼ 100ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.>");
 			input = scanner.nextInt();
 			
 			if(input > answer) {
-				System.out.println("´õ ÀÛÀº ¼ö·Î ´Ù½Ã ½ÃµµÇØº¸¼¼¿ä.");
+				System.out.println("ë” ì‘ì€ ìˆ˜ë¡œ ë‹¤ì‹œ ì‹œë„í•´ë³´ì„¸ìš”.");
 			} else if(input < answer)	{
-				System.out.println("´õ Å« ¼ö·Î ´Ù½Ã ½ÃµµÇØÇØº¸¼¼¿ä.");
+				System.out.println("ë” í° ìˆ˜ë¡œ ë‹¤ì‹œ ì‹œë„í•´í•´ë³´ì„¸ìš”.");
 			}
 			} while(input!=answer);
-		System.out.println("Á¤´äÀÔ´Ï´Ù.");
+		System.out.println("ì •ë‹µì…ë‹ˆë‹¤.");
 		}
 
 	}

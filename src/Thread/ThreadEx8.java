@@ -1,33 +1,33 @@
-package Thread;
+ï»¿package Thread;
 
 class ThreadEx8 {
 	public static void main(String args[]) {
-		ThreadEx8_1 th1 = new ThreadEx8_1();	//ThreadEx8_1Å¬·¡½º·Î ºÎÅÍ °´Ã¼¸¦ »ı¼ºÇÑ ÈÄ ThreadEx8_1 Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö th1¿¡ ÁÖ¼Ò°ªÀ» ÀúÀåÇÔ
-		ThreadEx8_2 th2 = new ThreadEx8_2();	//ThreadEx8_2Å¬·¡½º·Î ºÎÅÍ °´Ã¼¸¦ »ı¼ºÇÑ ÈÄ ThreadEx8_2 Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö th1¿¡ ÁÖ¼Ò°ªÀ» ÀúÀåÇÔ
+		ThreadEx8_1 th1 = new ThreadEx8_1();	//ThreadEx8_1í´ë˜ìŠ¤ë¡œ ë¶€í„° ê°ì²´ë¥¼ ìƒì„±í•œ í›„ ThreadEx8_1 íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ th1ì— ì£¼ì†Œê°’ì„ ì €ì¥í•¨
+		ThreadEx8_2 th2 = new ThreadEx8_2();	//ThreadEx8_2í´ë˜ìŠ¤ë¡œ ë¶€í„° ê°ì²´ë¥¼ ìƒì„±í•œ í›„ ThreadEx8_2 íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ th1ì— ì£¼ì†Œê°’ì„ ì €ì¥í•¨
 
-		th2.setPriority(7);	//th2°¡ °¡¸®Å°´Â ÀÎ½ºÅÏ½ºÀÇ ¿ì¼±¼øÀ§¸¦ 1~10±îÁö Áß 7·Î ¼³Á¤ÇÑ´Ù.
+		th2.setPriority(7);	//th2ê°€ ê°€ë¦¬í‚¤ëŠ” ì¸ìŠ¤í„´ìŠ¤ì˜ ìš°ì„ ìˆœìœ„ë¥¼ 1~10ê¹Œì§€ ì¤‘ 7ë¡œ ì„¤ì •í•œë‹¤.
 
-		System.out.println("Priority of th1(-) : " + th1.getPriority() );	//setPriority() ¸Ş¼­µå¸¦ ¼³Á¤ÇÏÁö ¾ÊÀ»½Ã ±âº»°ªÀ¸·Î 5¸¦ °¡Áø´Ù.
+		System.out.println("Priority of th1(-) : " + th1.getPriority() );	//setPriority() ë©”ì„œë“œë¥¼ ì„¤ì •í•˜ì§€ ì•Šì„ì‹œ ê¸°ë³¸ê°’ìœ¼ë¡œ 5ë¥¼ ê°€ì§„ë‹¤.
 		System.out.println("Priority of th2(|) : " + th2.getPriority() );
 		th1.start();
-		th2.start();	//¿ì¼± ¼øÀ§°¡ ³·±â¶§¹®¿¡ th2.start()°¡ ´õ ¸¹Àº ÀÛ¾÷½Ã°£À» °¡Áö°Ô µÈ´Ù.
+		th2.start();	//ìš°ì„  ìˆœìœ„ê°€ ë‚®ê¸°ë•Œë¬¸ì— th2.start()ê°€ ë” ë§ì€ ì‘ì—…ì‹œê°„ì„ ê°€ì§€ê²Œ ëœë‹¤.
 	}
 }
 
-class ThreadEx8_1 extends Thread {	//Thread Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â ThreadEx8_1À» »ı¼º
-	public void run() {	//Thread Å¬·¡½ºÀÇ run()¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿´´Ù
+class ThreadEx8_1 extends Thread {	//Thread í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” ThreadEx8_1ì„ ìƒì„±
+	public void run() {	//Thread í´ë˜ìŠ¤ì˜ run()ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì˜€ë‹¤
 		for(int i=0; i < 300; i++) {
-			System.out.print("-");	//¹İº¹ Ãâ·Â¹®
-			for(int x=0; x < 10000000; x++);	//ÀÛ¾÷½Ã°£À» Áö¿¬½ÃÅ°±âÀ§ÇÑ for¹®
+			System.out.print("-");	//ë°˜ë³µ ì¶œë ¥ë¬¸
+			for(int x=0; x < 10000000; x++);	//ì‘ì—…ì‹œê°„ì„ ì§€ì—°ì‹œí‚¤ê¸°ìœ„í•œ forë¬¸
 		}
 	}
 }
 
-class ThreadEx8_2 extends Thread {	//Thread Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â ThreadEx8_2À» »ı¼º
-	public void run() {	//Thread Å¬·¡½ºÀÇ run()¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿´´Ù
+class ThreadEx8_2 extends Thread {	//Thread í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” ThreadEx8_2ì„ ìƒì„±
+	public void run() {	//Thread í´ë˜ìŠ¤ì˜ run()ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì˜€ë‹¤
 		for(int i=0; i < 300; i++) {
-			System.out.print("|");	//¹İº¹ Ãâ·Â¹®
-			for(int x=0; x < 10000000; x++);	//ÀÛ¾÷½Ã°£À» Áö¿¬½ÃÅ°±âÀ§ÇÑ for¹®
+			System.out.print("|");	//ë°˜ë³µ ì¶œë ¥ë¬¸
+			for(int x=0; x < 10000000; x++);	//ì‘ì—…ì‹œê°„ì„ ì§€ì—°ì‹œí‚¤ê¸°ìœ„í•œ forë¬¸
 		}
 	}
 }

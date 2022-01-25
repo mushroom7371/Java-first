@@ -1,22 +1,22 @@
-package certificate;
+ï»¿package certificate;
 
 class Section059_99 {
-	//±¸±¸´Ü do while¹®	(¹Ýº¹ È½¼ö¸¦ ¾Ë°íÀÖ´Âµ¥ while¹®À» ¾µ ÀÌÀ¯°¡ ÀÖ³ª ½Í´Ù.)
+	//êµ¬êµ¬ë‹¨ do whileë¬¸	(ë°˜ë³µ íšŸìˆ˜ë¥¼ ì•Œê³ ìžˆëŠ”ë° whileë¬¸ì„ ì“¸ ì´ìœ ê°€ ìžˆë‚˜ ì‹¶ë‹¤.)
 	public static void main(String[] args) {
-		int b, c, i;	//b = ±âÁØÀÌ µÇ´Â ¼ýÀÚ, c = °öÇØÁú ¼ýÀÚ, i = ¹è¿­ÀÇ À§Ä¡
-		int [] a = new int[9];	//°ö¼À °á°ú°¡ ÀúÀåµÉ ¹è¿­
-		System.out.printf("****±¸±¸´Ü****\n");
+		int b, c, i;	//b = ê¸°ì¤€ì´ ë˜ëŠ” ìˆ«ìž, c = ê³±í•´ì§ˆ ìˆ«ìž, i = ë°°ì—´ì˜ ìœ„ì¹˜
+		int [] a = new int[9];	//ê³±ì…ˆ ê²°ê³¼ê°€ ì €ìž¥ë  ë°°ì—´
+		System.out.printf("****êµ¬êµ¬ë‹¨****\n");
 		b = 0;
-		do {	//¹«Á¶°Ç ÇÑ¹ø ½ÇÇàµÇµµ·Ï ÇÔ.
-			b++;	//±âÁØ ´ÜÀ» 0À¸·Î ÃÊ±âÈ­ ÇÏ¿´±â¿¡ ++¿¬»êÀÚ·Î 1ºÎÅÍ ½ÃÀÛÇÏµµ·Ï ¼³Á¤
-			c = 0;	//°öÇØÁú ¼ýÀÚ´Â ÇÏ´ÜÀÇ ¹Ýº¹À¸·Î 1ºÎÅÍ ½ÃÀÛµÉ ¿¹Á¤
+		do {	//ë¬´ì¡°ê±´ í•œë²ˆ ì‹¤í–‰ë˜ë„ë¡ í•¨.
+			b++;	//ê¸°ì¤€ ë‹¨ì„ 0ìœ¼ë¡œ ì´ˆê¸°í™” í•˜ì˜€ê¸°ì— ++ì—°ì‚°ìžë¡œ 1ë¶€í„° ì‹œìž‘í•˜ë„ë¡ ì„¤ì •
+			c = 0;	//ê³±í•´ì§ˆ ìˆ«ìžëŠ” í•˜ë‹¨ì˜ ë°˜ë³µìœ¼ë¡œ 1ë¶€í„° ì‹œìž‘ë  ì˜ˆì •
 			do {
 				c++;
-				a[c - 1] = b*c;	//¹è¿­¿¡ ÀúÀåµÉ À§Ä¡´Â 0¹øÁöºÎÅÍ ½ÃÀÛÀÌ¹Ç·Î c¿¡¼­ 1ÀÌÀüÀÇ ¼ýÀÚ°¡ µÈ´Ù
-			} while (c < 9);	//°öÇÒ ¼ýÀÚ´Â 9±îÁöÀÌ¹Ç·Î Á¶°ÇÀÌ ¸¸Á·ÇÒ¶§ ±îÁö ¹Ýº¹
-			for (i = 1; i <= 9; i++)	//Ãâ·ÂÀ» À§ÇÑ ¹Ýº¹¹®
+				a[c - 1] = b*c;	//ë°°ì—´ì— ì €ìž¥ë  ìœ„ì¹˜ëŠ” 0ë²ˆì§€ë¶€í„° ì‹œìž‘ì´ë¯€ë¡œ cì—ì„œ 1ì´ì „ì˜ ìˆ«ìžê°€ ëœë‹¤
+			} while (c < 9);	//ê³±í•  ìˆ«ìžëŠ” 9ê¹Œì§€ì´ë¯€ë¡œ ì¡°ê±´ì´ ë§Œì¡±í• ë•Œ ê¹Œì§€ ë°˜ë³µ
+			for (i = 1; i <= 9; i++)	//ì¶œë ¥ì„ ìœ„í•œ ë°˜ë³µë¬¸
 				System.out.printf("%dX%d=%d\n", b, i, a[i - 1]);
-		} while (b < 9);	//±âÁØ ´Ü ¶ÇÇÑ 9±îÁö
+		} while (b < 9);	//ê¸°ì¤€ ë‹¨ ë˜í•œ 9ê¹Œì§€
 
 	}
 

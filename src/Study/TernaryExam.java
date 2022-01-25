@@ -1,17 +1,17 @@
-package Study;
+ï»¿package Study;
 
-import java.util.Calendar;	//ÀÚ¹Ù À¯Æ¿ÀÇ Ä¶¸°´õ Å¬·¡½º¸¦ ¾µ¼öÀÖ°Ô ¹Ş¾Æ¿È?
+import java.util.Calendar;	//ìë°” ìœ í‹¸ì˜ ìº˜ë¦°ë” í´ë˜ìŠ¤ë¥¼ ì“¸ìˆ˜ìˆê²Œ ë°›ì•„ì˜´?
 
 public class TernaryExam {
 	public static void main(String [] args) {
 		int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-		//Á¤¼öÇü º¯¼ö¸¦ ¼±¾ğÇÏ°í Calendar ÀÎ½ºÅÏ½º?ÀÇ getIntance()¸Ş¼­µå¸¦ È£ÃâÇÏ°í,
-		//get()¸Ş¼­µå¿¡ ¸Å°³º¯¼ö·Î CalendarÀÎ½ºÅÏ½ºÀÇ HOUR_OF_DAY¸¦ ´ëÀÔÇÑ´Ù?
+		//ì •ìˆ˜í˜• ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  Calendar ì¸ìŠ¤í„´ìŠ¤?ì˜ getIntance()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ê³ ,
+		//get()ë©”ì„œë“œì— ë§¤ê°œë³€ìˆ˜ë¡œ Calendarì¸ìŠ¤í„´ìŠ¤ì˜ HOUR_OF_DAYë¥¼ ëŒ€ì…í•œë‹¤?
 		
-		String ampm;	//¹®ÀÚ¿­ Å¸ÀÔÀÇ º¯¼ö¸¦ ¼±¾ğ
+		String ampm;	//ë¬¸ìì—´ íƒ€ì…ì˜ ë³€ìˆ˜ë¥¼ ì„ ì–¸
 		
-		ampm = hour < 12 ? "¿ÀÀü" : "¿ÀÈÄ";	//¹®ÀÚ¿­ Å¸ÀÔº¯¼ö¿¡ »ïÇ×¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¿© °ªÀ» ÀúÀå
+		ampm = hour < 12 ? "ì˜¤ì „" : "ì˜¤í›„";	//ë¬¸ìì—´ íƒ€ì…ë³€ìˆ˜ì— ì‚¼í•­ì—°ì‚°ìë¥¼ ì´ìš©í•˜ì—¬ ê°’ì„ ì €ì¥
 		
-		System.out.println("ÇöÀç ½Ã°¢Àº "+ hour + " ½Ã ÀÌ¸ç " + ampm +" ÀÔ´Ï´Ù.");	//Ãâ·Â
+		System.out.println("í˜„ì¬ ì‹œê°ì€ "+ hour + " ì‹œ ì´ë©° " + ampm +" ì…ë‹ˆë‹¤.");	//ì¶œë ¥
 	}
 }

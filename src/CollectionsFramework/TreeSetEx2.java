@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.TreeSet;
 
@@ -6,18 +6,18 @@ public class TreeSetEx2 {
 
 	public static void main(String[] args) {
 		TreeSet set = new TreeSet();
-		int [] score = {80, 95, 50, 35, 45, 65, 10, 100};	//int Å¸ÀÔÀÇ °ªÀ» ÀúÀåÇÏ´Â ¹è¿­À» ¼±¾ğÇÔ°ú µ¿½Ã¿¡ ÃÊ±âÈ­
+		int [] score = {80, 95, 50, 35, 45, 65, 10, 100};	//int íƒ€ì…ì˜ ê°’ì„ ì €ì¥í•˜ëŠ” ë°°ì—´ì„ ì„ ì–¸í•¨ê³¼ ë™ì‹œì— ì´ˆê¸°í™”
 		
-		for(int i = 0; i < score.length; i++) {	//¹øÁö¼ö°¡ ±æÀÌº¸´Ù ÀÛÀ»¶§ ±îÁö ¹İº¹
-			set.add(new Integer(score[i]));	//score[i]°¡ ¸Å°³º¯¼ö·Î ´ã±â´Â ÀÌÀ¯´Â ¹øÁö¼öÀÇ ¼ıÀÚ¸¦ °´Ã¤·Î ¸¸µé¾î¼­ set¿¡ ÀúÀåÇÏ±â À§ÇÔÀÓ
-			//Integer(score[i])°´Ã¼·Î °ªÀÌ ¼ø¼­¾øÀÌ ÀúÀåµÇ´Â °Í °°¾Æ º¸ÀÌÁö¸¸, TreeSetÀº ÀÚµ¿À¸·Î ºÎ¸ğ,ÀÚ½Ä ³ëµå¸¦ »ı¼ºÇÏ¿© ¼ø¼­¿¡ ¸Â°Ô ÀúÀåÇÑ´Ù.
+		for(int i = 0; i < score.length; i++) {	//ë²ˆì§€ìˆ˜ê°€ ê¸¸ì´ë³´ë‹¤ ì‘ì„ë•Œ ê¹Œì§€ ë°˜ë³µ
+			set.add(new Integer(score[i]));	//score[i]ê°€ ë§¤ê°œë³€ìˆ˜ë¡œ ë‹´ê¸°ëŠ” ì´ìœ ëŠ” ë²ˆì§€ìˆ˜ì˜ ìˆ«ìë¥¼ ê°ì±„ë¡œ ë§Œë“¤ì–´ì„œ setì— ì €ì¥í•˜ê¸° ìœ„í•¨ì„
+			//Integer(score[i])ê°ì²´ë¡œ ê°’ì´ ìˆœì„œì—†ì´ ì €ì¥ë˜ëŠ” ê²ƒ ê°™ì•„ ë³´ì´ì§€ë§Œ, TreeSetì€ ìë™ìœ¼ë¡œ ë¶€ëª¨,ìì‹ ë…¸ë“œë¥¼ ìƒì„±í•˜ì—¬ ìˆœì„œì— ë§ê²Œ ì €ì¥í•œë‹¤.
 		}
 		
-		System.out.println("set = " + set.toString());	//À§ÀÇ add()¸Ş¼­µå·Î µ¥ÀÌÅÍ°¡ ÀúÀåµÉ¶§ ÀÚµ¿À¸·Î Á¤·ÄÀÌ ÁøÇàµÇ´Â ¸ğ½ÀÀ» ¾Ë ¼ö ÀÖ´Ù.
+		System.out.println("set = " + set.toString());	//ìœ„ì˜ add()ë©”ì„œë“œë¡œ ë°ì´í„°ê°€ ì €ì¥ë ë•Œ ìë™ìœ¼ë¡œ ì •ë ¬ì´ ì§„í–‰ë˜ëŠ” ëª¨ìŠµì„ ì•Œ ìˆ˜ ìˆë‹¤.
 			
-		System.out.println("50 º¸´Ù ÀÛÀº°ª : " + set.headSet(new Integer(50)));
-		System.out.println("50 º¸´Ù Å«°ª : " + set.tailSet(new Integer(50)));
-		//set¿¡ ´ã±ä °¢°¢ÀÇ °´Ã¼µéÀ» headSet(),tailSet() ¸Ş¼­µå·Î ºñ±³ÇÏ¿© ±âÁØº¸´Ù ÀÛ°Å³ª Å« °ªµéÀ» Ãâ·ÂÇÒ¼öÀÖ´Ù.
+		System.out.println("50 ë³´ë‹¤ ì‘ì€ê°’ : " + set.headSet(new Integer(50)));
+		System.out.println("50 ë³´ë‹¤ í°ê°’ : " + set.tailSet(new Integer(50)));
+		//setì— ë‹´ê¸´ ê°ê°ì˜ ê°ì²´ë“¤ì„ headSet(),tailSet() ë©”ì„œë“œë¡œ ë¹„êµí•˜ì—¬ ê¸°ì¤€ë³´ë‹¤ ì‘ê±°ë‚˜ í° ê°’ë“¤ì„ ì¶œë ¥í• ìˆ˜ìˆë‹¤.
 	}
 
 }

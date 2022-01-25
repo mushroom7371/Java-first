@@ -1,22 +1,22 @@
-package programmers;
+ï»¿package programmers;
 
-//ºÎÁ·ÇÑ ±İ¾× °è»êÇÏ±â
+//ë¶€ì¡±í•œ ê¸ˆì•¡ ê³„ì‚°í•˜ê¸°
 class LackOfMoney {
 	private long solution(int price, int money, int count) {
         long answer = -1;
-        long realPrice = 0;	//N¹øÂ° ÀÌ¿ë ±İ¾×¿ï ÀúÀåÇÒ º¯¼ö
-        long moneys = 0;	//ÀÜ°í¸¦ ÀúÀåÇÒ º¯¼ö
+        long realPrice = 0;	//Në²ˆì§¸ ì´ìš© ê¸ˆì•¡ìš¸ ì €ì¥í•  ë³€ìˆ˜
+        long moneys = 0;	//ì”ê³ ë¥¼ ì €ì¥í•  ë³€ìˆ˜
         
-        for(int i = 1; i <= count; i++) {	//1ºÎÅÍ count±îÁö 1¾¿ Áõ°¡ÇÏ¸ç ¹İº¹
-        	realPrice += price*i;			//ÀÌ¿ë±İ¾× ´©Àû
+        for(int i = 1; i <= count; i++) {	//1ë¶€í„° countê¹Œì§€ 1ì”© ì¦ê°€í•˜ë©° ë°˜ë³µ
+        	realPrice += price*i;			//ì´ìš©ê¸ˆì•¡ ëˆ„ì 
         }
         
-        moneys = money - realPrice;	//ÀÜ°í °è»ê
+        moneys = money - realPrice;	//ì”ê³  ê³„ì‚°
         
-        if(moneys >= 0) {	//ÀÜ°í°¡ 0ÀÌ»óÀÌ¸é ±İ¾×ÀÌ ºÎÁ·ÇÏÁö ¾Ê´Ù.
+        if(moneys >= 0) {	//ì”ê³ ê°€ 0ì´ìƒì´ë©´ ê¸ˆì•¡ì´ ë¶€ì¡±í•˜ì§€ ì•Šë‹¤.
         	return 0;
         }else {
-        	answer = Math.abs(moneys);	//À½¼ö¶ó¸é ÇØ´ç °ª¸¸Å­ ºÎÁ·ÇÔ ±İ¾×Àº Àı´ë°ªÀ¸·Î ¹İÈ¯
+        	answer = Math.abs(moneys);	//ìŒìˆ˜ë¼ë©´ í•´ë‹¹ ê°’ë§Œí¼ ë¶€ì¡±í•¨ ê¸ˆì•¡ì€ ì ˆëŒ€ê°’ìœ¼ë¡œ ë°˜í™˜
         	return answer;
         }
     }

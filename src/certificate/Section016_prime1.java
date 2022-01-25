@@ -1,11 +1,11 @@
-package certificate;
+ï»¿package certificate;
 
 import java.util.Scanner;
 
 class Section016_prime1 {
-	//³ª´©¾î ¶³¾îÁöÁö ¾ÊÀ»¶§ ¼Ò¼ö ±¸ÇÏ±â
+	//ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ì§€ ì•Šì„ë•Œ ì†Œìˆ˜ êµ¬í•˜ê¸°
 	public static void main(String[] args) {
-		System.out.println("¼Ò¼öÆÇº°±â... ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ½Ã¿À");
+		System.out.println("ì†Œìˆ˜íŒë³„ê¸°... ìˆ«ìë¥¼ ì…ë ¥í•˜ì‹œì˜¤");
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
 		int i = a - 1;
@@ -14,13 +14,13 @@ class Section016_prime1 {
 		while(true) {
 			if(j <= i) {
 				if(a % j == 0) {
-					System.out.println("¼Ò¼ö ¾Æ´Ô");
+					System.out.println("ì†Œìˆ˜ ì•„ë‹˜");
 					break;
 				}else {
 					j++;
 				}
 			}else {
-				System.out.println("¼Ò¼öÀÓ");
+				System.out.println("ì†Œìˆ˜ì„");
 				break;
 			}
 		}

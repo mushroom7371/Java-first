@@ -1,4 +1,4 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.HashMap;
 import java.util.Map.Entry;
@@ -7,18 +7,18 @@ class NotCompletionHash {
 	private String solution(String [] participant, String [] completion) {
 		String answer = "";
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
-		//Âü°¡ÀÚ, ¿ÏÁÖÀÚÀÇ Á¤º¸¸¦ ´ãÀ» HashMapÀ» ¼±¾ğÇÏ¿© ÁØ´Ù
+		//ì°¸ê°€ì, ì™„ì£¼ìì˜ ì •ë³´ë¥¼ ë‹´ì„ HashMapì„ ì„ ì–¸í•˜ì—¬ ì¤€ë‹¤
 		
-		//Âü°¡ÀÚ ¹è¿­ÀÇ ¸ğµç °ªÀ» ÇØ½Ã ¸Ê¿¡ ³Ö¾îÁØ´Ù.
+		//ì°¸ê°€ì ë°°ì—´ì˜ ëª¨ë“  ê°’ì„ í•´ì‹œ ë§µì— ë„£ì–´ì¤€ë‹¤.
 		for(String part : participant) {
-			//key = ¹®ÀÚ¿­, value = ÇöÀç ¸Ê¿¡ ÀúÀåµÈ ¹®ÀÚ¿­ÀÇ °¹¼ö +1
+			//key = ë¬¸ìì—´, value = í˜„ì¬ ë§µì— ì €ì¥ëœ ë¬¸ìì—´ì˜ ê°¯ìˆ˜ +1
 			map.put(part, map.getOrDefault(part, 0) + 1);
-			//getOrDefalut()´Â map¿¡¼­ Ã£´Â key°¡ ¾ø´Ù¸é defaultValue¸¦ ¸®ÅÏ
+			//getOrDefalut()ëŠ” mapì—ì„œ ì°¾ëŠ” keyê°€ ì—†ë‹¤ë©´ defaultValueë¥¼ ë¦¬í„´
 		}
 		
-		//¿ÏÁÖÀÚ ¹è¿­ÀÇ ¸ğµç °ªÀ» ÇØ½Ã ¸Ê¿¡ ³Ö¾îÁØ´Ù.
+		//ì™„ì£¼ì ë°°ì—´ì˜ ëª¨ë“  ê°’ì„ í•´ì‹œ ë§µì— ë„£ì–´ì¤€ë‹¤.
 		for(String comp : completion) {
-			//°°Àº ¹®ÀÚ¿­À» Ã£¾Æ valueÀÇ °ªÀ» -1
+			//ê°™ì€ ë¬¸ìì—´ì„ ì°¾ì•„ valueì˜ ê°’ì„ -1
 			map.put(comp, map.get(comp) -1);
 		}
 		
@@ -29,8 +29,8 @@ class NotCompletionHash {
 //			}
 //		}
 		
-		for (String key : map.keySet()) {	//¹İº¹¹®À» ÅëÇÏ¿© map¿¡ ´ã±è key °ªÀ» ¹İÈ¯ÇÑ´Ù.
-			if (map.get(key) != 0) {	//ÇØ´ç keyÀÇ value °ªÀÌ 0ÀÌ ¾Æ´Ï¸é ¿ÏÁÖÇÏÁö ¸øÇÑ ÀÎ¿øÀÌ´Ù.
+		for (String key : map.keySet()) {	//ë°˜ë³µë¬¸ì„ í†µí•˜ì—¬ mapì— ë‹´ê¹€ key ê°’ì„ ë°˜í™˜í•œë‹¤.
+			if (map.get(key) != 0) {	//í•´ë‹¹ keyì˜ value ê°’ì´ 0ì´ ì•„ë‹ˆë©´ ì™„ì£¼í•˜ì§€ ëª»í•œ ì¸ì›ì´ë‹¤.
 				answer = key;
 			}
 		}

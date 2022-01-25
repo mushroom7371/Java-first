@@ -1,17 +1,17 @@
-package ch03;
+ï»¿package ch03;
 
 public class Exercise3_1 {
 
 	/*
-	ÃâÁ¦ÀÏ : 20210204
-	³»¿ë : ¿¬½À¹®Á¦ Ç®ÀÌ
-	Á¦ÃâÀÚ : ¹ÚÁØÈ­
+	ì¶œì œì¼ : 20210204
+	ë‚´ìš© : ì—°ìŠµë¬¸ì œ í’€ì´
+	ì œì¶œì : ë°•ì¤€í™”
 	*/
 	
 	public static void main(String[] args) {
 		int x = 2;
 		int y = 5;
-		char c = 'A';	// "A'ÀÇ ¹®ÀÚÄÚµå´Â 65
+		char c = 'A';	// "A'ì˜ ë¬¸ìì½”ë“œëŠ” 65
 		
 		System.out.println(1 + x << 33);
 		System.out.println(y >=5 || x < 0 && x > 2);

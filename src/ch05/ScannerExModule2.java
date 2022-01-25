@@ -1,11 +1,11 @@
-package ch05;
+ï»¿package ch05;
 
-import java.util.*;    // Scanner¸¦ »ç¿ëÇÏ±â À§ÇØ Ãß°¡
-//String ÆÄ¶ó¸ÞÅÍ Á¦¾î¹æ¹ý
+import java.util.*;    // Scannerë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ ì¶”ê°€
+//String íŒŒë¼ë©”í„° ì œì–´ë°©ë²•
 class ScannerExModule2 { 
 	public static void main(String[] args) { 
-		String[] input= new String[1];//°´Ã¼¹è¿­
-		input[0]= new String();//°´Ã¼¹è¿­¿¡ ÀÎ½ºÅÏ½º ÁÖ¼Ò ´ëÀÔ
+		String[] input= new String[1];//ê°ì²´ë°°ì—´
+		input[0]= new String();//ê°ì²´ë°°ì—´ì— ì¸ìŠ¤í„´ìŠ¤ ì£¼ì†Œ ëŒ€ìž…
 		int num=0;	
 		num = inputMethod(input,num);
 		System.out.println("input="+input[0]+" num="+(num+1));
@@ -15,7 +15,7 @@ class ScannerExModule2 {
 	
 	static int inputMethod(String[] input, int num) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("µÎÀÚ¸® Á¤¼ö¸¦ ÇÏ³ª ÀÔ·ÂÇØÁÖ¼¼¿ä.>");
+		System.out.print("ë‘ìžë¦¬ ì •ìˆ˜ë¥¼ í•˜ë‚˜ ìž…ë ¥í•´ì£¼ì„¸ìš”.>");
 		input[0] = scanner.nextLine();
 		num = Integer.parseInt(input[0]);
 		return num;
@@ -24,7 +24,7 @@ class ScannerExModule2 {
 	
 	static void outputMethod(String input, int num) {
 		
-		System.out.println("ÀÔ·Â³»¿ë :"+ input);
+		System.out.println("ìž…ë ¥ë‚´ìš© :"+ input);
 		System.out.printf("num=%d%n", num);
 		
 	}

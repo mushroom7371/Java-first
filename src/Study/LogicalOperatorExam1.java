@@ -1,25 +1,25 @@
-package Study;
+ï»¿package Study;
 
 public class LogicalOperatorExam1 {
-	public boolean isAgeDiscountable(int age) {	//¸Å°³º¯¼ö·Î Á¤¼ö°ªÀ» °¡Áö°í ¹İÈ¯À» ³í¸®ÇüÀ¸·Î ¹Ş´Â ¸Ş¼­µå¸¦ ¼±¾ğ
-		boolean isDiscount = false; //³í¸®Çü º¯¼ö¸¦ ¼±¾ğÇÏ°í false·Î ÃÊ±âÈ­ ÇÑ´Ù
+	public boolean isAgeDiscountable(int age) {	//ë§¤ê°œë³€ìˆ˜ë¡œ ì •ìˆ˜ê°’ì„ ê°€ì§€ê³  ë°˜í™˜ì„ ë…¼ë¦¬í˜•ìœ¼ë¡œ ë°›ëŠ” ë©”ì„œë“œë¥¼ ì„ ì–¸
+		boolean isDiscount = false; //ë…¼ë¦¬í˜• ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  falseë¡œ ì´ˆê¸°í™” í•œë‹¤
 		
-		if(age<=19 || age>=60) {	//Á¶°Ç¹® ifÀÇ Á¶°Ç½Ä¿¡ ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¿© Á¶°Ç ÀÛ¼º
-			isDiscount = true;		//Á¶°ÇÀÌ trueÀÌ¸é º¯¼ö¸¦ true·Î º¯°æ
+		if(age<=19 || age>=60) {	//ì¡°ê±´ë¬¸ ifì˜ ì¡°ê±´ì‹ì— ì—°ì‚°ìë¥¼ ì´ìš©í•˜ì—¬ ì¡°ê±´ ì‘ì„±
+			isDiscount = true;		//ì¡°ê±´ì´ trueì´ë©´ ë³€ìˆ˜ë¥¼ trueë¡œ ë³€ê²½
 		}
 		else {
-			isDiscount = false;		//else¹®À¸·Î ifÁ¶°ÇÀÌ falseÀÏ¶§ º¯¼ö¸¦ false·Î º¯°æ
+			isDiscount = false;		//elseë¬¸ìœ¼ë¡œ ifì¡°ê±´ì´ falseì¼ë•Œ ë³€ìˆ˜ë¥¼ falseë¡œ ë³€ê²½
 		}
 		
-		return isDiscount;			//³í¸®Çü Å¸ÀÔÀÇ º¯¼ö¸¦ ¹İÈ¯ÇÑ´Ù
+		return isDiscount;			//ë…¼ë¦¬í˜• íƒ€ì…ì˜ ë³€ìˆ˜ë¥¼ ë°˜í™˜í•œë‹¤
 	}
 	
 	public static void main(String [] args) {
 		LogicalOperatorExam1 exam = new LogicalOperatorExam1();
-		//LogicalOperatorExam1 Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö examÀ» ¼±¾ğÇÏ°í
-		//LogicalOperatorExam1 Å¬·¡½º·ÎºÎÅÍ ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÏ¿© ÀÌ ÁÖ¼Ò°ªÀ» ÂüÁ¶º¯¼ö¿¡ ÀúÀåÇÑ´Ù
+		//LogicalOperatorExam1 íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ examì„ ì„ ì–¸í•˜ê³ 
+		//LogicalOperatorExam1 í´ë˜ìŠ¤ë¡œë¶€í„° ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ì—¬ ì´ ì£¼ì†Œê°’ì„ ì°¸ì¡°ë³€ìˆ˜ì— ì €ì¥í•œë‹¤
 		
-		exam.isAgeDiscountable(15);	//ÂüÁ¶º¯¼ö°¡ °¡¸®Å°´Â ÁÖ¼ÒÀÇ LogicalOperatorExam1 ÀÎ½ºÅÏ½º¿¡ ÀÖ´Â
-		exam.isAgeDiscountable(62); //isAgeDiscountable ¸Ş¼­µå¸¦ È£ÃâÇÏ°í Á¤¼ö°ªÀ» ¸Å°³º¯¼ö·Î ³Ö´Â´Ù
+		exam.isAgeDiscountable(15);	//ì°¸ì¡°ë³€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” ì£¼ì†Œì˜ LogicalOperatorExam1 ì¸ìŠ¤í„´ìŠ¤ì— ìˆëŠ”
+		exam.isAgeDiscountable(62); //isAgeDiscountable ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ê³  ì •ìˆ˜ê°’ì„ ë§¤ê°œë³€ìˆ˜ë¡œ ë„£ëŠ”ë‹¤
 	}
 }

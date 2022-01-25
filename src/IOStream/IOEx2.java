@@ -1,4 +1,4 @@
-package IOStream;
+ï»¿package IOStream;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -9,26 +9,26 @@ public class IOEx2 {
 		byte[] inSrc = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 		byte[] outSrc = null;
 		byte[] temp = new byte[10];
-		//byte Å¸ÀÔÀÇ ¹è¿­À» °¡¸®Å°´Â ÂüÁ¶º¯¼ö¸¦ °¢°¢ ¼±¾ğÇÏ°í {}, null, ±æÀÌ10ÀÇ ¹è¿­»ı¼º µîÀÇ ÁÖ¼Ò¸¦ °¡¸®Å°°Ô ÇÑ´Ù.
+		//byte íƒ€ì…ì˜ ë°°ì—´ì„ ê°€ë¦¬í‚¤ëŠ” ì°¸ì¡°ë³€ìˆ˜ë¥¼ ê°ê° ì„ ì–¸í•˜ê³  {}, null, ê¸¸ì´10ì˜ ë°°ì—´ìƒì„± ë“±ì˜ ì£¼ì†Œë¥¼ ê°€ë¦¬í‚¤ê²Œ í•œë‹¤.
 		
 		ByteArrayInputStream input = null;
 		ByteArrayOutputStream output = null;
-		//¹ÙÀÌÆ® ¹è¿­ÀÇ ÀÔÃâ·ÂÀ» ÇÏ´Âµ¥ »ç¿ëÇÏ´Â ½ºÆ®¸² Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í null·Î ÃÊ±âÈ­
+		//ë°”ì´íŠ¸ ë°°ì—´ì˜ ì…ì¶œë ¥ì„ í•˜ëŠ”ë° ì‚¬ìš©í•˜ëŠ” ìŠ¤íŠ¸ë¦¼ íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  nullë¡œ ì´ˆê¸°í™”
 		
 		input = new ByteArrayInputStream(inSrc);
 		output = new ByteArrayOutputStream();
-		//°¢°¢ °´Ã¼¸¦ »ı¼ºÇÏ°í ÇÏ³ª´Â ¸Å°³º¯¼ö·Î inSrc¸¦ ³Ñ°ÜÁØ´Ù.
+		//ê°ê° ê°ì²´ë¥¼ ìƒì„±í•˜ê³  í•˜ë‚˜ëŠ” ë§¤ê°œë³€ìˆ˜ë¡œ inSrcë¥¼ ë„˜ê²¨ì¤€ë‹¤.
 		
-		input.read(temp, 0, inSrc.length);	//inputÀÇ read()¸Ş¼­µå·Î temp°¡ °¡¸®Å°´Â ¹è¿­¿¡ ¼ø¼­´ë·Î, ¸Å°³º¯¼ö·Î ¹ŞÀº inSrcÀÇ 0¹øÁö µ¥ÀÌÅÍºÎÅÍ, inSrc¹è¿­ÀÇ ±æÀÌ¸¸Å­À» ÀúÀåÇÑ´Ù.
-		output.write(temp, 5, 5);	//outputÀÇ write()¸Ş¼­µå·Î outputÀÌ °¡¸®Å°´Â °´Ã¼¿¡ temp¹è¿­ÀÇ, 5¹øÂ° µ¥ÀÌÅÍºÎÅÍ, 5ÀÇ ±æÀÌ¸¸Å­ÀÇ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÑ´Ù.
+		input.read(temp, 0, inSrc.length);	//inputì˜ read()ë©”ì„œë“œë¡œ tempê°€ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì— ìˆœì„œëŒ€ë¡œ, ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ inSrcì˜ 0ë²ˆì§€ ë°ì´í„°ë¶€í„°, inSrcë°°ì—´ì˜ ê¸¸ì´ë§Œí¼ì„ ì €ì¥í•œë‹¤.
+		output.write(temp, 5, 5);	//outputì˜ write()ë©”ì„œë“œë¡œ outputì´ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì— tempë°°ì—´ì˜, 5ë²ˆì§¸ ë°ì´í„°ë¶€í„°, 5ì˜ ê¸¸ì´ë§Œí¼ì˜ ë°ì´í„°ë¥¼ ì €ì¥í•œë‹¤.
 		
 		outSrc = output.toByteArray();
-		//outSrc°¡ °¡¸®Å°´Â byte ¹è¿­¿¡ output ½ºÆ®¸²ÀÇ ³»¿ëÀ» ¹è¿­·Î ÀúÀåÇÑ´Ù.
+		//outSrcê°€ ê°€ë¦¬í‚¤ëŠ” byte ë°°ì—´ì— output ìŠ¤íŠ¸ë¦¼ì˜ ë‚´ìš©ì„ ë°°ì—´ë¡œ ì €ì¥í•œë‹¤.
 		
 		System.out.println("Input Source : " + Arrays.toString(inSrc));
 		System.out.println("temp : " + Arrays.toString(temp));
 		System.out.println("Output Source : " + Arrays.toString(outSrc));
-		//º¹»ç°¡ µÈ ÈÄÀÇ °á°ú¸¦ Ãâ·Â
+		//ë³µì‚¬ê°€ ëœ í›„ì˜ ê²°ê³¼ë¥¼ ì¶œë ¥
 		
 	}
 }

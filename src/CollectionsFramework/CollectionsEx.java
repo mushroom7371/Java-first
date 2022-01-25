@@ -1,6 +1,6 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
-import static java.util.Collections.*;	//ÄÃ·º¼Ç Å¬·¡½ºÀÇ ¸Ş¼­µå¸¦ »ç¿ëÇÏ±â À§ÇØ staticÀ¸·Î importÇÏ¿´´Ù.
+import static java.util.Collections.*;	//ì»¬ë ‰ì…˜ í´ë˜ìŠ¤ì˜ ë©”ì„œë“œë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ staticìœ¼ë¡œ importí•˜ì˜€ë‹¤.
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -8,46 +8,46 @@ import java.util.List;
 class CollectionsEx {
 	public static void main(String[] args) {
 		List list = new ArrayList();
-		System.out.println(list);	//¼±¾ğ¸¸ ÇÏ¿´À» ½Ã ¾Æ¹«°Íµµ ´ã±âÁö ¾ÊÀº »óÅÂ
+		System.out.println(list);	//ì„ ì–¸ë§Œ í•˜ì˜€ì„ ì‹œ ì•„ë¬´ê²ƒë„ ë‹´ê¸°ì§€ ì•Šì€ ìƒíƒœ
 		
-		addAll(list, 1,2,3,4,5);	//¾Õ¼­ importÇÑ Collections Å¬·¡½ºÀÇ ¸Ş¼­µå ÀÌÇÏ »ı·«
-		System.out.println(list);	//addAll() ¸Ş¼­µå·Î ÂüÁ¶º¯¼ö list°¡ °¡¸®Å°´Â ArrayList °´Ã¼¿¡ ³»¿ëÀÌ ´õÇØ Áø´Ù.
+		addAll(list, 1,2,3,4,5);	//ì•ì„œ importí•œ Collections í´ë˜ìŠ¤ì˜ ë©”ì„œë“œ ì´í•˜ ìƒëµ
+		System.out.println(list);	//addAll() ë©”ì„œë“œë¡œ ì°¸ì¡°ë³€ìˆ˜ listê°€ ê°€ë¦¬í‚¤ëŠ” ArrayList ê°ì²´ì— ë‚´ìš©ì´ ë”í•´ ì§„ë‹¤.
 		
-		rotate(list, 2);	//¿À¸¥ÂÊÀ¸·Î µÎÄ­¾¿ ÀÌµ¿
+		rotate(list, 2);	//ì˜¤ë¥¸ìª½ìœ¼ë¡œ ë‘ì¹¸ì”© ì´ë™
 		System.out.println(list);
 		
-		swap(list, 0, 2);	//0¹øÁö¿Í 2¹øÁöÀÇ °ªÀ» ¹Ù²Û´Ù.
+		swap(list, 0, 2);	//0ë²ˆì§€ì™€ 2ë²ˆì§€ì˜ ê°’ì„ ë°”ê¾¼ë‹¤.
 		System.out.println(list);
 		
-		shuffle(list);	//ÇØ´ç °´Ã¼ÀÇ ³»¿ëÀ» ¼¯´Â´Ù.
+		shuffle(list);	//í•´ë‹¹ ê°ì²´ì˜ ë‚´ìš©ì„ ì„ëŠ”ë‹¤.
 		System.out.println(list);
 		
-		sort(list);	//°´Ã¼ÀÇ ³»¿ëÀ» ¼øÂ÷ÀûÀ¸·Î Á¤·ÄÇÑ´Ù.
+		sort(list);	//ê°ì²´ì˜ ë‚´ìš©ì„ ìˆœì°¨ì ìœ¼ë¡œ ì •ë ¬í•œë‹¤.
 		System.out.println(list);
 		
-		sort(list, reverseOrder());	//¿ª¼øÀ¸·Î Á¤·ÄÇÑ´Ù.
+		sort(list, reverseOrder());	//ì—­ìˆœìœ¼ë¡œ ì •ë ¬í•œë‹¤.
 		System.out.println(list);
 		
-		int idx = binarySearch(list, 3);	//°´Ã¼³»ÀÇ ÇØ´ç µ¥ÀÌÅÍÀÇ ¹øÁö¼ö¸¦ Ã£¾Æ ¹İÈ¯ÇÑ´Ù.
+		int idx = binarySearch(list, 3);	//ê°ì²´ë‚´ì˜ í•´ë‹¹ ë°ì´í„°ì˜ ë²ˆì§€ìˆ˜ë¥¼ ì°¾ì•„ ë°˜í™˜í•œë‹¤.
 		System.out.println("index of 3 : " + idx);
 		
 		System.out.println("max = " + max(list));
 		System.out.println("min = " + min(list));
-		System.out.println("min = " + max(list, reverseOrder()));	//¹İ´ë·Î Á¤·ÄÇÑ »óÅÂ·Î max°ªÀ» Ã£°Ô µÇ¸é ´ç¿¬È÷ min°ªÀÌ ³ª¿Â´Ù.
+		System.out.println("min = " + max(list, reverseOrder()));	//ë°˜ëŒ€ë¡œ ì •ë ¬í•œ ìƒíƒœë¡œ maxê°’ì„ ì°¾ê²Œ ë˜ë©´ ë‹¹ì—°íˆ minê°’ì´ ë‚˜ì˜¨ë‹¤.
 		
-		fill(list, 9);	//°´Ã¼ÀÇ µ¥ÀÌÅÍ¸¦ 9·Î Ã¤¿î´Ù. ±âÁ¸ ¹è¿­ÀÇ ±æÀÌ´Â À¯ÁöµÈ´Ù.
+		fill(list, 9);	//ê°ì²´ì˜ ë°ì´í„°ë¥¼ 9ë¡œ ì±„ìš´ë‹¤. ê¸°ì¡´ ë°°ì—´ì˜ ê¸¸ì´ëŠ” ìœ ì§€ëœë‹¤.
 		System.out.println(list);
 		
-		List newList = nCopies(list.size(), 2);	//list¿Í °°Àº Å©±âÀÇ »õ·Î¿î list¸¦ »ı¼ºÇÏ°í ³»¿ëÀ» 2·Î Ã¤¿î´Ù.
+		List newList = nCopies(list.size(), 2);	//listì™€ ê°™ì€ í¬ê¸°ì˜ ìƒˆë¡œìš´ listë¥¼ ìƒì„±í•˜ê³  ë‚´ìš©ì„ 2ë¡œ ì±„ìš´ë‹¤.
 		System.out.println("newList = " + newList);
 		
-		System.out.println(disjoint(list, newList));	//µÎ ÂüÁ¶º¯¼ö°¡ °¡¸®Å°´Â °´Ã¼¿¡ °øÅë¿ä¼Ò°¡ ¾øÀ¸¸é true¸¦ ¹İÈ¯ÇÔ
+		System.out.println(disjoint(list, newList));	//ë‘ ì°¸ì¡°ë³€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì— ê³µí†µìš”ì†Œê°€ ì—†ìœ¼ë©´ trueë¥¼ ë°˜í™˜í•¨
 		
-		copy(list, newList);	//ÂüÁ¶º¯¼ö list¿¡ newList°¡ °¡¸®Å°´Â °´Ã¼¸¦ º¹»çÇÔ.
+		copy(list, newList);	//ì°¸ì¡°ë³€ìˆ˜ listì— newListê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ë¥¼ ë³µì‚¬í•¨.
 		System.out.println("newList = " + newList);
 		System.out.println("list = " + list);
 		
-		replaceAll(list, 2, 1);	//list°¡ °¡¸®Å°´Â °´Ã¼ÀÇ µ¥ÀÌÅÍ 2¸¦ ¸ğµÎ 1·Î ´ëÃ¼
+		replaceAll(list, 2, 1);	//listê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì˜ ë°ì´í„° 2ë¥¼ ëª¨ë‘ 1ë¡œ ëŒ€ì²´
 		System.out.println("list = " + list);
 		
 		Enumeration e = enumeration(list);

@@ -1,4 +1,4 @@
-package ch09;
+ï»¿package ch09;
 
 class StringMethod {
 
@@ -6,58 +6,58 @@ class StringMethod {
 		char [] c = {'h', 'e', 'l', 'l', 'o'};
 		String s = new String(c);
 		System.out.println(c);
-		//char Å¸ÀÔÀÇ ¹è¿­·Î ¹®ÀÚ¿­ ÀÎ½ºÅÏ½º¸¦ ¸¸µé ¼ö ÀÖ´Ù.
+		//char íƒ€ì…ì˜ ë°°ì—´ë¡œ ë¬¸ìì—´ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë§Œë“¤ ìˆ˜ ìˆë‹¤.
 		
 		char c1 = s.charAt(4);
 		System.out.println(c1);
-		//ÁöÁ¤µÈ À§Ä¡(¹øÁö¼ö)¿¡ ÀÖ´Â ¹®ÀÚ¸¦ ¾Ë·ÁÁØ´Ù.
+		//ì§€ì •ëœ ìœ„ì¹˜(ë²ˆì§€ìˆ˜)ì— ìˆëŠ” ë¬¸ìë¥¼ ì•Œë ¤ì¤€ë‹¤.
 		
 		String s1 = s.concat(" world");
 		System.out.println(s1);
-		//¹®ÀÚ¿­À» µÚ¿¡ µ¡ºÙÈù´Ù.
+		//ë¬¸ìì—´ì„ ë’¤ì— ë§ë¶™íŒë‹¤.
 		
 		boolean b = s.equals("hello");
 		System.out.println(b);
-		//¸Å°³º¯¼ö·Î ¹ŞÀº ¹®ÀÚ¿­°ú StringÀÎ½ºÅÏ½ºÀÇ ¹®ÀÚ¿­À» ºñ±³ÇÑ´Ù. ÂüÀÌ¸é true¸¦ ¹İÈ¯
+		//ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ë¬¸ìì—´ê³¼ Stringì¸ìŠ¤í„´ìŠ¤ì˜ ë¬¸ìì—´ì„ ë¹„êµí•œë‹¤. ì°¸ì´ë©´ trueë¥¼ ë°˜í™˜
 		
 		int idx = s.indexOf("e");
 		int idx1 = s.indexOf("ell");
 		System.out.println(idx);
 		System.out.println(idx1);
-		//ÁÖ¾îÁø ¹®ÀÚ°¡ ¹®ÀÚ¿­¿¡ Á¸ÀçÇÏ´ÂÁö È®ÀÎÇÏ¿© À§Ä¡¸¦ ¾Ë·ÁÁØ´Ù. ¾ø´Ù¸é -1À» ¹İÈ¯
+		//ì£¼ì–´ì§„ ë¬¸ìê°€ ë¬¸ìì—´ì— ì¡´ì¬í•˜ëŠ”ì§€ í™•ì¸í•˜ì—¬ ìœ„ì¹˜ë¥¼ ì•Œë ¤ì¤€ë‹¤. ì—†ë‹¤ë©´ -1ì„ ë°˜í™˜
 		
 		int length = s.length();
 		System.out.println(length);
-		//¹®ÀÚ¿­ÀÇ ±æÀÌ¸¦ ¹İÈ¯ ¹è¿­¿¡¼­ ÀÚÁÖ »ç¿ëÇÔ
+		//ë¬¸ìì—´ì˜ ê¸¸ì´ë¥¼ ë°˜í™˜ ë°°ì—´ì—ì„œ ìì£¼ ì‚¬ìš©í•¨
 		
 		String ab = s.replaceAll("ll", "LL");
 		System.out.println(ab);
-		//¹®ÀÚ¿­Áß¿¡¼­ ÁöÁ¤µÈ ¹®ÀÚ¿­°ú ÀÏÄ¡ÇÏ´Â °ÍÀ» »õ·Î¿î ¹®ÀÚ¿­·Î º¯°æÇÑ´Ù.
+		//ë¬¸ìì—´ì¤‘ì—ì„œ ì§€ì •ëœ ë¬¸ìì—´ê³¼ ì¼ì¹˜í•˜ëŠ” ê²ƒì„ ìƒˆë¡œìš´ ë¬¸ìì—´ë¡œ ë³€ê²½í•œë‹¤.
 		
 		String animals = "dog,cat,cow";
 		String [] arr = animals.split(",");
 		for(int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i]);
 		}
-		//¹®ÀÚ¿­Áß ÁöÁ¤µÈ ºĞ¸®ÀÚ·Î ³ª´² ¹®ÀÚ¿­¿¡ ´ã¾Æ ¹İÈ¯ÇÑ´Ù.
+		//ë¬¸ìì—´ì¤‘ ì§€ì •ëœ ë¶„ë¦¬ìë¡œ ë‚˜ëˆ  ë¬¸ìì—´ì— ë‹´ì•„ ë°˜í™˜í•œë‹¤.
 		
 		String sub = "123.abc.ABC";
 		String sub1 = sub.substring(8);
 		String sub2 = sub.substring(0, 3);
 		System.out.println(sub1);
 		System.out.println(sub2);
-		//ÁÖ¾îÁø ½ÃÀÛ À§Ä¡ºÎÅÍ ³¡ ¹üÀ§¿¡ Æ÷ÇÔµÈ ¹®ÀÚ¿­À» ¾ò´Â´Ù. ÀÌ¶§ ³¡ À§Ä¡ÀÇ ¹®ÀÚ´Â Æ÷ÇÔµÇÁö ¾Ê´Â´Ù.
+		//ì£¼ì–´ì§„ ì‹œì‘ ìœ„ì¹˜ë¶€í„° ë ë²”ìœ„ì— í¬í•¨ëœ ë¬¸ìì—´ì„ ì–»ëŠ”ë‹¤. ì´ë•Œ ë ìœ„ì¹˜ì˜ ë¬¸ìëŠ” í¬í•¨ë˜ì§€ ì•ŠëŠ”ë‹¤.
 		
 		String lower = s.toLowerCase();
 		String upper = s.toUpperCase();
 		System.out.println(lower);
 		System.out.println(upper);
-		//ÇØ´ç ¹®ÀÚ¿­À» ¸ğµÎ ¼Ò¹®ÀÚ ¶Ç´Â ´ë¹®ÀÚ·Î º¯È¯ÇÏ¿© ¹İÈ¯ÇÑ´Ù.
+		//í•´ë‹¹ ë¬¸ìì—´ì„ ëª¨ë‘ ì†Œë¬¸ì ë˜ëŠ” ëŒ€ë¬¸ìë¡œ ë³€í™˜í•˜ì—¬ ë°˜í™˜í•œë‹¤.
 		
 		String trim = "   Trim   Ex     ";
 		String trimResult = trim.trim();
 		System.out.println(trimResult);
-		//¹®ÀÚ¿­ÀÇ °¡Àå ¿ŞÂÊ, ¿À¸¥ÂÊÀÇ °ø¹éÀ» Á¦°ÅÇÑ´Ù. Áß°£ °ø¹éÀº Á¦°ÅÇÏÁö ¾Ê´Â´Ù.
+		//ë¬¸ìì—´ì˜ ê°€ì¥ ì™¼ìª½, ì˜¤ë¥¸ìª½ì˜ ê³µë°±ì„ ì œê±°í•œë‹¤. ì¤‘ê°„ ê³µë°±ì€ ì œê±°í•˜ì§€ ì•ŠëŠ”ë‹¤.
 		
 	}
 

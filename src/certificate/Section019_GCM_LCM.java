@@ -1,21 +1,21 @@
-package certificate;
+ï»¿package certificate;
 
 import java.util.Scanner;
 
 class Section019_GCM_LCM {
-	//ÃÖ´ë°ø¾à¼ö, ÃÖ¼Ò°ø¹è¼ö ±¸ÇÏ±â
+	//ìµœëŒ€ê³µì•½ìˆ˜, ìµœì†Œê³µë°°ìˆ˜ êµ¬í•˜ê¸°
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		int a, b, big, small, mok, nmg, gcm, lcm;
-		//a = Ã¹¹øÂ° ÀÔ·Â, b = µÎ¹øÂ° ÀÔ·Â, big = Å«¼ö, small = ÀÛÀº¼ö, mok = ¸ò, nmg = ³ª¸ÓÁö, gcm = ÃÖ´ë°ø¾à¼ö, lcm = ÃÖ¼Ò°ø¹è¼ö
+		//a = ì²«ë²ˆì§¸ ìž…ë ¥, b = ë‘ë²ˆì§¸ ìž…ë ¥, big = í°ìˆ˜, small = ìž‘ì€ìˆ˜, mok = ëª«, nmg = ë‚˜ë¨¸ì§€, gcm = ìµœëŒ€ê³µì•½ìˆ˜, lcm = ìµœì†Œê³µë°°ìˆ˜
 		
-		System.out.print("Ã¹¹øÂ°¼ö ÀÔ·Â : ");
+		System.out.print("ì²«ë²ˆì§¸ìˆ˜ ìž…ë ¥ : ");
 		a = sc.nextInt();
-		System.out.print("µÎ¹øÂ°¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ë²ˆì§¸ìˆ˜ ìž…ë ¥ : ");
 		b = sc.nextInt();
 		
-		if(a >= b) {	//ÀÔ·Â¹ÞÀº ¼öÀÇ Å©±â´ë·Î º¯¼ö¿¡ ÀúÀå
+		if(a >= b) {	//ìž…ë ¥ë°›ì€ ìˆ˜ì˜ í¬ê¸°ëŒ€ë¡œ ë³€ìˆ˜ì— ì €ìž¥
 			big = a;
 			small = b;
 		}else {
@@ -24,8 +24,8 @@ class Section019_GCM_LCM {
 		}
 		
 		while(true) {
-			mok = big/small;	//int Å¸ÀÔÀÇ º¯¼öÀÌ¹Ç·Î ¼Ò¼öÁ¡ÀÌ ¹ö·ÁÁö±â¿¡ ¸òÀ¸·Î Ãß°¡ ÀÛ¾÷¾øÀÌ °¡´É
-			nmg = big - small*mok;	//¸¶Âù°¡Áö int Å¸ÀÔÀÇ Æ¯Â¡À» ÀÌ¿ëÇØ¼­ ³ª¸ÓÁö¸¦ ±¸ÇÔ
+			mok = big/small;	//int íƒ€ìž…ì˜ ë³€ìˆ˜ì´ë¯€ë¡œ ì†Œìˆ˜ì ì´ ë²„ë ¤ì§€ê¸°ì— ëª«ìœ¼ë¡œ ì¶”ê°€ ìž‘ì—…ì—†ì´ ê°€ëŠ¥
+			nmg = big - small*mok;	//ë§ˆì°¬ê°€ì§€ int íƒ€ìž…ì˜ íŠ¹ì§•ì„ ì´ìš©í•´ì„œ ë‚˜ë¨¸ì§€ë¥¼ êµ¬í•¨
 			
 			if(nmg == 0) {
 				gcm = small;

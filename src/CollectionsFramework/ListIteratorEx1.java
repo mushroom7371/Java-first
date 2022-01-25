@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
@@ -6,24 +6,24 @@ import java.util.ListIterator;
 public class ListIteratorEx1 {
 
 	public static void main(String[] args) {
-		ArrayList list = new ArrayList();	//ArrayList Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¿¡ »õ·Î¸¸µç ArrayList °´Ã¼ÀÇ ÁÖ¼Ò°ªÀ» ÀúÀåÇÔ
+		ArrayList list = new ArrayList();	//ArrayList íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ì— ìƒˆë¡œë§Œë“  ArrayList ê°ì²´ì˜ ì£¼ì†Œê°’ì„ ì €ì¥í•¨
 		
-		list.add("1");	//ArrayList ÀÎ½ºÅÏ½º¿¡ µ¥ÀÌÅÍ¸¦ Ãß°¡ÇÔ.
+		list.add("1");	//ArrayList ì¸ìŠ¤í„´ìŠ¤ì— ë°ì´í„°ë¥¼ ì¶”ê°€í•¨.
 		list.add("2");
 		list.add("3");
 		list.add("4");
 		list.add("5");
 		
-		ListIterator it = list.listIterator();	//ListIterator Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö itÀ» ¼±¾ğÇÏ°í ArrayList°´Ã¼°¡ °¡Áö°í ÀÖ´Â listIterator()¸Ş¼­µå¸¦ È£ÃâÇÏ¿© ¸®ÅÏ°ªÀ» ÀúÀåÇÔ
-												//ÀÌ¶§ ÂüÁ¶º¯¼öÀÇ Å¸ÀÔÀ» ListIterator¸¦ »ç¿ëÇÑ ÀÌÀ¯´Â listIterator()¸Ş¼­µå Ã³¸®°á°ú·Î ¹İÈ¯µÈ °ªÀÌ ListIteratorÅ¸ÀÔÀÌ±â ¶§¹®ÀÌ´Ù.
-		while(it.hasNext()) {	//it°¡ °¡¸®Å°´Â ÀÎ½ºÅÏ½º¿¡ ´ÙÀ½ µ¥ÀÌÅÍ°¡ ÀÖ´Â °æ¿ì, ¹İº¹ÀÇ ¹üÀ§°¡ Á¤ÇØÁ®ÀÖÁö ¾Ê±â¿¡ false°ªÀÌ µÉ °æ¿ì Ãâ·ÂÇÏÁö ¾Ê´Â´Ù.
-			System.out.println(it.next());	//±× µ¥ÀÌÅÍ¸¦ ºÒ·¯¿Í¼­ Ãâ·ÂÇÑ´Ù.
+		ListIterator it = list.listIterator();	//ListIterator íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ itì„ ì„ ì–¸í•˜ê³  ArrayListê°ì²´ê°€ ê°€ì§€ê³  ìˆëŠ” listIterator()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ë¦¬í„´ê°’ì„ ì €ì¥í•¨
+												//ì´ë•Œ ì°¸ì¡°ë³€ìˆ˜ì˜ íƒ€ì…ì„ ListIteratorë¥¼ ì‚¬ìš©í•œ ì´ìœ ëŠ” listIterator()ë©”ì„œë“œ ì²˜ë¦¬ê²°ê³¼ë¡œ ë°˜í™˜ëœ ê°’ì´ ListIteratoríƒ€ì…ì´ê¸° ë•Œë¬¸ì´ë‹¤.
+		while(it.hasNext()) {	//itê°€ ê°€ë¦¬í‚¤ëŠ” ì¸ìŠ¤í„´ìŠ¤ì— ë‹¤ìŒ ë°ì´í„°ê°€ ìˆëŠ” ê²½ìš°, ë°˜ë³µì˜ ë²”ìœ„ê°€ ì •í•´ì ¸ìˆì§€ ì•Šê¸°ì— falseê°’ì´ ë  ê²½ìš° ì¶œë ¥í•˜ì§€ ì•ŠëŠ”ë‹¤.
+			System.out.println(it.next());	//ê·¸ ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì™€ì„œ ì¶œë ¥í•œë‹¤.
 		}
 		
 		System.out.println("--------------");
 		
-		while(it.hasPrevious()) {	//Iterator¿Í´Â ´Ù¸£°Ô ListIterator ¿¡´Â ¾ç¹æÇâÀ¸·Î °ªÀ» ÀĞ¾î¿Ã ¼öÀÖ´Ù hasPrevious()´Â ÀÌÀü °ªÀÌ ÀÖ´ÂÁö ¾ø´ÂÁö À¯¹«¸¦ ÆÇ´ÜÇÔ.
-			System.out.println(it.previous());	//ÀÌÀü¿¡ ÀĞ¾î¿Ã µ¥ÀÌÅÍ°¡ ÀÖ´Ù¸é ±× µ¥ÀÌÅÍ¸¦ ºÒ·¯¿À°í ÀÌ¸¦ Ãâ·ÂÇÑ´Ù.
+		while(it.hasPrevious()) {	//Iteratorì™€ëŠ” ë‹¤ë¥´ê²Œ ListIterator ì—ëŠ” ì–‘ë°©í–¥ìœ¼ë¡œ ê°’ì„ ì½ì–´ì˜¬ ìˆ˜ìˆë‹¤ hasPrevious()ëŠ” ì´ì „ ê°’ì´ ìˆëŠ”ì§€ ì—†ëŠ”ì§€ ìœ ë¬´ë¥¼ íŒë‹¨í•¨.
+			System.out.println(it.previous());	//ì´ì „ì— ì½ì–´ì˜¬ ë°ì´í„°ê°€ ìˆë‹¤ë©´ ê·¸ ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì˜¤ê³  ì´ë¥¼ ì¶œë ¥í•œë‹¤.
 		}
 	}
 

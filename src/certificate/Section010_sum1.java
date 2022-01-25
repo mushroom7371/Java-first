@@ -1,9 +1,9 @@
-package certificate;
+ï»¿package certificate;
 
 class Section010_sum1 {
-	//do-while¹®À» ÀÌ¿ëÇÑ 1~99 È¦¼ö ÇÕ ±¸ÇÏ±â
+	//do-whileë¬¸ì„ ì´ìš©í•œ 1~99 í™€ìˆ˜ í•© êµ¬í•˜ê¸°
 	public static void main(String[] args) {
-		int i = -1;	//do ¹®Àå¿¡¼­ Ã¹Ç×ÀÌ 1ÀÌ µÇ°Ô ÇÏ±â À§ÇÔ
+		int i = -1;	//do ë¬¸ì¥ì—ì„œ ì²«í•­ì´ 1ì´ ë˜ê²Œ í•˜ê¸° ìœ„í•¨
 		int sum = 0;
 		
 		do {

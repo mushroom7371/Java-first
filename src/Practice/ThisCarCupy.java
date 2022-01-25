@@ -1,4 +1,4 @@
-package Practice;
+ï»¿package Practice;
 
 class CarCupy{
 	String color;
@@ -15,7 +15,7 @@ class CarCupy{
 		this.door = 4;
 	}
 
-	CarCupy(CarCupy c){	//ÀÎ½ºÅÏ½º º¹»ç¸¦ À§ÇÑ »ı¼ºÀÚ
+	CarCupy(CarCupy c){	//ì¸ìŠ¤í„´ìŠ¤ ë³µì‚¬ë¥¼ ìœ„í•œ ìƒì„±ì
 		color = c.color;
 		geartype = c.geartype;
 		door = c.door;
@@ -26,18 +26,18 @@ class ThisCarCupy {
 
 	public static void main(String[] args) {
 		CarCupy c1 = new CarCupy();
-		CarCupy c2 = new CarCupy(c1);	// c1ÀÇ º¹»çº»À» ¸¸µê
+		CarCupy c2 = new CarCupy(c1);	// c1ì˜ ë³µì‚¬ë³¸ì„ ë§Œë“¦
 
-		System.out.println("c1ÀÇ color = " + c1.color 
+		System.out.println("c1ì˜ color = " + c1.color 
 				+ ", geartype = " + c1.geartype + ", door = " + c1.door);
-		System.out.println("c2ÀÇ color = " + c2.color 
+		System.out.println("c2ì˜ color = " + c2.color 
 				+ ", geartype = " + c2.geartype + ", door = " + c2.door);
 		c1.color = "blue";
 
-		System.out.println("c1.color = blue ¼öÇà ÈÄ");
-		System.out.println("c1ÀÇ color = " + c1.color 
+		System.out.println("c1.color = blue ìˆ˜í–‰ í›„");
+		System.out.println("c1ì˜ color = " + c1.color 
 				+ ", geartype = " + c1.geartype + ", door = " + c1.door);
-		System.out.println("c2ÀÇ color = " + c2.color 
+		System.out.println("c2ì˜ color = " + c2.color 
 				+ ", geartype = " + c2.geartype + ", door = " + c2.door);
 
 

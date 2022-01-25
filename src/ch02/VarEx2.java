@@ -1,7 +1,7 @@
-package ch02;
+ï»¿package ch02;
 
 /*
- * µÎ º¯¼öÀÇ °ªÀ» ±³È¯ÇÏ±â À§ÇØ¼­ ÀÓ½Ã·Î ÀúÀåÇÒ º¯¼ö¸¦ ¼±¾ðÇÔ
+ * ë‘ ë³€ìˆ˜ì˜ ê°’ì„ êµí™˜í•˜ê¸° ìœ„í•´ì„œ ìž„ì‹œë¡œ ì €ìž¥í•  ë³€ìˆ˜ë¥¼ ì„ ì–¸í•¨
  */
 
 class VarEx2	{

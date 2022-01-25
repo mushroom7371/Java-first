@@ -1,4 +1,4 @@
-package Practice;
+ï»¿package Practice;
 
 import java.util.*;
 
@@ -12,7 +12,7 @@ public class FlowEx25divide {
 	}
 
 	static int inputMethod(int num){
-		System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä. -> ");
+		System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”. -> ");
 
 		Scanner scanner = new Scanner(System.in);
 		String tmp = scanner.nextLine();
@@ -29,7 +29,7 @@ public class FlowEx25divide {
 
 		}
 
-		System.out.print("°¢ ÀÚ¸®¼öÀÇ ÇÕ : " + sum);
+		System.out.print("ê° ìë¦¬ìˆ˜ì˜ í•© : " + sum);
 	}
 
 }

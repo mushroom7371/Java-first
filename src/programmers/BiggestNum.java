@@ -1,4 +1,4 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,19 +6,19 @@ import java.util.Collections;
 class BiggestNum {
 	private String solution(int[] numbers) {
 		String answer = "";
-		ArrayList<String> strNum = new ArrayList();	//int °ªÀ» String °ªÀ¸·Î ÀúÀåÇÒ ArrayList °´Ã¼ »ı¼º
+		ArrayList<String> strNum = new ArrayList();	//int ê°’ì„ String ê°’ìœ¼ë¡œ ì €ì¥í•  ArrayList ê°ì²´ ìƒì„±
 		
-		for(int i = 0; i < numbers.length; i++) {	//ÁÖ¾îÁø ¹è¿­ÀÇ µ¥ÀÌÅÍ¸¦ º¯È¯ÇÏ¿© strNumÀÌ °¡¸®Å°´Â ArrayList °´Ã¼¿¡ ´õÇÑ´Ù.
+		for(int i = 0; i < numbers.length; i++) {	//ì£¼ì–´ì§„ ë°°ì—´ì˜ ë°ì´í„°ë¥¼ ë³€í™˜í•˜ì—¬ strNumì´ ê°€ë¦¬í‚¤ëŠ” ArrayList ê°ì²´ì— ë”í•œë‹¤.
 			strNum.add(String.valueOf(numbers[i]));
 		}
 		
-		Collections.sort(strNum, (a, b) -> (b + a).compareTo(a + b));	//¶÷´Ù½ÄÀ» »ç¿ëÇÏ¿© µ¥ÀÌÅÍ ³»¸²Â÷¼ø Á¤·Ä
+		Collections.sort(strNum, (a, b) -> (b + a).compareTo(a + b));	//ëŒë‹¤ì‹ì„ ì‚¬ìš©í•˜ì—¬ ë°ì´í„° ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬
 		
-		if(strNum.get(0).startsWith("0")) {	//ÁÖ¾îÁø ¹è¿­ÀÌ [0,0] µîÀ¸·Î ÁÖ¾îÁö¸é "0"À¸·Î ¹İÈ¯
+		if(strNum.get(0).startsWith("0")) {	//ì£¼ì–´ì§„ ë°°ì—´ì´ [0,0] ë“±ìœ¼ë¡œ ì£¼ì–´ì§€ë©´ "0"ìœ¼ë¡œ ë°˜í™˜
 			return "0";			
 		}
 		
-		for(int i = 0; i < strNum.size(); i++) {	//answer¿¡ Á¤·ÄµÈ µ¥ÀÌÅÍ ÀúÀåÇÏ°¡
+		for(int i = 0; i < strNum.size(); i++) {	//answerì— ì •ë ¬ëœ ë°ì´í„° ì €ì¥í•˜ê°€
 			answer += strNum.get(i);
 		}
 		

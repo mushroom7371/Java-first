@@ -1,18 +1,18 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 public class ExceptionEx1 {
 	public static void main(String args[]) {
-		int arr[] = new int[10];	//int Å¸ÀÔÀÇ ¹è¿­À» ÀúÀåÇÏ´Â ÂüÁ¶º¯¼ö arrÀ» ¼±¾ðÇÏ°í
-									//±æÀÌ 10ÀÇ »õ·Î¿î ¹è¿­À» »ý¼ºÇÏ¿© ÀÌ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
+		int arr[] = new int[10];	//int íƒ€ìž…ì˜ ë°°ì—´ì„ ì €ìž¥í•˜ëŠ” ì°¸ì¡°ë³€ìˆ˜ arrì„ ì„ ì–¸í•˜ê³ 
+									//ê¸¸ì´ 10ì˜ ìƒˆë¡œìš´ ë°°ì—´ì„ ìƒì„±í•˜ì—¬ ì´ ì£¼ì†Œê°’ì„ ì €ìž¥í•œë‹¤.
 		
-		try {	//¿¹¿Ü°¡ ¹ß»ý ÇÒ ¼öÀÖ´Â ºÎºÐÀ» °¨½Ñ´Ù.
-			arr[20] = 10;	//±æÀÌ°¡ 10ÀÎ ¹è¿­¿¡ 20¹øÁöÀÇ °ªÀ» 10À¸·Î ÃÊ±âÈ­ ÇÏ·Á°í ÇÏ±â¿¡ ¿À·ù°¡ ¹ß»ý
-		}catch(Exception e) {	//¿À·ù°¡ ¹ß»ý ÇÏ¿´À»¶§ ½ÇÇàµÇ´Â ºÎºÐ »ý¼ºÀÚ¾È¿¡´Â Á¤È®È÷
-								//IndexOutOfBoundsExceptionÀÌ µé¾î°¡°Ô µÇ³ª ExceptionÀ» »ó¼Ó¹Þ´Â Å¬·¡½ºÀÌ¹Ç·Î »ó°ü¾ø´Ù
-			System.out.println("¿À·ù¹ß»ý!!");
+		try {	//ì˜ˆì™¸ê°€ ë°œìƒ í•  ìˆ˜ìžˆëŠ” ë¶€ë¶„ì„ ê°ì‹¼ë‹¤.
+			arr[20] = 10;	//ê¸¸ì´ê°€ 10ì¸ ë°°ì—´ì— 20ë²ˆì§€ì˜ ê°’ì„ 10ìœ¼ë¡œ ì´ˆê¸°í™” í•˜ë ¤ê³  í•˜ê¸°ì— ì˜¤ë¥˜ê°€ ë°œìƒ
+		}catch(Exception e) {	//ì˜¤ë¥˜ê°€ ë°œìƒ í•˜ì˜€ì„ë•Œ ì‹¤í–‰ë˜ëŠ” ë¶€ë¶„ ìƒì„±ìžì•ˆì—ëŠ” ì •í™•ížˆ
+								//IndexOutOfBoundsExceptionì´ ë“¤ì–´ê°€ê²Œ ë˜ë‚˜ Exceptionì„ ìƒì†ë°›ëŠ” í´ëž˜ìŠ¤ì´ë¯€ë¡œ ìƒê´€ì—†ë‹¤
+			System.out.println("ì˜¤ë¥˜ë°œìƒ!!");
 		}finally {
-			System.out.println("¿©±â´Â ¿À·ù ¹ß»ý ¿©ºÎ¿Í »ó°ü¾øÀÌ ¹«Á¶°Ç ½ÇÇà!");
-			//finally ±¸¹®Àº Ãâ·Â ³»¿ë´ë·Î ¹«Á¶°Ç ½ÇÇàµÇ³ª »ý·«ÇØµµ µÇ´Â ±¸¹®ÀÌ´Ù
+			System.out.println("ì—¬ê¸°ëŠ” ì˜¤ë¥˜ ë°œìƒ ì—¬ë¶€ì™€ ìƒê´€ì—†ì´ ë¬´ì¡°ê±´ ì‹¤í–‰!");
+			//finally êµ¬ë¬¸ì€ ì¶œë ¥ ë‚´ìš©ëŒ€ë¡œ ë¬´ì¡°ê±´ ì‹¤í–‰ë˜ë‚˜ ìƒëžµí•´ë„ ë˜ëŠ” êµ¬ë¬¸ì´ë‹¤
 		}
 	}
 }

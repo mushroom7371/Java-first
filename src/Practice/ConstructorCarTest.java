@@ -1,4 +1,4 @@
-package Practice;
+ï»¿package Practice;
 
 class Car{
 	String color;
@@ -16,17 +16,17 @@ class Car{
 
 public class ConstructorCarTest {
 	public static void main(String[] args) {
-		Car c1 = new Car();		// ÀÎ½ºÅÏ½º »ı¼º ÈÄ¿¡ ÀÎ½ºÅÏ½º º¯¼ö¸¦ µû·Î ÃÊ±âÈ­°¡ ÇÊ¿äÇÔ
+		Car c1 = new Car();		// ì¸ìŠ¤í„´ìŠ¤ ìƒì„± í›„ì— ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë¥¼ ë”°ë¡œ ì´ˆê¸°í™”ê°€ í•„ìš”í•¨
 		c1.color = "white";
 		c1.geartype = "auto";
 		c1.door = 4;
 		
-		Car c2 = new Car("white", "auto", 4);	// ÀÎ½ºÅÏ½º »ı¼º ½Ã ¿øÇÏ´Â °ªÀ¸·Î ÃÊ±âÈ­
+		Car c2 = new Car("white", "auto", 4);	// ì¸ìŠ¤í„´ìŠ¤ ìƒì„± ì‹œ ì›í•˜ëŠ” ê°’ìœ¼ë¡œ ì´ˆê¸°í™”
 		
-		System.out.println("c1ÀÇ »ö»óÀº " + c1.color + " ±â¾îÅ¸ÀÔÀº " +
-							c1.geartype + " ¹®ÀÇ °³¼ö´Â " + c1.door);
-		System.out.println("c2ÀÇ »ö»óÀº " + c2.color + " ±â¾îÅ¸ÀÔÀº " + 
-							c2.geartype + " ¹®ÀÇ °³¼ö´Â " + c2.door);
+		System.out.println("c1ì˜ ìƒ‰ìƒì€ " + c1.color + " ê¸°ì–´íƒ€ì…ì€ " +
+							c1.geartype + " ë¬¸ì˜ ê°œìˆ˜ëŠ” " + c1.door);
+		System.out.println("c2ì˜ ìƒ‰ìƒì€ " + c2.color + " ê¸°ì–´íƒ€ì…ì€ " + 
+							c2.geartype + " ë¬¸ì˜ ê°œìˆ˜ëŠ” " + c2.door);
 
 	}
 

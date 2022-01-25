@@ -1,4 +1,4 @@
-package IOStream;
+ï»¿package IOStream;
 
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
@@ -12,13 +12,13 @@ class DataOutputStreamEx1 {
 		
 		try {
 			fos = new FileOutputStream("sample.dat");
-			//ÇØ´ç ¿öÅ©½ºÆäÀÌ½º À§Ä¡¿¡ sample.dat ÆÄÀÏÀ» ¸¸µê
+			//í•´ë‹¹ ì›Œí¬ìŠ¤í˜ì´ìŠ¤ ìœ„ì¹˜ì— sample.dat íŒŒì¼ì„ ë§Œë“¦
 			dos = new DataOutputStream(fos);
-			//sample.dat ÆÄÀÏ¿¡ data Á¤º¸¸¦ ÀÔ·ÂÇÏ±â À§ÇÑ ÀÛ¾÷
+			//sample.dat íŒŒì¼ì— data ì •ë³´ë¥¼ ì…ë ¥í•˜ê¸° ìœ„í•œ ì‘ì—…
 			dos.writeInt(10);
 			dos.writeFloat(20.0f);
 			dos.writeBoolean(true);
-			//DataOutputStream Å¬·¡½ºÀÇ ¸Ş¼­µå¸¦ »ç¿ëÇÏ¿© ÇØ´ç ÆÄÀÏ¿¡ µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÑ´Ù.
+			//DataOutputStream í´ë˜ìŠ¤ì˜ ë©”ì„œë“œë¥¼ ì‚¬ìš©í•˜ì—¬ í•´ë‹¹ íŒŒì¼ì— ë°ì´í„°ë¥¼ ì…ë ¥í•œë‹¤.
 			
 			dos.close();
 		}catch(IOException ex) {

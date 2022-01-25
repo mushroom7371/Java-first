@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -6,39 +6,39 @@ import java.util.Map;
 import java.util.Set;
 
 class HashMapEx3 {
-	static HashMap phoneBook = new HashMap();	//static Á¦¾îÀÚ·Î Å¬·¡½º°¡ ¸Ş¸ğ¸®¿¡ ÀûÀçµÉ¶§ ÃÖÃÊ ÇÑ¹ø ½ÇÇàµÊ. ÀÌ °æ¿ì´Â HashMap°´Ã¼¸¦ ¸¸µé¾î ÁÖ¼Ò·ÏÀ¸·Î »ç¿ë
+	static HashMap phoneBook = new HashMap();	//static ì œì–´ìë¡œ í´ë˜ìŠ¤ê°€ ë©”ëª¨ë¦¬ì— ì ì¬ë ë•Œ ìµœì´ˆ í•œë²ˆ ì‹¤í–‰ë¨. ì´ ê²½ìš°ëŠ” HashMapê°ì²´ë¥¼ ë§Œë“¤ì–´ ì£¼ì†Œë¡ìœ¼ë¡œ ì‚¬ìš©
 	
 	public static void main(String[] args) {
-		addPhoneNo("Ä£±¸", "ÀÌÀÚ¹Ù", "010-111-1111");
-		addPhoneNo("Ä£±¸", "±èÀÚ¹Ù", "010-222-2222");
-		addPhoneNo("Ä£±¸", "±èÀÚ¹Ù", "010-333-3333");
-		addPhoneNo("È¸»ç", "±è´ë¸®", "010-444-4444");
-		addPhoneNo("È¸»ç", "±è´ë¸®", "010-555-5555");
-		addPhoneNo("È¸»ç", "¹Ú´ë¸®", "010-666-6666");
-		addPhoneNo("È¸»ç", "ÀÌ°úÀå", "010-777-7777");
-		addPhoneNo("¼¼Å¹", "010-888-8888");
+		addPhoneNo("ì¹œêµ¬", "ì´ìë°”", "010-111-1111");
+		addPhoneNo("ì¹œêµ¬", "ê¹€ìë°”", "010-222-2222");
+		addPhoneNo("ì¹œêµ¬", "ê¹€ìë°”", "010-333-3333");
+		addPhoneNo("íšŒì‚¬", "ê¹€ëŒ€ë¦¬", "010-444-4444");
+		addPhoneNo("íšŒì‚¬", "ê¹€ëŒ€ë¦¬", "010-555-5555");
+		addPhoneNo("íšŒì‚¬", "ë°•ëŒ€ë¦¬", "010-666-6666");
+		addPhoneNo("íšŒì‚¬", "ì´ê³¼ì¥", "010-777-7777");
+		addPhoneNo("ì„¸íƒ", "010-888-8888");
 
 		printList();
 	}
 	
-	static void addGroup(String groupName) {	//±×·ìÀ» Ãß°¡ÇÏ±â À§ÇÑ ¸Ş¼­µå
-		if(!phoneBook.containsKey(groupName))	//ÂüÁ¶º¯¼ö phoneBookÀÌ °¡¸®Å°´Â HashMap°´Ã¼°¡ ¸Å°³º¯¼ö·Î ¹ŞÀº groupNameÀ» Key°ªÀ¸·Î °¡Áö°í ÀÖÁö ¾Ê´Ù¸é
-			phoneBook.put(groupName, new HashMap());	//ÇØ´ç °´Ã¼¿¡ ±× ¸Å°³º¯¼ö¸¦ Key°ªÀ¸·Î ¼³Á¤ÇÑ´Ù.
+	static void addGroup(String groupName) {	//ê·¸ë£¹ì„ ì¶”ê°€í•˜ê¸° ìœ„í•œ ë©”ì„œë“œ
+		if(!phoneBook.containsKey(groupName))	//ì°¸ì¡°ë³€ìˆ˜ phoneBookì´ ê°€ë¦¬í‚¤ëŠ” HashMapê°ì²´ê°€ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ groupNameì„ Keyê°’ìœ¼ë¡œ ê°€ì§€ê³  ìˆì§€ ì•Šë‹¤ë©´
+			phoneBook.put(groupName, new HashMap());	//í•´ë‹¹ ê°ì²´ì— ê·¸ ë§¤ê°œë³€ìˆ˜ë¥¼ Keyê°’ìœ¼ë¡œ ì„¤ì •í•œë‹¤.
 	}
 	
 	static void addPhoneNo(String groupName, String name, String tel) {
-		addGroup(groupName);	//±âÁ¸¿¡ Á¸ÀçÇÏ´Â ±×·ìÀÌ¸é ¾Æ¹«ÀÏµµ ÀÏ¾î³ªÁö ¾Ê´Â´Ù.
-		HashMap group = (HashMap)phoneBook.get(groupName);	//»õ·Î¿î ÂüÁ¶º¯¼ö gruop¿¡ ¸Å°³º¯¼ö groupNameÀ» ³ëµå?¿¡ ´ã¾Æ¼­ ¹İÈ¯ÇÏ°í
-		group.put(tel, name);	//ÇØ´ç °´Ã¼¿¡  ÀüÈ­¹øÈ£¿Í ÀÌ¸§À» ÀúÀåÇÑ´Ù.
+		addGroup(groupName);	//ê¸°ì¡´ì— ì¡´ì¬í•˜ëŠ” ê·¸ë£¹ì´ë©´ ì•„ë¬´ì¼ë„ ì¼ì–´ë‚˜ì§€ ì•ŠëŠ”ë‹¤.
+		HashMap group = (HashMap)phoneBook.get(groupName);	//ìƒˆë¡œìš´ ì°¸ì¡°ë³€ìˆ˜ gruopì— ë§¤ê°œë³€ìˆ˜ groupNameì„ ë…¸ë“œ?ì— ë‹´ì•„ì„œ ë°˜í™˜í•˜ê³ 
+		group.put(tel, name);	//í•´ë‹¹ ê°ì²´ì—  ì „í™”ë²ˆí˜¸ì™€ ì´ë¦„ì„ ì €ì¥í•œë‹¤.
 	}
 	
-	static void addPhoneNo(String name, String tel) {	//¿À¹ö·Îµù ÇÏ¿© °°Àº ÀÌ¸§ÀÇ ¸Å¼­µå¸¦ »ç¿ëÇÏ¿´´Ù
-		addPhoneNo("±âÅ¸", name, tel);
+	static void addPhoneNo(String name, String tel) {	//ì˜¤ë²„ë¡œë”© í•˜ì—¬ ê°™ì€ ì´ë¦„ì˜ ë§¤ì„œë“œë¥¼ ì‚¬ìš©í•˜ì˜€ë‹¤
+		addPhoneNo("ê¸°íƒ€", name, tel);
 	}
 	
-	static void printList() {	//Ãâ·Â¿ë ¸Ş¼­µå
-		Set set = phoneBook.entrySet();	//SetÅ¸ÀÔÀÇ ÂüÁ¶º¯¼ö set¿¡ phoneBookÀÇ µ¥ÀÌÅÍ¸¦ ¿£Æ®¸® Çü½ÄÀ¸·Î ¹İÈ¯µÈ °´Ã¼¸¦ °¡¸®Å°°Ô ÇÑ´Ù.
-		Iterator it = set.iterator();	//Iterator¸¦ ÅëÇÏ¿© µ¥ÀÌÅÍ¸¦ ÀĞ¾î¿Ã ÁØºñ¸¦ ÇÑ´Ù.
+	static void printList() {	//ì¶œë ¥ìš© ë©”ì„œë“œ
+		Set set = phoneBook.entrySet();	//Setíƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ setì— phoneBookì˜ ë°ì´í„°ë¥¼ ì—”íŠ¸ë¦¬ í˜•ì‹ìœ¼ë¡œ ë°˜í™˜ëœ ê°ì²´ë¥¼ ê°€ë¦¬í‚¤ê²Œ í•œë‹¤.
+		Iterator it = set.iterator();	//Iteratorë¥¼ í†µí•˜ì—¬ ë°ì´í„°ë¥¼ ì½ì–´ì˜¬ ì¤€ë¹„ë¥¼ í•œë‹¤.
 
 		while(it.hasNext()) {
 			Map.Entry e = (Map.Entry)it.next();

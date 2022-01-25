@@ -1,4 +1,4 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.util.Scanner;
 
@@ -6,20 +6,20 @@ public class SumWhile {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("1¿¡¼­ ÀÔ·Â ¹ŞÀº ¼ö±îÁöÀÇ ÇÕÀ» ±¸ÇÕ´Ï´Ù.");
-		System.out.print("ÀÔ·Â ÇÏ½Å ¼ö´Â : ");
+		System.out.println("1ì—ì„œ ì…ë ¥ ë°›ì€ ìˆ˜ê¹Œì§€ì˜ í•©ì„ êµ¬í•©ë‹ˆë‹¤.");
+		System.out.print("ì…ë ¥ í•˜ì‹  ìˆ˜ëŠ” : ");
 		System.out.println();
 		
 		int n = sc.nextInt();
 		
-		int sum = 0;	//ÇÕ°è¸¦ ÀúÀåÇÏ±â À§ÇÑ º¯¼ö ¼±¾ğ ¹× ÃÊ±âÈ­
-		int i = 1;	//¹İº¹¹®À» µ¹¸®±â À§ÇØ ¼±¾ğÇÑ ÃÊ±â°ª
+		int sum = 0;	//í•©ê³„ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
+		int i = 1;	//ë°˜ë³µë¬¸ì„ ëŒë¦¬ê¸° ìœ„í•´ ì„ ì–¸í•œ ì´ˆê¸°ê°’
 		
-		while(i <= n) {	//  Á¶°Ç½Ä nextInt·Î ÀÔ·Â¹ŞÀº ¼ö±îÁö ¹İº¹À» µ¹¸°´Ù.
-			sum = sum + i;	//ÇÕ°è¿¡ i¸¦ ´õÇÑ´Ù.
-			i++;	//iÀÇ °ªÀ» 1Áõ°¡ ½ÃÅ°°í ´Ù½Ã ¹İº¹À» µ¹¸®¸ç ÇÕ°è¸¦ ±¸ÇÑ´Ù.
+		while(i <= n) {	//  ì¡°ê±´ì‹ nextIntë¡œ ì…ë ¥ë°›ì€ ìˆ˜ê¹Œì§€ ë°˜ë³µì„ ëŒë¦°ë‹¤.
+			sum = sum + i;	//í•©ê³„ì— ië¥¼ ë”í•œë‹¤.
+			i++;	//iì˜ ê°’ì„ 1ì¦ê°€ ì‹œí‚¤ê³  ë‹¤ì‹œ ë°˜ë³µì„ ëŒë¦¬ë©° í•©ê³„ë¥¼ êµ¬í•œë‹¤.
 		}
 		
-		System.out.println("1¿¡¼­ ºÎÅÍ ÀÔ·ÂÇÏ½Å ¼ö±îÁöÀÇ ÃÑ ÇÕÀº : " + sum + " ÀÔ´Ï´Ù.");
+		System.out.println("1ì—ì„œ ë¶€í„° ì…ë ¥í•˜ì‹  ìˆ˜ê¹Œì§€ì˜ ì´ í•©ì€ : " + sum + " ì…ë‹ˆë‹¤.");
 	}
 }

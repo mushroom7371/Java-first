@@ -1,6 +1,6 @@
-package programmers;
+ï»¿package programmers;
 
-//°ýÈ£ º¯È¯
+//ê´„í˜¸ ë³€í™˜
 class ParenthesesChange {
 	public String solution(String p) {
 		int index = splitString(p);

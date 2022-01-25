@@ -1,4 +1,4 @@
-package ch07;
+ï»¿package ch07;
 
 class InnerEx3 {
 	private int iv = 100;
@@ -7,11 +7,11 @@ class InnerEx3 {
 	class InstanceInner{
 		int iiv1 = iv;
 		int iiv2 = cv;
-		//³»ºÎ Å¬·¡½º¿¡¼­´Â ¿ÜºÎÅ¬·¡½ºÀÇ º¯¼öÀÎ ÀÎ½ºÅÏ½º º¯¼ö¿Í static º¯¼ö µÑ´Ù ÂüÁ¶°¡ °¡´ÉÇÏ´Ù. ³»ºÎÅ¬·¡½º¸¦ »ç¿ëÇÏ±â À§ÇØ¼­´Â ÀÌ¹Ì ¿ÜºÎÅ¬·¡½ºÀÇ °´Ã¼°¡ »ý¼ºµÇ±â ¶§¹®
+		//ë‚´ë¶€ í´ëž˜ìŠ¤ì—ì„œëŠ” ì™¸ë¶€í´ëž˜ìŠ¤ì˜ ë³€ìˆ˜ì¸ ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ì™€ static ë³€ìˆ˜ ë‘˜ë‹¤ ì°¸ì¡°ê°€ ê°€ëŠ¥í•˜ë‹¤. ë‚´ë¶€í´ëž˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œëŠ” ì´ë¯¸ ì™¸ë¶€í´ëž˜ìŠ¤ì˜ ê°ì²´ê°€ ìƒì„±ë˜ê¸° ë•Œë¬¸
 	}
 	
 	static class StaticInner{
-		//int iiv1 = iv; ³»ºÎ static Å¬·¡½º¿¡¼­´Â ÀÎ½ºÅÏ½º º¯¼ö¸¦ »ç¿ëÇÒ ¼ö ¾ø´Ù. staticÀ¸·Î ¼±¾ðµÈ ½ÃÁ¡¿¡´Â ÀÎ½ºÅÏ½º°¡ »ý¼ºµÇÁö ¾ÊÀº °æ¿ì°¡ ÀÖÀ» ¼ö ÀÖ±â ¶§¹®
+		//int iiv1 = iv; ë‚´ë¶€ static í´ëž˜ìŠ¤ì—ì„œëŠ” ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤. staticìœ¼ë¡œ ì„ ì–¸ëœ ì‹œì ì—ëŠ” ì¸ìŠ¤í„´ìŠ¤ê°€ ìƒì„±ë˜ì§€ ì•Šì€ ê²½ìš°ê°€ ìžˆì„ ìˆ˜ ìžˆê¸° ë•Œë¬¸
 		static int iiv2 = cv;
 	}
 	
@@ -19,7 +19,7 @@ class InnerEx3 {
 		int lv = 0;
 		final int LV = 0;
 		
-		class LocalInner{	//Áö¿ª Å¬·¡½º´Â º¯¼ö¿¡ ´ëÇÑ Á¦ÇÑÀÌ ¾øÀÌ »ç¿ë°¡´ÉÇÏ³ª ³»ºÎ ¸Þ¼­µå¿¡¼­ Á¤ÀÇµÈ Áö¿ªº¯¼ö´Â »ó¼ö¸¸ Á¢±Ù °¡´ÉÇÏ´Ù.
+		class LocalInner{	//ì§€ì—­ í´ëž˜ìŠ¤ëŠ” ë³€ìˆ˜ì— ëŒ€í•œ ì œí•œì´ ì—†ì´ ì‚¬ìš©ê°€ëŠ¥í•˜ë‚˜ ë‚´ë¶€ ë©”ì„œë“œì—ì„œ ì •ì˜ëœ ì§€ì—­ë³€ìˆ˜ëŠ” ìƒìˆ˜ë§Œ ì ‘ê·¼ ê°€ëŠ¥í•˜ë‹¤.
 			int liv = iv;
 			int lcv = cv;
 			int liv2 = LV;

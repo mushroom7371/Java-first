@@ -1,6 +1,6 @@
-package Practice;
+ï»¿package Practice;
 
-import java.util.*; // ScannerÅ¬·¡½º¸¦ »ç¿ëÇÏ±â À§ÇØ Ãß°¡
+import java.util.*; // Scannerí´ë˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ ì¶”ê°€
 
 class FlowEx2Divide {
 	public static void main(String[] args) {
@@ -11,7 +11,7 @@ class FlowEx2Divide {
 	}
 
 		static int inputMethod(int num) {
-		System.out.print("¼ıÀÚ¸¦ ÇÏ³ª ÀÔ·ÂÇÏ¼¼¿ä.>");
+		System.out.print("ìˆ«ìë¥¼ í•˜ë‚˜ ì…ë ¥í•˜ì„¸ìš”.>");
 
 		Scanner scanner = new Scanner(System.in);
 		String input = scanner.nextLine();
@@ -21,11 +21,11 @@ class FlowEx2Divide {
 		
 		static void outputMethod(int num){
 		if(num==0) {
-			System.out.println("ÀÔ·ÂÇÏ½Å ¼ıÀÚ´Â 0ÀÔ´Ï´Ù.");	
+			System.out.println("ì…ë ¥í•˜ì‹  ìˆ«ìëŠ” 0ì…ë‹ˆë‹¤.");	
 		}
 
 		if(num!=0)
-			System.out.println("ÀÔ·ÂÇÏ½Å ¼ıÀÚ´Â 0ÀÌ ¾Æ´Õ´Ï´Ù.");		
-			System.out.println("ÀÔ·ÂÇÏ½Å ¼ıÀÚ´Â "+ num +"ÀÔ´Ï´Ù.");
+			System.out.println("ì…ë ¥í•˜ì‹  ìˆ«ìëŠ” 0ì´ ì•„ë‹™ë‹ˆë‹¤.");		
+			System.out.println("ì…ë ¥í•˜ì‹  ìˆ«ìëŠ” "+ num +"ì…ë‹ˆë‹¤.");
 		}
 }

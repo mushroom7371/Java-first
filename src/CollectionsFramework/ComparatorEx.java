@@ -1,19 +1,19 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
 class ComparatorEx {
 	public static void main(String[] args) {
-		String [] strArr = {"cat", "Dog", "lion", "tiger"};	//Á¤·ÄÅ×½ºÆ®¸¦ À§ÇØ ¼±¾ğÇÑ String Å¸ÀÔ ¹è¿­À» ´ã´Â ÂüÁ¶º¯¼ö ¼±¾ğ ¹× ÃÊ±âÈ­
+		String [] strArr = {"cat", "Dog", "lion", "tiger"};	//ì •ë ¬í…ŒìŠ¤íŠ¸ë¥¼ ìœ„í•´ ì„ ì–¸í•œ String íƒ€ì… ë°°ì—´ì„ ë‹´ëŠ” ì°¸ì¡°ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
 		
-		Arrays.sort(strArr);	//Arrays Å¬·¡½º¿¡¼­ Á¦°øÇÏ´Â Á¤·Ä¸Ş¼­µå »ç¿ë, String ÀÇ Comparable±¸Çö¿¡ ÀÇÇÑ Á¤·Ä(µû·Î Comparator¸¦ ÁöÁ¤ÇÏÁö ¾Ê¾Ò±â¿¡ Comparable¸¦ ±¸ÇöÇÑ Stirng Å¬·¡½º¿¡ ±¸ÇöµÈ ³»¿ë¿¡ µû¶ó Á¤·ÄÇÏ¿´´Ù.)
+		Arrays.sort(strArr);	//Arrays í´ë˜ìŠ¤ì—ì„œ ì œê³µí•˜ëŠ” ì •ë ¬ë©”ì„œë“œ ì‚¬ìš©, String ì˜ Comparableêµ¬í˜„ì— ì˜í•œ ì •ë ¬(ë”°ë¡œ Comparatorë¥¼ ì§€ì •í•˜ì§€ ì•Šì•˜ê¸°ì— Comparableë¥¼ êµ¬í˜„í•œ Stirng í´ë˜ìŠ¤ì— êµ¬í˜„ëœ ë‚´ìš©ì— ë”°ë¼ ì •ë ¬í•˜ì˜€ë‹¤.)
 		System.out.println("strArr = " + Arrays.toString(strArr));
 		
-		Arrays.sort(strArr, String.CASE_INSENSITIVE_ORDER);	//´ë¼Ò¹®ÀÚÀÇ ±¸ºĞ ¾øÀÌ Á¤·Ä. ÁöÁ¤ÇÑ Comparator¿¡ ÀÇÇÑ Á¤·ÄÀÌÁö¸¸ String Å¬·¡½º¿¡¼­ ±¸ÇöÇÑ ³»¿ëÀ» ÁöÁ¤ÇÏ¿© Á¤·ÄÇÏ¿´´Ù.
+		Arrays.sort(strArr, String.CASE_INSENSITIVE_ORDER);	//ëŒ€ì†Œë¬¸ìì˜ êµ¬ë¶„ ì—†ì´ ì •ë ¬. ì§€ì •í•œ Comparatorì— ì˜í•œ ì •ë ¬ì´ì§€ë§Œ String í´ë˜ìŠ¤ì—ì„œ êµ¬í˜„í•œ ë‚´ìš©ì„ ì§€ì •í•˜ì—¬ ì •ë ¬í•˜ì˜€ë‹¤.
 		System.out.println("strArr = " + Arrays.toString(strArr));
 		
-		Arrays.sort(strArr, new Descending());	//¾Æ·¡ÀÇ Comparator ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Descending Å¬·¡½º¸¦ »ç¿ëÇÏ¿© ¿ª¼øÀ¸·Î Á¤·ÄÇÑ´Ù.
+		Arrays.sort(strArr, new Descending());	//ì•„ë˜ì˜ Comparator ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ Descending í´ë˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ì—¬ ì—­ìˆœìœ¼ë¡œ ì •ë ¬í•œë‹¤.
 		System.out.println("strArr = " + Arrays.toString(strArr));
 
 	}
@@ -24,10 +24,10 @@ class Descending implements Comparator	{
 		if(o1 instanceof Comparable && o2 instanceof Comparable) {
 			Comparable c1 = (Comparable)o1;
 			Comparable c2 = (Comparable)o2;
-			//ComparableÀº ±âº» Á¤·Ä±âÁØÀ» ±¸ÇöÇÏ´Âµ¥ »ç¿ë
-			//Comparator´Â ±âº» Á¤·Ä±âÁØ ¿Ü¿¡ ´Ù¸¥ ±âÁØÀ¸·Î Á¤·ÄÇÏ°íÀÚ ÇÒ¶§ »ç¿ë
+			//Comparableì€ ê¸°ë³¸ ì •ë ¬ê¸°ì¤€ì„ êµ¬í˜„í•˜ëŠ”ë° ì‚¬ìš©
+			//ComparatorëŠ” ê¸°ë³¸ ì •ë ¬ê¸°ì¤€ ì™¸ì— ë‹¤ë¥¸ ê¸°ì¤€ìœ¼ë¡œ ì •ë ¬í•˜ê³ ì í• ë•Œ ì‚¬ìš©
 			
-			return c1.compareTo(c2) * -1;	//¿ª¼øÀ¸·Î Á¤·ÄÇÏ±â À§ÇØ ´Ü¼øÈ÷ ¹İÈ¯°ª¿¡ -1À» °öÇÏ´Â ÀÛ¾÷À» ÇÏ¿´´Ù.
+			return c1.compareTo(c2) * -1;	//ì—­ìˆœìœ¼ë¡œ ì •ë ¬í•˜ê¸° ìœ„í•´ ë‹¨ìˆœíˆ ë°˜í™˜ê°’ì— -1ì„ ê³±í•˜ëŠ” ì‘ì—…ì„ í•˜ì˜€ë‹¤.
 		}
 		
 		return -1;

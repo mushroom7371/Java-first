@@ -1,12 +1,12 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 public class SongExam {
 	public static void main(String [] args) {
-		Song song = new Song();	//Song Å¬·¡½º·Î ºÎÅÍ »õ·Î ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÏ°í ±× ÁÖ¼Ò°ªÀ» ÂüÁ¶º¯¼ö song¿¡ ÀúÀå
+		Song song = new Song();	//Song í´ëž˜ìŠ¤ë¡œ ë¶€í„° ìƒˆë¡œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ê³  ê·¸ ì£¼ì†Œê°’ì„ ì°¸ì¡°ë³€ìˆ˜ songì— ì €ìž¥
 		
-		song.songTitle = "°î¸í";		//ÀÎ½ºÅÏ½ºÀÇ ÇÊµå¸¦ »ç¿ëÇÏ±â À§ÇØ ÇØ´ç ÀÎ½ºÅÏ½ºÀÇ ÀÌ¸§À» ÂüÁ¶ÇÑ´Ù.
-		song.singer = "°¡¼ö¸í";		//ÀÎ½ºÅÏ½º ¾ÈÀÇ º¯¼öµéÀ» ÃÊ±âÈ­ ÇÑ´Ù.
-		song.albumName = "¾Ù¹üÀÌ¸§";
+		song.songTitle = "ê³¡ëª…";		//ì¸ìŠ¤í„´ìŠ¤ì˜ í•„ë“œë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ í•´ë‹¹ ì¸ìŠ¤í„´ìŠ¤ì˜ ì´ë¦„ì„ ì°¸ì¡°í•œë‹¤.
+		song.singer = "ê°€ìˆ˜ëª…";		//ì¸ìŠ¤í„´ìŠ¤ ì•ˆì˜ ë³€ìˆ˜ë“¤ì„ ì´ˆê¸°í™” í•œë‹¤.
+		song.albumName = "ì•¨ë²”ì´ë¦„";
 		song.trackNumber = 5;
 		
 	}

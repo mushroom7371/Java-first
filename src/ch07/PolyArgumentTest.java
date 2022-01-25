@@ -1,27 +1,27 @@
-package ch07;
+ï»¿package ch07;
 
 import java.util.Vector;
 
-class Product{	//Á¦Ç°ÀÇ °øÅë ºÎºÐÀ» °¡Áö°í ÀÖ´Â ºÎ¸ð Å¬·¡½º ÀÛ¼º
-	int price;	//°¡°Ý
-	int bonusPoint;	//º¸³Ê½ºÆ÷ÀÎÆ®
+class Product{	//ì œí’ˆì˜ ê³µí†µ ë¶€ë¶„ì„ ê°€ì§€ê³  ìžˆëŠ” ë¶€ëª¨ í´ëž˜ìŠ¤ ìž‘ì„±
+	int price;	//ê°€ê²©
+	int bonusPoint;	//ë³´ë„ˆìŠ¤í¬ì¸íŠ¸
 	
-	Product(int price){	//»ý¼ºÀÚ¿¡ ¸Å°³º¯¼ö°¡ ÀÖ´Ù¸é ÀÚ±âÀÚ½Å(ºÎ¸ðÅ¬·¡½º)ÀÇ º¯¼öÀÎ °¡°Ý°ú º¸³Ê½º Æ÷ÀÎÆ®¸¦ ¼³Á¤ÇÔ.
+	Product(int price){	//ìƒì„±ìžì— ë§¤ê°œë³€ìˆ˜ê°€ ìžˆë‹¤ë©´ ìžê¸°ìžì‹ (ë¶€ëª¨í´ëž˜ìŠ¤)ì˜ ë³€ìˆ˜ì¸ ê°€ê²©ê³¼ ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸ë¥¼ ì„¤ì •í•¨.
 		this.price = price;
 		this.bonusPoint = (int)(price/10.0);
 	}
 	
-	Product(){	//»ý¼ºÀÚ¿¡ ¸Å°³º¯¼ö°¡ ¾ø´Ù¸é ¸â¹öº¯¼ö¸¦ 0À¸·Î ÃÊ±âÈ­
+	Product(){	//ìƒì„±ìžì— ë§¤ê°œë³€ìˆ˜ê°€ ì—†ë‹¤ë©´ ë©¤ë²„ë³€ìˆ˜ë¥¼ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 		price = 0;
 		bonusPoint = 0;
 	}
 }
 
 class Tv2 extends Product{
-	Tv2(){	//°´Ã¼ »ý¼º½Ã super() »ý¼ºÀÚ¸¦ ÀÌ¿ëÇÏ¿© ºÎ¸ðÅ¬·¡½ºÀÇ »ý¼ºÀÚ¿¡ ¸Å°³º¯¼ö·Î 100À» ³Ö¾î °¡°Ý°ú º¸³Ê½ºÆ÷ÀÎÆ®¸¦ ¼³Á¤ÇÑ´Ù.
+	Tv2(){	//ê°ì²´ ìƒì„±ì‹œ super() ìƒì„±ìžë¥¼ ì´ìš©í•˜ì—¬ ë¶€ëª¨í´ëž˜ìŠ¤ì˜ ìƒì„±ìžì— ë§¤ê°œë³€ìˆ˜ë¡œ 100ì„ ë„£ì–´ ê°€ê²©ê³¼ ë³´ë„ˆìŠ¤í¬ì¸íŠ¸ë¥¼ ì„¤ì •í•œë‹¤.
 		super(100);
 	}
-	public String toString() {	//toString()Àº Object Å¬·¡½º¿¡ Á¤ÀÇµÈ ¸Þ¼­µå·Î ¿À¹ö¶óÀÌµù ÇÏ¿´À» ½Ã ÇØ´ç °´Ã¼¸¦ ºÎ¸¦¶§ return°ªÀ» Ãâ·ÂÇØÁØ´Ù.
+	public String toString() {	//toString()ì€ Object í´ëž˜ìŠ¤ì— ì •ì˜ëœ ë©”ì„œë“œë¡œ ì˜¤ë²„ë¼ì´ë”© í•˜ì˜€ì„ ì‹œ í•´ë‹¹ ê°ì²´ë¥¼ ë¶€ë¥¼ë•Œ returnê°’ì„ ì¶œë ¥í•´ì¤€ë‹¤.
 		return "Tv";
 	}
 }
@@ -44,53 +44,53 @@ class Audio extends Product{
 	}
 }
 
-class Buyer{	//°í°´ Á¤º¸°¡ ´ã±ä Å¬·¡½º
+class Buyer{	//ê³ ê° ì •ë³´ê°€ ë‹´ê¸´ í´ëž˜ìŠ¤
 	int money = 1000;
 	int bonusPoint = 0;
-	Vector item = new Vector();	//VectorÅ¬·¡½º·Î ºÎÅÍ °´Ã¼¸¦ »ý¼ºÇÒ ½Ã ±âº» °ªÀ¸·Î ¹è¿­ÀÌ »ý¼ºµÇ³ª Å©±â°¡ 10À¸·Î ¼³Á¤µÇ°í Å©±â¸¦ ³ÑÀ»½Ã °¡º¯ÀûÀ¸·Î º¯ÇÑ´Ù. °´Ã¼¹è¿­ÀÓ
+	Vector item = new Vector();	//Vectorí´ëž˜ìŠ¤ë¡œ ë¶€í„° ê°ì²´ë¥¼ ìƒì„±í•  ì‹œ ê¸°ë³¸ ê°’ìœ¼ë¡œ ë°°ì—´ì´ ìƒì„±ë˜ë‚˜ í¬ê¸°ê°€ 10ìœ¼ë¡œ ì„¤ì •ë˜ê³  í¬ê¸°ë¥¼ ë„˜ì„ì‹œ ê°€ë³€ì ìœ¼ë¡œ ë³€í•œë‹¤. ê°ì²´ë°°ì—´ìž„
 	
-	void buy(Product p) {	//buy() ¸Þ¼­µå¸¦ È£Ãâ ½Ã Product Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¸Å°³º¯¼ö·Î ¹Þ°í
-		if(money < p.price) {	//±× ÂüÁ¶º¯¼ö°¡ °¡¸®Å°´Â °´Ã¼ÀÇ °¡°Ýº¸´Ù ±¸¸ÅÀÚÀÇ º¸À¯ ±Ý¾×ÀÌ Àû´Ù¸é ¾Æ·¡¿Í °°Àº ¹®ÀÚ¸¦ Ãâ·ÂÇÏ°í ¾Æ¹«°Íµµ ¾ÈÇÑ´Ù.
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© ¹°°ÇÀ» »ì ¼ö ¾ø½À´Ï´Ù.");
+	void buy(Product p) {	//buy() ë©”ì„œë“œë¥¼ í˜¸ì¶œ ì‹œ Product íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ê³ 
+		if(money < p.price) {	//ê·¸ ì°¸ì¡°ë³€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì˜ ê°€ê²©ë³´ë‹¤ êµ¬ë§¤ìžì˜ ë³´ìœ  ê¸ˆì•¡ì´ ì ë‹¤ë©´ ì•„ëž˜ì™€ ê°™ì€ ë¬¸ìžë¥¼ ì¶œë ¥í•˜ê³  ì•„ë¬´ê²ƒë„ ì•ˆí•œë‹¤.
+			System.out.println("ìž”ì•¡ì´ ë¶€ì¡±í•˜ì—¬ ë¬¼ê±´ì„ ì‚´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			return;
 		}
 		
-		//±¸¸ÅÀÚÀÇ º¸À¯ ±Ý¾×ÀÌ ¹°Ç°ÀÇ °¡°Ýº¸´Ù ¸¹´Ù¸é ±Ý¾×À» °¡°Ý¸¸Å­ »©°í, º¸³Ê½º Æ÷ÀÎÆ®¸¦ Áõ°¡½ÃÅ²´Ù
+		//êµ¬ë§¤ìžì˜ ë³´ìœ  ê¸ˆì•¡ì´ ë¬¼í’ˆì˜ ê°€ê²©ë³´ë‹¤ ë§Žë‹¤ë©´ ê¸ˆì•¡ì„ ê°€ê²©ë§Œí¼ ë¹¼ê³ , ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸ë¥¼ ì¦ê°€ì‹œí‚¨ë‹¤
 		money = money - p.price;
 		bonusPoint = bonusPoint + p.bonusPoint;
 		item.add(p);
-		System.out.println(p + "À»/¸¦ ±¸ÀÔÇß½À´Ï´Ù.");
-		//¶ÇÇÑ Vector Å¸ÀÔÀÇ °´Ã¼(itemÀÌ °¡¸®Å°´Â)¿¡ ÂüÁ¶º¯¼öÀÇ µ¥ÀÌÅÍ(ÁÖ¼Ò°ª)¸¦ ¼øÂ÷ÀûÀ¸·Î ÀúÀåÇÑ´Ù.
+		System.out.println(p + "ì„/ë¥¼ êµ¬ìž…í–ˆìŠµë‹ˆë‹¤.");
+		//ë˜í•œ Vector íƒ€ìž…ì˜ ê°ì²´(itemì´ ê°€ë¦¬í‚¤ëŠ”)ì— ì°¸ì¡°ë³€ìˆ˜ì˜ ë°ì´í„°(ì£¼ì†Œê°’)ë¥¼ ìˆœì°¨ì ìœ¼ë¡œ ì €ìž¥í•œë‹¤.
 	}
 	
-	void refund(Product p) {	//È¯ºÒÀ» À§ÇÑ ¸Þ¼­µå·Î ¹éÅÍ °´Ã¼¿¡ ´ã±ä µ¥ÀÌÅÍ¸¦ remove()ÇÒ ¼ö ÀÖ´Ù¸é, Áï È¯ºÒÇÒ Á¦Ç°ÀÌ ÀÖ´Ù¸é
+	void refund(Product p) {	//í™˜ë¶ˆì„ ìœ„í•œ ë©”ì„œë“œë¡œ ë°±í„° ê°ì²´ì— ë‹´ê¸´ ë°ì´í„°ë¥¼ remove()í•  ìˆ˜ ìžˆë‹¤ë©´, ì¦‰ í™˜ë¶ˆí•  ì œí’ˆì´ ìžˆë‹¤ë©´
 		if(item.remove(p)) {
 			money = money + p.price;
 			bonusPoint = bonusPoint - p.bonusPoint;
-			System.out.println(p + "À»/¸¦ ¹ÝÇ° ÇÏ¼Ì½À´Ï´Ù.");
-			//±Ý¾×°ú º¸³Ê½ºÆ÷ÀÎÆ®¸¦ µÇµ¹¸°´Ù.
+			System.out.println(p + "ì„/ë¥¼ ë°˜í’ˆ í•˜ì…¨ìŠµë‹ˆë‹¤.");
+			//ê¸ˆì•¡ê³¼ ë³´ë„ˆìŠ¤í¬ì¸íŠ¸ë¥¼ ë˜ëŒë¦°ë‹¤.
 		}else {
-			System.out.println("±¸ÀÔÇÏ½Å Á¦Ç° Áß ÇØ´ç Á¦Ç°ÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("êµ¬ìž…í•˜ì‹  ì œí’ˆ ì¤‘ í•´ë‹¹ ì œí’ˆì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 	}
 	
-	void summary() {	//Á¦Ç°ÀÇ ÃÑ ±Ý¾×À» ±¸ÇÏ´Â ¸Þ¼­µå
+	void summary() {	//ì œí’ˆì˜ ì´ ê¸ˆì•¡ì„ êµ¬í•˜ëŠ” ë©”ì„œë“œ
 		int sum = 0;
 		String itemList = "";
 		
-		if(item.isEmpty()) {	//Vector °´Ã¼°¡ Á¦°øÇÏ´Â isEmpty()¸Þ¼­µå¸¦ ÅëÇÏ¿© ÀúÀåµÈ µ¥ÀÌÅÍ(ÁÖ¼Ò°ª)ÀÌ ¾ø´Ù¸é Ãâ·ÂÈÄ ¾Æ¹«°Íµµ ÇÏÁö ¾Ê´Â´Ù.
-			System.out.println("±¸ÀÔÇÏ½Å ¹°Ç°ÀÌ ¾ø½À´Ï´Ù.");
+		if(item.isEmpty()) {	//Vector ê°ì²´ê°€ ì œê³µí•˜ëŠ” isEmpty()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ì €ìž¥ëœ ë°ì´í„°(ì£¼ì†Œê°’)ì´ ì—†ë‹¤ë©´ ì¶œë ¥í›„ ì•„ë¬´ê²ƒë„ í•˜ì§€ ì•ŠëŠ”ë‹¤.
+			System.out.println("êµ¬ìž…í•˜ì‹  ë¬¼í’ˆì´ ì—†ìŠµë‹ˆë‹¤.");
 			return;
 		}
 		
-		for(int i = 0; i < item.size(); i++) {	//µ¥ÀÌÅÍ°¡ ÀÖ´Ù¸é °´Ã¼¹è¿­ÀÇ 0¹øÁö ºÎÅÍ ´ã±ä Å©±â¸¸Å­ 1¾¿ Áõ°¡ÇÏ¸ç ¹Ýº¹ÇÑ´Ù.
-			Product p = (Product)item.get(i);	//Product Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¿¡ Vector°´Ã¼ÀÇ °¢ ¹øÁö¼ö°¡ °¡¸®Å°´Â °´Ã¼¸¦ Çüº¯È¯ ÇÏ¿© ÀúÀåÇÑ´Ù.
-			sum = sum + p.price;	//ÇØ´ç °´Ã¼ÀÇ °¡°ÝÀ» ÃÑ±Ý¾×¿¡ ´õÇÏ°í
-			itemList += (i == 0) ? "" + p : ", " + p;	//3Ç× ¿¬»êÀÚ¸¦ ÅëÇÏ¿© String Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¿¡ toStringÀ¸·Î ¹ÝÈ¯µÈ °´Ã¼ÀÇ ¹®ÀÚ¿­À» ´õÇÑ´Ù.
+		for(int i = 0; i < item.size(); i++) {	//ë°ì´í„°ê°€ ìžˆë‹¤ë©´ ê°ì²´ë°°ì—´ì˜ 0ë²ˆì§€ ë¶€í„° ë‹´ê¸´ í¬ê¸°ë§Œí¼ 1ì”© ì¦ê°€í•˜ë©° ë°˜ë³µí•œë‹¤.
+			Product p = (Product)item.get(i);	//Product íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ì— Vectorê°ì²´ì˜ ê° ë²ˆì§€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ë¥¼ í˜•ë³€í™˜ í•˜ì—¬ ì €ìž¥í•œë‹¤.
+			sum = sum + p.price;	//í•´ë‹¹ ê°ì²´ì˜ ê°€ê²©ì„ ì´ê¸ˆì•¡ì— ë”í•˜ê³ 
+			itemList += (i == 0) ? "" + p : ", " + p;	//3í•­ ì—°ì‚°ìžë¥¼ í†µí•˜ì—¬ String íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ì— toStringìœ¼ë¡œ ë°˜í™˜ëœ ê°ì²´ì˜ ë¬¸ìžì—´ì„ ë”í•œë‹¤.
 		}
 		
-		System.out.println("±¸ÀÔÇÏ½Å ¹°Ç°ÀÇ ÃÑ ±Ý¾×Àº : " + sum + " ¸¸¿ø ÀÔ´Ï´Ù.");
-		System.out.println("±¸ÀÔÇÏ½Å Á¦Ç°Àº " + itemList + " ÀÔ´Ï´Ù.");
+		System.out.println("êµ¬ìž…í•˜ì‹  ë¬¼í’ˆì˜ ì´ ê¸ˆì•¡ì€ : " + sum + " ë§Œì› ìž…ë‹ˆë‹¤.");
+		System.out.println("êµ¬ìž…í•˜ì‹  ì œí’ˆì€ " + itemList + " ìž…ë‹ˆë‹¤.");
 	}
 }
 
@@ -100,18 +100,18 @@ class PolyArgumentTest {
 		Tv2 tv = new Tv2();
 		Computer com = new Computer();
 		Audio audio = new Audio();
-		//°¢°¢ÀÇ Å¬·¡½º·Î ºÎÅÍ »õ·Î °´Ã¼¸¦ »ý¼ºÇÑ ÈÄ
+		//ê°ê°ì˜ í´ëž˜ìŠ¤ë¡œ ë¶€í„° ìƒˆë¡œ ê°ì²´ë¥¼ ìƒì„±í•œ í›„
 		
 		b.buy(tv);
 		b.buy(com);
 		b.buy(audio);
-		//Buyer °´Ã¼ÀÇ buy()¸Þ¼­µå¿¡ ÇØ´ç ÂüÁ¶º¯¼ö¸¦ ¸Å°³º¯¼ö·Î Àü´ÞÇÏ¿©
-		//(ÀÌ¶§ ¸Å°³º¯¼ö·Î´Â Product Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¹ÞÀ¸³ª ºÎ¸ð/ÀÚ½Ä °ü°è·Î ÀÎÇÏ¿© ÀÚ½ÄÅ¸ÀÔÀÌ Àü´ÞµÈ´Ù) ±â´ÉÀ» ½ÇÇàÇÑ´Ù.
+		//Buyer ê°ì²´ì˜ buy()ë©”ì„œë“œì— í•´ë‹¹ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ì „ë‹¬í•˜ì—¬
+		//(ì´ë•Œ ë§¤ê°œë³€ìˆ˜ë¡œëŠ” Product íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ë°›ìœ¼ë‚˜ ë¶€ëª¨/ìžì‹ ê´€ê³„ë¡œ ì¸í•˜ì—¬ ìžì‹íƒ€ìž…ì´ ì „ë‹¬ëœë‹¤) ê¸°ëŠ¥ì„ ì‹¤í–‰í•œë‹¤.
 		b.summary();
 		System.out.println();
 		
 		b.refund(com);
 		b.summary();
-		//summary()¸Þ¼­µå¿Í refund()¸Þ¼­µå¸¦ ÅëÇÏ¿© °¢°¢ÀÇ ±â´ÉÀ» ½ÇÇàÇÑ´Ù. ÇØ´ç ±â´ÉÀº À§ÀÇ Å¬·¡½º¿¡¼­ ¼³¸íÇÔ
+		//summary()ë©”ì„œë“œì™€ refund()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ê°ê°ì˜ ê¸°ëŠ¥ì„ ì‹¤í–‰í•œë‹¤. í•´ë‹¹ ê¸°ëŠ¥ì€ ìœ„ì˜ í´ëž˜ìŠ¤ì—ì„œ ì„¤ëª…í•¨
 	}
 }

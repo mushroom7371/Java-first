@@ -1,4 +1,4 @@
-package ch07;
+ï»¿package ch07;
 
 public class CastingTest1 {
 	public static void main(String [] args) {
@@ -8,10 +8,10 @@ public class CastingTest1 {
 		
 		fe.water();
 		
-		car = fe;		// CarÅ¸ÀÔÀÇ ÂüÁ¶º¯¼ö°¡ ÀÚ¼Õ Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ °¡¸®Å³ ¼öÀÖÀ½. (Çüº¯È¯ »ı·«°¡´É)
-		// car.water(); ¿À·ù!! ÀÚ¼ÕÅ¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ °¡¸®Å°³ª Car Å¸ÀÔ¿¡´Â water ¸Ş¼­µå°¡ ¾ø¾î¼­ »ç¿ëºÒ°¡.
-		fe2 = (FireEngine)car; //FireEngine Å¸ÀÔÀÇ fe2°¡ car°¡ °¡¸®Å°´Â °÷¿¡ fe°¡ ÀÖÀ½.
-		fe2.water(); // fe2 °¡ °¡¸®Å°´Â °÷ÀÇ ÀÎ½ºÅÏ½º¿¡ water ¸Ş¼­µå°¡ ÀÖÀ¸¹Ç·Î »ç¿ë °¡´É.
+		car = fe;		// Caríƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ê°€ ìì† íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ê°€ë¦¬í‚¬ ìˆ˜ìˆìŒ. (í˜•ë³€í™˜ ìƒëµê°€ëŠ¥)
+		// car.water(); ì˜¤ë¥˜!! ìì†íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ê°€ë¦¬í‚¤ë‚˜ Car íƒ€ì…ì—ëŠ” water ë©”ì„œë“œê°€ ì—†ì–´ì„œ ì‚¬ìš©ë¶ˆê°€.
+		fe2 = (FireEngine)car; //FireEngine íƒ€ì…ì˜ fe2ê°€ carê°€ ê°€ë¦¬í‚¤ëŠ” ê³³ì— feê°€ ìˆìŒ.
+		fe2.water(); // fe2 ê°€ ê°€ë¦¬í‚¤ëŠ” ê³³ì˜ ì¸ìŠ¤í„´ìŠ¤ì— water ë©”ì„œë“œê°€ ìˆìœ¼ë¯€ë¡œ ì‚¬ìš© ê°€ëŠ¥.
 	}
 }
 	class Car{
@@ -19,16 +19,16 @@ public class CastingTest1 {
 		int door;
 		
 		void dive() {
-			System.out.println("¿îÀü ±â´É");
+			System.out.println("ìš´ì „ ê¸°ëŠ¥");
 		}
 		
 		void stop() {
-			System.out.println("¸ØÃß´Â ±â´É");
+			System.out.println("ë©ˆì¶”ëŠ” ê¸°ëŠ¥");
 		}
 	}
 
 	class FireEngine extends Car{
 		void water() {
-			System.out.println("¹° »Ñ¸®´Â ±â´É");
+			System.out.println("ë¬¼ ë¿Œë¦¬ëŠ” ê¸°ëŠ¥");
 		}
 	}

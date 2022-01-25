@@ -1,36 +1,36 @@
-package Generics;
+ï»¿package Generics;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-class Fruit12	{	//°úÀÏ Å¬·¡½º
+class Fruit12	{	//ê³¼ì¼ í´ë˜ìŠ¤
 	String name;
 	int weight;
 	
-	Fruit12(String name, int weight) {	//»ı¼ºÀÚ¸¦ ÅëÇÑ °´Ã¼ »ı¼º½Ã °úÀÏ ÀÌ¸§°ú ¹«°Ô ¼³Á¤
+	Fruit12(String name, int weight) {	//ìƒì„±ìë¥¼ í†µí•œ ê°ì²´ ìƒì„±ì‹œ ê³¼ì¼ ì´ë¦„ê³¼ ë¬´ê²Œ ì„¤ì •
 		this.name   = name;
 		this.weight = weight;
 	}
 
-	public String toString() { return name+"("+weight+")";}	//Ãâ·Â ¸Ş¼­µå toString() ¸Ş¼­µå ¿À¹ö¶óÀÌµù
+	public String toString() { return name+"("+weight+")";}	//ì¶œë ¥ ë©”ì„œë“œ toString() ë©”ì„œë“œ ì˜¤ë²„ë¼ì´ë”©
 	
 }
 
-class Apple12 extends Fruit12 {	//»ç°ú Å¬·¡½º, °úÀÏÅ¬·¡½º¸¦ »ó¼Ó¹ŞÀ½
-	Apple12(String name, int weight) {	//»ı¼ºÀÚ¸¦ ÅëÇØ ÀÎÀÚ°ªÀ¸·Î ¹ŞÀº µ¥ÀÌÅÍ¸¦
-		super(name, weight);	//Á¶»óÀÎ °úÀÏ Å¬·¡½ºÀÇ »ı¼ºÀÚ·Î ³Ñ°Ü ÀÌ¸§°ú ¹«°Ô¸¦ ¼³Á¤ÇÑ´Ù.
+class Apple12 extends Fruit12 {	//ì‚¬ê³¼ í´ë˜ìŠ¤, ê³¼ì¼í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ìŒ
+	Apple12(String name, int weight) {	//ìƒì„±ìë¥¼ í†µí•´ ì¸ìê°’ìœ¼ë¡œ ë°›ì€ ë°ì´í„°ë¥¼
+		super(name, weight);	//ì¡°ìƒì¸ ê³¼ì¼ í´ë˜ìŠ¤ì˜ ìƒì„±ìë¡œ ë„˜ê²¨ ì´ë¦„ê³¼ ë¬´ê²Œë¥¼ ì„¤ì •í•œë‹¤.
 	}
 }
 
-class Grape12 extends Fruit12 {	//»ç°ú Å¬·¡½º¿Í ¸¶Âù°¡Áö
+class Grape12 extends Fruit12 {	//ì‚¬ê³¼ í´ë˜ìŠ¤ì™€ ë§ˆì°¬ê°€ì§€
 	Grape12(String name, int weight) {
 		super(name, weight);
 	}
 }
 
-class AppleComp implements Comparator<Apple12> {	//ÀÎÅÍÆäÀÌ½º Comparator¸¦ ±¸ÇöÇÏ¿´°í ÇØ´ç ÀÎÅÍÆäÀÌ½º´Â Áö³×¸¯½º·Î ÀÎÇÏ¿© Apple12°´Ã¼¸¸ ÀúÀå°¡´ÉÇÏ´Ù.
-	public int compare(Apple12 t1, Apple12 t2) {	//Ãß»ó¸Ş¼­µå¸¦ ±¸ÇöÇÏ¿´´Ù.
+class AppleComp implements Comparator<Apple12> {	//ì¸í„°í˜ì´ìŠ¤ Comparatorë¥¼ êµ¬í˜„í•˜ì˜€ê³  í•´ë‹¹ ì¸í„°í˜ì´ìŠ¤ëŠ” ì§€ë„¤ë¦­ìŠ¤ë¡œ ì¸í•˜ì—¬ Apple12ê°ì²´ë§Œ ì €ì¥ê°€ëŠ¥í•˜ë‹¤.
+	public int compare(Apple12 t1, Apple12 t2) {	//ì¶”ìƒë©”ì„œë“œë¥¼ êµ¬í˜„í•˜ì˜€ë‹¤.
 		return t2.weight - t1.weight;
 	}
 }
@@ -55,15 +55,15 @@ class FruitBoxEx4 {
 		appleBox.add(new Apple12("GreenApple", 300));
 		appleBox.add(new Apple12("GreenApple", 100));
 		appleBox.add(new Apple12("GreenApple", 200));
-		//ÇØ´ç °´Ã¼(appleBox°¡ °¡¸®Å°´Â)¿¡ ¹«°Ô°¡ ´Ù¸¥ »ç°ú °´Ã¼¸¦ ÀúÀåÇÔ
+		//í•´ë‹¹ ê°ì²´(appleBoxê°€ ê°€ë¦¬í‚¤ëŠ”)ì— ë¬´ê²Œê°€ ë‹¤ë¥¸ ì‚¬ê³¼ ê°ì²´ë¥¼ ì €ì¥í•¨
 
 		grapeBox.add(new Grape12("GreenGrape", 400));
 		grapeBox.add(new Grape12("GreenGrape", 300));
 		grapeBox.add(new Grape12("GreenGrape", 200));
-		//¸¶Âù°¡Áö
+		//ë§ˆì°¬ê°€ì§€
 
 		Collections.sort(appleBox.getList(), new AppleComp());
-		Collections.sort(grapeBox.getList(), new GrapeComp());	//CollectionsÅ¬·¡½ºÀÇ sort()¸Ş¼­µå¸¦ ÅëÇÏ¿© »ó´ÜÀÇ *Comp()¸Ş¼­µå¸¦ ±âÁØÀ¸·Î *Box¾ÈÀÇ °´Ã¼¸¦ Á¤·ÄÇÑ´Ù.
+		Collections.sort(grapeBox.getList(), new GrapeComp());	//Collectionsí´ë˜ìŠ¤ì˜ sort()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ìƒë‹¨ì˜ *Comp()ë©”ì„œë“œë¥¼ ê¸°ì¤€ìœ¼ë¡œ *Boxì•ˆì˜ ê°ì²´ë¥¼ ì •ë ¬í•œë‹¤.
 		System.out.println(appleBox);
 		System.out.println(grapeBox);
 		System.out.println();
@@ -74,9 +74,9 @@ class FruitBoxEx4 {
 	}  // main
 }
 
-class FruitBox12<T extends Fruit12> extends Box12<T> {}	//Fruit12 °´Ã¼¸¦ »ó¼Ó¹Ş´Â Å¸ÀÔT °´Ã¼¸¸À» ÀúÀåÇÏ´Â Å¬·¡½º, Box12Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â´Ù.
+class FruitBox12<T extends Fruit12> extends Box12<T> {}	//Fruit12 ê°ì²´ë¥¼ ìƒì†ë°›ëŠ” íƒ€ì…T ê°ì²´ë§Œì„ ì €ì¥í•˜ëŠ” í´ë˜ìŠ¤, Box12í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ”ë‹¤.
 
-class Box12<T> {	//ÇØ´ç ³»¿ëÀº FruitBoxEx3.java Âü°í
+class Box12<T> {	//í•´ë‹¹ ë‚´ìš©ì€ FruitBoxEx3.java ì°¸ê³ 
 	ArrayList<T> list = new ArrayList<T>();
 
 	void add(T item) {

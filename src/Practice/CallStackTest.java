@@ -1,21 +1,21 @@
-package Practice;
+ï»¿package Practice;
 
 public class CallStackTest {
 	public static void main(String[] args) {
 		
-		System.out.println("main(String[] args) ÀÌ ½ÃÀÛµÇ¾úÀ½.");
+		System.out.println("main(String[] args) ì´ ì‹œì‘ë˜ì—ˆìŒ.");
 		firstMethod();
-		System.out.println("main(String[] args) ÀÌ ³¡³µÀ½.");
+		System.out.println("main(String[] args) ì´ ëë‚¬ìŒ.");
 	}
 	
 	static void firstMethod() {
-		System.out.println("firstMethod() ÀÌ ½ÃÀÛµÇ¾úÀ½.");
+		System.out.println("firstMethod() ì´ ì‹œì‘ë˜ì—ˆìŒ.");
 		secondMethod();
-		System.out.println("firstMethod() ÀÌ ³¡³µÀ½.");
+		System.out.println("firstMethod() ì´ ëë‚¬ìŒ.");
 	}
 	
 	static void secondMethod() {
-		System.out.println("secondMethod() ÀÌ ½ÃÀÛµÇ¾úÀ½.");
-		System.out.println("secondMethod() ÀÌ ³¡³µÀ½.");
+		System.out.println("secondMethod() ì´ ì‹œì‘ë˜ì—ˆìŒ.");
+		System.out.println("secondMethod() ì´ ëë‚¬ìŒ.");
 	}
 }

@@ -1,27 +1,27 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.Stack;
 
-//Â¦Áö¾î Á¦°ÅÇÏ±â
+//ì§ì§€ì–´ ì œê±°í•˜ê¸°
 class MatchDelete {
 	private int solution(String s) {
 		int answer = -1;
-		Stack<String> st = new Stack<String>();	//¹®ÀÚ¸¦ ´ã°í ÆÇ´ÜÇÏ±â À§ÇØ »ı¼ºÇÑ Stack °´Ã¼
+		Stack<String> st = new Stack<String>();	//ë¬¸ìë¥¼ ë‹´ê³  íŒë‹¨í•˜ê¸° ìœ„í•´ ìƒì„±í•œ Stack ê°ì²´
 		
-		for(int i = 0; i < s.length(); i++) {	//¸Å°³º¯¼ö·Î ÁÖ¾îÁø ¹®ÀÚ¿­ÀÇ ±æÀÌ¸¸Å­ 1¾¿ ¹İº¹
-			if(st.isEmpty()) {	//½ºÅÃÀÌ ºñ¾îÀÖ´Ù¸é
-				st.push(s.substring(i, i+1));	//i¹øÁö ºÎÅÍ i+1¹øÁö Àü±îÁöÀÇ ¹®ÀÚ¿­À» ½ºÅÃ¿¡ ³Ö´Â´Ù.
-			}else if(st.peek().equals(s.substring(i, i+1))) {	//½ºÅÃÀÇ ¸¶Áö¸· ¹®ÀÚ°¡ ±× ´ÙÀ½ ¹®ÀÚ¿Í µ¿ÀÏÇÏ´Ù¸é
-				st.pop();	//½ºÅÃÀÇ ¸¶Áö¸· ¹®ÀÚ¸¦ Á¦°ÅÇÑ´Ù.
-			}else {	//¾Æ´Ï¶ó¸é ¹®ÀÚ¸¦ ½ºÅÃ¿¡ ³Ö´Â´Ù.
+		for(int i = 0; i < s.length(); i++) {	//ë§¤ê°œë³€ìˆ˜ë¡œ ì£¼ì–´ì§„ ë¬¸ìì—´ì˜ ê¸¸ì´ë§Œí¼ 1ì”© ë°˜ë³µ
+			if(st.isEmpty()) {	//ìŠ¤íƒì´ ë¹„ì–´ìˆë‹¤ë©´
+				st.push(s.substring(i, i+1));	//ië²ˆì§€ ë¶€í„° i+1ë²ˆì§€ ì „ê¹Œì§€ì˜ ë¬¸ìì—´ì„ ìŠ¤íƒì— ë„£ëŠ”ë‹¤.
+			}else if(st.peek().equals(s.substring(i, i+1))) {	//ìŠ¤íƒì˜ ë§ˆì§€ë§‰ ë¬¸ìê°€ ê·¸ ë‹¤ìŒ ë¬¸ìì™€ ë™ì¼í•˜ë‹¤ë©´
+				st.pop();	//ìŠ¤íƒì˜ ë§ˆì§€ë§‰ ë¬¸ìë¥¼ ì œê±°í•œë‹¤.
+			}else {	//ì•„ë‹ˆë¼ë©´ ë¬¸ìë¥¼ ìŠ¤íƒì— ë„£ëŠ”ë‹¤.
 				st.push(s.substring(i, i+1));
 			}
 		}
 		
-		if(st.isEmpty()) {	//½ºÅÃÀÌ ºñ¾îÀÖ´Ù¸é ¾Æ¹« °Íµµ ¾ø´Â »óÅÂ·Î
-			answer = 1;	//1 ¹İÈ¯
-		}else {	//¾Æ´Ï¶ó¸é
-			answer = 0;	//0 ¹İÈ¯
+		if(st.isEmpty()) {	//ìŠ¤íƒì´ ë¹„ì–´ìˆë‹¤ë©´ ì•„ë¬´ ê²ƒë„ ì—†ëŠ” ìƒíƒœë¡œ
+			answer = 1;	//1 ë°˜í™˜
+		}else {	//ì•„ë‹ˆë¼ë©´
+			answer = 0;	//0 ë°˜í™˜
 		}
 		
         System.out.println("Hello Java");

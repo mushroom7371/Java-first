@@ -1,30 +1,30 @@
-package Thread;
+ï»¿package Thread;
 
 class ThreadEx15 {
 	public static void main(String args[]) {
 		RunImplEx15 r = new RunImplEx15();
-		//¾Æ·¡¿¡ Á¤ÀÇÇÑ Å¬·¡½º Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í ¿©±â¿¡ Å¬·¡½º·ÎºÎÅÍ »õ·Î¿î °´Ã¼¸¦ »ı¼ºÇÑ ´ÙÀ½ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
+		//ì•„ë˜ì— ì •ì˜í•œ í´ë˜ìŠ¤ íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ì—¬ê¸°ì— í´ë˜ìŠ¤ë¡œë¶€í„° ìƒˆë¡œìš´ ê°ì²´ë¥¼ ìƒì„±í•œ ë‹¤ìŒ ì£¼ì†Œê°’ì„ ì €ì¥í•œë‹¤.
 		Thread th1 = new Thread(r, "*");
 		Thread th2 = new Thread(r, "**");
 		Thread th3 = new Thread(r, "***");
-		//Thread Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ °¢°¢ ¼±¾ğÇÏ°í ¿©±â¿¡ °´Ã¼¸¦ »ı¼ºÇÏ¿© ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ´Âµ¥,
-		//run()¸Ş¼­µå¸¦ È£ÃâÇÒ °´Ã¼(target)¸¦ r·Î ÁöÁ¤ÇÑ ´ÙÀ½ ÁöÁ¤µÈ ÀÌ¸§(¹®ÀÚ¿­)·Î ÀúÀåÇÑ´Ù.
+		//Thread íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ê°ê° ì„ ì–¸í•˜ê³  ì—¬ê¸°ì— ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ì£¼ì†Œê°’ì„ ì €ì¥í•˜ëŠ”ë°,
+		//run()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•  ê°ì²´(target)ë¥¼ rë¡œ ì§€ì •í•œ ë‹¤ìŒ ì§€ì •ëœ ì´ë¦„(ë¬¸ìì—´)ë¡œ ì €ì¥í•œë‹¤.
 		
 
 		th1.start();
 		th2.start();
 		th3.start();
-		//Thread ½ÃÀÛ
+		//Thread ì‹œì‘
 
 		try {
 			Thread.sleep(2000);
-			th1.suspend();	// ¾²·¹µå th1À» Àá½Ã Áß´Ü½ÃÅ²´Ù.
+			th1.suspend();	// ì“°ë ˆë“œ th1ì„ ì ì‹œ ì¤‘ë‹¨ì‹œí‚¨ë‹¤.
 			Thread.sleep(2000);
 			th2.suspend();
 			Thread.sleep(3000);
-			th1.resume();	// ¾²·¹µå th1ÀÌ ´Ù½Ã µ¿ÀÛÇÏµµ·Ï ÇÑ´Ù.
+			th1.resume();	// ì“°ë ˆë“œ th1ì´ ë‹¤ì‹œ ë™ì‘í•˜ë„ë¡ í•œë‹¤.
 			Thread.sleep(3000);
-			th1.stop();		// ¾²·¹µå th1À» °­Á¦Á¾·á½ÃÅ²´Ù.
+			th1.stop();		// ì“°ë ˆë“œ th1ì„ ê°•ì œì¢…ë£Œì‹œí‚¨ë‹¤.
 			th2.stop();
 			Thread.sleep(2000);
 			th3.stop();
@@ -32,13 +32,13 @@ class ThreadEx15 {
 	} // main
 }
 
-class RunImplEx15 implements Runnable {	//Runnable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ´Â Å¬·¡½º ÀÛ¼º
-	public void run() {	//Ãß»ó¸Ş¼­µå¸¦ Á¤ÀÇÇÏ¿© ¿Ï¼ºÇÑ´Ù.
-		while(true) {	//Ç×»ó ½ÇÇàµÇµµ·Ï ÇÔ
+class RunImplEx15 implements Runnable {	//Runnable ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ëŠ” í´ë˜ìŠ¤ ì‘ì„±
+	public void run() {	//ì¶”ìƒë©”ì„œë“œë¥¼ ì •ì˜í•˜ì—¬ ì™„ì„±í•œë‹¤.
+		while(true) {	//í•­ìƒ ì‹¤í–‰ë˜ë„ë¡ í•¨
 			System.out.println(Thread.currentThread().getName());
-			//ÇöÀç ¾²·¡µåÀÇ ÀÌ¸§À» ¸®ÅÏ¹Ş°í ÀÌ¸¦ Ãâ·ÂÇÑ´Ù.
+			//í˜„ì¬ ì“°ë˜ë“œì˜ ì´ë¦„ì„ ë¦¬í„´ë°›ê³  ì´ë¥¼ ì¶œë ¥í•œë‹¤.
 			try {
-				Thread.sleep(1000);	//¾²·¹µå¸¦ Áö¿¬½ÃÅ²´Ù.
+				Thread.sleep(1000);	//ì“°ë ˆë“œë¥¼ ì§€ì—°ì‹œí‚¨ë‹¤.
 			} catch(InterruptedException e) {}
 		}
 	} // run()

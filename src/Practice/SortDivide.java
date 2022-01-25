@@ -1,4 +1,4 @@
-package Practice;
+ï»¿package Practice;
 
 import java.util.*;
 
@@ -17,13 +17,13 @@ class SortDivide{
 		static void randomMethod(int [] arr1, int [] arr2) {
 			for(int i = 0; i < arr1.length; i++) {
 				arr1[i] = (int)(Math.random() * 10);
-				//System.out.printf("%d ", arr1[i]); // arr1 ·£´ý Ãâ·Â È®ÀÎ¿ë
+				//System.out.printf("%d ", arr1[i]); // arr1 ëžœë¤ ì¶œë ¥ í™•ì¸ìš©
 			}
 			for(int i = 0; i < arr2.length; i++) {
 				arr2[i] = (int)(Math.random() * 10);
-				//System.out.printf("%d ", arr2[i]); // arr2 ·£´ý Ãâ·Â È®ÀÎ¿ë
+				//System.out.printf("%d ", arr2[i]); // arr2 ëžœë¤ ì¶œë ¥ í™•ì¸ìš©
 			}
-		} //randomMethod ³¡
+		} //randomMethod ë
 		
 		static void sortMethod(int [] arr1, int [] arr2) {
 			for(int i = 0; i < arr1.length-1; i++) {
@@ -43,6 +43,6 @@ class SortDivide{
 					System.out.print(arr1[k]);
 				System.out.println();
 			}
-		} //sortMethod ³¡
+		} //sortMethod ë
 	}
 

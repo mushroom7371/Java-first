@@ -1,49 +1,49 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 public class QueueEx {
 	
 	int MAX = 1000;
-	int front;	//Å¥ÀÇ Ã¹¹øÂ°¿¡ À§Ä¡ÇÒ index°ª popÇÒ¶§ Âü°íÇÑ´Ù.
-	int rear;	//Å¥ÀÇ ¸¶Áö¸·¿¡ À§Ä¡ÇÒ index°ª pushÇÒ¶§ Âü°íÇÑ´Ù.
-	int [] queue;	//±âº»¹è¿­À» ÀÌ¿ëÇØ¼­ Å¥¸¦ ±¸ÇöÇÒ °ÍÀÓ
+	int front;	//íì˜ ì²«ë²ˆì§¸ì— ìœ„ì¹˜í•  indexê°’ popí• ë•Œ ì°¸ê³ í•œë‹¤.
+	int rear;	//íì˜ ë§ˆì§€ë§‰ì— ìœ„ì¹˜í•  indexê°’ pushí• ë•Œ ì°¸ê³ í•œë‹¤.
+	int [] queue;	//ê¸°ë³¸ë°°ì—´ì„ ì´ìš©í•´ì„œ íë¥¼ êµ¬í˜„í•  ê²ƒì„
 	
 	public QueueEx() {
-		front = rear = 0;	//Å¥ÀÇ ±¸Á¶»ó Ã³À½°ú ¸¶Áö¸· Åë·Î°¡ ¿­·ÁÀÖÀ½ »ı¼ºÀÚ·Î ÃÖÃÊ»ı¼º½Ã ÃÊ±âÈ­ ÇÏ´Â ÀÛ¾÷
-		queue = new int[MAX];	//À§¿¡ ¼±¾ğÇÑ Àü¿ªº¯¼ö MAXÀÇ ÃÖ´ë Å©±â¸¸Å­ ¹è¿­ÀÇ Å©±â¸¦ ¼³Á¤
+		front = rear = 0;	//íì˜ êµ¬ì¡°ìƒ ì²˜ìŒê³¼ ë§ˆì§€ë§‰ í†µë¡œê°€ ì—´ë ¤ìˆìŒ ìƒì„±ìë¡œ ìµœì´ˆìƒì„±ì‹œ ì´ˆê¸°í™” í•˜ëŠ” ì‘ì—…
+		queue = new int[MAX];	//ìœ„ì— ì„ ì–¸í•œ ì „ì—­ë³€ìˆ˜ MAXì˜ ìµœëŒ€ í¬ê¸°ë§Œí¼ ë°°ì—´ì˜ í¬ê¸°ë¥¼ ì„¤ì •
 	}
 	
 	public boolean queueIsEmpty() {
-		return front == rear;	//¸¶Âù°¡Áö·Î Å¥´Â ¶Õ¸° Åë·ÎÀÌ¹Ç·Î front¿Í rear °¡ °°´Ù¸é °ªÀÌ ¾ø´Ù´Â °ÍÀ» ¾Ë¼öÀÖÀ½
+		return front == rear;	//ë§ˆì°¬ê°€ì§€ë¡œ íëŠ” ëš«ë¦° í†µë¡œì´ë¯€ë¡œ frontì™€ rear ê°€ ê°™ë‹¤ë©´ ê°’ì´ ì—†ë‹¤ëŠ” ê²ƒì„ ì•Œìˆ˜ìˆìŒ
 	}
 	
 	public boolean queueIsFull() {
-		if(rear == MAX-1) {	//¸¶Áö¸·À» ÆÇ´ÜÇÏ´Â rear °¡ MAX-1 ÀÌ¸é °¡µæ Â÷ÀÖ´Ù´Â ¶æ
+		if(rear == MAX-1) {	//ë§ˆì§€ë§‰ì„ íŒë‹¨í•˜ëŠ” rear ê°€ MAX-1 ì´ë©´ ê°€ë“ ì°¨ìˆë‹¤ëŠ” ëœ»
 			return true;
 		}else {
 			return false;
 		}
 	}
 	
-	public int size() {	//ÇöÀç Å¥¿¡ µé¾îÀÖ´Â µ¥ÀÌÅÍÀÇ °¹¼ö¸¦ ÆÄ¾ÇÇÏ±â À§ÇÑ ¸Ş¼­µå
+	public int size() {	//í˜„ì¬ íì— ë“¤ì–´ìˆëŠ” ë°ì´í„°ì˜ ê°¯ìˆ˜ë¥¼ íŒŒì•…í•˜ê¸° ìœ„í•œ ë©”ì„œë“œ
 		return front - rear;
 	}
 	
-	public void push(int value) {	//Å¥°¡ °¡µæÂ÷ÀÖ´Ù¸é ¾Æ¹«°Íµµ ¾ÈÇÏ°í
+	public void push(int value) {	//íê°€ ê°€ë“ì°¨ìˆë‹¤ë©´ ì•„ë¬´ê²ƒë„ ì•ˆí•˜ê³ 
 		if(queueIsFull()) {
 			System.out.println("Queue is Full");
 			return;
 		}
 		
-		queue[rear++] = value;	//ºó °ø°£ÀÌ ÀÖ´Ù¸é Å¥ÀÇ rear¹øÁö¼ö¿¡ ¸Å°³º¯¼ö·Î µé¾î¿Â value¸¦ µ¥ÀÌÅÍ·Î ³Ö¾îÁÖ°í rearÀÇ °ªÀ» 1 Áõ°¡½ÃÅ´
+		queue[rear++] = value;	//ë¹ˆ ê³µê°„ì´ ìˆë‹¤ë©´ íì˜ rearë²ˆì§€ìˆ˜ì— ë§¤ê°œë³€ìˆ˜ë¡œ ë“¤ì–´ì˜¨ valueë¥¼ ë°ì´í„°ë¡œ ë„£ì–´ì£¼ê³  rearì˜ ê°’ì„ 1 ì¦ê°€ì‹œí‚´
 	}
 	
-	public int pop() {	//Å¥°¡ ºñ¾îÀÖ´Â »óÅÂ¶ó¸é ¾Æ¹«°Íµµ ¾ÈÇÏ°í
+	public int pop() {	//íê°€ ë¹„ì–´ìˆëŠ” ìƒíƒœë¼ë©´ ì•„ë¬´ê²ƒë„ ì•ˆí•˜ê³ 
 		if(queueIsEmpty()) {
 			System.out.println("Queue is Empty");
 			return -1;
 		}
 		
-		int popValue = queue[front++];	//µ¥ÀÌÅÍ°¡ ÀÖ´Ù¸é »õ·Î ¼±¾ğÇÑ º¯¼ö¿¡ queue ¹øÁö¼öÀÇ µ¥ÀÌÅÍ¸¦ ´ãÀº ´ÙÀ½ ¹øÁö¼ö¸¦ Áõ°¡½ÃÅ²´Ù.
+		int popValue = queue[front++];	//ë°ì´í„°ê°€ ìˆë‹¤ë©´ ìƒˆë¡œ ì„ ì–¸í•œ ë³€ìˆ˜ì— queue ë²ˆì§€ìˆ˜ì˜ ë°ì´í„°ë¥¼ ë‹´ì€ ë‹¤ìŒ ë²ˆì§€ìˆ˜ë¥¼ ì¦ê°€ì‹œí‚¨ë‹¤.
 		return popValue;
 	}
 	

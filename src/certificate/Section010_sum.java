@@ -1,7 +1,7 @@
-package certificate;
+ï»¿package certificate;
 
 class Section010_sum {
-	//while¹®À» ÀÌ¿ëÇÑ 1~100 ÇÕ±¸ÇÏ±â
+	//whileë¬¸ì„ ì´ìš©í•œ 1~100 í•©êµ¬í•˜ê¸°
 	public static void main(String[] args) {
 		int i = 0;
 		int sum = 0;
@@ -9,7 +9,7 @@ class Section010_sum {
 		do {
 			i++;
 			sum += i;
-		}while(i < 100);	//while¹®ÀÌ °ÅÁşÀÌ µÇ¸é ¹İº¹À» Á¾·áÇÑ´Ù. 100¹Ì¸¸ÀÎ ÀÌÀ¯´Â 99ÀÏ¶§ do¹®Àå¿¡¼­ Áõ°¡¿¬»êÀÚ·Î 100ÀÌ µÇ±â ¶§¹®
+		}while(i < 100);	//whileë¬¸ì´ ê±°ì§“ì´ ë˜ë©´ ë°˜ë³µì„ ì¢…ë£Œí•œë‹¤. 100ë¯¸ë§Œì¸ ì´ìœ ëŠ” 99ì¼ë•Œ doë¬¸ì¥ì—ì„œ ì¦ê°€ì—°ì‚°ìë¡œ 100ì´ ë˜ê¸° ë•Œë¬¸
 		
 		System.out.println(sum);
 	}

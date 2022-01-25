@@ -1,4 +1,4 @@
-package IOStream;
+ï»¿package IOStream;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -15,13 +15,13 @@ public class IOEx4 {
 		ByteArrayInputStream  input  = null;
 		ByteArrayOutputStream output = null;
 
-		input  = new ByteArrayInputStream(inSrc);	//input¿¡ inSrc¸¦ ¸Å°³º¯¼ö·Î ¹ŞÀº ByteArrayInputStream°´Ã¼¸¦ »ı¼º
+		input  = new ByteArrayInputStream(inSrc);	//inputì— inSrcë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ByteArrayInputStreamê°ì²´ë¥¼ ìƒì„±
 		output = new ByteArrayOutputStream();
 
 		try {
-			while(input.available() > 0) { //input¿¡ ÇöÀç ÀĞ¾î¿Ã¼ö ÀÖ´Â µ¥ÀÌÅÍ°¡ ÀÖ´Ù¸é
-				int len = input.read(temp); // ÀĞ¾î ¿Â µ¥ÀÌÅÍÀÇ °³¼ö¸¦ ¹İÈ¯ÇÑ´Ù.
-				output.write(temp, 0, len); // ÀĞ¾î ¿Â ¸¸Å­¸¸ writeÇÑ´Ù.
+			while(input.available() > 0) { //inputì— í˜„ì¬ ì½ì–´ì˜¬ìˆ˜ ìˆëŠ” ë°ì´í„°ê°€ ìˆë‹¤ë©´
+				int len = input.read(temp); // ì½ì–´ ì˜¨ ë°ì´í„°ì˜ ê°œìˆ˜ë¥¼ ë°˜í™˜í•œë‹¤.
+				output.write(temp, 0, len); // ì½ì–´ ì˜¨ ë§Œí¼ë§Œ writeí•œë‹¤.
 			}
 		} catch(IOException e) {}
 

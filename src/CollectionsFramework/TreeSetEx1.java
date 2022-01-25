@@ -1,11 +1,11 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.TreeSet;
 
 public class TreeSetEx1 {
 
 	public static void main(String[] args) {
-		TreeSet set = new TreeSet(); //TreeSet °´Ã¼ »ı¼º ÈÄ TreeSet Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¿¡ ÁÖ¼Ò°ªÀ» ÀúÀå
+		TreeSet set = new TreeSet(); //TreeSet ê°ì²´ ìƒì„± í›„ TreeSet íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ì— ì£¼ì†Œê°’ì„ ì €ì¥
 		
 		String from = "b";
 		String to = "d";
@@ -26,8 +26,8 @@ public class TreeSetEx1 {
 		
 		System.out.println(set);
 		System.out.println("range search : from " + from + " to " + to);
-		System.out.println("result1 : " + set.subSet(from, to));	//ÀÚ¹Ù¿¡¼­ from toÀÇ °æ¿ì to´Â Æ÷ÇÔÇÏÁö ¾Ê´Â´Ù. ¿©±â¼­´Â dÀÌÀü±îÁöÀÇ °ªÀ» Ãâ·Â
-		System.out.println("result2 : " + set.subSet(from, to + "zzz")); //d·Î ½ÃÀÛÇÏ´Â ´Ü¾î±îÁö Æ÷ÇÔÇÏ±â À§ÇØ "zzz"¸¦ ´õÇØ ÁÖ¾ú´Ù ¹®ÀÚ¿­Àº À¯´ÏÄÚµå·Î ÀúÀåµÇ¾î ´ë¼Ò¹®ÀÚ,°ø¹é µîÀÌ ¼ø¼­¿¡ ¿µÇâÀ» ¹ÌÄ£´Ù.
+		System.out.println("result1 : " + set.subSet(from, to));	//ìë°”ì—ì„œ from toì˜ ê²½ìš° toëŠ” í¬í•¨í•˜ì§€ ì•ŠëŠ”ë‹¤. ì—¬ê¸°ì„œëŠ” dì´ì „ê¹Œì§€ì˜ ê°’ì„ ì¶œë ¥
+		System.out.println("result2 : " + set.subSet(from, to + "zzz")); //dë¡œ ì‹œì‘í•˜ëŠ” ë‹¨ì–´ê¹Œì§€ í¬í•¨í•˜ê¸° ìœ„í•´ "zzz"ë¥¼ ë”í•´ ì£¼ì—ˆë‹¤ ë¬¸ìì—´ì€ ìœ ë‹ˆì½”ë“œë¡œ ì €ì¥ë˜ì–´ ëŒ€ì†Œë¬¸ì,ê³µë°± ë“±ì´ ìˆœì„œì— ì˜í–¥ì„ ë¯¸ì¹œë‹¤.
 	}
 
 }

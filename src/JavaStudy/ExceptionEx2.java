@@ -1,4 +1,4 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 public class ExceptionEx2 {
 	public static void main(String [] args) {
@@ -7,17 +7,17 @@ public class ExceptionEx2 {
 		
 		try {
 			int k = divide(x, y);
-			//divide ¸Ş¼­µå¸¦ È£Ãâ ÇÏ°í ¸®ÅÏ°ªÀ» ÀúÀåÇÏ·Á ÇÏ´Âµ¥ ¿¹¿Ü°¡ ¹ß»ıÇÒ ¼ö ÀÖ´Â ÁöÁ¡
+			//divide ë©”ì„œë“œë¥¼ í˜¸ì¶œ í•˜ê³  ë¦¬í„´ê°’ì„ ì €ì¥í•˜ë ¤ í•˜ëŠ”ë° ì˜ˆì™¸ê°€ ë°œìƒí•  ìˆ˜ ìˆëŠ” ì§€ì 
 		}catch(ArithmeticException a) {
-			System.out.println("¿À·ù ¹ß»ı" + a.toString());
-			//¿¹¿ÜÃ³¸®½Ã Ãâ·ÂÇÏµÇ a.toStringÀ» ÀÌ¿ëÇÏ¿© ¾î¶°ÇÑ ¿¹¿Ü°¡ ³ªÅ¸³µ´ÂÁö ¸í½ÃÇØÁÙ¼öÀÖ´Ù.
+			System.out.println("ì˜¤ë¥˜ ë°œìƒ" + a.toString());
+			//ì˜ˆì™¸ì²˜ë¦¬ì‹œ ì¶œë ¥í•˜ë˜ a.toStringì„ ì´ìš©í•˜ì—¬ ì–´ë– í•œ ì˜ˆì™¸ê°€ ë‚˜íƒ€ë‚¬ëŠ”ì§€ ëª…ì‹œí•´ì¤„ìˆ˜ìˆë‹¤.
 		}
 		
 	}
 	
 	public static int divide(int x, int y) throws ArithmeticException {
-		//¿¹¿ÜÃ³¸®¸¦ À§ÇÑ ¸Ş¼­µå ArithmeticExceptionÀ» ¿¹»óÇÏ±â ¶§¹®¿¡ ÀÇµµÀûÀ¸·Î throws¸¦ »ç¿ëÇÏ¿´´Ù.
-		int k = x / y;	//Á¤¼ö Å¸ÀÔÀ» ³ª´­¶§ 0À¸·Î ³ª´©°Ô µÇ´Â °æ¿ì°¡ »ı±æ¼ö ÀÖÀ½
+		//ì˜ˆì™¸ì²˜ë¦¬ë¥¼ ìœ„í•œ ë©”ì„œë“œ ArithmeticExceptionì„ ì˜ˆìƒí•˜ê¸° ë•Œë¬¸ì— ì˜ë„ì ìœ¼ë¡œ throwsë¥¼ ì‚¬ìš©í•˜ì˜€ë‹¤.
+		int k = x / y;	//ì •ìˆ˜ íƒ€ì…ì„ ë‚˜ëˆŒë•Œ 0ìœ¼ë¡œ ë‚˜ëˆ„ê²Œ ë˜ëŠ” ê²½ìš°ê°€ ìƒê¸¸ìˆ˜ ìˆìŒ
 		return k;
 	}
 }

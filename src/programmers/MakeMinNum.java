@@ -1,16 +1,16 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-//ÃÖ¼Ú°ª ¸¸µé±â
+//ìµœì†Ÿê°’ ë§Œë“¤ê¸°
 class MakeMinNum {
 	private int solution(int [] A, int [] B){
 		int answer = 0;
-		ArrayList<Integer> ala = new ArrayList();	//Á¤·ÄÀ» À§ÇØ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÒ ArrayList °´Ã¼ »ı¼º
+		ArrayList<Integer> ala = new ArrayList();	//ì •ë ¬ì„ ìœ„í•´ ë°ì´í„°ë¥¼ ì €ì¥í•  ArrayList ê°ì²´ ìƒì„±
 		ArrayList<Integer> alb = new ArrayList();
 		
-		for(int i = 0; i < A.length; i++) {	//ArrayList °´Ã¼¿¡ ÀÎÀÚ°ªÀ¸·Î ÁÖ¾îÁø ÂüÁ¶º¯¼ö°¡ °¡¸®Å°´Â ¹è¿­ÀÇ µ¥ÀÌÅÍ¸¦ Ãß°¡ÇÏ¿© ÁØ´Ù.
+		for(int i = 0; i < A.length; i++) {	//ArrayList ê°ì²´ì— ì¸ìê°’ìœ¼ë¡œ ì£¼ì–´ì§„ ì°¸ì¡°ë³€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì˜ ë°ì´í„°ë¥¼ ì¶”ê°€í•˜ì—¬ ì¤€ë‹¤.
 			ala.add(A[i]);
 		}
 		
@@ -18,12 +18,12 @@ class MakeMinNum {
 			alb.add(B[i]);
 		}
 		
-		//°¢ ¹øÁöÀÇ µ¥ÀÌÅÍ¸¦ °öÇÏ¿© ´õÇÑ °á°ú°¡ ÃÖ¼Ú°ªÀÌ µÇ±â À§ÇØ¼­´Â °¡ÀåÅ« ¼ö´Â °¡Àå ÀÛÀº¼ö¶û °öÇÏ°í, µÎ¹øÂ°·Î Å«¼ö¿Í µÎ¹øÂ°·Î ÀÛÀº¼ö¶û °öÇÏ¿©¾ß µÈ´Ù.
-		//ÀÌ¸¦ À§ÇÑ Á¤·Ä ÀÛ¾÷
+		//ê° ë²ˆì§€ì˜ ë°ì´í„°ë¥¼ ê³±í•˜ì—¬ ë”í•œ ê²°ê³¼ê°€ ìµœì†Ÿê°’ì´ ë˜ê¸° ìœ„í•´ì„œëŠ” ê°€ì¥í° ìˆ˜ëŠ” ê°€ì¥ ì‘ì€ìˆ˜ë‘ ê³±í•˜ê³ , ë‘ë²ˆì§¸ë¡œ í°ìˆ˜ì™€ ë‘ë²ˆì§¸ë¡œ ì‘ì€ìˆ˜ë‘ ê³±í•˜ì—¬ì•¼ ëœë‹¤.
+		//ì´ë¥¼ ìœ„í•œ ì •ë ¬ ì‘ì—…
 		Collections.sort(ala);
 		Collections.sort(alb, Collections.reverseOrder());
 		
-		for(int i = 0; i < ala.size(); i++) {	//Å«¼ö¿Í ÀÛÀº¼ö¸¦ ´õÇÏ¿© answer¿¡ ´õÇÏ¿© ÁØ´Ù.
+		for(int i = 0; i < ala.size(); i++) {	//í°ìˆ˜ì™€ ì‘ì€ìˆ˜ë¥¼ ë”í•˜ì—¬ answerì— ë”í•˜ì—¬ ì¤€ë‹¤.
 			answer += ala.get(i) * alb.get(i);
 		}
 

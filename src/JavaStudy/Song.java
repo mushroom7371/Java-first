@@ -1,9 +1,9 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 public class Song {
 	
-	String songTitle;	//Å¬·¡½ºÀÇ ÇÊµå¸¦ ¼±¾ğÇÔ
-	String singer;		//°¢°¢ String Å¸ÀÔ, int Å¸ÀÔÀÇ º¯¼ö¸¦ ¼±¾ğÇÏ³ª ÃÊ±âÈ­´Â ÇÏÁö ¾ÊÀ½
+	String songTitle;	//í´ë˜ìŠ¤ì˜ í•„ë“œë¥¼ ì„ ì–¸í•¨
+	String singer;		//ê°ê° String íƒ€ì…, int íƒ€ì…ì˜ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ë‚˜ ì´ˆê¸°í™”ëŠ” í•˜ì§€ ì•ŠìŒ
 	String albumName;
 	int trackNumber;
 	

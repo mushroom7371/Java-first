@@ -1,29 +1,29 @@
-package Generics;
+ï»¿package Generics;
 
 import java.util.ArrayList;
 
 class Fruit1{	public String toString() {	return "Fruit";}	}
 class Apple1 extends Fruit1{	public String toString() {	return "Apple";	}	}
 class Grape1 extends Fruit1{	public String toString() {	return "Grape";	}	}
-//Fruit1Å¬·¡½º¿Í ÀÌ¸¦ »ó¼Ó¹Ş´Â Apple1, Grape1 Å¬·¡½º Á¤ÀÇ
+//Fruit1í´ë˜ìŠ¤ì™€ ì´ë¥¼ ìƒì†ë°›ëŠ” Apple1, Grape1 í´ë˜ìŠ¤ ì •ì˜
 
 class Juice{
 	String name;
 	
-	Juice(String name){	//»ı¼ºÀÚ¸¦ ÅëÇÏ¿© ÀÎÀÚ°ªÀ¸·Î ¹ŞÀº µ¥ÀÌÅÍ¸¦ Âü°íÇÏ¿© °´Ã¼ »ı¼º½Ã ÃÊ±âÈ­ ¿ªÇÒÀ» ÇÔ
-		this.name = name + "Juice";	//Juice Å¬·¡½ºÀÇ ¸â¹öº¯¼öÀÎ name¿¡ ÀÎÀÚ°ªÀ¸·Î ¹ŞÀº ¹®ÀÚ¿­ + Juice¶ó°í ÀúÀåÇÑ´Ù.
+	Juice(String name){	//ìƒì„±ìë¥¼ í†µí•˜ì—¬ ì¸ìê°’ìœ¼ë¡œ ë°›ì€ ë°ì´í„°ë¥¼ ì°¸ê³ í•˜ì—¬ ê°ì²´ ìƒì„±ì‹œ ì´ˆê¸°í™” ì—­í• ì„ í•¨
+		this.name = name + "Juice";	//Juice í´ë˜ìŠ¤ì˜ ë©¤ë²„ë³€ìˆ˜ì¸ nameì— ì¸ìê°’ìœ¼ë¡œ ë°›ì€ ë¬¸ìì—´ + Juiceë¼ê³  ì €ì¥í•œë‹¤.
 	}
 	
-	public String toString() {	//Object Å¬·¡½ºÀÇ toString()¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿´´Ù.
+	public String toString() {	//Object í´ë˜ìŠ¤ì˜ toString()ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì˜€ë‹¤.
 		return name;
 	}
 }
 
 class Juicer{
-	static Juice makeJuice(FruitBox<? extends Fruit1> box) {	//staticÀ¸·Î Á¤ÀÇ ÇÏ¿´±â¿¡ Å¬·¡½º°¡ ¸Ş¸ğ¸®¿¡ ¿Ã¶ó °¥¶§ ºÎÅÍ »ç¿ë°¡´ÉÇÏ´Ù.
+	static Juice makeJuice(FruitBox<? extends Fruit1> box) {	//staticìœ¼ë¡œ ì •ì˜ í•˜ì˜€ê¸°ì— í´ë˜ìŠ¤ê°€ ë©”ëª¨ë¦¬ì— ì˜¬ë¼ ê°ˆë•Œ ë¶€í„° ì‚¬ìš©ê°€ëŠ¥í•˜ë‹¤.
 		String tmp = "";
 		
-		for(Fruit1 f : box.getList())	//Çâ»óµÈ for¹®À¸·Î Furit1 Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö f¿¡ ÀÎÀÚ°ªÀ¸·Î ¹ŞÀº ÀÎ½ºÅÏ½ºÀÇ getList() ¸Ş¼­µåÀÇ ¹İÈ¯°ªÀ» ÀúÀåÇÑ´Ù.
+		for(Fruit1 f : box.getList())	//í–¥ìƒëœ forë¬¸ìœ¼ë¡œ Furit1 íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ fì— ì¸ìê°’ìœ¼ë¡œ ë°›ì€ ì¸ìŠ¤í„´ìŠ¤ì˜ getList() ë©”ì„œë“œì˜ ë°˜í™˜ê°’ì„ ì €ì¥í•œë‹¤.
 			tmp += f + " ";
 		return new Juice(tmp);
 	}
@@ -31,25 +31,25 @@ class Juicer{
 
 class FruitBoxEx3 {
 	public static void main(String[] args) {
-		FruitBox<Fruit1> fruitBox = new FruitBox<Fruit1>();	//FruitBox °´Ã¼¸¦ »ı¼ºÇÏÁö¸¸ ¿©±â¿¡´Â Fruit1 Å¸ÀÔÀÇ °´Ã¼¸¸À» ´ãÀ» ¼öÀÖ´Ù.
-		FruitBox<Apple1> appleBox = new FruitBox<Apple1>();	//FruitBox °´Ã¼¸¦ »ı¼ºÇÏÁö¸¸ ¿©±â¿¡´Â Apple1 Å¸ÀÔÀÇ °´Ã¼¸¸À» ´ãÀ» ¼öÀÖ´Ù.
+		FruitBox<Fruit1> fruitBox = new FruitBox<Fruit1>();	//FruitBox ê°ì²´ë¥¼ ìƒì„±í•˜ì§€ë§Œ ì—¬ê¸°ì—ëŠ” Fruit1 íƒ€ì…ì˜ ê°ì²´ë§Œì„ ë‹´ì„ ìˆ˜ìˆë‹¤.
+		FruitBox<Apple1> appleBox = new FruitBox<Apple1>();	//FruitBox ê°ì²´ë¥¼ ìƒì„±í•˜ì§€ë§Œ ì—¬ê¸°ì—ëŠ” Apple1 íƒ€ì…ì˜ ê°ì²´ë§Œì„ ë‹´ì„ ìˆ˜ìˆë‹¤.
 		
-		fruitBox.add(new Apple1());	//fruitBox°¡ °¡¸®Å°´Â °´Ã¼¿¡´Â Fruit1Å¬·¡½º¸¦ »ó¼Ó¹ŞÀº Apple1, Grape1 °´Ã¼ ¸ğµÎ ´ãÀ» ¼ö ÀÖ´Ù.
+		fruitBox.add(new Apple1());	//fruitBoxê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì—ëŠ” Fruit1í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ Apple1, Grape1 ê°ì²´ ëª¨ë‘ ë‹´ì„ ìˆ˜ ìˆë‹¤.
 		fruitBox.add(new Grape1());
-		appleBox.add(new Apple1());	//appleBox°¡ °¡¸®Å°´Â °´Ã¼¿¡´Â Apple1 °´Ã¼¸¸ ´ãÀ» ¼ö ÀÖ´Ù.
+		appleBox.add(new Apple1());	//appleBoxê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì—ëŠ” Apple1 ê°ì²´ë§Œ ë‹´ì„ ìˆ˜ ìˆë‹¤.
 		appleBox.add(new Apple1());
 		
 		System.out.println(Juicer.makeJuice(fruitBox));
 		System.out.println(Juicer.makeJuice(appleBox));
-		//static ¸Ş¼­µå¸¦ È£ÃâÇÏ¿© ÇØ´ç box¿¡ ´ã±ä ³»¿ëÀ» Ãâ·ÂÇÑ´Ù.
-		//¼øÂ÷ÀûÀ¸·Î º¸¸é for¹®À¸·Î Fruit1 Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö f¿¡ ÇØ´ç ÀÎÀÚ°ªÀ¸·Î Àü´Ş ¹ŞÀº boxÀÇ °´Ã¼µéÀÌ ArrayList°´Ã¼·Î ´ã±â°Ô µÇ°í,
-		//¹İº¹¸¶´Ù String tmp¿¡ toStringÀÇ °á°ú·Î ¹®ÀÚ¿­ÀÌ ´õÇØ Áø´Ù. ³¡À¸·Î Juice(tmp)¸¦ ÅëÇÏ¿© tmp¿¡ ÀúÀåµÈ ¹®ÀÚ¿­¿¡ Juice¹®ÀÚ¿­ÀÌ ´õÇØÁø °á°ú°¡ ¹İÈ¯µÈ´Ù.
+		//static ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ í•´ë‹¹ boxì— ë‹´ê¸´ ë‚´ìš©ì„ ì¶œë ¥í•œë‹¤.
+		//ìˆœì°¨ì ìœ¼ë¡œ ë³´ë©´ forë¬¸ìœ¼ë¡œ Fruit1 íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ fì— í•´ë‹¹ ì¸ìê°’ìœ¼ë¡œ ì „ë‹¬ ë°›ì€ boxì˜ ê°ì²´ë“¤ì´ ArrayListê°ì²´ë¡œ ë‹´ê¸°ê²Œ ë˜ê³ ,
+		//ë°˜ë³µë§ˆë‹¤ String tmpì— toStringì˜ ê²°ê³¼ë¡œ ë¬¸ìì—´ì´ ë”í•´ ì§„ë‹¤. ëìœ¼ë¡œ Juice(tmp)ë¥¼ í†µí•˜ì—¬ tmpì— ì €ì¥ëœ ë¬¸ìì—´ì— Juiceë¬¸ìì—´ì´ ë”í•´ì§„ ê²°ê³¼ê°€ ë°˜í™˜ëœë‹¤.
 		
 	}
 }
 
 class FruitBox<T extends Fruit1> extends Box1<T>{
-	//°úÀÏ ¹Ú½º Å¬·¡½º, Fruit1 Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â Å¸ÀÔº¯¼ö T¸¦ ÁöÁ¤ÇÏ¿´°í Box1 Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â´Ù.
+	//ê³¼ì¼ ë°•ìŠ¤ í´ë˜ìŠ¤, Fruit1 í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” íƒ€ì…ë³€ìˆ˜ Të¥¼ ì§€ì •í•˜ì˜€ê³  Box1 í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ”ë‹¤.
 }
 
 class Box1<T>{

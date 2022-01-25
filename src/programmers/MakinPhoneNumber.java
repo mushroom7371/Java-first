@@ -1,14 +1,14 @@
-package programmers;
+ï»¿package programmers;
 
-//ÀüÈ­¹øÈ£ µŞÀÚ¸®¸¦ Á¦¿ÜÇÑ ¹øÈ£ *·Î ¸¶½ºÅ· ÇÏ±â
+//ì „í™”ë²ˆí˜¸ ë’·ìë¦¬ë¥¼ ì œì™¸í•œ ë²ˆí˜¸ *ë¡œ ë§ˆìŠ¤í‚¹ í•˜ê¸°
 class MakinPhoneNumber {
 	private String soultion(String phone_number) {
 		StringBuilder maskingNum = new StringBuilder(phone_number);
 		
-		for(int i = 0; i < phone_number.length()-4; i++) {	//µŞ 4ÀÚ¸® Àü±îÁö ¹İº¹ ½Ç½Ã
-			maskingNum.setCharAt(i, '*');	//setCharAt()¸Ş¼­µå¸¦ ÀÌ¿ëÇÏ¿© ÇØ´ç ÀÚ¸®ÀÇ ¹®ÀÚ°ªÀ» *·Î ¹Ù²Û´Ù.
+		for(int i = 0; i < phone_number.length()-4; i++) {	//ë’· 4ìë¦¬ ì „ê¹Œì§€ ë°˜ë³µ ì‹¤ì‹œ
+			maskingNum.setCharAt(i, '*');	//setCharAt()ë©”ì„œë“œë¥¼ ì´ìš©í•˜ì—¬ í•´ë‹¹ ìë¦¬ì˜ ë¬¸ìê°’ì„ *ë¡œ ë°”ê¾¼ë‹¤.
 		}
 		
-		return maskingNum.toString();		//toString() ¸Ş¼­µå´Â °´Ã¼°¡ °¡Áø Á¤º¸³ª °ªµéÀ» ¹®ÀÚ¿­·Î ¸¸µé¾î ¸®ÅÏÇÑ´Ù.
+		return maskingNum.toString();		//toString() ë©”ì„œë“œëŠ” ê°ì²´ê°€ ê°€ì§„ ì •ë³´ë‚˜ ê°’ë“¤ì„ ë¬¸ìì—´ë¡œ ë§Œë“¤ì–´ ë¦¬í„´í•œë‹¤.
 	}
 }

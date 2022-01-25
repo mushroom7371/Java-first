@@ -1,4 +1,4 @@
-package ch09;
+ï»¿package ch09;
 
 import java.util.Date;
 
@@ -9,9 +9,9 @@ class ToStringTest {
 		
 		System.out.println(str);
 		System.out.println(str.toString());
-		//String Å¬·¡½º¿¡¼­ÀÇ toString() ¸Ş¼­µå´Â Object Å¬·¡½ºÀÇ toString() ¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµù(ÀçÁ¤ÀÇ) ÇÏ¿´´Ù.
+		//String í´ë˜ìŠ¤ì—ì„œì˜ toString() ë©”ì„œë“œëŠ” Object í´ë˜ìŠ¤ì˜ toString() ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”©(ì¬ì •ì˜) í•˜ì˜€ë‹¤.
 		System.out.println(today);
 		System.out.println(today.toString());
-		//¸¶Âù°¡Áö·Î Date Å¬·¡½º ¶ÇÇÑ toString() ¸Ş¼­µå¸¦ ÀçÁ¤ÀÇ ÇÏ¿´´Ù.
+		//ë§ˆì°¬ê°€ì§€ë¡œ Date í´ë˜ìŠ¤ ë˜í•œ toString() ë©”ì„œë“œë¥¼ ì¬ì •ì˜ í•˜ì˜€ë‹¤.
 	}
 }

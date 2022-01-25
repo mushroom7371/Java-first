@@ -1,7 +1,7 @@
-package ch04;
+ï»¿package ch04;
 
 class Ex020403PJH	{
-	//10Áø Á¤¼ö¸¦ 2Áø¼ö·Î º¯È¯ÇÏ´Â ¸Þ¼­µå
+	//10ì§„ ì •ìˆ˜ë¥¼ 2ì§„ìˆ˜ë¡œ ë³€í™˜í•˜ëŠ” ë©”ì„œë“œ
 	static String toBinaryString(int x)	{
 		String zero = "00000000000000000000000000000000";
 		String tmp = zero + Integer.toBinaryString(x);
@@ -12,11 +12,11 @@ class Ex020403PJH	{
 	public static void main(String[] args)	{
 		
 		/*
-		dec 8 -> 7·Î º¯È­
-		½ÇÇà°á°ú ÀÌÀ¯ : º¯°æÀü¿¡´Â 10Áø¼ö ¼ýÀÚ 8À» ´ë»óÀ¸·Î ½¬ÇÁÆ® ¿¬»êÇÑ °á°ú¸¦ °¢°¢ 2Áø¼ö¿Í 10Áø¼ö·Î ³ªÅ¸³»¾ú°í
-					 2Áø¼ö´Â °ø¹éÀ» 0À¸·Î Ã¤¿ö 32°³ ÀÚ¸®¼ö·Î Ç¥½ÃÇÔ. 7·Î º¯°æÇÑ °á°ú¿ÍÀÇ Â÷ÀÌ´Â ÀÚ¸®¼ö
-					 Â÷ÀÌ. ±âÁ¸ 8ÀÇ °æ¿ì 2Áø¼ö·Î Ç¥Çö½Ã 4ÀÚ¸® ÀÎ 1000¿¡¼­ 7·Î º¯°æÈÄ 2Áø¼ö´Â 111·Î
-					 ÇÑÄ­¾¿ ÁÙ¾îµç°ÍÀ» È®ÀÎÇÒ ¼ö ÀÖÀ½
+		dec 8 -> 7ë¡œ ë³€í™”
+		ì‹¤í–‰ê²°ê³¼ ì´ìœ  : ë³€ê²½ì „ì—ëŠ” 10ì§„ìˆ˜ ìˆ«ìž 8ì„ ëŒ€ìƒìœ¼ë¡œ ì‰¬í”„íŠ¸ ì—°ì‚°í•œ ê²°ê³¼ë¥¼ ê°ê° 2ì§„ìˆ˜ì™€ 10ì§„ìˆ˜ë¡œ ë‚˜íƒ€ë‚´ì—ˆê³ 
+					 2ì§„ìˆ˜ëŠ” ê³µë°±ì„ 0ìœ¼ë¡œ ì±„ì›Œ 32ê°œ ìžë¦¬ìˆ˜ë¡œ í‘œì‹œí•¨. 7ë¡œ ë³€ê²½í•œ ê²°ê³¼ì™€ì˜ ì°¨ì´ëŠ” ìžë¦¬ìˆ˜
+					 ì°¨ì´. ê¸°ì¡´ 8ì˜ ê²½ìš° 2ì§„ìˆ˜ë¡œ í‘œí˜„ì‹œ 4ìžë¦¬ ì¸ 1000ì—ì„œ 7ë¡œ ë³€ê²½í›„ 2ì§„ìˆ˜ëŠ” 111ë¡œ
+					 í•œì¹¸ì”© ì¤„ì–´ë“ ê²ƒì„ í™•ì¸í•  ìˆ˜ ìžˆìŒ
 				     			
 		*/
 		

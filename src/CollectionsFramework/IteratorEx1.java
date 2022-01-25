@@ -1,23 +1,23 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class IteratorEx1 {
 	public static void main(String [] args) {
-		ArrayList list = new ArrayList();	//ÀúÀå ¼ø¼­°¡ À¯ÁöµÇ°í Áßº¹À» Çã¿ëÇÏ´Â ArrayList Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö list ¸¦ ¼±¾ğÇÏ°í, »õ·Î¿î ArrayList ÀÎ½ºÅÏ½º¸¦ ¸¸µé¾î ÀÌ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù. 
+		ArrayList list = new ArrayList();	//ì €ì¥ ìˆœì„œê°€ ìœ ì§€ë˜ê³  ì¤‘ë³µì„ í—ˆìš©í•˜ëŠ” ArrayList íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ list ë¥¼ ì„ ì–¸í•˜ê³ , ìƒˆë¡œìš´ ArrayList ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë§Œë“¤ì–´ ì´ ì£¼ì†Œê°’ì„ ì €ì¥í•œë‹¤. 
 		
-		list.add("1");	//add()	¸Ş¼­µå¸¦ ÅëÇÏ¿© µ¥ÀÌÅÍ¸¦ ÀúÀåÇÑ´Ù.
+		list.add("1");	//add()	ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ë°ì´í„°ë¥¼ ì €ì¥í•œë‹¤.
 		list.add("2");
 		list.add("3");
 		list.add("4");
 		list.add("5");
 		
-		Iterator it = list.iterator();	//Iterator Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö it ¸¦ ¼±¾ğÇÏ°í listÀÇ iterator() ¸Ş¼­µå¸¦ È£ÃâÇÑ ¸®ÅÏ°ªÀ» ÀúÀåÇÑ´Ù.
+		Iterator it = list.iterator();	//Iterator íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ it ë¥¼ ì„ ì–¸í•˜ê³  listì˜ iterator() ë©”ì„œë“œë¥¼ í˜¸ì¶œí•œ ë¦¬í„´ê°’ì„ ì €ì¥í•œë‹¤.
 		
-		while(it.hasNext()) {	//itÀÇ hasNext() ¸Ş¼­µå´Â ´ÙÀ½ °ªÀÌ ÀÖÀ¸¸é true ¾øÀ¸¸é false¸¦ ¹İÈ¯ÇÏ±â¿¡ ´ÙÀ½ µ¥ÀÌÅÍ°¡ ÀÖÀ»¶§ ±îÁö ¹İº¹À» ½ÃÇàÇÑ´Ù.
-			Object obj = it.next();		//Object Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö obj¿¡ it¿¡ ÀÖ´Â next() ¸Ş¼­µå¸¦ È£ÃâÇÏ¿© ±× ¸®ÅÏ°ªÀ» ÀúÀåÇÑ´Ù.
-			System.out.println(obj);	//Á¶°ÇÀÌ ÂüÀÏ °æ¿ì Obj¿¡ ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÑ´Ù.
+		while(it.hasNext()) {	//itì˜ hasNext() ë©”ì„œë“œëŠ” ë‹¤ìŒ ê°’ì´ ìˆìœ¼ë©´ true ì—†ìœ¼ë©´ falseë¥¼ ë°˜í™˜í•˜ê¸°ì— ë‹¤ìŒ ë°ì´í„°ê°€ ìˆì„ë•Œ ê¹Œì§€ ë°˜ë³µì„ ì‹œí–‰í•œë‹¤.
+			Object obj = it.next();		//Object íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ objì— itì— ìˆëŠ” next() ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ê·¸ ë¦¬í„´ê°’ì„ ì €ì¥í•œë‹¤.
+			System.out.println(obj);	//ì¡°ê±´ì´ ì°¸ì¼ ê²½ìš° Objì— ì €ì¥ëœ ë°ì´í„°ë¥¼ ì¶œë ¥í•œë‹¤.
 		}
 	}
 }

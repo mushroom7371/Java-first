@@ -1,28 +1,28 @@
-package ch04;
+ï»¿package ch04;
 
 import java.util.Scanner;
 
 public class FlowEx7 {
 
 	public static void main(String[] args) {
-		System.out.print("°¡À§(1),¹ÙÀ§(2),º¸(3), Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä.>");
+		System.out.print("ê°€ìœ„(1),ë°”ìœ„(2),ë³´(3), ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.>");
 		
 		Scanner scanner = new Scanner(System.in);
 		int user = scanner.nextInt();
 		int com = (int)(Math.random() * 3) + 1;
 		
-		System.out.println("´ç½ÅÀº " + user + "ÀÔ´Ï´Ù.");
-		System.out.println("ÄÄÀº " + com + "ÀÔ´Ï´Ù.");
+		System.out.println("ë‹¹ì‹ ì€ " + user + "ì…ë‹ˆë‹¤.");
+		System.out.println("ì»´ì€ " + com + "ì…ë‹ˆë‹¤.");
 		
 		switch (user - com) {
 		case 2: case -1:
-			System.out.println("´ç½ÅÀÌ Á³½À´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì´ ì¡ŒìŠµë‹ˆë‹¤.");
 			break;
 		case 1: case -2:
-			System.out.println("´ç½ÅÀÌ ÀÌ°å½À´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤.");
 			break;
 		case 0:
-			System.out.println("ºñ°å½À´Ï´Ù.");
+			System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 			break;
 			
 		}

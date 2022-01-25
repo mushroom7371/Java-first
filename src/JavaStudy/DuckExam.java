@@ -1,14 +1,14 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 public class DuckExam {
 	
 	public static void main(String [] args) {
 		Duck duck = new Duck();
-		//¾Õ¼­ ¸¸µç Ãß»óÅ¬·¡½ºÀÎ Bird¸¦ »ó¼Ó¹Þ´Â Duck Å¬·¡½º¸¦ ÀÎ½ºÅÏ½ºÈ­ ½ÃÄÑ °´Ã¤¸¦ ¸¸µç´Ù.
+		//ì•žì„œ ë§Œë“  ì¶”ìƒí´ëž˜ìŠ¤ì¸ Birdë¥¼ ìƒì†ë°›ëŠ” Duck í´ëž˜ìŠ¤ë¥¼ ì¸ìŠ¤í„´ìŠ¤í™” ì‹œì¼œ ê°ì±„ë¥¼ ë§Œë“ ë‹¤.
 		duck.sing();
-		//Duck Å¬·¡½º¿¡´Â Ãß»ó¸Þ¼­µå¸¦ ¿Ï¼ºÇÑ sing ¸Þ¼­µå°¡ ÀÖÀ¸¹Ç·Î ÀÌ¸¦ ±¸Çö ÇÒ ¼öÀÖ´Ù.
+		//Duck í´ëž˜ìŠ¤ì—ëŠ” ì¶”ìƒë©”ì„œë“œë¥¼ ì™„ì„±í•œ sing ë©”ì„œë“œê°€ ìžˆìœ¼ë¯€ë¡œ ì´ë¥¼ êµ¬í˜„ í•  ìˆ˜ìžˆë‹¤.
 		duck.fly();
-		//¶ÇÇÑ ºÎ¸ðÅ¬·¡½ºÀÎ Bird¿¡¼­ ¼±¾ðÇÑ fly´Â ´ç¿¬È÷ ±¸Çö ÇÒ ¼ö ÀÖ´Ù.
+		//ë˜í•œ ë¶€ëª¨í´ëž˜ìŠ¤ì¸ Birdì—ì„œ ì„ ì–¸í•œ flyëŠ” ë‹¹ì—°ížˆ êµ¬í˜„ í•  ìˆ˜ ìžˆë‹¤.
 		
 	}	
 }

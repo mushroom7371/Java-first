@@ -1,4 +1,4 @@
-package IOStream;
+ï»¿package IOStream;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -8,13 +8,13 @@ class FileCopy {
 
 	public static void main(String[] args) {
 		try {
-			//input, output streamÀ» ÀÌ¿ëÇÏ¿© ÆÄÀÏ º¹»ç¸¦ ½Ç½ÃÇÏ´Â ÀÛ¾÷. ¹üÀ§¿À·ù°¡ ¶ä...
+			//input, output streamì„ ì´ìš©í•˜ì—¬ íŒŒì¼ ë³µì‚¬ë¥¼ ì‹¤ì‹œí•˜ëŠ” ì‘ì—…. ë²”ìœ„ì˜¤ë¥˜ê°€ ëœ¸...
 			FileInputStream fis = new FileInputStream(args[0]);
 			FileOutputStream fos = new FileOutputStream(args[1]);
 			
 			int data = 0;
 			while((data=fis.read()) != -1) {
-				//±âº»Çü º¯¼ö data¿¡ fis.read() ¸Ş¼­µå¸¦ ÅëÇØ ¹İÈ¯°ªÀ» ÀúÀåÇÏ°í, ±× °ªÀÌ -1ÀÌ µÉ¶§±îÁö ¾Æ·¡ ³»¿ëÀ» ÁøÇàÇÑ´Ù.
+				//ê¸°ë³¸í˜• ë³€ìˆ˜ dataì— fis.read() ë©”ì„œë“œë¥¼ í†µí•´ ë°˜í™˜ê°’ì„ ì €ì¥í•˜ê³ , ê·¸ ê°’ì´ -1ì´ ë ë•Œê¹Œì§€ ì•„ë˜ ë‚´ìš©ì„ ì§„í–‰í•œë‹¤.
 				fos.write(data);
 			}
 		}catch(IOException ex) {

@@ -1,27 +1,27 @@
-package ch07;
+ï»¿package ch07;
 
 public class CaptionTvTest {
 	public static void main(String [] args) {
-		CaptionTv ctv = new CaptionTv();	//TvÅ¬·¡½º¸¦ »ó¼Ó¹ŞÀº Caption Å¬·¡½º¿¡¼­ °´Ã¼¸¦ »ı¼ºÇÏ¿´À½.
-		ctv.channel = 10;	// Á¶»ó Å¬·¡½º¿¡ ¼±¾ğµÈ int Å¸ÀÔÀÇ ¸Ş¸ğ¸®°ø°£ channel¿¡ 10À» ³ÖÀ½.
-		ctv.channelup();	// Á¶»ó Å¬·¡½ºÀÇ ¸Ş¼­µå¸¦ È£ÃâÇÏ¿© channel°ªÀ» 1 Áõ°¡ ½ÃÅ´
+		CaptionTv ctv = new CaptionTv();	//Tví´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ Caption í´ë˜ìŠ¤ì—ì„œ ê°ì²´ë¥¼ ìƒì„±í•˜ì˜€ìŒ.
+		ctv.channel = 10;	// ì¡°ìƒ í´ë˜ìŠ¤ì— ì„ ì–¸ëœ int íƒ€ì…ì˜ ë©”ëª¨ë¦¬ê³µê°„ channelì— 10ì„ ë„£ìŒ.
+		ctv.channelup();	// ì¡°ìƒ í´ë˜ìŠ¤ì˜ ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ channelê°’ì„ 1 ì¦ê°€ ì‹œí‚´
 		System.out.println(ctv.channel);
-		ctv.displyCaption("Hellow, World");	// ÀÚ¼Õ Å¬·¡½ºÀÇ ¸Ş¼­µå¸¦ È£Ãâ ÇÏ¿´À¸³ª captionÀÇ ÃÊ±â°ªÀÌ falseÀÌ¹Ç·Î Ãâ·ÂµÇÁö ¾ÊÀ½
+		ctv.displyCaption("Hellow, World");	// ìì† í´ë˜ìŠ¤ì˜ ë©”ì„œë“œë¥¼ í˜¸ì¶œ í•˜ì˜€ìœ¼ë‚˜ captionì˜ ì´ˆê¸°ê°’ì´ falseì´ë¯€ë¡œ ì¶œë ¥ë˜ì§€ ì•ŠìŒ
 		ctv.caption = true;
 		ctv.displyCaption("Hellow, World");	
 	}
 }
 
 	class Tv{
-		boolean power;	//ÀÎ½ºÅÏ½º º¯¼ö,  boolean Å¸ÀÔÀÇ powerÀ» ¼±¾ğ
-		int channel;	//ÀÎ½ºÅÏ½º º¯¼ö, int Å¸ÀÔÀÇ channelÀ» ¼±¾ğ
+		boolean power;	//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜,  boolean íƒ€ì…ì˜ powerì„ ì„ ì–¸
+		int channel;	//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜, int íƒ€ì…ì˜ channelì„ ì„ ì–¸
 		
-		void power() { power = !power; }	//ÀÎ½ºÅÏ½º ¸Ş¼­µå 
+		void power() { power = !power; }	//ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œ 
 		void channelup() { ++channel; }
 		void channeldown() { --channel; }
 	}
 	
-	class CaptionTv extends Tv{	//Tv Å¬·¡½º¸¦ »ó¼Ó ¹Ş´Â CaptionTv Å¬·¡½º ¾È¿¡ Tv Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º º¯¼ö¿Í ÀÎ½ºÅÏ½º ¸Ş¼­µåµéÀÌ µé¾îÀÖ´Ù
+	class CaptionTv extends Tv{	//Tv í´ë˜ìŠ¤ë¥¼ ìƒì† ë°›ëŠ” CaptionTv í´ë˜ìŠ¤ ì•ˆì— Tv í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ì™€ ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œë“¤ì´ ë“¤ì–´ìˆë‹¤
 		boolean caption;
 		void displyCaption(String text) {
 			if(caption) {

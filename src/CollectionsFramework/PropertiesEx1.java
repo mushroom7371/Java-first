@@ -1,29 +1,29 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.Enumeration;
 import java.util.Properties;
 
 class PropertiesEx1 {
 	public static void main(String[] args) {
-		Properties prop = new Properties();	//Properties´Â HashMapÀÇ ±¸¹öÀüÀÎ HashtableÀ» »ó¼Ó¹Ş¾Æ ±¸ÇöÇÑ Å¬·¡½º
+		Properties prop = new Properties();	//PropertiesëŠ” HashMapì˜ êµ¬ë²„ì „ì¸ Hashtableì„ ìƒì†ë°›ì•„ êµ¬í˜„í•œ í´ë˜ìŠ¤
 		
-		//prop¿¡ Å°¿Í °ª(key, value)À» ÀúÀåÇÑ´Ù.
+		//propì— í‚¤ì™€ ê°’(key, value)ì„ ì €ì¥í•œë‹¤.
 		prop.setProperty("timeout", "30");
 		prop.setProperty("language", "kr");
 		prop.setProperty("size", "10");
 		prop.setProperty("capacity", "10");
 		
-		//prop¿¡ ÀúÀåµÈ ¿ä¼ÒµéÀ» EnumerationÀ» ÀÌ¿ëÇÏ¿© Ãâ·ÂÇÑ´Ù.
+		//propì— ì €ì¥ëœ ìš”ì†Œë“¤ì„ Enumerationì„ ì´ìš©í•˜ì—¬ ì¶œë ¥í•œë‹¤.
 		Enumeration e = prop.propertyNames();
 		
-		while(e.hasMoreElements()) {	//e°¡ °¡¸®Å°´Â °´Ã¼ÀÇ ¿ä¼Ò°¡ ´õ ÀÖ´Ù¸é ¹İº¹À» ½Ç½ÃÇÑ´Ù.
-			String element = (String)e.nextElement();	//ÇØ´ç ¿ä¼Ò¸¦ Çüº¯È¯ ÇÏ¿© String Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö element°¡ °¡¸®Å°µµ·Ï ÇÑ´Ù.
-			System.out.println(element + " = " + prop.getProperty(element));	//ÇØ´ç ³»¿ëÀ» Ãâ·Â
+		while(e.hasMoreElements()) {	//eê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì˜ ìš”ì†Œê°€ ë” ìˆë‹¤ë©´ ë°˜ë³µì„ ì‹¤ì‹œí•œë‹¤.
+			String element = (String)e.nextElement();	//í•´ë‹¹ ìš”ì†Œë¥¼ í˜•ë³€í™˜ í•˜ì—¬ String íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ elementê°€ ê°€ë¦¬í‚¤ë„ë¡ í•œë‹¤.
+			System.out.println(element + " = " + prop.getProperty(element));	//í•´ë‹¹ ë‚´ìš©ì„ ì¶œë ¥
 		}
 		
 		System.out.println();
-		prop.setProperty("size", "20");	//setProperty()¸Ş¼­µå¸¦ ÅëÇÏ¿© key¿Í value¸¦ ÀúÀåÇÑ´Ù.
-		System.out.println("size = " + prop.getProperty("size"));	//getProperty()¸Ş¼­µå¸¦ ÅëÇÏ¿© ÇØ´ç vlaue¸¦ ºÒ·¯¿Â´Ù.
+		prop.setProperty("size", "20");	//setProperty()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ keyì™€ valueë¥¼ ì €ì¥í•œë‹¤.
+		System.out.println("size = " + prop.getProperty("size"));	//getProperty()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ í•´ë‹¹ vlaueë¥¼ ë¶ˆëŸ¬ì˜¨ë‹¤.
 		System.out.println("capacity = " + prop.getProperty("capacity", "20"));
 		System.out.println("loadfactor = " + prop.getProperty("loadfactor", "0.75"));
 		

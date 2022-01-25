@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,14 +6,14 @@ import java.util.Set;
 public class HashSetEx1 {
 	public static void main(String [] args) {
 		Object [] objArr = {"1", new Integer(1), "2", "2", "3", "3", "4", "4", "4"};
-		//Object Å¸ÀÔÀÇ ¹è¿­À» ¼±¾ğ°ú µ¿½Ã¿¡ {}¾ÈÀÇ °ªÀ¸·Î ÃÊ±âÈ­ ÇÏ°í ÂüÁ¶º¯¼ö objArr¿¡ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù. 
+		//Object íƒ€ì…ì˜ ë°°ì—´ì„ ì„ ì–¸ê³¼ ë™ì‹œì— {}ì•ˆì˜ ê°’ìœ¼ë¡œ ì´ˆê¸°í™” í•˜ê³  ì°¸ì¡°ë³€ìˆ˜ objArrì— ì£¼ì†Œê°’ì„ ì €ì¥í•œë‹¤. 
 		Set set = new HashSet();
-		//Set Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í HashSetÀ» »ı¼ºÇÑ ´ÙÀ½ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
+		//Set íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  HashSetì„ ìƒì„±í•œ ë‹¤ìŒ ì£¼ì†Œê°’ì„ ì €ì¥í•œë‹¤.
 		
-		for(int i = 0; i < objArr.length; i++) {	//objArr°¡ °¡¸®Å°´Â ¹è¿­ÀÇ ±æÀÌ¸¸Å­ ¹İº¹
-			set.add(objArr[i]);	//setÅ¸ÀÔÀÌ °¡Áö°í ÀÖ´Â add ¸Ş¼­µå¸¦ ÅëÇØ¼­ objArrÀÇ ¹è¿­°ªÀ» ¼øÂ÷ÀûÀ¸·Î ÀúÀåÇÑ´Ù.
+		for(int i = 0; i < objArr.length; i++) {	//objArrê°€ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì˜ ê¸¸ì´ë§Œí¼ ë°˜ë³µ
+			set.add(objArr[i]);	//setíƒ€ì…ì´ ê°€ì§€ê³  ìˆëŠ” add ë©”ì„œë“œë¥¼ í†µí•´ì„œ objArrì˜ ë°°ì—´ê°’ì„ ìˆœì°¨ì ìœ¼ë¡œ ì €ì¥í•œë‹¤.
 		}
 		
-		System.out.println(set);	//setÀº Áßº¹À» Çã¿ëÇÏÁö ¾ÊÀ¸¹Ç·Î 1,1,2,3,4 °¡ Ãâ·ÂµÇ³ª 1ÀÌ Áßº¹µÈ°ÍÀº StringÀÎ½ºÅÏ½º¿Í IntegerÀÎ½ºÅÏ½º¶ó ´Ù¸£±â¶§¹®
+		System.out.println(set);	//setì€ ì¤‘ë³µì„ í—ˆìš©í•˜ì§€ ì•Šìœ¼ë¯€ë¡œ 1,1,2,3,4 ê°€ ì¶œë ¥ë˜ë‚˜ 1ì´ ì¤‘ë³µëœê²ƒì€ Stringì¸ìŠ¤í„´ìŠ¤ì™€ Integerì¸ìŠ¤í„´ìŠ¤ë¼ ë‹¤ë¥´ê¸°ë•Œë¬¸
 	}
 }

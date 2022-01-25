@@ -1,15 +1,15 @@
-package programmers;
+ï»¿package programmers;
 
-//À½¾ç ´õÇÏ±â
+//ìŒì–‘ ë”í•˜ê¸°
 class Posi_NegativeNumSum {
 	private int solution(int[] absolutes, boolean[] signs) {
 		int answer = 0;
 		
-		for(int i = 0; i < absolutes.length; i++) {	//ÀÎÀÚ°ªÀ¸·Î ¹ŞÀº ¹è¿­ÀÇ ±æÀÌ´Â µ¿ÀÏÇÏ¿© ±× ¹è¿­ÀÇ ±æÀÌ¸¸Å­ 1¾¿ Áõ°¡ÇÏ¸ç ¹İº¹
-			if(signs[i] == true) {	//ÂüÁ¶ º¯¼ö signsÀÌ °¡¸®Å°´Â ¹è¿­ÀÇ i¹øÁöÀÇ °ªÀÌ ÂüÀÌ¶ó¸é
-				answer += absolutes[i];	//¾ç¼öÀÌ¹Ç·Î ´õÇÑ´Ù.
-			}else {	//¾Æ´Ï¶ó¸é
-				answer += -absolutes[i];	//»«´Ù.
+		for(int i = 0; i < absolutes.length; i++) {	//ì¸ìê°’ìœ¼ë¡œ ë°›ì€ ë°°ì—´ì˜ ê¸¸ì´ëŠ” ë™ì¼í•˜ì—¬ ê·¸ ë°°ì—´ì˜ ê¸¸ì´ë§Œí¼ 1ì”© ì¦ê°€í•˜ë©° ë°˜ë³µ
+			if(signs[i] == true) {	//ì°¸ì¡° ë³€ìˆ˜ signsì´ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì˜ ië²ˆì§€ì˜ ê°’ì´ ì°¸ì´ë¼ë©´
+				answer += absolutes[i];	//ì–‘ìˆ˜ì´ë¯€ë¡œ ë”í•œë‹¤.
+			}else {	//ì•„ë‹ˆë¼ë©´
+				answer += -absolutes[i];	//ëº€ë‹¤.
 			}
 		}
 		

@@ -1,24 +1,24 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.ArrayList;
 
-//°°Àº ¼ıÀÚ´Â ½È¾î
+//ê°™ì€ ìˆ«ìëŠ” ì‹«ì–´
 class NotSameNum {
 	public int [] solution(int [] arr) {
 		int [] answer = {};
-		ArrayList<Integer> al = new ArrayList();	//Á¤´äÀ» ´ãÀ» ArrayList°´Ã¼ »ı¼º Á¦³Ê¸¯À» ÅëÇØ Å¸ÀÔ ¾ÈÁ¤¼ºÀ» °®Ãá´Ù.
-		int num = 10;	//Áßº¹µÇ´Â ¼ıÀÚ¸¦ ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
+		ArrayList<Integer> al = new ArrayList();	//ì •ë‹µì„ ë‹´ì„ ArrayListê°ì²´ ìƒì„± ì œë„ˆë¦­ì„ í†µí•´ íƒ€ì… ì•ˆì •ì„±ì„ ê°–ì¶˜ë‹¤.
+		int num = 10;	//ì¤‘ë³µë˜ëŠ” ìˆ«ìë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
 		
-		for(int i = 0; i < arr.length; i++) {	//¹®Á¦ ¹è¿­ÀÇ ±æÀÌ¸¸Å­ 1¾¿ Áõ°¡¸é¼­ ¹İº¹
-			if(arr[i] != num) {	//Ã¹ ½ÇÇà½Ã´Â ¹«Á¶°Ç µé¾î°¡°Ô µÇ¾îÀÖÀ½
-				al.add(arr[i]);	//arr¹è¿­ÀÇ i ¹øÁöÀÇ µ¥ÀÌÅÍ°¡ Ãß°¡µÈ´Ù.
-				num = arr[i];	//Á¶°Ç¹®¿¡¼­ °Å¸£±â À§ÇØ Áßº¹µÇ´Â µ¥ÀÌÅÍ¸¦ numÀ¸·Î ¼³Á¤ÇÑ´Ù.
+		for(int i = 0; i < arr.length; i++) {	//ë¬¸ì œ ë°°ì—´ì˜ ê¸¸ì´ë§Œí¼ 1ì”© ì¦ê°€ë©´ì„œ ë°˜ë³µ
+			if(arr[i] != num) {	//ì²« ì‹¤í–‰ì‹œëŠ” ë¬´ì¡°ê±´ ë“¤ì–´ê°€ê²Œ ë˜ì–´ìˆìŒ
+				al.add(arr[i]);	//arrë°°ì—´ì˜ i ë²ˆì§€ì˜ ë°ì´í„°ê°€ ì¶”ê°€ëœë‹¤.
+				num = arr[i];	//ì¡°ê±´ë¬¸ì—ì„œ ê±°ë¥´ê¸° ìœ„í•´ ì¤‘ë³µë˜ëŠ” ë°ì´í„°ë¥¼ numìœ¼ë¡œ ì„¤ì •í•œë‹¤.
 			}
 		}
 		
-		answer = new int[al.size()];	//¹è¿­ÀÇ ±æÀÌ¸¦ Àç¼³Á¤
+		answer = new int[al.size()];	//ë°°ì—´ì˜ ê¸¸ì´ë¥¼ ì¬ì„¤ì •
 		for(int i = 0; i < al.size(); i++) {
-			answer[i] = al.get(i);	//Á¤´äÀ» ¹è¿­·Î ¿Å±ä´Ù.
+			answer[i] = al.get(i);	//ì •ë‹µì„ ë°°ì—´ë¡œ ì˜®ê¸´ë‹¤.
 		}
 		
 		return answer;

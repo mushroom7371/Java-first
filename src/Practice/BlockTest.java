@@ -1,21 +1,21 @@
-package Practice;
+ï»¿package Practice;
 
 class BlockTest{
 	static {
-		System.out.println("static { } Å¬·¡½º ÃÊ±âÈ­ ºí·°, ÇÁ·Î±×·¥ ½ÃÀÛ½Ã ÇÑ¹ø ¼öÇàµÊ");
+		System.out.println("static { } í´ë˜ìŠ¤ ì´ˆê¸°í™” ë¸”ëŸ­, í”„ë¡œê·¸ë¨ ì‹œì‘ì‹œ í•œë²ˆ ìˆ˜í–‰ë¨");
 	}
 
 	{
-		System.out.println("{ } ÀÎ½ºÅÏ½º ÃÊ±âÈ­ ºí·°, ÀÎ½ºÅÏ½º »ı¼º½Ã ¼öÇàµÊ.");
+		System.out.println("{ } ì¸ìŠ¤í„´ìŠ¤ ì´ˆê¸°í™” ë¸”ëŸ­, ì¸ìŠ¤í„´ìŠ¤ ìƒì„±ì‹œ ìˆ˜í–‰ë¨.");
 	}
 	
 	public BlockTest() {
-		System.out.println("»ı¼ºÀÚ");
+		System.out.println("ìƒì„±ì");
 	}
 
 	public static void main(String [] args) {
-		// Å¬·¡½º ÃÊ±âÈ­ ºí·°ÀÌ ÇÑ¹ø ½ÇÇàµÈ´Ù.
-		BlockTest bt1 = new BlockTest();	// ÀÎ½ºÅÏ½º°¡ »ı¼ºµÇ¹Ç·Î ÀÎ½ºÅÏ½º ÃÊ±âÈ­ ºí·°ÀÌ ½ÇÇàµÈ´Ù.
+		// í´ë˜ìŠ¤ ì´ˆê¸°í™” ë¸”ëŸ­ì´ í•œë²ˆ ì‹¤í–‰ëœë‹¤.
+		BlockTest bt1 = new BlockTest();	// ì¸ìŠ¤í„´ìŠ¤ê°€ ìƒì„±ë˜ë¯€ë¡œ ì¸ìŠ¤í„´ìŠ¤ ì´ˆê¸°í™” ë¸”ëŸ­ì´ ì‹¤í–‰ëœë‹¤.
 		BlockTest bt2 = new BlockTest();
 	}
 }

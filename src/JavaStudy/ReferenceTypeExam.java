@@ -1,22 +1,22 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 public class ReferenceTypeExam {
 	public static void main(String args[]) {
 		ReferenceTypeExam rtx = new ReferenceTypeExam();
-		//Å¬·¡½º·Î ºÎÅÍ ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÏ°í ÀÌ¸¦ ReferenceTypeExam Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¿¡ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
+		//í´ëž˜ìŠ¤ë¡œ ë¶€í„° ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ê³  ì´ë¥¼ ReferenceTypeExam íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ì— ì£¼ì†Œê°’ì„ ì €ìž¥í•œë‹¤.
 		
-		int value = 10;	// Á¤¼öÇü º¯¼ö ¼±¾ð ¹× ÃÊ±âÈ­
-		rtx.addOne(value);	//ÀÎ½ºÅÏ½ºÀÇ ¸Þ¼­µå¸¦ È£ÃâÇÏ°í ¸Å°³º¯¼ö¿¡ value¸¦ ´ëÀÔÇÑ´Ù. 10ÀÌ ´ëÀÔµÊ.
-		System.out.println("±âº»Çü º¯¼öÀÇ °ªÀ» ´Ù¸¥ ¸Þ¼­µå¿¡¼­ º¯°æÇÑ °á°ú :" + value);
-		//addOne ¸Þ¼­µå¿¡ value 10ÀÌ ´ëÀÔµÇ°í value++·Î ÀÎÇØ 11ÀÌ µÇ´Â°Í °°Áö¸¸, ÇØ´ç ¸Å¼­µå´Â ¸®ÅÏ°ªÀÌ
-		//¾øÀ¸¸ç ÀÌ¹Ì Å¬·¡½º·Î ºÎÅÍ »ý¼ºµÈ ÀÎ½ºÅÏ½ºÀÇ valueÀÇ °ªÀÌ º¯ÇÏ´Â°ÍÀÌ ¾Æ´Ï±â ¶§¹®¿¡ 10ÀÌ Ãâ·ÂµÈ´Ù.
+		int value = 10;	// ì •ìˆ˜í˜• ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
+		rtx.addOne(value);	//ì¸ìŠ¤í„´ìŠ¤ì˜ ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ê³  ë§¤ê°œë³€ìˆ˜ì— valueë¥¼ ëŒ€ìž…í•œë‹¤. 10ì´ ëŒ€ìž…ë¨.
+		System.out.println("ê¸°ë³¸í˜• ë³€ìˆ˜ì˜ ê°’ì„ ë‹¤ë¥¸ ë©”ì„œë“œì—ì„œ ë³€ê²½í•œ ê²°ê³¼ :" + value);
+		//addOne ë©”ì„œë“œì— value 10ì´ ëŒ€ìž…ë˜ê³  value++ë¡œ ì¸í•´ 11ì´ ë˜ëŠ”ê²ƒ ê°™ì§€ë§Œ, í•´ë‹¹ ë§¤ì„œë“œëŠ” ë¦¬í„´ê°’ì´
+		//ì—†ìœ¼ë©° ì´ë¯¸ í´ëž˜ìŠ¤ë¡œ ë¶€í„° ìƒì„±ëœ ì¸ìŠ¤í„´ìŠ¤ì˜ valueì˜ ê°’ì´ ë³€í•˜ëŠ”ê²ƒì´ ì•„ë‹ˆê¸° ë•Œë¬¸ì— 10ì´ ì¶œë ¥ëœë‹¤.
 		
-		int arr [] = {10}; // Á¤¼öÇü °ªÀ» ´ã´Â ¹è¿­À» »ý¼ºÇÏ°í ÃÊ±âÈ­ ÇÑ ÈÄ ÀÌ ÁÖ¼Ò°ªÀ» ÂüÁ¶Çü º¯¼ö arr¿¡ ÀúÀåÇÑ´Ù.
-		rtx.addOne(arr);	//ÀÎ½ºÅÏ½ºÀÇ ¸Þ¼­µå¸¦ È£ÃâÇÏ°í ¸Å°³º¯¼ö¿¡ ÁÖ¼Ò°ªÀ» ´ëÀÔÇÔ.
-        System.out.println("ÂüÁ¶Çü º¯¼öÀÇ °ªÀ» ´Ù¸¥ ¸Þ¼­µå¿¡¼­ º¯°æÇÑ °á°ú: " + arr[0]);
-        //À§ÀÇ °á°ú¿Í´Â ´Ù¸£°Ô ¹è¿­ arrÀº ÀÎ½ºÅÏ½ºÈ­ µÇ¾î ¸¸µé¾îÁú¶§ 10ÀÌ¶ó´Â °ªÀÌ ´ã±ä ¹è¿­ÀÇ ÁÖ¼Ò°ªÀÌ ÀúÀåµÈ°ÍÀÌ¹Ç·Î
-        //¸Þ¼­µåÀÇ ½ÇÇà °á°ú ÁÖ¼Ò°ªÀÌ º¯ÇÏ´Â°Ô ¾Æ´Ñ ÁÖ¼Ò°¡ °¡¸®Å°´Â °÷ÀÇ Á¤¼ö 10À» 11·Î º¯°æÇÑ °ÍÀ» °¡¸®Å°±â ¶§¹®¿¡
-        //°á°úÀûÀ¸·Î °ªÀÌ ÀúÀåµÈ 11ÀÌ Ãâ·ÂµÇ°Ô µÈ´Ù.
+		int arr [] = {10}; // ì •ìˆ˜í˜• ê°’ì„ ë‹´ëŠ” ë°°ì—´ì„ ìƒì„±í•˜ê³  ì´ˆê¸°í™” í•œ í›„ ì´ ì£¼ì†Œê°’ì„ ì°¸ì¡°í˜• ë³€ìˆ˜ arrì— ì €ìž¥í•œë‹¤.
+		rtx.addOne(arr);	//ì¸ìŠ¤í„´ìŠ¤ì˜ ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ê³  ë§¤ê°œë³€ìˆ˜ì— ì£¼ì†Œê°’ì„ ëŒ€ìž…í•¨.
+        System.out.println("ì°¸ì¡°í˜• ë³€ìˆ˜ì˜ ê°’ì„ ë‹¤ë¥¸ ë©”ì„œë“œì—ì„œ ë³€ê²½í•œ ê²°ê³¼: " + arr[0]);
+        //ìœ„ì˜ ê²°ê³¼ì™€ëŠ” ë‹¤ë¥´ê²Œ ë°°ì—´ arrì€ ì¸ìŠ¤í„´ìŠ¤í™” ë˜ì–´ ë§Œë“¤ì–´ì§ˆë•Œ 10ì´ë¼ëŠ” ê°’ì´ ë‹´ê¸´ ë°°ì—´ì˜ ì£¼ì†Œê°’ì´ ì €ìž¥ëœê²ƒì´ë¯€ë¡œ
+        //ë©”ì„œë“œì˜ ì‹¤í–‰ ê²°ê³¼ ì£¼ì†Œê°’ì´ ë³€í•˜ëŠ”ê²Œ ì•„ë‹Œ ì£¼ì†Œê°€ ê°€ë¦¬í‚¤ëŠ” ê³³ì˜ ì •ìˆ˜ 10ì„ 11ë¡œ ë³€ê²½í•œ ê²ƒì„ ê°€ë¦¬í‚¤ê¸° ë•Œë¬¸ì—
+        //ê²°ê³¼ì ìœ¼ë¡œ ê°’ì´ ì €ìž¥ëœ 11ì´ ì¶œë ¥ë˜ê²Œ ëœë‹¤.
 	}
 	
 	public void addOne(int value) {

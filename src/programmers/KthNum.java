@@ -1,25 +1,25 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-//k¹øÂ° ¼ö
+//kë²ˆì§¸ ìˆ˜
 class KthNum {
 	private int [] solution(int [] array, int [][] commands) {
 		int [] answer = {};
-		answer = new int [commands.length];	//Á¤´äÀÌ ´ã±æ ¹è¿­, Å©±â´Â 2Â÷¿ø ¹è¿­ÀÇ Ã¹¹øÂ° ¹è¿­ÀÇ Å©±â¸¸Å­ÀÌ´Ù.
+		answer = new int [commands.length];	//ì •ë‹µì´ ë‹´ê¸¸ ë°°ì—´, í¬ê¸°ëŠ” 2ì°¨ì› ë°°ì—´ì˜ ì²«ë²ˆì§¸ ë°°ì—´ì˜ í¬ê¸°ë§Œí¼ì´ë‹¤.
 		
-		for(int i = 0; i < commands.length; i++) {	//ÂüÁ¶º¯¼ö commands °¡ °¡¸®Å°´Â Ã¹¹øÂ° ¹è¿­ÀÇ Å©±â¸¸Å­ ¹İº¹.
-			List<Integer> list = new ArrayList();	//Á¤·ÄÀ» À§ÇØ »ı¼ºÇÑ ArrayList °´Ã¼
+		for(int i = 0; i < commands.length; i++) {	//ì°¸ì¡°ë³€ìˆ˜ commands ê°€ ê°€ë¦¬í‚¤ëŠ” ì²«ë²ˆì§¸ ë°°ì—´ì˜ í¬ê¸°ë§Œí¼ ë°˜ë³µ.
+			List<Integer> list = new ArrayList();	//ì •ë ¬ì„ ìœ„í•´ ìƒì„±í•œ ArrayList ê°ì²´
 			
 			for(int j = commands[i][0]-1; j < commands[i][1]; j++) {
-				//Ã¹¹øÂ° ¹è¿­ÀÇ i¹øÁö°¡ °¡¸®Å°´Â µÎ¹øÂ° ¹è¿­ÀÇ 0¹øÁö, Áï Ã¹¹øÂ° ½ÃÀÛÁöÁ¡ÀÌ µÈ´Ù. ¹è¿­Àº 0¹øÁöºÎÅÍ ½ÃÀÛÇÏ´Ï -1À» ÇØÁØ´Ù.
-				//¸¶Âù°¡Áö·Î ³¡ ÁöÁ¡Àº µÎ¹øÂ° ¹è¿­ÀÇ 1¹øÁö°¡ µÇ¸ç º¸´Ù ÀÛ´Ù´Â Á¶°ÇÀ¸·Î ±×´ë·Î »ç¿ëÇÏ¿´´Ù.
-				list.add(array[j]);	//array¹è¿­ÀÇ j¹øÁö´Â ÀÚ¸¥ ºÎºĞÀÌ µÈ´Ù.
+				//ì²«ë²ˆì§¸ ë°°ì—´ì˜ ië²ˆì§€ê°€ ê°€ë¦¬í‚¤ëŠ” ë‘ë²ˆì§¸ ë°°ì—´ì˜ 0ë²ˆì§€, ì¦‰ ì²«ë²ˆì§¸ ì‹œì‘ì§€ì ì´ ëœë‹¤. ë°°ì—´ì€ 0ë²ˆì§€ë¶€í„° ì‹œì‘í•˜ë‹ˆ -1ì„ í•´ì¤€ë‹¤.
+				//ë§ˆì°¬ê°€ì§€ë¡œ ë ì§€ì ì€ ë‘ë²ˆì§¸ ë°°ì—´ì˜ 1ë²ˆì§€ê°€ ë˜ë©° ë³´ë‹¤ ì‘ë‹¤ëŠ” ì¡°ê±´ìœ¼ë¡œ ê·¸ëŒ€ë¡œ ì‚¬ìš©í•˜ì˜€ë‹¤.
+				list.add(array[j]);	//arrayë°°ì—´ì˜ jë²ˆì§€ëŠ” ìë¥¸ ë¶€ë¶„ì´ ëœë‹¤.
 			}
-		Collections.sort(list);	//Á¤·Ä
-		answer[i] = list.get(commands[i][2] - 1);	//k¹øÂ° ¼ö ¶ÇÇÑ ¹è¿­ÀÌ 0¹øÁöºÎÅÍ ½ÃÀÛÇÏ¹Ç·Î -1À» ÇØÁØ´Ù.
+		Collections.sort(list);	//ì •ë ¬
+		answer[i] = list.get(commands[i][2] - 1);	//kë²ˆì§¸ ìˆ˜ ë˜í•œ ë°°ì—´ì´ 0ë²ˆì§€ë¶€í„° ì‹œì‘í•˜ë¯€ë¡œ -1ì„ í•´ì¤€ë‹¤.
 			
 		}
 		return answer;

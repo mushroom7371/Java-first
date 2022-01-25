@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.EmptyStackException;
 import java.util.Stack;
@@ -9,12 +9,12 @@ class ExpValidCheck {
 			System.out.println("Usage : java ExpValidCheck \"EXPRESSION\"");
 			System.out.println("Example : java ExpValidCheck \"((2+3)*1)+3\"");
 			System.exit(0);
-			//.exit(0)ÀÌÈÄÀÇ ³»¿ëÀÌ µ¹Áö¸¦ ¾ÊÀ½... exit()¸Ş¼­µå¸¦ ¸¸³ª¼­ Á¾·áµÇ´Â°Å °°Àºµ¥ ¿¹Á¦¿¡´Â ¿Ö ÀÌ·¸°Ô ½áÀÖ´ÂÁö ÀÌÇØ ºÒ°¡
-			//exit¸¦ ÁÖ¼®Ã³¸®ÇÏ¸é ¹Ø¿¡¼­ ÀÎµ¦½º ¹Ù¿îµå ¿À·ù¹ß»ı... ¾Ë¼ö°¡ ¾ø´Ù.
+			//.exit(0)ì´í›„ì˜ ë‚´ìš©ì´ ëŒì§€ë¥¼ ì•ŠìŒ... exit()ë©”ì„œë“œë¥¼ ë§Œë‚˜ì„œ ì¢…ë£Œë˜ëŠ”ê±° ê°™ì€ë° ì˜ˆì œì—ëŠ” ì™œ ì´ë ‡ê²Œ ì¨ìˆëŠ”ì§€ ì´í•´ ë¶ˆê°€
+			//exitë¥¼ ì£¼ì„ì²˜ë¦¬í•˜ë©´ ë°‘ì—ì„œ ì¸ë±ìŠ¤ ë°”ìš´ë“œ ì˜¤ë¥˜ë°œìƒ... ì•Œìˆ˜ê°€ ì—†ë‹¤.
 		}
 		
 		Stack st = new Stack();
-		String expression = args[0];	//¿©±â¼­ ºÎÅÍ ÀÎµ¦½º ¹üÀ§¿À·ù ¹ß»ı... args´Â ¸ŞÀÎ ¸Ş¼­µåÀÇ ÀÎÀÚ°ªÀ¸·Î String ¹è¿­ Å¸ÀÔ ÂüÁ¶º¯¼ö¶ó ¹øÁö°¡ ÀÖ¾î¾ß µÇ´Âµ¥..
+		String expression = args[0];	//ì—¬ê¸°ì„œ ë¶€í„° ì¸ë±ìŠ¤ ë²”ìœ„ì˜¤ë¥˜ ë°œìƒ... argsëŠ” ë©”ì¸ ë©”ì„œë“œì˜ ì¸ìê°’ìœ¼ë¡œ String ë°°ì—´ íƒ€ì… ì°¸ì¡°ë³€ìˆ˜ë¼ ë²ˆì§€ê°€ ìˆì–´ì•¼ ë˜ëŠ”ë°..
 		System.out.println("expression : " + expression);
 		
 		try{
@@ -29,12 +29,12 @@ class ExpValidCheck {
 			}
 			
 			if(st.isEmpty()) {
-				System.out.println("°ıÈ£°¡ ÀÏÄ¡ ÇÕ´Ï´Ù.");
+				System.out.println("ê´„í˜¸ê°€ ì¼ì¹˜ í•©ë‹ˆë‹¤.");
 			}else {
-				System.out.println("°ıÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
+				System.out.println("ê´„í˜¸ê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			}
 		}catch(EmptyStackException e) {
-			System.out.println("°ıÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ê´„í˜¸ê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			e.printStackTrace();
 		}	//try - catch
 		

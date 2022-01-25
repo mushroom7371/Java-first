@@ -1,18 +1,18 @@
-package programmers;
+ï»¿package programmers;
 
-//¹®ÀÚ¿­s¸¦ ¼ýÀÚ·Î º¯È¯ÇÑ °á°ú¸¦ ¹ÝÈ¯ÇÏ´Â ÇÔ¼ö, solution ¿Ï¼º
-/*Á¦ÇÑ Á¶°Ç
-sÀÇ ±æÀÌ´Â 1 ÀÌ»ó 5ÀÌÇÏÀÔ´Ï´Ù.
-sÀÇ ¸Ç¾Õ¿¡´Â ºÎÈ£(+, -)°¡ ¿Ã ¼ö ÀÖ½À´Ï´Ù.
-s´Â ºÎÈ£¿Í ¼ýÀÚ·Î¸¸ ÀÌ·ç¾îÁ®ÀÖ½À´Ï´Ù.
-s´Â "0"À¸·Î ½ÃÀÛÇÏÁö ¾Ê½À´Ï´Ù.*/
+//ë¬¸ìžì—´së¥¼ ìˆ«ìžë¡œ ë³€í™˜í•œ ê²°ê³¼ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜, solution ì™„ì„±
+/*ì œí•œ ì¡°ê±´
+sì˜ ê¸¸ì´ëŠ” 1 ì´ìƒ 5ì´í•˜ìž…ë‹ˆë‹¤.
+sì˜ ë§¨ì•žì—ëŠ” ë¶€í˜¸(+, -)ê°€ ì˜¬ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+sëŠ” ë¶€í˜¸ì™€ ìˆ«ìžë¡œë§Œ ì´ë£¨ì–´ì ¸ìžˆìŠµë‹ˆë‹¤.
+sëŠ” "0"ìœ¼ë¡œ ì‹œìž‘í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.*/
 
 class StringToInt {
 	private int solution(String s) {
-		//solution() ¸Þ¼­µå¸¦ È£Ãâ ÇÒ ¶§ String Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö s¸¦ ÀÎÀÚ·Î ¹Þ´Â´Ù.
+		//solution() ë©”ì„œë“œë¥¼ í˜¸ì¶œ í•  ë•Œ String íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ së¥¼ ì¸ìžë¡œ ë°›ëŠ”ë‹¤.
 		return Integer.parseInt(s);
 		
-		//Integer Å¬·¡½ºÀÇ static ¸Þ¼­µåÀÎ parseInt()¸¦ »ç¿ëÇÑ´Ù.
-		//ÇØ´ç ¸Þ¼­µå´Â ¼ýÀÚÇüÀÇ ¹®ÀÚ¿­À» ÀÎÀÚ°ªÀ¸·Î ¹ÞÀ¸¸é ÇØ´ç °ªÀ» 10Áø¼öÀÇ IntegerÇüÀ¸·Î ¹ÝÈ¯ÇÑ´Ù.
+		//Integer í´ëž˜ìŠ¤ì˜ static ë©”ì„œë“œì¸ parseInt()ë¥¼ ì‚¬ìš©í•œë‹¤.
+		//í•´ë‹¹ ë©”ì„œë“œëŠ” ìˆ«ìží˜•ì˜ ë¬¸ìžì—´ì„ ì¸ìžê°’ìœ¼ë¡œ ë°›ìœ¼ë©´ í•´ë‹¹ ê°’ì„ 10ì§„ìˆ˜ì˜ Integerí˜•ìœ¼ë¡œ ë°˜í™˜í•œë‹¤.
 	}
 }

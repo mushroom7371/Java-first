@@ -1,51 +1,51 @@
-package programmers;
+﻿package programmers;
 
 import java.util.HashSet;
 import java.util.Set;
 
-//소수찾기(완전탐색)
+//??李얘린(????)
 class FindPrimeNum {
-	boolean [] visit;	//이미 사용한 숫자를 다시 사용하지 못하도록 판단하기 위한 배열
+	boolean [] visit;	//?대??ъ⑺ ?レ瑜??ㅼ ?ъ⑺吏 紐삵?濡 ??⑦湲??? 諛곗?
 	char [] arr;
 	Set<Integer> set = new HashSet<Integer>();
 	
-	public boolean isPrime(int n) {	//소수인지 판단하기 위한 메서드
-		if(n == 1 || n == 0) {	//매개변수로 들어온 숫자가 0 또는 1이면 소수가 아니다.
+	public boolean isPrime(int n) {	//???몄? ??⑦湲??? 硫??
+		if(n == 1 || n == 0) {	//留ㅺ?蹂?濡 ?ㅼ댁??レ媛 0 ?? 1?대㈃ ??媛 ????
 			return false;
 		}
 		
-		for(int i = 2; i < n; i++) {	//주어진 숫자까지 2부터 1씩 증가면서 반복
-			if(n % i == 0) {	//주어진 숫자를 i로 나눴을때 나머지가 0이라면 소수가 아니다.
+		for(int i = 2; i < n; i++) {	//二쇱댁? ?レ源吏 2遺??1??利媛硫댁 諛蹂?
+			if(n % i == 0) {	//二쇱댁? ?レ瑜?i濡 ??댁? ?癒몄?媛 0?대쇰㈃ ??媛 ????
 				return false;
 			}
 		}
 		
-		return true;	//그 이외의 경우는 1과 자기 자신만으로 나눠떨어지는 수이므로 소수이다.
+		return true;	//洹??댁몄 寃쎌곕 1怨??湲???留?쇰? ???⑥댁?? ??대濡 ???대?
 	}
 	
-	public int charsToInt(char [] arr, int length) {	//문자를 int 타입으로 변환하기 위한 메서드
-		StringBuilder sb = new StringBuilder();	//숫자를 채워 넣을 것이므로 생성 및 선언
+	public int charsToInt(char [] arr, int length) {	//臾몄瑜?int ???쇰? 蹂??湲??? 硫??
+		StringBuilder sb = new StringBuilder();	//?レ瑜?梨? ?ｌ 寃?대濡 ???諛 ???
 		
-		for(int i = 0; i < length; i++) {	//arr이 가리키는 배열의 데이터를 sb에 순서대로 추가하여준다.
+		for(int i = 0; i < length; i++) {	//arr??媛由ыㅻ 諛곗댁 ?곗댄곕? sb? ???濡 異媛??ъ???
 			sb.append(arr[i]);
 		}
 		
-		return Integer.parseInt(sb.toString());	//문자열인 sb를 숫자로 변형하여 반환한다.
+		return Integer.parseInt(sb.toString());	//臾몄?댁?sb瑜??レ濡 蹂????諛????
 	}
 	
-	public void dfs(int level, int length, String numbers) {	//탐색을 위한 메서드
+	public void dfs(int level, int length, String numbers) {	//??? ?? 硫??
 		if(level == length) {
 			int num = charsToInt(arr, length);
-			if(isPrime(num)) {	//소수라면
-				set.add(num);	//set에 해당 숫자를 저장한다.
+			if(isPrime(num)) {	//???쇰㈃
+				set.add(num);	//set? ?대??レ瑜???ν??
 			}
 		}else {
-			for(int i = 0; i < numbers.length(); i++) {	//String 문자열의 길이만큼 1씩 증가면서 반복
-				if(!visit[i]) {	//해당 번지수가 참이 아니라면, 즉 이미 사용하지 않은 숫자라면
-					visit[i] = true;	//사용한 숫자로 바꿔준다.
-					arr[level] = numbers.charAt(i);	//arr의 level 번지에 numbers의 i번지의 문자를 저장한다.
-					dfs(level + 1, length, numbers);	//level을 1증가 시킨 후 다시 dfs를 호출한다.
-					visit[i] = false;	//사용하지 않은 숫자로 바꿔준다.
+			for(int i = 0; i < numbers.length(); i++) {	//String 臾몄?댁 湲몄대???1??利媛硫댁 諛蹂?
+				if(!visit[i]) {	//?대?踰吏?媛 李몄????쇰㈃, 利 ?대??ъ⑺吏 ?? ?レ?쇰㈃
+					visit[i] = true;	//?ъ⑺ ?レ濡 諛轅以??
+					arr[level] = numbers.charAt(i);	//arr? level 踰吏? numbers? i踰吏? 臾몄瑜???ν??
+					dfs(level + 1, length, numbers);	//level? 1利媛 ???? ?ㅼ dfs瑜??몄????
+					visit[i] = false;	//?ъ⑺吏 ?? ?レ濡 諛轅以??
 				}
 			}
 		}

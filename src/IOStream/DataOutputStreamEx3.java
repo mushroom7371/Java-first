@@ -1,4 +1,4 @@
-package IOStream;
+ï»¿package IOStream;
 
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
@@ -7,16 +7,16 @@ import java.io.IOException;
 class DataOutputStreamEx3 {
 	public static void main(String[] args) {
 		int [] score = {100, 90, 95, 85, 50};
-		//±âº»Çü ¹è¿­¼±¾ğ ¹× ÃÊ±âÈ­
+		//ê¸°ë³¸í˜• ë°°ì—´ì„ ì–¸ ë° ì´ˆê¸°í™”
 		try {
 			FileOutputStream fos = new FileOutputStream("score.dat");
-			//FileOutputStreamÀ» ÅëÇÑ score.dat ÆÄÀÏ »ı¼º
+			//FileOutputStreamì„ í†µí•œ score.dat íŒŒì¼ ìƒì„±
 			DataOutputStream dos = new DataOutputStream(fos);
 			
 			for(int i = 0; i < score.length; i++) {
 				dos.writeInt(score[i]);
 			}
-			//DataOutputStreamÀ» ÀÌ¿ëÇÏ¿© ¹è¿­ÀÇ ±æÀÌ¸¸Å­ °´Ã¼¿¡ int°ªÀ» ÀúÀåÇÑ´Ù.
+			//DataOutputStreamì„ ì´ìš©í•˜ì—¬ ë°°ì—´ì˜ ê¸¸ì´ë§Œí¼ ê°ì²´ì— intê°’ì„ ì €ì¥í•œë‹¤.
 		}catch(IOException ex) {
 			ex.printStackTrace();
 		}

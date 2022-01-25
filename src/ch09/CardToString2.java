@@ -1,14 +1,14 @@
-package ch09;
+ï»¿package ch09;
 
 class Card1{
 	String kind;
 	int number;
 	
-	Card1(){	//¸Å°³º¯¼ö°¡ ¾ø´Â »ý¼ºÀÚ¸¦ ÅëÇØ °´Ã¼ »ý¼º½Ã º¯¼ö¿¡ ´ëÇÑ ³»¿ëÀ» ÃÊ±âÈ­ ÇÏ´Âµ¥ ±âº»°ªÀ» ¼³Á¤ÇÏ¿´´Ù.
+	Card1(){	//ë§¤ê°œë³€ìˆ˜ê°€ ì—†ëŠ” ìƒì„±ìžë¥¼ í†µí•´ ê°ì²´ ìƒì„±ì‹œ ë³€ìˆ˜ì— ëŒ€í•œ ë‚´ìš©ì„ ì´ˆê¸°í™” í•˜ëŠ”ë° ê¸°ë³¸ê°’ì„ ì„¤ì •í•˜ì˜€ë‹¤.
 		this("SPADE", 1);
 	}
 	
-	Card1(String kind, int number){	//¸Å°³º¯¼ö°¡ ¾øÀ»¶§ ÀÌ »ý¼ºÀÚ¸¦ È£ÃâÇÏ¿© ÀÎÀÚ°ªÀ» ÀÚ±âÀÚ½ÅÀÇ º¯¼öµé¿¡ ¼³Á¤ÇØÁØ´Ù.
+	Card1(String kind, int number){	//ë§¤ê°œë³€ìˆ˜ê°€ ì—†ì„ë•Œ ì´ ìƒì„±ìžë¥¼ í˜¸ì¶œí•˜ì—¬ ì¸ìžê°’ì„ ìžê¸°ìžì‹ ì˜ ë³€ìˆ˜ë“¤ì— ì„¤ì •í•´ì¤€ë‹¤.
 		this.kind = kind;
 		this.number = number;
 	}
@@ -22,12 +22,12 @@ class CardToString2 {
 	public static void main(String[] args) {
 		
 		Card1 c1 = new Card1();
-		//¸Å°³º¯¼ö·Î ³Ñ±æ ÀÎÀÚ°ªÀÌ ÁÖ¾îÁöÁö ¾ÊÀ» ¶§ »ý¼ºÀÚ¸¦ ÅëÇÑ ±âº» °´Ã¼¸¦ »ý¼º
+		//ë§¤ê°œë³€ìˆ˜ë¡œ ë„˜ê¸¸ ì¸ìžê°’ì´ ì£¼ì–´ì§€ì§€ ì•Šì„ ë•Œ ìƒì„±ìžë¥¼ í†µí•œ ê¸°ë³¸ ê°ì²´ë¥¼ ìƒì„±
 		Card1 c2 = new Card1("HEART", 9);
-		//ÀÎÀÚ°ªÀÌ ÁÖ¾îÁö¹Ç·Î °´Ã¼ÀÇ ¸â¹öº¯¼ö¿¡ ÇØ´ç µ¥ÀÌÅÍ°¡ ÀúÀåµÊ
+		//ì¸ìžê°’ì´ ì£¼ì–´ì§€ë¯€ë¡œ ê°ì²´ì˜ ë©¤ë²„ë³€ìˆ˜ì— í•´ë‹¹ ë°ì´í„°ê°€ ì €ìž¥ë¨
 		
 		System.out.println("toString c1 : " + c1.toString());
 		System.out.println("toString c2 : " + c2.toString());
-		//Ä¿½ºÅÒ Å¬·¡½º¿¡¼­ toString() ¸Þ¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿© ÇØ´ç ¸Þ¼­µå È£Ãâ½Ã ¿À¹ö¶óÀÌµù ÇÑ ³»¿ëÀÌ Ãâ·ÂµÈ´Ù.
+		//ì»¤ìŠ¤í…€ í´ëž˜ìŠ¤ì—ì„œ toString() ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì—¬ í•´ë‹¹ ë©”ì„œë“œ í˜¸ì¶œì‹œ ì˜¤ë²„ë¼ì´ë”© í•œ ë‚´ìš©ì´ ì¶œë ¥ëœë‹¤.
 	}
 }

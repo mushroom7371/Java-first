@@ -1,4 +1,4 @@
-package ch06;
+ï»¿package ch06;
 
 	class Card	{
 		String kind;
@@ -20,14 +20,14 @@ package ch06;
 			c2.kind = "Spade";
 			c2.number = 4;
 			
-			System.out.println("c1Àº " + c1.kind + ", " + c1.number + "ÀÌ¸ç, Å©±â´Â ("+ c1.width + ", " + c1.heigt + ")");
-			System.out.println("c2´Â " + c2.kind + ", " + c2.number + "ÀÌ¸ç, Å©±â´Â ("+ c2.width + ", " + c2.heigt + ")");
-			System.out.println("c1ÀÇ width¿Í heigt¸¦ °¢°¢ 50, 80À¸·Î º¯°æÇÕ´Ï´Ù.");
+			System.out.println("c1ì€ " + c1.kind + ", " + c1.number + "ì´ë©°, í¬ê¸°ëŠ” ("+ c1.width + ", " + c1.heigt + ")");
+			System.out.println("c2ëŠ” " + c2.kind + ", " + c2.number + "ì´ë©°, í¬ê¸°ëŠ” ("+ c2.width + ", " + c2.heigt + ")");
+			System.out.println("c1ì˜ widthì™€ heigtë¥¼ ê°ê° 50, 80ìœ¼ë¡œ ë³€ê²½í•©ë‹ˆë‹¤.");
 			c1.width = 50;
 			c2.heigt= 80;
 			
-			System.out.println("c1Àº " + c1.kind + ", " + c1.number + "ÀÌ¸ç, Å©±â´Â ("+ c1.width + ", " + c1.heigt + ")");
-			System.out.println("c2´Â " + c2.kind + ", " + c2.number + "ÀÌ¸ç, Å©±â´Â ("+ c2.width + ", " + c2.heigt + ")");
+			System.out.println("c1ì€ " + c1.kind + ", " + c1.number + "ì´ë©°, í¬ê¸°ëŠ” ("+ c1.width + ", " + c1.heigt + ")");
+			System.out.println("c2ëŠ” " + c2.kind + ", " + c2.number + "ì´ë©°, í¬ê¸°ëŠ” ("+ c2.width + ", " + c2.heigt + ")");
 			
 		}
 	}

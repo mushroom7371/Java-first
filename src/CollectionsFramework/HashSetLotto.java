@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -9,15 +9,15 @@ import java.util.Set;
 public class HashSetLotto {
 
 	public static void main(String[] args) {
-		Set set = new HashSet();	//Set Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í HashSetÅ¬·¡½º·Î ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÑ ÈÄ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
+		Set set = new HashSet();	//Set íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  HashSetí´ë˜ìŠ¤ë¡œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•œ í›„ ì£¼ì†Œê°’ì„ ì €ì¥í•œë‹¤.
 		
-		for(int i = 0; set.size() < 6; i++) {	//set.size()°¡ 6¹Ì¸¸ÀÏ¶§ ±îÁö ¹İº¹À»ÇÑ´Ù.
-			int num = (int)(Math.random()*45) + 1;	//¹İº¹¸¶´Ù ¹üÀ§ 1~45±îÁöÀÇ ÀÓÀÇÀÇ ¼ö¸¦ num¿¡ ÀúÀåÇÑ´Ù.
-			set.add(new Integer(num));	//±× ÀúÀåÇÑ °ªÀ» setÀÌ °¡¸®Å°´Â HashSet ÀÎ½ºÅÏ½º¿¡ ÀúÀåÇÑ´Ù.	Áßº¹°ªÀº ÀúÀåÇÏÁö ¾Ê´Â´Ù.
+		for(int i = 0; set.size() < 6; i++) {	//set.size()ê°€ 6ë¯¸ë§Œì¼ë•Œ ê¹Œì§€ ë°˜ë³µì„í•œë‹¤.
+			int num = (int)(Math.random()*45) + 1;	//ë°˜ë³µë§ˆë‹¤ ë²”ìœ„ 1~45ê¹Œì§€ì˜ ì„ì˜ì˜ ìˆ˜ë¥¼ numì— ì €ì¥í•œë‹¤.
+			set.add(new Integer(num));	//ê·¸ ì €ì¥í•œ ê°’ì„ setì´ ê°€ë¦¬í‚¤ëŠ” HashSet ì¸ìŠ¤í„´ìŠ¤ì— ì €ì¥í•œë‹¤.	ì¤‘ë³µê°’ì€ ì €ì¥í•˜ì§€ ì•ŠëŠ”ë‹¤.
 		}
 		
-		List list = new LinkedList(set);	//setÀÇ µ¥ÀÌÅÍ °ªÀ» List Å¸ÀÔÀÇ ÀÎ½ºÅÏ½º LinkedList¿¡ ´ã´Â´Ù.
-		Collections.sort(list);	//CollectionsÅ¬·¡½ºÀÇ sort()¸Ş¼­µå¸¦ ÀÌ¿ëÇØ¼­ listÀÇ µ¥ÀÌÅÍ°ªÀ» Á¤·ÄÇÑ´Ù. CollectionÀº ÀÎÅÍÆäÀÌ½ºÀÌ´Ù.
+		List list = new LinkedList(set);	//setì˜ ë°ì´í„° ê°’ì„ List íƒ€ì…ì˜ ì¸ìŠ¤í„´ìŠ¤ LinkedListì— ë‹´ëŠ”ë‹¤.
+		Collections.sort(list);	//Collectionsí´ë˜ìŠ¤ì˜ sort()ë©”ì„œë“œë¥¼ ì´ìš©í•´ì„œ listì˜ ë°ì´í„°ê°’ì„ ì •ë ¬í•œë‹¤. Collectionì€ ì¸í„°í˜ì´ìŠ¤ì´ë‹¤.
 		System.out.println(list);
 	}
 

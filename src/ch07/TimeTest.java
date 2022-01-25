@@ -1,16 +1,16 @@
-package ch07;
+ï»¿package ch07;
 
 public class TimeTest {
 	public static void main(String [] args) {
 		Time t = new Time(12, 35, 30);
 		System.out.println(t);
-		// t.hour = 13; Time Å¬·¡½ºÀÇ º¯¼ö hourÀÇ Á¢±Ù Á¦¾îÀÚ°¡ private ÀÌ¹Ç·Î º¯°æ ºÒ°¡
-		t.setHour(t.getHour()+1); //privateÀÇ Á¢±Ù Á¦¾îÀÚ¸¦ °¡Áø º¯¼ö¸¦ º¯°æ ÇÒ ¼ö ¾øÀ¸¹Ç·Î 
-		System.out.println(t);	  //ÀÌ º¯¼ö¸¦ ´Ù·ç±â À§ÇÏ¿© public ¸Ş¼­µå¸¦ ÀÌ¿ëÇÔ 
+		// t.hour = 13; Time í´ë˜ìŠ¤ì˜ ë³€ìˆ˜ hourì˜ ì ‘ê·¼ ì œì–´ìê°€ private ì´ë¯€ë¡œ ë³€ê²½ ë¶ˆê°€
+		t.setHour(t.getHour()+1); //privateì˜ ì ‘ê·¼ ì œì–´ìë¥¼ ê°€ì§„ ë³€ìˆ˜ë¥¼ ë³€ê²½ í•  ìˆ˜ ì—†ìœ¼ë¯€ë¡œ 
+		System.out.println(t);	  //ì´ ë³€ìˆ˜ë¥¼ ë‹¤ë£¨ê¸° ìœ„í•˜ì—¬ public ë©”ì„œë“œë¥¼ ì´ìš©í•¨ 
 	}
 }	
 class Time {
-	private int hour, minute, second; //private Á¢±Ù Á¦¾îÀÚ·Î ÇØ´ç Å¬·¡½º¿¡¼­¸¸ º¯¼ö Á¢±ÙÀÌ °¡´ÉÇÔ
+	private int hour, minute, second; //private ì ‘ê·¼ ì œì–´ìë¡œ í•´ë‹¹ í´ë˜ìŠ¤ì—ì„œë§Œ ë³€ìˆ˜ ì ‘ê·¼ì´ ê°€ëŠ¥í•¨
 
 	Time(int hour, int minute, int second){
 		setHour(hour);
@@ -18,7 +18,7 @@ class Time {
 		setSecond(second);
 	}
 
-	public int getHour(){ return hour; }	// Å¸ Å¬·¡½º¿¡¼­ Á¢±ÙÇÏ±â À§ÇÏ¿© public¸¦ »ç¿ëÇÔ.
+	public int getHour(){ return hour; }	// íƒ€ í´ë˜ìŠ¤ì—ì„œ ì ‘ê·¼í•˜ê¸° ìœ„í•˜ì—¬ publicë¥¼ ì‚¬ìš©í•¨.
 	public void setHour(int hour) {
 		if(hour < 0 || hour > 23) return;
 		this.hour = hour;

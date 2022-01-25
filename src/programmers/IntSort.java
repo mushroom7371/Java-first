@@ -1,29 +1,29 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-//Á¤¼ö ³»¸²Â÷¼ø Á¤·Ä
+//ì •ìˆ˜ ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬
 class IntSort {
 	private long solution(long n) {
         long answer = 0;
         
-        String num = String.valueOf(n);	//long Å¸ÀÔÀÇ ÀÎÀÚ°ªÀ» String Å¸ÀÔÀ¸·Î ¹Ù²Ù¾î ÁØ´Ù.
-        String [] arr = new String [num.length()];	//numÀÇ ±æÀÌ ¸¸±İÀÇ Å©±â¸¦ °¡Áö´Â String Å¸ÀÔ ¹è¿­À» ¼±¾ğÇÏ°í ÂüÁ¶º¯¼ö arrÀÌ ¹è¿­À» °¡¸®Å°µµ·Ï ÇÑ´Ù.
+        String num = String.valueOf(n);	//long íƒ€ì…ì˜ ì¸ìê°’ì„ String íƒ€ì…ìœ¼ë¡œ ë°”ê¾¸ì–´ ì¤€ë‹¤.
+        String [] arr = new String [num.length()];	//numì˜ ê¸¸ì´ ë§Œê¸ˆì˜ í¬ê¸°ë¥¼ ê°€ì§€ëŠ” String íƒ€ì… ë°°ì—´ì„ ì„ ì–¸í•˜ê³  ì°¸ì¡°ë³€ìˆ˜ arrì´ ë°°ì—´ì„ ê°€ë¦¬í‚¤ë„ë¡ í•œë‹¤.
         
-        for(int i = 0; i < arr.length; i++) {	//0¹øÁö ºÎÅÍ ¹è¿­ÀÇ Å©±â¸¸Å­ 1¾¿ Áõ°¡ ÇÏ¸é¼­ ¹İº¹
-        	arr[i] = String.valueOf(num.charAt(i));	//¹è¿­ÀÇ °¢ ¹øÁö¿¡ ¸Â´Â numÀÇ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÑ´Ù.
+        for(int i = 0; i < arr.length; i++) {	//0ë²ˆì§€ ë¶€í„° ë°°ì—´ì˜ í¬ê¸°ë§Œí¼ 1ì”© ì¦ê°€ í•˜ë©´ì„œ ë°˜ë³µ
+        	arr[i] = String.valueOf(num.charAt(i));	//ë°°ì—´ì˜ ê° ë²ˆì§€ì— ë§ëŠ” numì˜ ë°ì´í„°ë¥¼ ì €ì¥í•œë‹¤.
         }
         
         Arrays.sort(arr, Collections.reverseOrder());
-        //java.util.Arrays Å¬·¡½º¿¡¼­ Á¦°øÇÏ´Â sort() ¸Ş¼­µå¸¦ ÀÌ¿ëÇÏ¿© Á¤·ÄÇÏµÇ, ´Ù½Ã java.util.Collections Å¬·¡½º¿¡¼­ Á¦°øÇÏ´Â reverseOrder()¸Ş¼­µå¸¦ Á¤·ÄÀ» ³»¸²Â÷¼øÀ¸·Î ÇÑ´Ù.
-        num = "";	//long Å¸ÀÔÀÇ º¯¼ö¿¡ ´ãÀ¸¸é µ¡¼ÀÀÌ µÇ¹Ç·Î String Å¸ÀÔÀ» Àç »ç¿ëÇÑ´Ù.
+        //java.util.Arrays í´ë˜ìŠ¤ì—ì„œ ì œê³µí•˜ëŠ” sort() ë©”ì„œë“œë¥¼ ì´ìš©í•˜ì—¬ ì •ë ¬í•˜ë˜, ë‹¤ì‹œ java.util.Collections í´ë˜ìŠ¤ì—ì„œ ì œê³µí•˜ëŠ” reverseOrder()ë©”ì„œë“œë¥¼ ì •ë ¬ì„ ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ í•œë‹¤.
+        num = "";	//long íƒ€ì…ì˜ ë³€ìˆ˜ì— ë‹´ìœ¼ë©´ ë§ì…ˆì´ ë˜ë¯€ë¡œ String íƒ€ì…ì„ ì¬ ì‚¬ìš©í•œë‹¤.
         
         for(int i = 0; i < arr.length; i++) {
-        	num += arr[i];	//¹®ÀÚ¿­·Î ´õÇØÁø´Ù.
+        	num += arr[i];	//ë¬¸ìì—´ë¡œ ë”í•´ì§„ë‹¤.
         }
         
-        answer = Long.parseLong(num);	//´Ù½Ã long Å¸ÀÔÀ¸·Î º¯È¯ ÇÏ¿©ÁØ´Ù.
+        answer = Long.parseLong(num);	//ë‹¤ì‹œ long íƒ€ì…ìœ¼ë¡œ ë³€í™˜ í•˜ì—¬ì¤€ë‹¤.
         
         return answer;
     }

@@ -1,26 +1,26 @@
-package Study;
+ï»¿package Study;
 
 public class ObjectEqualEx1 {
 	public static void main(String [] args) {
 		Value v1 = new Value(10);
 		Value v2 = new Value(10);
-		// ¾Æ·¡¿¡ Á¤ÀÇÇÑ Å¬·¡½º·Î ºÎÅÍ °´Ã¼¸¦ »ý¼ºÇÑ´Ù. ÀÌ¶§ °´Ã¼ ¾ÈÀÇ º¯¼ö´Â °¢°¢ ¸Å°³º¯¼öÀÎ 10À¸·Î ¼³Á¤µÈ´Ù.
+		// ì•„ëž˜ì— ì •ì˜í•œ í´ëž˜ìŠ¤ë¡œ ë¶€í„° ê°ì²´ë¥¼ ìƒì„±í•œë‹¤. ì´ë•Œ ê°ì²´ ì•ˆì˜ ë³€ìˆ˜ëŠ” ê°ê° ë§¤ê°œë³€ìˆ˜ì¸ 10ìœ¼ë¡œ ì„¤ì •ëœë‹¤.
 		
-		if(v1.equals(v2)) {	//¸ðµç Å¬·¡½ºÀÇ ÃÖ°í Á¶»óÀÎ Object Å¬·¡½ºÀÇ equals ¸Å¼­µå¸¦ ÅëÇØ ºñ±³ÇÑ´Ù.
-			System.out.println("v1°ú v2´Â °°½À´Ï´Ù.");
+		if(v1.equals(v2)) {	//ëª¨ë“  í´ëž˜ìŠ¤ì˜ ìµœê³  ì¡°ìƒì¸ Object í´ëž˜ìŠ¤ì˜ equals ë§¤ì„œë“œë¥¼ í†µí•´ ë¹„êµí•œë‹¤.
+			System.out.println("v1ê³¼ v2ëŠ” ê°™ìŠµë‹ˆë‹¤.");
 		}else {
-			System.out.println("v1°ú v2´Â ´Ù¸¨´Ï´Ù.");
+			System.out.println("v1ê³¼ v2ëŠ” ë‹¤ë¦…ë‹ˆë‹¤.");
 		}
-		//ºñ±³ °á°ú v1°ú v2´Â ¼­·Î ´Ù¸¥ °´Ã¼ÀÌ¸ç ´Ù¸¥ ÁÖ¼Ò°ªÀ» °¡Áö±â ¶§¹®¿¡ Á¶°Ç¹®ÀÇ °á°ú·Î ´Ù¸¥ °ªÀÌ Ãâ·ÂµÈ´Ù.
-		//ÀÌ·Î ÀÎÇÏ¿© equals¸Þ¼­µå´Â µðÆúµå·Î °´Ã¼ÀÇ ÁÖ¼Ò°ªÀ» ºñ±³ÇÏ´Â °ÍÀ» ¾Ë ¼ö ÀÖ´Ù.
+		//ë¹„êµ ê²°ê³¼ v1ê³¼ v2ëŠ” ì„œë¡œ ë‹¤ë¥¸ ê°ì²´ì´ë©° ë‹¤ë¥¸ ì£¼ì†Œê°’ì„ ê°€ì§€ê¸° ë•Œë¬¸ì— ì¡°ê±´ë¬¸ì˜ ê²°ê³¼ë¡œ ë‹¤ë¥¸ ê°’ì´ ì¶œë ¥ëœë‹¤.
+		//ì´ë¡œ ì¸í•˜ì—¬ equalsë©”ì„œë“œëŠ” ë””í´ë“œë¡œ ê°ì²´ì˜ ì£¼ì†Œê°’ì„ ë¹„êµí•˜ëŠ” ê²ƒì„ ì•Œ ìˆ˜ ìžˆë‹¤.
 		
 		v2 = v1;
-		//ÂüÁ¶º¯¼ö v2°¡ °¡¸®Å°´Â ÁÖ¼Ò¸¦ v1ÀÌ °¡¸®Å°´Â ÁÖ¼Ò·Î ¹Ù²å±â ¶§¹®¿¡ µÑÀº °°Àº °´Ã¼¸¦ °¡¸®Å²´Ù.
+		//ì°¸ì¡°ë³€ìˆ˜ v2ê°€ ê°€ë¦¬í‚¤ëŠ” ì£¼ì†Œë¥¼ v1ì´ ê°€ë¦¬í‚¤ëŠ” ì£¼ì†Œë¡œ ë°”ê¿¨ê¸° ë•Œë¬¸ì— ë‘˜ì€ ê°™ì€ ê°ì²´ë¥¼ ê°€ë¦¬í‚¨ë‹¤.
 		
 		if(v1.equals(v2)) {
-			System.out.println("v1°ú v2´Â °°½À´Ï´Ù.");
+			System.out.println("v1ê³¼ v2ëŠ” ê°™ìŠµë‹ˆë‹¤.");
 		}else {
-			System.out.println("v1°ú v2´Â ´Ù¸¨´Ï´Ù.");
+			System.out.println("v1ê³¼ v2ëŠ” ë‹¤ë¦…ë‹ˆë‹¤.");
 		}
 		
 	}
@@ -28,9 +28,9 @@ public class ObjectEqualEx1 {
 }
 
 class Value{
-	int value;	//¸â¹öº¯¼ö·Î ¼±¾ð
+	int value;	//ë©¤ë²„ë³€ìˆ˜ë¡œ ì„ ì–¸
 	
-	Value(int value){	//»ý¼ºÀÚ¸¦ ÅëÇÏ¿© °´Ã¼ »ý¼º½Ã º¯¼ö valueÀÇ °ªÀ» ¸Å°³º¯¼öÀÇ °ªÀ¸·Î ¼³Á¤ÇÑ´Ù.
+	Value(int value){	//ìƒì„±ìžë¥¼ í†µí•˜ì—¬ ê°ì²´ ìƒì„±ì‹œ ë³€ìˆ˜ valueì˜ ê°’ì„ ë§¤ê°œë³€ìˆ˜ì˜ ê°’ìœ¼ë¡œ ì„¤ì •í•œë‹¤.
 		this.value = value;
 	}
 }

@@ -1,4 +1,4 @@
-package ch05;
+ï»¿package ch05;
 
 import java.util.*;
 
@@ -33,7 +33,7 @@ public class MultiArrEx2 {
 			}
 			System.out.println();
 			
-			System.out.printf("1~%dÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä. (Á¾·á:0)", SIZE*SIZE);
+			System.out.printf("1~%dì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”. (ì¢…ë£Œ:0)", SIZE*SIZE);
 			String tmp = scanner.nextLine();
 			num = Integer.parseInt(tmp);
 			

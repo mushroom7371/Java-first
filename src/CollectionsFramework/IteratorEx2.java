@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -6,32 +6,32 @@ import java.util.Iterator;
 public class IteratorEx2 {
 
 	public static void main(String[] args) {
-		ArrayList origin = new ArrayList(10);	//ArrayList Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í ÂüÁ¶º¯¼ö¿¡ »õ·Î¿î ArrayList ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÏ¿© ±× ÁÖ¼Ò°ªÀ» ÀúÀåÇÔ.
+		ArrayList origin = new ArrayList(10);	//ArrayList íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ì°¸ì¡°ë³€ìˆ˜ì— ìƒˆë¡œìš´ ArrayList ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ì—¬ ê·¸ ì£¼ì†Œê°’ì„ ì €ì¥í•¨.
 		ArrayList copy1 = new ArrayList(10);
 		ArrayList copy2 = new ArrayList(10);
 		
 		for(int i = 0; i < 10; i++) {
-			origin.add(i + "");		//originÀÌ °¡¸®Å°´Â °÷ÀÇ ÀÎ½ºÅÏ½º¿¡ 0¿¡¼­ 9±îÁöÀÇ ¼ö¸¦ ¹®ÀÚ¿­·Î ÀúÀåÇÔ
+			origin.add(i + "");		//originì´ ê°€ë¦¬í‚¤ëŠ” ê³³ì˜ ì¸ìŠ¤í„´ìŠ¤ì— 0ì—ì„œ 9ê¹Œì§€ì˜ ìˆ˜ë¥¼ ë¬¸ìì—´ë¡œ ì €ì¥í•¨
 		}
 		
-		Iterator it = origin.iterator();	//Iterator Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í ¿©±â¿¡ origin ÀÇ iterator()¸¦ È£ÃâÇÏ°í ¸®ÅÏ¹ŞÀº µ¥ÀÌÅÍ¸¦ ÀúÀåÇÔ
+		Iterator it = origin.iterator();	//Iterator íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ì—¬ê¸°ì— origin ì˜ iterator()ë¥¼ í˜¸ì¶œí•˜ê³  ë¦¬í„´ë°›ì€ ë°ì´í„°ë¥¼ ì €ì¥í•¨
 		
 		while(it.hasNext()) {
-			copy1.add(it.next());	//´ÙÀ½°ªÀÌ ÀÖÀ» °æ¿ì copy1ÀÇ ÀÎ½ºÅÏ½º¿¡ ±× °ªÀ» ¼øÂ÷ÀûÀ¸·Î ÀúÀå
+			copy1.add(it.next());	//ë‹¤ìŒê°’ì´ ìˆì„ ê²½ìš° copy1ì˜ ì¸ìŠ¤í„´ìŠ¤ì— ê·¸ ê°’ì„ ìˆœì°¨ì ìœ¼ë¡œ ì €ì¥
 		}
 		
-		System.out.println("origin ¿¡¼­ copy1 À¸·Î µ¥ÀÌÅÍ º¹»ç");
+		System.out.println("origin ì—ì„œ copy1 ìœ¼ë¡œ ë°ì´í„° ë³µì‚¬");
 		System.out.println("origin = " + origin);
 		System.out.println("copy1 = " + copy1);
 		
-		it = origin.iterator();	//iterator´Â Àç»ç¿ëÀÌ ºÒ°¡´ÉÇÏ¿© ÀÌ¹Ì ¸¸µé¾îÁø ÂüÁ¶º¯¼ö¿¡ ´Ù½Ã ÇÑ¹ø ¸Ş¼­µå¸¦ È£ÃâÇÏ¿© µ¥ÀÌÅÍ¸¦ ÀúÀåÇÑ´Ù.
+		it = origin.iterator();	//iteratorëŠ” ì¬ì‚¬ìš©ì´ ë¶ˆê°€ëŠ¥í•˜ì—¬ ì´ë¯¸ ë§Œë“¤ì–´ì§„ ì°¸ì¡°ë³€ìˆ˜ì— ë‹¤ì‹œ í•œë²ˆ ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ë°ì´í„°ë¥¼ ì €ì¥í•œë‹¤.
 		
 		while(it.hasNext()) {
 			copy2.add(it.next());
-			it.remove();	//copy1°ú´Â ´Ù¸£°Ô ÀúÀåÇÑ ÈÄ µ¥ÀÌÅÍ¸¦ Á¦°ÅÇÑ´Ù.
+			it.remove();	//copy1ê³¼ëŠ” ë‹¤ë¥´ê²Œ ì €ì¥í•œ í›„ ë°ì´í„°ë¥¼ ì œê±°í•œë‹¤.
 		}
 		
-		System.out.println("origin ¿¡¼­ copy2 À¸·Î µ¥ÀÌÅÍ ÀÌµ¿");
+		System.out.println("origin ì—ì„œ copy2 ìœ¼ë¡œ ë°ì´í„° ì´ë™");
 		System.out.println("origin = " + origin);
 		System.out.println("copy2 = " + copy2);
 

@@ -1,13 +1,13 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.util.Scanner;
 
 public class Factorial {
 	static int factorial(int n) {
-		//static ¸Ş¼­µå·Î Å¬·¡½º¿¡ ¸Ş¸ğ¸®°¡ ÀûÀçµÉ¶§ »ı¼ºµÈ´Ù.
-		if(n > 0)	//¸Å°³º¯¼ö·Î ¹ŞÀº nÀÇ °ªÀÌ 0º¸´Ù Å©´Ù¸é
+		//static ë©”ì„œë“œë¡œ í´ë˜ìŠ¤ì— ë©”ëª¨ë¦¬ê°€ ì ì¬ë ë•Œ ìƒì„±ëœë‹¤.
+		if(n > 0)	//ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ nì˜ ê°’ì´ 0ë³´ë‹¤ í¬ë‹¤ë©´
 			return n * factorial(n - 1);
-			//n*(n-1)*(n-1-1)*(n-1-1-1)*...1 ·Î °è¼ÓÇÏ¿© ÀÚ±â ÀÚ½ÅÀÇ ¸Ş¼­µå¸¦ È£ÃâÇÑ °á°ú¸¦ °öÇÏ¿© ¹İÈ¯ÇÑ´Ù.
+			//n*(n-1)*(n-1-1)*(n-1-1-1)*...1 ë¡œ ê³„ì†í•˜ì—¬ ìê¸° ìì‹ ì˜ ë©”ì„œë“œë¥¼ í˜¸ì¶œí•œ ê²°ê³¼ë¥¼ ê³±í•˜ì—¬ ë°˜í™˜í•œë‹¤.
 		else
 			return 1;
 	}
@@ -15,9 +15,9 @@ public class Factorial {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		int x = sc.nextInt();
 		
-		System.out.println(x + " ÀÇ ÆÑÅä¸®¾óÀº " + factorial(x) + " ÀÔ´Ï´Ù.");
+		System.out.println(x + " ì˜ íŒ©í† ë¦¬ì–¼ì€ " + factorial(x) + " ì…ë‹ˆë‹¤.");
 	}
 }

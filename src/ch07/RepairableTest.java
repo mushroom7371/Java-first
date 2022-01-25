@@ -1,4 +1,4 @@
-package ch07;
+ï»¿package ch07;
 
 public class RepairableTest {
 	public static void main(String [] agrs) {
@@ -10,46 +10,46 @@ public class RepairableTest {
 		
 		scv.repair(tank);
 		scv.repair(dropship);
-		// scv.repair(marine); ¸¶¸°Àº repairable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ°í ÀÖÁö ¾Ê±â¿¡ ºÒ°¡´É
+		// scv.repair(marine); ë§ˆë¦°ì€ repairable ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ê³  ìˆì§€ ì•Šê¸°ì— ë¶ˆê°€ëŠ¥
 		
 	}
 }
 
-interface Repairable {}	//À¯´Ö ¼ö¸® ±â´ÉÀ» Ãß°¡ÇÏ±â À§ÇÑ ÀÎÅÍÆäÀÌ½º Á¤ÀÇ ¾Æ¹« ³»¿ë¾ø´Ù.
+interface Repairable {}	//ìœ ë‹› ìˆ˜ë¦¬ ê¸°ëŠ¥ì„ ì¶”ê°€í•˜ê¸° ìœ„í•œ ì¸í„°í˜ì´ìŠ¤ ì •ì˜ ì•„ë¬´ ë‚´ìš©ì—†ë‹¤.
 
-class Unit{	// ¸ğµç À¯´ÖÀÇ °øÅë µÈ º¯¼ö¸¦ °¡Áö°í ÀÖ´Â Å¬·¡½º
+class Unit{	// ëª¨ë“  ìœ ë‹›ì˜ ê³µí†µ ëœ ë³€ìˆ˜ë¥¼ ê°€ì§€ê³  ìˆëŠ” í´ë˜ìŠ¤
 	int hitPoint;
 	final int MAX_HP;
 	
-	Unit(int hp){	//»ı¼ºÀÚ¸¦ ÅëÇÏ¿© ¸Å°³º¯¼ö Àü´Ş½Ã »ó¼ö·Î ¼±¾ğÇÑ MAX_HP º¯¼öÀÇ °ªÀ» ÁöÁ¤ÇÑ´Ù.
+	Unit(int hp){	//ìƒì„±ìë¥¼ í†µí•˜ì—¬ ë§¤ê°œë³€ìˆ˜ ì „ë‹¬ì‹œ ìƒìˆ˜ë¡œ ì„ ì–¸í•œ MAX_HP ë³€ìˆ˜ì˜ ê°’ì„ ì§€ì •í•œë‹¤.
 		MAX_HP = hp;
 	}
 	
 }
 
-class GroundUnit extends Unit{	//±×¶ó¿îµå À¯´ÖÀ» À§ÇÑ Å¬·¡½º À¯´ÖÀ» »ó¼Ó¹Ş´Â´Ù
-	GroundUnit(int hp){	//¸¶Âù°¡Áö·Î »ı¼ºÀÚ¸¦ ÅëÇÏ¿© ¸Å°³º¯¼ö¸¦ Àü´ŞÇØ ÁÖ¸é,
-		super(hp);	//ºÎ¸ğÅ¬·¡½ºÀÇ »ı¼ºÀÚ¿¡ ÀÌ ¸Å°³º¯¼ö¸¦ Àü´ŞÇÏ¿© MAX_HP¸¦ ¼³Á¤ÇÑ´Ù.
+class GroundUnit extends Unit{	//ê·¸ë¼ìš´ë“œ ìœ ë‹›ì„ ìœ„í•œ í´ë˜ìŠ¤ ìœ ë‹›ì„ ìƒì†ë°›ëŠ”ë‹¤
+	GroundUnit(int hp){	//ë§ˆì°¬ê°€ì§€ë¡œ ìƒì„±ìë¥¼ í†µí•˜ì—¬ ë§¤ê°œë³€ìˆ˜ë¥¼ ì „ë‹¬í•´ ì£¼ë©´,
+		super(hp);	//ë¶€ëª¨í´ë˜ìŠ¤ì˜ ìƒì„±ìì— ì´ ë§¤ê°œë³€ìˆ˜ë¥¼ ì „ë‹¬í•˜ì—¬ MAX_HPë¥¼ ì„¤ì •í•œë‹¤.
 	}
 }
 
-class AirUnit extends Unit{	//¿¡¾î À¯´ÖÀ» À§ÇÑ Å¬·¡½º
+class AirUnit extends Unit{	//ì—ì–´ ìœ ë‹›ì„ ìœ„í•œ í´ë˜ìŠ¤
 	AirUnit(int hp){
-		super(hp);	//¿©±â¼­ÀÇ super ´Â Uint Å¬·¡½º¸¦ ÀÇ¹ÌÇÔ
+		super(hp);	//ì—¬ê¸°ì„œì˜ super ëŠ” Uint í´ë˜ìŠ¤ë¥¼ ì˜ë¯¸í•¨
 	}
 }
 
-class Tank extends GroundUnit implements Repairable{	//Tank Å¬·¡½º´Â UnitÀ» »ó¼Ó¹ŞÀº GroundUint À» »ó¼Ó ¹ŞÀ¸¸ç ¼ö¸®¸¦ À§ÇÑ ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ´Ù.
-	Tank(){	//¸Å°³º¯¼ö°¡ ¾ø´Â »ı¼ºÀÚ¸¦ ÅëÇÏ¿©
-		super(150);	//ºÎ¸ğÅ¬·¡½ºÀÇ »ı¼ºÀÚ¿¡ ¸Å°³º¯¼ö °ªÀ» Àü´ŞÇÏ°í, ÀÌ¸¦ ÅëÇØ MAX_HP°¡ ¼³Á¤µÇ°í hitPoint º¯¼ö ¶ÇÇÑ °°Àº °ªÀÌ ÀúÀåµÈ´Ù.
+class Tank extends GroundUnit implements Repairable{	//Tank í´ë˜ìŠ¤ëŠ” Unitì„ ìƒì†ë°›ì€ GroundUint ì„ ìƒì† ë°›ìœ¼ë©° ìˆ˜ë¦¬ë¥¼ ìœ„í•œ ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œë‹¤.
+	Tank(){	//ë§¤ê°œë³€ìˆ˜ê°€ ì—†ëŠ” ìƒì„±ìë¥¼ í†µí•˜ì—¬
+		super(150);	//ë¶€ëª¨í´ë˜ìŠ¤ì˜ ìƒì„±ìì— ë§¤ê°œë³€ìˆ˜ ê°’ì„ ì „ë‹¬í•˜ê³ , ì´ë¥¼ í†µí•´ MAX_HPê°€ ì„¤ì •ë˜ê³  hitPoint ë³€ìˆ˜ ë˜í•œ ê°™ì€ ê°’ì´ ì €ì¥ëœë‹¤.
 		hitPoint = MAX_HP;
 	}
-	public String toString() {	//Object Å¬·¡½ºÀÇ toString()¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµùÇÏ¿© Ãâ·Â¿¡ »ç¿ëÇÑ´Ù.
+	public String toString() {	//Object í´ë˜ìŠ¤ì˜ toString()ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”©í•˜ì—¬ ì¶œë ¥ì— ì‚¬ìš©í•œë‹¤.
 		return "Tank";
 	}
 }
 
-class Marine extends GroundUnit{	//Marine Å¬·¡½º´Â Tank Å¬·¡½º¿Í °°À¸³ª ÀÎÅÍÆäÀÌ½º¸¦ °¡ÁöÁö ¾ÊÀ¸¹Ç·Î ¼ö¸®°¡ ºÒ°¡´ÉÇÏ´Ù
+class Marine extends GroundUnit{	//Marine í´ë˜ìŠ¤ëŠ” Tank í´ë˜ìŠ¤ì™€ ê°™ìœ¼ë‚˜ ì¸í„°í˜ì´ìŠ¤ë¥¼ ê°€ì§€ì§€ ì•Šìœ¼ë¯€ë¡œ ìˆ˜ë¦¬ê°€ ë¶ˆê°€ëŠ¥í•˜ë‹¤
 	Marine(){
 		super(40);
 		hitPoint = MAX_HP;
@@ -59,7 +59,7 @@ class Marine extends GroundUnit{	//Marine Å¬·¡½º´Â Tank Å¬·¡½º¿Í °°À¸³ª ÀÎÅÍÆäÀÌ
 	}
 }
 
-class DropShip extends AirUnit implements Repairable{	//Tank Å¬·¡½º¿Í ¸¶Âù°¡Áö·Î ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½º
+class DropShip extends AirUnit implements Repairable{	//Tank í´ë˜ìŠ¤ì™€ ë§ˆì°¬ê°€ì§€ë¡œ ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ë˜ìŠ¤
 	DropShip(){
 		super(125);
 		hitPoint = MAX_HP;
@@ -75,13 +75,13 @@ class Scv extends GroundUnit implements Repairable{
 		hitPoint = MAX_HP;
 	}
 	
-	void repair(Repairable r) { //¼ö¸®¸¦ ÇÏ±âÀ§ÇÑ ¸Ş¼­µå¸¦ Á¤ÀÇÇÏ¿´À¸¸ç ¸Å°³º¯¼ö·Î´Â ÀÎÅÍÆäÀÌ½º Å¸ÀÔÀ» ¹Ş´Â´Ù.
-		if(r instanceof Unit) {	//¸Å°³º¯¼ö·Î ¹ŞÀº ÂüÁ¶º¯¼ö°¡ °¡¸®Å°´Â ÀÎ½ºÅÏ½º°¡ UnitÅ¬·¡½º¿Í ÀÚ½Ä-ºÎ¸ğ°ü°è¶ó¸é
-			Unit u = (Unit)r;	//ÂüÁ¶º¯¼öÀÇ Çüº¯È¯À» ÅëÇÏ¿© Unit Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö u°¡ Repairable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ ÀÎ½ºÅÏ½º¸¦ °¡¸®Å°°Ô µÈ´Ù.
-			while(u.hitPoint != u.MAX_HP) {	//¹İº¹ È½¼ö¸¦ ¸ğ¸¦¶§ ÁÖ·Î »ç¿ëÇÏ´Â while¹®À» ÅëÇÏ¿© Á¶°ÇÀÌ ¸¸Á·ÇÒ¶§±îÁö Ã¼·ÂÀ» Áõ°¡½ÃÅ²´Ù.
+	void repair(Repairable r) { //ìˆ˜ë¦¬ë¥¼ í•˜ê¸°ìœ„í•œ ë©”ì„œë“œë¥¼ ì •ì˜í•˜ì˜€ìœ¼ë©° ë§¤ê°œë³€ìˆ˜ë¡œëŠ” ì¸í„°í˜ì´ìŠ¤ íƒ€ì…ì„ ë°›ëŠ”ë‹¤.
+		if(r instanceof Unit) {	//ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ì°¸ì¡°ë³€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” ì¸ìŠ¤í„´ìŠ¤ê°€ Unití´ë˜ìŠ¤ì™€ ìì‹-ë¶€ëª¨ê´€ê³„ë¼ë©´
+			Unit u = (Unit)r;	//ì°¸ì¡°ë³€ìˆ˜ì˜ í˜•ë³€í™˜ì„ í†µí•˜ì—¬ Unit íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ uê°€ Repairable ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ê°€ë¦¬í‚¤ê²Œ ëœë‹¤.
+			while(u.hitPoint != u.MAX_HP) {	//ë°˜ë³µ íšŸìˆ˜ë¥¼ ëª¨ë¥¼ë•Œ ì£¼ë¡œ ì‚¬ìš©í•˜ëŠ” whileë¬¸ì„ í†µí•˜ì—¬ ì¡°ê±´ì´ ë§Œì¡±í• ë•Œê¹Œì§€ ì²´ë ¥ì„ ì¦ê°€ì‹œí‚¨ë‹¤.
 				u.hitPoint++;
 			}
-			System.out.println(u.toString() + "ÀÇ ¼ö¸®°¡ ³¡³µ½À´Ï´Ù.");
+			System.out.println(u.toString() + "ì˜ ìˆ˜ë¦¬ê°€ ëë‚¬ìŠµë‹ˆë‹¤.");
 		}
 	}
 }

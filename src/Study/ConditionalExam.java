@@ -1,11 +1,11 @@
-package Study;
+ï»¿package Study;
 
 public class ConditionalExam {
 	public static void main(String [] args) {
-		int value = 12;	//Á¤¼öÇü º¯¼ö value¸¦ ¼±¾ğÇÏ°í 12·Î ÃÊ±âÈ­
+		int value = 12;	//ì •ìˆ˜í˜• ë³€ìˆ˜ valueë¥¼ ì„ ì–¸í•˜ê³  12ë¡œ ì´ˆê¸°í™”
 
-		if(value % 3 == 0) {	//Á¶°Ç¹® if ¸¦ ÀÌ¿ëÇÏ¿© valueÀÇ °ªÀ» ³ª¸ÓÁö ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ°í 3ÀÇ ¹è¼öÀÎÁö È®ÀÎ
-			System.out.println("value´Â 3ÀÇ ¹è¼ö ÀÔ´Ï´Ù.");	//Á¶°Ç¿¡ ¸¸Á·ÇÒ °æ¿ì Ãâ·Â
+		if(value % 3 == 0) {	//ì¡°ê±´ë¬¸ if ë¥¼ ì´ìš©í•˜ì—¬ valueì˜ ê°’ì„ ë‚˜ë¨¸ì§€ ì—°ì‚°ìë¥¼ ì´ìš©í•˜ê³  3ì˜ ë°°ìˆ˜ì¸ì§€ í™•ì¸
+			System.out.println("valueëŠ” 3ì˜ ë°°ìˆ˜ ì…ë‹ˆë‹¤.");	//ì¡°ê±´ì— ë§Œì¡±í•  ê²½ìš° ì¶œë ¥
 		}
 
 

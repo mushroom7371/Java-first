@@ -1,4 +1,4 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -7,36 +7,36 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-//½ÇÆĞÀ²
+//ì‹¤íŒ¨ìœ¨
 class StageFailureRate {
 	private int [] solution(int N, int [] stages) {
-		Map<Integer, Double> mp = new HashMap<Integer, Double>();	//ÇØ´ç ½ºÅ×ÀÌÁö¸¦ Å°°ªÀ¸·Î, ½ÇÆĞÀ²À» ¹ë·ù°ªÀ¸·Î ÀúÀåÇÏ±â À§ÇØ ¼±¾ğ
-		int cnt = 0;	//Å¬¸®¾î ÇÏÁö ¸øÇÑ ÀÎ¿ø¼ö
-		int player = stages.length;	//ÃÑ ÀÎ¿ø¼ö
+		Map<Integer, Double> mp = new HashMap<Integer, Double>();	//í•´ë‹¹ ìŠ¤í…Œì´ì§€ë¥¼ í‚¤ê°’ìœ¼ë¡œ, ì‹¤íŒ¨ìœ¨ì„ ë°¸ë¥˜ê°’ìœ¼ë¡œ ì €ì¥í•˜ê¸° ìœ„í•´ ì„ ì–¸
+		int cnt = 0;	//í´ë¦¬ì–´ í•˜ì§€ ëª»í•œ ì¸ì›ìˆ˜
+		int player = stages.length;	//ì´ ì¸ì›ìˆ˜
 		
-		for(int i = 1; i <= N; i++) {	//½ºÅ×ÀÌÁö´Â 1ºÎÅÍ N±îÁö 1¾¿ Áõ°¡ÇÏ¸é¼­ ´ã±ä´Ù.
-			for(int j = 0; j < stages.length; j++) {	//ÃÑ ÀÎ¿øÁß¿¡ ÇØ´ç ½ºÅ×ÀÌÁö¸¦ Å¬¸®¾î ÇÑ ÀÎ¿øÀ» ±¸ÇÏ±â À§ÇÑ ¹İº¹
-				if(stages[j] == i) {	//ÇØ´ç ÀÎ¿øÀÌ µµ´ŞÇÑ ½ºÅ×ÀÌÁö¿Í »óÀ§ ¹İº¹ÁßÀÎ ½ºÅ×ÀÌÁö°¡ °°´Ù¸é
-					cnt++;	//Å¬¸®¾î ÇÏÁö ¸øÇÑ ÀÎ¿ø¼ö°¡ Áõ°¡ÇÑ´Ù.
+		for(int i = 1; i <= N; i++) {	//ìŠ¤í…Œì´ì§€ëŠ” 1ë¶€í„° Nê¹Œì§€ 1ì”© ì¦ê°€í•˜ë©´ì„œ ë‹´ê¸´ë‹¤.
+			for(int j = 0; j < stages.length; j++) {	//ì´ ì¸ì›ì¤‘ì— í•´ë‹¹ ìŠ¤í…Œì´ì§€ë¥¼ í´ë¦¬ì–´ í•œ ì¸ì›ì„ êµ¬í•˜ê¸° ìœ„í•œ ë°˜ë³µ
+				if(stages[j] == i) {	//í•´ë‹¹ ì¸ì›ì´ ë„ë‹¬í•œ ìŠ¤í…Œì´ì§€ì™€ ìƒìœ„ ë°˜ë³µì¤‘ì¸ ìŠ¤í…Œì´ì§€ê°€ ê°™ë‹¤ë©´
+					cnt++;	//í´ë¦¬ì–´ í•˜ì§€ ëª»í•œ ì¸ì›ìˆ˜ê°€ ì¦ê°€í•œë‹¤.
 				}
 			}
 			
-			if(cnt == 0) {	//½ºÅ×ÀÌÁö¸¦ ¸ğµÎ Åë°úÇß´Ù¸é
-				mp.put(i, 0.0);	//ÇØ´ç ½ºÅ×ÀÌÁöÀÇ ½ÇÆĞÀ²Àº 0ÀÌ´Ù.
+			if(cnt == 0) {	//ìŠ¤í…Œì´ì§€ë¥¼ ëª¨ë‘ í†µê³¼í–ˆë‹¤ë©´
+				mp.put(i, 0.0);	//í•´ë‹¹ ìŠ¤í…Œì´ì§€ì˜ ì‹¤íŒ¨ìœ¨ì€ 0ì´ë‹¤.
 			}else {
-				mp.put(i, cnt/(double)player);	//½ÇÆĞÀ²À» ±¸ÇÑ´Ù.
-				player -= cnt;	//ÃÑ ÀÎ¿ø¼ö¿¡¼­ Å¬¸®¾î ÇÏÁö ¸øÇÑ ÀÎ¿øÀ» Á¦¿ÜÇÑ´Ù.
+				mp.put(i, cnt/(double)player);	//ì‹¤íŒ¨ìœ¨ì„ êµ¬í•œë‹¤.
+				player -= cnt;	//ì´ ì¸ì›ìˆ˜ì—ì„œ í´ë¦¬ì–´ í•˜ì§€ ëª»í•œ ì¸ì›ì„ ì œì™¸í•œë‹¤.
 			}
 			cnt = 0;
 		}
 
-		List<Entry<Integer, Double>> entryList = new ArrayList<Entry<Integer, Double>>(mp.entrySet());	//EntryÅ¸ÀÔÀÌ ´ã±â´Â ArrayList¸¦ »ı¼ºÇÏ°í, °¢°¢ÀÇ ¹øÁö¿¡ key, value¸¦ ½ÖÀ¸·Î ÀúÀåÇÑ´Ù.
-		entryList.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));	//Á¤·Ä(sort)ÇÏµÇ, ¹ë·ù°ªÀ» ±âÁØÀ¸·Î(comparingByValue) ³»¸²Â÷¼ø(reverseOrder)À¸·Î ÇÑ´Ù.
+		List<Entry<Integer, Double>> entryList = new ArrayList<Entry<Integer, Double>>(mp.entrySet());	//Entryíƒ€ì…ì´ ë‹´ê¸°ëŠ” ArrayListë¥¼ ìƒì„±í•˜ê³ , ê°ê°ì˜ ë²ˆì§€ì— key, valueë¥¼ ìŒìœ¼ë¡œ ì €ì¥í•œë‹¤.
+		entryList.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));	//ì •ë ¬(sort)í•˜ë˜, ë°¸ë¥˜ê°’ì„ ê¸°ì¤€ìœ¼ë¡œ(comparingByValue) ë‚´ë¦¼ì°¨ìˆœ(reverseOrder)ìœ¼ë¡œ í•œë‹¤.
 		
-		int [] answer = new int [N];	//½ÇÆĞÀ²ÀÌ ³ôÀº ½ºÅ×ÀÌÁö ºÎÅÍ ´ã±æ ¹è¿­
+		int [] answer = new int [N];	//ì‹¤íŒ¨ìœ¨ì´ ë†’ì€ ìŠ¤í…Œì´ì§€ ë¶€í„° ë‹´ê¸¸ ë°°ì—´
 		
-		for(int i = 0; i < entryList.size(); i++) {	//entryListÀÇ Å©±â¸¸Å­ 1¾¿ Áõ°¡ÇÏ¸é¼­ ¹İº¹
-			answer[i] = entryList.get(i).getKey();	//ÇØ´ç ¹øÁöÀÇ µ¥ÀÌÅÍ¸¦ entryListÀÇ Key°ªÀ¸·Î ¼³Á¤ÇÑ´Ù.
+		for(int i = 0; i < entryList.size(); i++) {	//entryListì˜ í¬ê¸°ë§Œí¼ 1ì”© ì¦ê°€í•˜ë©´ì„œ ë°˜ë³µ
+			answer[i] = entryList.get(i).getKey();	//í•´ë‹¹ ë²ˆì§€ì˜ ë°ì´í„°ë¥¼ entryListì˜ Keyê°’ìœ¼ë¡œ ì„¤ì •í•œë‹¤.
 		}
 		
 		return answer;

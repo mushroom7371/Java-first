@@ -1,27 +1,27 @@
-package DBConnection;
+ï»¿package DBConnection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-/*	¿À¶óÅ¬À» ¿¬°áÇÏ°í ÃÖÁ¾ÀûÀ¸·Î Connection °´Ã¼¸¦ ¹İÈ¯ÇÏ´Â ¿ªÈ° */
+/*	ì˜¤ë¼í´ì„ ì—°ê²°í•˜ê³  ìµœì¢…ì ìœ¼ë¡œ Connection ê°ì²´ë¥¼ ë°˜í™˜í•˜ëŠ” ì—­í™œ */
 
 public class DBConn {
-	//µ¥ÀÌÅÍ º£ÀÌ½º¿Í ¿¬µ¿ÇÏ±â À§ÇÑ DBConn Å¬·¡½º ¼±¾ğ
+	//ë°ì´í„° ë² ì´ìŠ¤ì™€ ì—°ë™í•˜ê¸° ìœ„í•œ DBConn í´ë˜ìŠ¤ ì„ ì–¸
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
 	String user = "system";
 	String pwd = "wnsghk6670";
-	//µ¥ÀÌÅÍº£ÀÌ½º¿¡ Á¢±ÙÇÏ±â À§ÇØ ÇÊ¿äÇÑ Á¤º¸µéÀ» String º¯¼ö¿¡ ´ã¾Ò´Ù
+	//ë°ì´í„°ë² ì´ìŠ¤ì— ì ‘ê·¼í•˜ê¸° ìœ„í•´ í•„ìš”í•œ ì •ë³´ë“¤ì„ String ë³€ìˆ˜ì— ë‹´ì•˜ë‹¤
 	Connection conn = null;
-	//Connection Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö connÀ» ¼±¾ğÇÏ°í null ·Î ÃÊ±âÈ­
+	//Connection íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ connì„ ì„ ì–¸í•˜ê³  null ë¡œ ì´ˆê¸°í™”
 
-	public Connection getConn() {	//Connection Å¸ÀÔÀÇ °ªÀ» ¸®ÅÏÇÏ´Â getConn() ¸Ş¼­µå ¼±¾ğ
+	public Connection getConn() {	//Connection íƒ€ì…ì˜ ê°’ì„ ë¦¬í„´í•˜ëŠ” getConn() ë©”ì„œë“œ ì„ ì–¸
 		try {
 			Class.forName(driver);
-			//°¢°¢ÀÇ µ¥ÀÌÅÍº£ÀÌ½º¿¡ ¿¬°áÇÏ±â À§ÇÑ µå¶óÀÌ¹ö ·Îµå. Å¬·¡½º º¯¼ö¿¡ °æ·Î¸¦ ¹Ì¸® ¼³Á¤ÇØ ³õÀ½
-			//ÀÌ·Î ÀÎÇØ °´Ã¼°¡ »ı¼ºµÇ°í, DriverManager¿¡ µî·ÏµÊ
+			//ê°ê°ì˜ ë°ì´í„°ë² ì´ìŠ¤ì— ì—°ê²°í•˜ê¸° ìœ„í•œ ë“œë¼ì´ë²„ ë¡œë“œ. í´ë˜ìŠ¤ ë³€ìˆ˜ì— ê²½ë¡œë¥¼ ë¯¸ë¦¬ ì„¤ì •í•´ ë†“ìŒ
+			//ì´ë¡œ ì¸í•´ ê°ì²´ê°€ ìƒì„±ë˜ê³ , DriverManagerì— ë“±ë¡ë¨
 			conn = DriverManager.getConnection(url, user, pwd);
-			//DriverManagerÀÇ getConnection()¸¦ ÅëÇÏ¿© Connection °´Ã¼¸¦ »ı¼ºÇÏ°í ÀÌ ÁÖ¼Ò°ªÀ» ÂüÁ¶º¯¼ö conn¿¡ ÀúÀåÇÔ
+			//DriverManagerì˜ getConnection()ë¥¼ í†µí•˜ì—¬ Connection ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì´ ì£¼ì†Œê°’ì„ ì°¸ì¡°ë³€ìˆ˜ connì— ì €ì¥í•¨
 		}catch(Exception ex) {
 			ex.printStackTrace();
 		}

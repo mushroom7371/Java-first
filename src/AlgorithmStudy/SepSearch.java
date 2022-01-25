@@ -1,24 +1,24 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.util.Scanner;
 
 public class SepSearch {
 
 	static int sepSearch(int [] a, int n, int key) {
-		//static ¸Þ¼­µå·Î Å¬·¡½º°¡ ¸Þ¸ð¸®¿¡ ÀûÀçµÉ¶§ »ý¼ºµÇ¾î µû·Î °´Ã¼¸¦ »ý¼ºÇÒ ÇÊ¿ä ¾øÀÌ »ç¿ë°¡´ÉÇÏ´Ù
-		//int Å¸ÀÔÀ» ¸®ÅÏ°ªÀ¸·Î °¡Áö¸ç ¸Å°³º¯¼ö·Î 3°³ÀÇ °ªÀ» ¹Þ´Â´Ù.
+		//static ë©”ì„œë“œë¡œ í´ëž˜ìŠ¤ê°€ ë©”ëª¨ë¦¬ì— ì ìž¬ë ë•Œ ìƒì„±ë˜ì–´ ë”°ë¡œ ê°ì²´ë¥¼ ìƒì„±í•  í•„ìš” ì—†ì´ ì‚¬ìš©ê°€ëŠ¥í•˜ë‹¤
+		//int íƒ€ìž…ì„ ë¦¬í„´ê°’ìœ¼ë¡œ ê°€ì§€ë©° ë§¤ê°œë³€ìˆ˜ë¡œ 3ê°œì˜ ê°’ì„ ë°›ëŠ”ë‹¤.
 		int i = 0;
-		//°ªÀ» Ã£±âÀ§ÇÑ Á¤¼öÇü º¯¼ö¸¦ ¼±¾ðÇÏ°í ÃÊ±â°ªÀ» 1·Î ¼³Á¤ÇÔ.
+		//ê°’ì„ ì°¾ê¸°ìœ„í•œ ì •ìˆ˜í˜• ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ì´ˆê¸°ê°’ì„ 1ë¡œ ì„¤ì •í•¨.
 
-		while(true) {	//while ¹Ýº¹¹®À» ½ÇÇàÇÏ´Âµ¥ Á¶°Ç½ÄÀÌ true ÀÌ¹Ç·Î Ç×»ó ½ÇÇàµÈ´Ù.
+		while(true) {	//while ë°˜ë³µë¬¸ì„ ì‹¤í–‰í•˜ëŠ”ë° ì¡°ê±´ì‹ì´ true ì´ë¯€ë¡œ í•­ìƒ ì‹¤í–‰ëœë‹¤.
 			if( i == n)
 				return -1;
-			//¼±¾ðÇÑ º¯¼ö°ªÀÌ n°ú °°´Ù¸é -1À» ¸®ÅÏÇÑ´Ù.
+			//ì„ ì–¸í•œ ë³€ìˆ˜ê°’ì´ nê³¼ ê°™ë‹¤ë©´ -1ì„ ë¦¬í„´í•œë‹¤.
 			if( a[i] == key)
 				return i;
-			//¸Å°³º¯¼ö·Î ¹ÞÀº ¹è¿­ÀÇ i¹øÁö°¡ key¿Í °°´Ù¸é iÀÇ °ªÀ» ¸®ÅÏÇÑ´Ù.
+			//ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ë°°ì—´ì˜ ië²ˆì§€ê°€ keyì™€ ê°™ë‹¤ë©´ iì˜ ê°’ì„ ë¦¬í„´í•œë‹¤.
 			i++;
-			//if ¹®ÀåÀÇ Á¶°Ç¿¡ ºÎÇÕÇÏ´Â °æ¿ì°¡ ¾øÀ» °æ¿ì i¸¦ 1 Áõ°¡½ÃÄÑ ¹Ýº¹À» ½ÇÇàÇÑ´Ù.
+			//if ë¬¸ìž¥ì˜ ì¡°ê±´ì— ë¶€í•©í•˜ëŠ” ê²½ìš°ê°€ ì—†ì„ ê²½ìš° ië¥¼ 1 ì¦ê°€ì‹œì¼œ ë°˜ë³µì„ ì‹¤í–‰í•œë‹¤.
 		}
 	}
 	
@@ -26,29 +26,29 @@ public class SepSearch {
 
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("¿ä¼Ú¼ö : ");
+		System.out.print("ìš”ì†Ÿìˆ˜ : ");
 		int num = sc.nextInt();
-		//Å°º¸µå·Î Àü´Þ¹ÞÀº ¼ýÀÚ¸¦ int Å¸ÀÔÀÇ º¯¼ö num¿¡ ÀúÀåÇÑ´Ù.
+		//í‚¤ë³´ë“œë¡œ ì „ë‹¬ë°›ì€ ìˆ«ìžë¥¼ int íƒ€ìž…ì˜ ë³€ìˆ˜ numì— ì €ìž¥í•œë‹¤.
 		int [] x = new int[num];
-		//int Å¸ÀÔÀÇ ¹è¿­À» ÀúÀåÇÒ ÂüÁ¶º¯¼ö x¸¦ ¼±¾ðÇÏ°í ¿©±â¿¡ numÀÇ ¼ýÀÚ¸¸Å­ÀÇ ±æÀÌ¸¦ °¡Áö´Â ¹è¿­À» »ý¼ºÇÏ°í ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
+		//int íƒ€ìž…ì˜ ë°°ì—´ì„ ì €ìž¥í•  ì°¸ì¡°ë³€ìˆ˜ xë¥¼ ì„ ì–¸í•˜ê³  ì—¬ê¸°ì— numì˜ ìˆ«ìžë§Œí¼ì˜ ê¸¸ì´ë¥¼ ê°€ì§€ëŠ” ë°°ì—´ì„ ìƒì„±í•˜ê³  ì£¼ì†Œê°’ì„ ì €ìž¥í•œë‹¤.
 		
 		for(int i = 0; i < num; i++) {
 			System.out.print("x[" + i + "] : ");
 			x[i] = sc.nextInt();
 		}
-		//¹è¿­ xÀÇ 0 ¹øÁö¿¡¼­ num-1 ¹øÁö±îÁö Å°º¸µå·Î ÀÔ·Â¹ÞÀº Á¤¼ö¸¦ ÀúÀåÇÑ´Ù.
+		//ë°°ì—´ xì˜ 0 ë²ˆì§€ì—ì„œ num-1 ë²ˆì§€ê¹Œì§€ í‚¤ë³´ë“œë¡œ ìž…ë ¥ë°›ì€ ì •ìˆ˜ë¥¼ ì €ìž¥í•œë‹¤.
 		
-		System.out.print("°Ë»öÇÒ °ª : ");
+		System.out.print("ê²€ìƒ‰í•  ê°’ : ");
 		int ky = sc.nextInt();
-		//°Ë»öÇÒ °ªÀ» ÀúÀåÇÏ±âÀ§ÇÑ int Å¸ÀÔ º¯¼ö¸¦ ¼±¾ðÇÏ°í Å°º¸µå·Î ºÎÅÍ ¹ÞÀº °ªÀ» ÀúÀåÇÑ´Ù.
+		//ê²€ìƒ‰í•  ê°’ì„ ì €ìž¥í•˜ê¸°ìœ„í•œ int íƒ€ìž… ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  í‚¤ë³´ë“œë¡œ ë¶€í„° ë°›ì€ ê°’ì„ ì €ìž¥í•œë‹¤.
 		int idx = sepSearch(x, num, ky);
-		//sepSearch()¸Þ¼­µå¸¦ È£ÃâÇÏ¿© ¸®ÅÏ¹ÞÀº °ªÀ» º¯¼ö idx¿¡ ÀúÀåÇÑ´Ù.
+		//sepSearch()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ë¦¬í„´ë°›ì€ ê°’ì„ ë³€ìˆ˜ idxì— ì €ìž¥í•œë‹¤.
 		
 		if(idx == -1)
-			System.out.println("±× °ªÀÇ ¿ä¼Ò°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ê·¸ ê°’ì˜ ìš”ì†Œê°€ ì—†ìŠµë‹ˆë‹¤.");
 		else
-			System.out.println(ky + "Àº(´Â) x[" + idx + "] ¿¡ ÀÖ½À´Ï´Ù.");
-		//±ê Å¬·Ð È®ÀÎ¿ë ¼öÁ¤
+			System.out.println(ky + "ì€(ëŠ”) x[" + idx + "] ì— ìžˆìŠµë‹ˆë‹¤.");
+		//ê¹ƒ í´ë¡  í™•ì¸ìš© ìˆ˜ì •
 	}
 
 }

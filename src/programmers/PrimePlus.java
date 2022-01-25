@@ -1,17 +1,17 @@
-package programmers;
+ï»¿package programmers;
 
-//¼Ò¼ö ¸¸µé±â
+//ì†Œìˆ˜ ë§Œë“¤ê¸°
 class PrimePlus {
 	private int solution(int[] nums) {
 		int answer = 0;
         
-		//nums¿¡ ´ã±ä Á¤¼ö 3°³¸¦ ´õÇÏ±â
+		//numsì— ë‹´ê¸´ ì •ìˆ˜ 3ê°œë¥¼ ë”í•˜ê¸°
 		for(int i = 0; i < nums.length; i++) {
 			for(int j = i + 1; i < nums.length; j++) {
 				for(int k = j + 1; k < nums.length; k++) {
 					int n = nums[i] + nums[j] + nums[k];
-					if(PrimeNum(n)){	//´õÇÑ °ªÀ» ¼Ò¼ö ÆÇÁ¤À» ÇÏ¿© ÂüÀÌ¶ó¸é
-						answer++;		//°¹¼ö¸¦ Áõ°¡ ½ÃÅ²´Ù.
+					if(PrimeNum(n)){	//ë”í•œ ê°’ì„ ì†Œìˆ˜ íŒì •ì„ í•˜ì—¬ ì°¸ì´ë¼ë©´
+						answer++;		//ê°¯ìˆ˜ë¥¼ ì¦ê°€ ì‹œí‚¨ë‹¤.
 					}
 				}
 			}
@@ -20,9 +20,9 @@ class PrimePlus {
 		return answer;
 	}
  
-	 private boolean PrimeNum(int num) {	//¼Ò¼ö ÆÇº° ¸Ş¼­µå
-		for(int i = 2; i < num; i++) {		//¼Ò¼ö´Â 1°ú ÀÚ±âÀÚ½ÅÀ» Á¦¿Ü ÇÑ ¼ö·Î ³ª´­¼ö ¾ø´Ù
-			if(num % i == 0) {	//³ª´µ¸é °ÅÁşÀ» ¹İÈ¯
+	 private boolean PrimeNum(int num) {	//ì†Œìˆ˜ íŒë³„ ë©”ì„œë“œ
+		for(int i = 2; i < num; i++) {		//ì†Œìˆ˜ëŠ” 1ê³¼ ìê¸°ìì‹ ì„ ì œì™¸ í•œ ìˆ˜ë¡œ ë‚˜ëˆŒìˆ˜ ì—†ë‹¤
+			if(num % i == 0) {	//ë‚˜ë‰˜ë©´ ê±°ì§“ì„ ë°˜í™˜
 				return false;			
 			}
 		}

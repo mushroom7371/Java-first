@@ -1,16 +1,16 @@
-package ch03;
+ï»¿package ch03;
 
 public class Exercies3_3 {
 
 	/*
-	ÃâÁ¦ÀÏ : 20210204
-	³»¿ë : ¿¬½À¹®Á¦ num À» ¾ç¼ö À½¼ö 0 Áß ÇÏ³ª·Î Ç¥ÇöÇÏ±â
-	Á¦ÃâÀÚ : ¹ÚÁØÈ­
+	ì¶œì œì¼ : 20210204
+	ë‚´ìš© : ì—°ìŠµë¬¸ì œ num ì„ ì–‘ìˆ˜ ìŒìˆ˜ 0 ì¤‘ í•˜ë‚˜ë¡œ í‘œí˜„í•˜ê¸°
+	ì œì¶œìž : ë°•ì¤€í™”
 	*/
 
 	public static void main(String[] args) {
 		int num = 10;
-		System.out.println( num > 0 ? "¾ç¼ö" : (num < 0 ? "À½¼ö" : 0) );
+		System.out.println( num > 0 ? "ì–‘ìˆ˜" : (num < 0 ? "ìŒìˆ˜" : 0) );
 
 	}
 

@@ -1,4 +1,4 @@
-package Practice;
+ï»¿package Practice;
 
 import java.util.*;
 
@@ -12,51 +12,51 @@ class FlowEx4Divide {
 
 	static int inputMethod(int score) {
 
-		System.out.print("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.>");
+		System.out.print("ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.>");
 		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ŞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		score = Integer.parseInt(tmp);   // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­(tmp)À» ¼ıÀÚ·Î º¯È¯
+		String tmp = scanner.nextLine(); // í™”ë©´ì„ í†µí•´ ì…ë ¥ë°›ì€ ë‚´ìš©ì„ tmpì— ì €ì¥
+		score = Integer.parseInt(tmp);   // ì…ë ¥ë°›ì€ ë¬¸ìì—´(tmp)ì„ ìˆ«ìë¡œ ë³€í™˜
 
 		return score;
 	}
 
 	static void outputMethod(int score,char grade){
 
-		if (score >= 90) {         // score°¡ 90Á¡ º¸´Ù °°°Å³ª Å©¸é AÇĞÁ¡
+		if (score >= 90) {         // scoreê°€ 90ì  ë³´ë‹¤ ê°™ê±°ë‚˜ í¬ë©´ Aí•™ì 
 			grade = 'A';             
-		} else if (score >=80) {   // score°¡ 80Á¡ º¸´Ù °°°Å³ª Å©¸é BÇĞÁ¡ 
+		} else if (score >=80) {   // scoreê°€ 80ì  ë³´ë‹¤ ê°™ê±°ë‚˜ í¬ë©´ Bí•™ì  
 			grade = 'B'; 
-		} else if (score >=70) {   // score°¡ 70Á¡ º¸´Ù °°°Å³ª Å©¸é CÇĞÁ¡ 
+		} else if (score >=70) {   // scoreê°€ 70ì  ë³´ë‹¤ ê°™ê±°ë‚˜ í¬ë©´ Cí•™ì  
 			grade = 'C'; 
-		} else {                   // ³ª¸ÓÁö´Â DÇĞÁ¡
+		} else {                   // ë‚˜ë¨¸ì§€ëŠ” Dí•™ì 
 			grade = 'D'; 
 		}
-		System.out.println("´ç½ÅÀÇ ÇĞÁ¡Àº " + grade + " ÀÔ´Ï´Ù.");
+		System.out.println("ë‹¹ì‹ ì˜ í•™ì ì€ " + grade + " ì…ë‹ˆë‹¤.");
 	}
 	/*
-		int score  = 0;   // Á¡¼ö¸¦ ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
-		char grade =' ';  // ÇĞÁ¡À» ÀúÀåÇÏ±â À§ÇÑ º¯¼ö. °ø¹éÀ¸·Î ÃÊ±âÈ­ÇÑ´Ù.
+		int score  = 0;   // ì ìˆ˜ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
+		char grade =' ';  // í•™ì ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜. ê³µë°±ìœ¼ë¡œ ì´ˆê¸°í™”í•œë‹¤.
 
 		inputMethod()
 
-		System.out.print("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.>");
+		System.out.print("ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.>");
 		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ŞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		score = Integer.parseInt(tmp);   // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­(tmp)À» ¼ıÀÚ·Î º¯È¯
+		String tmp = scanner.nextLine(); // í™”ë©´ì„ í†µí•´ ì…ë ¥ë°›ì€ ë‚´ìš©ì„ tmpì— ì €ì¥
+		score = Integer.parseInt(tmp);   // ì…ë ¥ë°›ì€ ë¬¸ìì—´(tmp)ì„ ìˆ«ìë¡œ ë³€í™˜
 
 		outputMethod()
 
-		if (score >= 90) {         // score°¡ 90Á¡ º¸´Ù °°°Å³ª Å©¸é AÇĞÁ¡
+		if (score >= 90) {         // scoreê°€ 90ì  ë³´ë‹¤ ê°™ê±°ë‚˜ í¬ë©´ Aí•™ì 
 			 grade = 'A';             
-		} else if (score >=80) {   // score°¡ 80Á¡ º¸´Ù °°°Å³ª Å©¸é BÇĞÁ¡ 
+		} else if (score >=80) {   // scoreê°€ 80ì  ë³´ë‹¤ ê°™ê±°ë‚˜ í¬ë©´ Bí•™ì  
 			 grade = 'B'; 
-		} else if (score >=70) {   // score°¡ 70Á¡ º¸´Ù °°°Å³ª Å©¸é CÇĞÁ¡ 
+		} else if (score >=70) {   // scoreê°€ 70ì  ë³´ë‹¤ ê°™ê±°ë‚˜ í¬ë©´ Cí•™ì  
 			 grade = 'C'; 
-		} else {                   // ³ª¸ÓÁö´Â DÇĞÁ¡
+		} else {                   // ë‚˜ë¨¸ì§€ëŠ” Dí•™ì 
 			 grade = 'D'; 
 		}
 
-		System.out.println("´ç½ÅÀÇ ÇĞÁ¡Àº "+ grade +"ÀÔ´Ï´Ù."); 
+		System.out.println("ë‹¹ì‹ ì˜ í•™ì ì€ "+ grade +"ì…ë‹ˆë‹¤."); 
 	 */
 }
 

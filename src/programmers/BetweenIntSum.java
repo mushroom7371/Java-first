@@ -1,25 +1,25 @@
-package programmers;
+ï»¿package programmers;
 
-//µÎ Á¤¼ö »çÀÌÀÇ ÇÕ
+//ë‘ ì •ìˆ˜ ì‚¬ì´ì˜ í•©
 class BetweenIntSum {
 	private long solution(int a, int b) {
         int start = 0, end = 0;
         long sum = 0;
         
-        if (a == b) {	//ºĞ±â Ã³¸® if¹® ÀÎÀÚ°ªÀ¸·Î ¹ŞÀº a¿Í b°¡ °°´Ù¸é
-            return a;	//a¸¦ ¹İÈ¯
-        } else if (a < b) {	//b°¡ aº¸´Ù Å©´Ù¸é
-            start = a;		//½ÃÀÛÀº a
-            end = b;		//³¡Àº b
-        } else if (b < a) {	//b°¡ aº¸´Ù ÀÛ´Ù¸é
-            start = b;		//½ÃÀÛÀº b
-            end = a;		//³¡Àº a
+        if (a == b) {	//ë¶„ê¸° ì²˜ë¦¬ ifë¬¸ ì¸ìê°’ìœ¼ë¡œ ë°›ì€ aì™€ bê°€ ê°™ë‹¤ë©´
+            return a;	//aë¥¼ ë°˜í™˜
+        } else if (a < b) {	//bê°€ aë³´ë‹¤ í¬ë‹¤ë©´
+            start = a;		//ì‹œì‘ì€ a
+            end = b;		//ëì€ b
+        } else if (b < a) {	//bê°€ aë³´ë‹¤ ì‘ë‹¤ë©´
+            start = b;		//ì‹œì‘ì€ b
+            end = a;		//ëì€ a
         }
         
-        for (int i = start; i <= end; i++) {	//start ºÎÅÍ end±îÁö 1¾¿ Áõ°¡ÇÏ¸é¼­
-            sum += i;	//sum¿¡ ¹İº¹µÇ´Â ´ë»óÀ» ÀúÀåÇÑ´Ù.
+        for (int i = start; i <= end; i++) {	//start ë¶€í„° endê¹Œì§€ 1ì”© ì¦ê°€í•˜ë©´ì„œ
+            sum += i;	//sumì— ë°˜ë³µë˜ëŠ” ëŒ€ìƒì„ ì €ì¥í•œë‹¤.
         }
         
-        return sum;	//sumÀ» ¹İÈ¯
+        return sum;	//sumì„ ë°˜í™˜
     }
 }

@@ -1,4 +1,4 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.util.Scanner;
 
@@ -6,16 +6,16 @@ public class JudgeSign {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Á¤¼ö¸¦ ÀÔ·Â ÇÏ¼¼¿ä.");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥ í•˜ì„¸ìš”.");
 		
 		int a = sc.nextInt();
 		
 		if( a > 0) {
-			System.out.println("ÀÌ ¼ö´Â ¾ç¼ö ÀÔ´Ï´Ù.");
+			System.out.println("ì´ ìˆ˜ëŠ” ì–‘ìˆ˜ ì…ë‹ˆë‹¤.");
 		}else if( a < 0) {
-			System.out.println("ÀÌ ¼ö´Â À½¼ö ÀÔ´Ï´Ù.");
+			System.out.println("ì´ ìˆ˜ëŠ” ìŒìˆ˜ ì…ë‹ˆë‹¤.");
 		}else
-			System.out.println("ÀÌ ¼ö´Â 0 ÀÔ´Ï´Ù.");
+			System.out.println("ì´ ìˆ˜ëŠ” 0 ì…ë‹ˆë‹¤.");
 	}
 	
 }

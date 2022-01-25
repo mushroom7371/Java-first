@@ -1,39 +1,39 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//Á¦ÀÏ ÀÛÀº ¼ö Á¦°ÅÇÏ±â
+//ì œì¼ ì‘ì€ ìˆ˜ ì œê±°í•˜ê¸°
 class MinNumDelete {
 	 private int [] solution(int [] arr) {
 	        int [] answer = {};
 	        List<Integer> list = new ArrayList<Integer>();
-	        //¹è¿­ÀÇ ¼ø¼­¸¦ ¹Ù²Ù°í ½ÍÁö ¾Ê¾Æ¼­ ArrayList¸¦ »ı¼ºÇÔ.
+	        //ë°°ì—´ì˜ ìˆœì„œë¥¼ ë°”ê¾¸ê³  ì‹¶ì§€ ì•Šì•„ì„œ ArrayListë¥¼ ìƒì„±í•¨.
 	        
-	        if(arr.length < 2) {	//¹è¿­¿¡ ´ã±ä ¿ä¼Ò°¡ 1°³ ÀÌÇÏÀÏ¶§´Â -1À» ¹İÈ¯ÇÑ´Ù.
+	        if(arr.length < 2) {	//ë°°ì—´ì— ë‹´ê¸´ ìš”ì†Œê°€ 1ê°œ ì´í•˜ì¼ë•ŒëŠ” -1ì„ ë°˜í™˜í•œë‹¤.
 	        	answer = new int[] {-1};
 	        	return answer;
 	        }
 	        
-	        for(int i = 0; i <arr.length; i++) {	//list°¡ °¡¸®Å°´Â ArrayList °´Ã¼¿¡ arrÀÌ °¡¸®Å°´Â ¹è¿­ÀÇ ¿ä¼Ò¸¦ ¼øÂ÷ÀûÀ¸·Î ´ã´Â´Ù.
+	        for(int i = 0; i <arr.length; i++) {	//listê°€ ê°€ë¦¬í‚¤ëŠ” ArrayList ê°ì²´ì— arrì´ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì˜ ìš”ì†Œë¥¼ ìˆœì°¨ì ìœ¼ë¡œ ë‹´ëŠ”ë‹¤.
 	        	list.add(arr[i]);
 	        }
 	        
-	        int min = arr[0];	//ÃÖ¼Ò°ªÀ» ±¸ÇÏ±âÀ§ÇÑ º¯¼ö
-	        int idx = 0;	//±× ÃÖ¼Ò°ªÀ» °¡Áö´Â À§Ä¡¸¦ ´ãÀ» º¯¼ö
+	        int min = arr[0];	//ìµœì†Œê°’ì„ êµ¬í•˜ê¸°ìœ„í•œ ë³€ìˆ˜
+	        int idx = 0;	//ê·¸ ìµœì†Œê°’ì„ ê°€ì§€ëŠ” ìœ„ì¹˜ë¥¼ ë‹´ì„ ë³€ìˆ˜
 	        
 	        for(int i = 0; i < arr.length; i++) {
-        		if(min > arr[i]) {	//minÀÇ °ªÀÌ ¹è¿­ÀÇ i¹øÁö °ªº¸´Ù Å©´Ù¸é
-        			min = arr[i];	//minÀÇ °ªÀ» ´Ù½Ã ¼³Á¤ÇÏ°í
-        			idx = i;		//ÇØ´çÇÏ´Â ¹øÁöÀÇ °ªÀ» idx º¯¼ö¿¡ ´ã´Â´Ù.
+        		if(min > arr[i]) {	//minì˜ ê°’ì´ ë°°ì—´ì˜ ië²ˆì§€ ê°’ë³´ë‹¤ í¬ë‹¤ë©´
+        			min = arr[i];	//minì˜ ê°’ì„ ë‹¤ì‹œ ì„¤ì •í•˜ê³ 
+        			idx = i;		//í•´ë‹¹í•˜ëŠ” ë²ˆì§€ì˜ ê°’ì„ idx ë³€ìˆ˜ì— ë‹´ëŠ”ë‹¤.
         		}
         	}
         	
-        	list.remove(idx);	//ArrayList °´Ã¼°¡ °¡Áø ¿ä¼ÒÁß ÇØ´ç ÀÎµ¦½ºÀÇ °ªÀ» Á¦°ÅÇÑ´Ù.
-        	answer = new int[list.size()];	//ÂüÁ¶º¯¼ö answer¸¦ ÀÛÀº¼ö°¡ Á¦°ÅµÈ ArrayListÀÇ Å©±â·Î int Å¸ÀÔ ¹è¿­À» »ı¼ºÇÏ¿© °¡¸®Å°°Ô ÇÏ°í
+        	list.remove(idx);	//ArrayList ê°ì²´ê°€ ê°€ì§„ ìš”ì†Œì¤‘ í•´ë‹¹ ì¸ë±ìŠ¤ì˜ ê°’ì„ ì œê±°í•œë‹¤.
+        	answer = new int[list.size()];	//ì°¸ì¡°ë³€ìˆ˜ answerë¥¼ ì‘ì€ìˆ˜ê°€ ì œê±°ëœ ArrayListì˜ í¬ê¸°ë¡œ int íƒ€ì… ë°°ì—´ì„ ìƒì„±í•˜ì—¬ ê°€ë¦¬í‚¤ê²Œ í•˜ê³ 
         	
         	for(int j = 0; j < list.size(); j++) {
-        		answer[j] = list.get(j);	//¹İº¹ÇÏ¸ç ¿ä¼ÒµéÀ» Ã¤¿öÁØ´Ù.
+        		answer[j] = list.get(j);	//ë°˜ë³µí•˜ë©° ìš”ì†Œë“¤ì„ ì±„ì›Œì¤€ë‹¤.
         	}
 	        	
 	        return answer;

@@ -1,20 +1,20 @@
-package ch07;
+ï»¿package ch07;
 
 public class BindingTest {
 	public static void main(String [] args) {
 		Parent p = new Parent();
 		Child c = new Child();
 
-		System.out.println("p.x : " + p.x); // ÂüÁ¶º¯¼ö p´Â Parent Å¬·¡½º·Î ¸¸µç ÀÎ½ºÅÏ½º¸¦ °¡¸®Å°±â¿¡ º¯¼ö x ÀÇ °ªÀÌ 100ÀÌ´Ù. 
+		System.out.println("p.x : " + p.x); // ì°¸ì¡°ë³€ìˆ˜ pëŠ” Parent í´ë˜ìŠ¤ë¡œ ë§Œë“  ì¸ìŠ¤í„´ìŠ¤ë¥¼ ê°€ë¦¬í‚¤ê¸°ì— ë³€ìˆ˜ x ì˜ ê°’ì´ 100ì´ë‹¤. 
 		p.method();
 		
-		System.out.println("c.x : " + c.x); // ÂüÁ¶º¯¼ö c´Â ParentÀÇ º¯¼ö 100°ú Áßº¹µÈ x °ªÀÌ ÀÖÁö¸¸ ÀÚ½ÄÅ¬·¡½ºÀÇ º¯¼ö¸¦ °¡¸®Å²´Ù.
-		c.method(); //¸¶Âù°¡Áö·Î Áßº¹µÈ ¸Ş¼­µå°¡ ÀÖÁö¸¸ ´õ ³ĞÀº °³³äÀÇ ÀÚ»èÅ¬·¡½ºÀÇ ¸Ş¼­µå°¡ ½ÇÇàµÈ´Ù.
+		System.out.println("c.x : " + c.x); // ì°¸ì¡°ë³€ìˆ˜ cëŠ” Parentì˜ ë³€ìˆ˜ 100ê³¼ ì¤‘ë³µëœ x ê°’ì´ ìˆì§€ë§Œ ìì‹í´ë˜ìŠ¤ì˜ ë³€ìˆ˜ë¥¼ ê°€ë¦¬í‚¨ë‹¤.
+		c.method(); //ë§ˆì°¬ê°€ì§€ë¡œ ì¤‘ë³µëœ ë©”ì„œë“œê°€ ìˆì§€ë§Œ ë” ë„“ì€ ê°œë…ì˜ ìì‚­í´ë˜ìŠ¤ì˜ ë©”ì„œë“œê°€ ì‹¤í–‰ëœë‹¤.
 	}
 }
 
 class Parent{
-	int x = 100;	// »ó¼Ó °ü°èÀÎ child ¿Í º¯¼öÀÌ¸§ÀÌ °°´Ù.
+	int x = 100;	// ìƒì† ê´€ê³„ì¸ child ì™€ ë³€ìˆ˜ì´ë¦„ì´ ê°™ë‹¤.
 
 	void method() {
 		System.out.println("parent method");

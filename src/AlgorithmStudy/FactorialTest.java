@@ -1,16 +1,16 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 public class FactorialTest {
-	static long factorial(int n) {	//static ¸Ş¼­µå·Î ¸Ş¸ğ¸®¿¡ Å¬·¡½º°¡ ÀûÀçµÉ¶§ »ı¼ºµÊ °´Ã¼ »ı¼º¾øÀÌ »ç¿ë°¡´É
+	static long factorial(int n) {	//static ë©”ì„œë“œë¡œ ë©”ëª¨ë¦¬ì— í´ë˜ìŠ¤ê°€ ì ì¬ë ë•Œ ìƒì„±ë¨ ê°ì²´ ìƒì„±ì—†ì´ ì‚¬ìš©ê°€ëŠ¥
 		if(n <= 0 || n > 20)
 			return -1;
-		//¸Å°³º¯¼öÀÇ À¯È¿¼º °Ë»ç¸¦ À§ÇØ ÀÛ¼ºÇÑ if¹®
+		//ë§¤ê°œë³€ìˆ˜ì˜ ìœ íš¨ì„± ê²€ì‚¬ë¥¼ ìœ„í•´ ì‘ì„±í•œ ifë¬¸
 		if(n <= 1)
 			return 1;
-		//Àç±ÍÈ£Ãâ ½Ã ¸Å°³º¯¼ö n-1 ·Î ÀÎÇÏ¿© ¸Å°³º¯¼ö°¡ 1ÀÌ µÉ½Ã ¹İÈ¯°ªÀ» 1·Î °íÁ¤
+		//ì¬ê·€í˜¸ì¶œ ì‹œ ë§¤ê°œë³€ìˆ˜ n-1 ë¡œ ì¸í•˜ì—¬ ë§¤ê°œë³€ìˆ˜ê°€ 1ì´ ë ì‹œ ë°˜í™˜ê°’ì„ 1ë¡œ ê³ ì •
 		
 		return n * factorial(n-1);
-		//Àç±Í È£Ãâ
+		//ì¬ê·€ í˜¸ì¶œ
 	}
 	
 	public static void main(String[] args) {
@@ -21,10 +21,10 @@ public class FactorialTest {
 			result = factorial(i);
 			
 			if(result == -1) {
-				System.out.printf("À¯È¿ÇÏÁö ¾ÊÀº °ªÀÔ´Ï´Ù. (0 < n <= 20) : %d%n", n);
+				System.out.printf("ìœ íš¨í•˜ì§€ ì•Šì€ ê°’ì…ë‹ˆë‹¤. (0 < n <= 20) : %d%n", n);
 				break;
 			}
-			//¸Å°³º¯¼ö À¯È¿¼º °Ë»ç·Î ºÎÀûÇÕ ÇÒ ½Ã ¾È³»¹®±¸ Ãâ·Â ÈÄ break·Î ¹İº¹¹®À» ºüÁ® ³ª¿È
+			//ë§¤ê°œë³€ìˆ˜ ìœ íš¨ì„± ê²€ì‚¬ë¡œ ë¶€ì í•© í•  ì‹œ ì•ˆë‚´ë¬¸êµ¬ ì¶œë ¥ í›„ breakë¡œ ë°˜ë³µë¬¸ì„ ë¹ ì ¸ ë‚˜ì˜´
 			
 			System.out.printf("%2d!=%20d%n", i, result);
 		}

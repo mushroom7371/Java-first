@@ -1,48 +1,48 @@
-package Study;
+ï»¿package Study;
 
 public class StringBuffer_Builder {
 	public static void main(String[] args) {
 		String str = "hello";
 		str = str + " world";
 		System.out.println(str);
-		//String Å¬·¡½ºÀÇ ÂüÁ¶º¯¼ö strÀÌ °¡¸®Å°´Â °÷¿¡ ÀúÀåµÈ "hello"¿¡ "world"°¡ ´õÇØÁø °ÍÃ³·³ º¸ÀÌÁö¸¸
-		//»ç½ÇÀº strÀº ±âÁ¸ÀÇ "hello"ÀÌ ¾Æ´Ñ »õ·Î¿î ¿µ¿ª¿¡ »ı¼ºµÈ "hello world"À» °¡¸®Å°°Ô µÈ´Ù
-		//¶ÇÇÑ ³²°ÜÁø "hello"´Â °¡ºñÁö·Î ³²¾ÆÀÖ´Ù°¡ °¡ºñÁöÄÃ·ºÅÍ·Î ÀÎÇØ »ç¶óÁö°Ô µÊ.
-		//ÀÌ´Â String Å¬·¡½º°¡ ºÒº¯ ¼Ó¼ºÀ» °¡Áö°í ÀÖ±â ¶§¹®
-		//ÀÌ¶§¹®¿¡ µµÀÔµÈ°ÍÀÌ String_Buffer/Builder
+		//String í´ë˜ìŠ¤ì˜ ì°¸ì¡°ë³€ìˆ˜ strì´ ê°€ë¦¬í‚¤ëŠ” ê³³ì— ì €ì¥ëœ "hello"ì— "world"ê°€ ë”í•´ì§„ ê²ƒì²˜ëŸ¼ ë³´ì´ì§€ë§Œ
+		//ì‚¬ì‹¤ì€ strì€ ê¸°ì¡´ì˜ "hello"ì´ ì•„ë‹Œ ìƒˆë¡œìš´ ì˜ì—­ì— ìƒì„±ëœ "hello world"ì„ ê°€ë¦¬í‚¤ê²Œ ëœë‹¤
+		//ë˜í•œ ë‚¨ê²¨ì§„ "hello"ëŠ” ê°€ë¹„ì§€ë¡œ ë‚¨ì•„ìˆë‹¤ê°€ ê°€ë¹„ì§€ì»¬ë ‰í„°ë¡œ ì¸í•´ ì‚¬ë¼ì§€ê²Œ ë¨.
+		//ì´ëŠ” String í´ë˜ìŠ¤ê°€ ë¶ˆë³€ ì†ì„±ì„ ê°€ì§€ê³  ìˆê¸° ë•Œë¬¸
+		//ì´ë•Œë¬¸ì— ë„ì…ëœê²ƒì´ String_Buffer/Builder
 		
 		StringBuffer sb = new StringBuffer("hello");
 		sb.append(" world");
 		System.out.println(sb);
-		//¹öÆÛ¿Í ºô´õ´Â °¡º¯¼ºÀ» °¡Á³±â ¶§¹®¿¡ append() delete() µî°ú °°Àº ¸Ş¼­µå·Î µ¿ÀÏ °´Ã¼³»¿¡¼­ ¹®ÀÚ¿­À» º¯°æÇÏ´Â °ÍÀÌ °¡´ÉÇÏ´Ù.
+		//ë²„í¼ì™€ ë¹Œë”ëŠ” ê°€ë³€ì„±ì„ ê°€ì¡Œê¸° ë•Œë¬¸ì— append() delete() ë“±ê³¼ ê°™ì€ ë©”ì„œë“œë¡œ ë™ì¼ ê°ì²´ë‚´ì—ì„œ ë¬¸ìì—´ì„ ë³€ê²½í•˜ëŠ” ê²ƒì´ ê°€ëŠ¥í•˜ë‹¤.
 		
 		String s = "abcdefg";
         StringBuffer sb1 = new StringBuffer(s); // String -> StringBuffer
 		
-        System.out.println("Ã³À½ »óÅÂ : " + sb1); //Ã³À½»óÅÂ : abcdefg
-        System.out.println("¹®ÀÚ¿­ String º¯È¯ : " + sb1.toString()); //String º¯È¯ÇÏ±â
-        System.out.println("¹®ÀÚ¿­ ÃßÃâ : " + sb1.substring(2,4)); //¹®ÀÚ¿­ ÃßÃâÇÏ±â
-        System.out.println("¹®ÀÚ¿­ Ãß°¡ : " + sb1.insert(2,"Ãß°¡")); //¹®ÀÚ¿­ Ãß°¡ÇÏ±â
-        System.out.println("¹®ÀÚ¿­ »èÁ¦ : " + sb1.delete(2,4)); //¹®ÀÚ¿­ »èÁ¦ÇÏ±â
-        System.out.println("¹®ÀÚ¿­ ¿¬°á : " + sb1.append("hijk")); //¹®ÀÚ¿­ ºÙÀÌ±â
-        System.out.println("¹®ÀÚ¿­ÀÇ ±æÀÌ : " + sb1.length()); //¹®ÀÚ¿­ÀÇ ±æÀÌ±¸ÇÏ±â
-        System.out.println("¿ë·®ÀÇ Å©±â : " + sb1.capacity()); //¿ë·®ÀÇ Å©±â ±¸ÇÏ±â
-        System.out.println("¹®ÀÚ¿­ ¿ª¼ø º¯°æ : " + sb1.reverse()); //¹®ÀÚ¿­ µÚÁı±â
-        System.out.println("¸¶Áö¸· »óÅÂ : " + sb1); //¸¶Áö¸·»óÅÂ : kjihgfedcba
+        System.out.println("ì²˜ìŒ ìƒíƒœ : " + sb1); //ì²˜ìŒìƒíƒœ : abcdefg
+        System.out.println("ë¬¸ìì—´ String ë³€í™˜ : " + sb1.toString()); //String ë³€í™˜í•˜ê¸°
+        System.out.println("ë¬¸ìì—´ ì¶”ì¶œ : " + sb1.substring(2,4)); //ë¬¸ìì—´ ì¶”ì¶œí•˜ê¸°
+        System.out.println("ë¬¸ìì—´ ì¶”ê°€ : " + sb1.insert(2,"ì¶”ê°€")); //ë¬¸ìì—´ ì¶”ê°€í•˜ê¸°
+        System.out.println("ë¬¸ìì—´ ì‚­ì œ : " + sb1.delete(2,4)); //ë¬¸ìì—´ ì‚­ì œí•˜ê¸°
+        System.out.println("ë¬¸ìì—´ ì—°ê²° : " + sb1.append("hijk")); //ë¬¸ìì—´ ë¶™ì´ê¸°
+        System.out.println("ë¬¸ìì—´ì˜ ê¸¸ì´ : " + sb1.length()); //ë¬¸ìì—´ì˜ ê¸¸ì´êµ¬í•˜ê¸°
+        System.out.println("ìš©ëŸ‰ì˜ í¬ê¸° : " + sb1.capacity()); //ìš©ëŸ‰ì˜ í¬ê¸° êµ¬í•˜ê¸°
+        System.out.println("ë¬¸ìì—´ ì—­ìˆœ ë³€ê²½ : " + sb1.reverse()); //ë¬¸ìì—´ ë’¤ì§‘ê¸°
+        System.out.println("ë§ˆì§€ë§‰ ìƒíƒœ : " + sb1); //ë§ˆì§€ë§‰ìƒíƒœ : kjihgfedcba
         
         String s2 = "abcdefg";
         StringBuilder sb2 = new StringBuilder(s2); // String -> StringBuilder
 		
-        System.out.println("Ã³À½ »óÅÂ : " + sb2); //Ã³À½»óÅÂ : abcdefg
-        System.out.println("¹®ÀÚ¿­ String º¯È¯ : " + sb2.toString()); //String º¯È¯ÇÏ±â
-        System.out.println("¹®ÀÚ¿­ ÃßÃâ : " + sb2.substring(2,4)); //¹®ÀÚ¿­ ÃßÃâÇÏ±â
-        System.out.println("¹®ÀÚ¿­ Ãß°¡ : " + sb2.insert(2,"Ãß°¡")); //¹®ÀÚ¿­ Ãß°¡ÇÏ±â
-        System.out.println("¹®ÀÚ¿­ »èÁ¦ : " + sb2.delete(2,4)); //¹®ÀÚ¿­ »èÁ¦ÇÏ±â
-        System.out.println("¹®ÀÚ¿­ ¿¬°á : " + sb2.append("hijk")); //¹®ÀÚ¿­ ºÙÀÌ±â
-        System.out.println("¹®ÀÚ¿­ÀÇ ±æÀÌ : " + sb2.length()); //¹®ÀÚ¿­ÀÇ ±æÀÌ±¸ÇÏ±â
-        System.out.println("¿ë·®ÀÇ Å©±â : " + sb2.capacity()); //¿ë·®ÀÇ Å©±â ±¸ÇÏ±â
-        System.out.println("¹®ÀÚ¿­ ¿ª¼ø º¯°æ : " + sb2.reverse()); //¹®ÀÚ¿­ µÚÁı±â
-        System.out.println("¸¶Áö¸· »óÅÂ : " + sb2); //¸¶Áö¸·»óÅÂ : kjihgfedcba
+        System.out.println("ì²˜ìŒ ìƒíƒœ : " + sb2); //ì²˜ìŒìƒíƒœ : abcdefg
+        System.out.println("ë¬¸ìì—´ String ë³€í™˜ : " + sb2.toString()); //String ë³€í™˜í•˜ê¸°
+        System.out.println("ë¬¸ìì—´ ì¶”ì¶œ : " + sb2.substring(2,4)); //ë¬¸ìì—´ ì¶”ì¶œí•˜ê¸°
+        System.out.println("ë¬¸ìì—´ ì¶”ê°€ : " + sb2.insert(2,"ì¶”ê°€")); //ë¬¸ìì—´ ì¶”ê°€í•˜ê¸°
+        System.out.println("ë¬¸ìì—´ ì‚­ì œ : " + sb2.delete(2,4)); //ë¬¸ìì—´ ì‚­ì œí•˜ê¸°
+        System.out.println("ë¬¸ìì—´ ì—°ê²° : " + sb2.append("hijk")); //ë¬¸ìì—´ ë¶™ì´ê¸°
+        System.out.println("ë¬¸ìì—´ì˜ ê¸¸ì´ : " + sb2.length()); //ë¬¸ìì—´ì˜ ê¸¸ì´êµ¬í•˜ê¸°
+        System.out.println("ìš©ëŸ‰ì˜ í¬ê¸° : " + sb2.capacity()); //ìš©ëŸ‰ì˜ í¬ê¸° êµ¬í•˜ê¸°
+        System.out.println("ë¬¸ìì—´ ì—­ìˆœ ë³€ê²½ : " + sb2.reverse()); //ë¬¸ìì—´ ë’¤ì§‘ê¸°
+        System.out.println("ë§ˆì§€ë§‰ ìƒíƒœ : " + sb2); //ë§ˆì§€ë§‰ìƒíƒœ : kjihgfedcba
 		
 		
 	}

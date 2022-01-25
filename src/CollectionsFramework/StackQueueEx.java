@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -6,25 +6,25 @@ import java.util.Stack;
 
 public class StackQueueEx {
 	public static void main(String [] args) {
-		Stack st = new Stack();			//StackÀº ÀÚ¹Ù ³»¿¡¼­ Å¬·¡½º·Î Á¸ÀçÇÏ±â¿¡ StackÅ¸ÀÔÀ¸·Î ÀÎ½ºÅÏ½º »ý¼ºÀÌ °¡´ÉÇÏ´Ù.
-		Queue q = new LinkedList();		//Queue´Â ÀÎÅÍÆäÀÌ½º·Î Á¸ÀçÇÏ±â ¶§¹®¿¡ ÀÌ¸¦ ±¸ÇöÇÏ±â À§ÇØ¼­´Â »ó¼Ó¹Þ´Â Å¬·¡½º¸¦ »ç¿ëÇØ¾ßµÈ´Ù.
+		Stack st = new Stack();			//Stackì€ ìžë°” ë‚´ì—ì„œ í´ëž˜ìŠ¤ë¡œ ì¡´ìž¬í•˜ê¸°ì— Stackíƒ€ìž…ìœ¼ë¡œ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±ì´ ê°€ëŠ¥í•˜ë‹¤.
+		Queue q = new LinkedList();		//QueueëŠ” ì¸í„°íŽ˜ì´ìŠ¤ë¡œ ì¡´ìž¬í•˜ê¸° ë•Œë¬¸ì— ì´ë¥¼ êµ¬í˜„í•˜ê¸° ìœ„í•´ì„œëŠ” ìƒì†ë°›ëŠ” í´ëž˜ìŠ¤ë¥¼ ì‚¬ìš©í•´ì•¼ëœë‹¤.
 		
-		st.push("0");		//stackÀÇ °æ¿ì push()¸Þ¼­µå¸¦ ÅëÇÏ¿© µ¥ÀÌÅÍ(°´Ã¼)¸¦ ÀúÀåÇÑ´Ù. 
+		st.push("0");		//stackì˜ ê²½ìš° push()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ë°ì´í„°(ê°ì²´)ë¥¼ ì €ìž¥í•œë‹¤. 
 		st.push("1");
 		st.push("2");
 		
-		q.offer("0");		//queueÀÇ °æ¿ì offer()¸Þ¼­µå¸¦ ÅëÇÏ¿© µ¥ÀÌÅÍ(°´Ã¼)¸¦ ÀúÀåÇÑ´Ù.
+		q.offer("0");		//queueì˜ ê²½ìš° offer()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ë°ì´í„°(ê°ì²´)ë¥¼ ì €ìž¥í•œë‹¤.
 		q.offer("1");
 		q.offer("2");
 		
 		System.out.println(" == Stack == ");
-		while(!st.empty()) {	//¾ðÁ¦±îÁö ¹Ýº¹µÉÁö ¸ð¸¦¶§ »ç¿ëÇÏ´Â while ¹®À» »ç¿ëÇÏ¿© stack Å¬·¡½º ³»ºÎÀÇ empty()¸Þ¼­µå¸¦ ÅëÇÏ¿© µ¥ÀÌÅÍ°¡ ºñ¾îÀÖ±â Àü±îÁö ¹Ýº¹ÇÑ´Ù.
-			System.out.println(st.pop());	//StackÀÇ pop()¸Þ¼­µå¸¦ ÅëÇØ °´Ã¼¸¦ ²¨³½´Ù StackÀº ±æÀÌ ¸·ÇôÀÖ´Â ±¸Á¶·Î ´Ê°Ô µé¾î°£ °ªÀÌ ¸ÕÀú ³ª¿Â´Ù.
+		while(!st.empty()) {	//ì–¸ì œê¹Œì§€ ë°˜ë³µë ì§€ ëª¨ë¥¼ë•Œ ì‚¬ìš©í•˜ëŠ” while ë¬¸ì„ ì‚¬ìš©í•˜ì—¬ stack í´ëž˜ìŠ¤ ë‚´ë¶€ì˜ empty()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ë°ì´í„°ê°€ ë¹„ì–´ìžˆê¸° ì „ê¹Œì§€ ë°˜ë³µí•œë‹¤.
+			System.out.println(st.pop());	//Stackì˜ pop()ë©”ì„œë“œë¥¼ í†µí•´ ê°ì²´ë¥¼ êº¼ë‚¸ë‹¤ Stackì€ ê¸¸ì´ ë§‰í˜€ìžˆëŠ” êµ¬ì¡°ë¡œ ëŠ¦ê²Œ ë“¤ì–´ê°„ ê°’ì´ ë¨¼ì € ë‚˜ì˜¨ë‹¤.
 		}
 		
 		System.out.println(" == Queue == ");
-		while(!q.isEmpty())	{	//¸¶Âù°¡Áö·Î µ¥ÀÌÅÍ°¡ ÀÖ´Â ÁöÁ¡±îÁö ¹Ýº¹À» ½ÇÇàÇÑ´Ù.
-			System.out.println(q.poll());	//queueÀÇ poll()¸Þ¼­µå¸¦ ÅëÇÏ¿© °´Ã¼¸¦ ²¨³»¼­ ¹ÝÈ¯ÇÑ´Ù. ±æÀÌ ¶Õ·ÁÀÎ´À ¾ç¹æÇâ ±¸Á¶·Î ¸ÕÀú µé¾î°£ µ¥ÀÌÅÍ°¡ ¸ÕÀú ³ª¿Â´Ù.
+		while(!q.isEmpty())	{	//ë§ˆì°¬ê°€ì§€ë¡œ ë°ì´í„°ê°€ ìžˆëŠ” ì§€ì ê¹Œì§€ ë°˜ë³µì„ ì‹¤í–‰í•œë‹¤.
+			System.out.println(q.poll());	//queueì˜ poll()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ê°ì²´ë¥¼ êº¼ë‚´ì„œ ë°˜í™˜í•œë‹¤. ê¸¸ì´ ëš«ë ¤ì¸ëŠ ì–‘ë°©í–¥ êµ¬ì¡°ë¡œ ë¨¼ì € ë“¤ì–´ê°„ ë°ì´í„°ê°€ ë¨¼ì € ë‚˜ì˜¨ë‹¤.
 		}
 	}
 }

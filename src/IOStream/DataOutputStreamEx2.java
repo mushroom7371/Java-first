@@ -1,4 +1,4 @@
-package IOStream;
+ï»¿package IOStream;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -31,8 +31,8 @@ class DataOutputStreamEx2 {
 				}
 			}
 
-			System.out.println("10Áø¼ö  :" + Arrays.toString(result));
-			System.out.println("16Áø¼ö  :" + Arrays.toString(hex));
+			System.out.println("10ì§„ìˆ˜  :" + Arrays.toString(result));
+			System.out.println("16ì§„ìˆ˜  :" + Arrays.toString(hex));
 
 			dos.close();
 		} catch (IOException e) {

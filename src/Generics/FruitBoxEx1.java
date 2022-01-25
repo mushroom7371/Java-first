@@ -1,42 +1,42 @@
-package Generics;
+ï»¿package Generics;
 
 import java.util.ArrayList;
 
 class Fruit				  { public String toString() { return "Fruit";}}
-	//Fruit Å¬·¡½º¸¦ ¼±¾ğÇÏ¿´°í Box Å¬·¡½ºÀÇ ¸Ş¼­µå ³»¿ëÀ» ¿À¹ö¶óÀÌµù ÇÏ¿´´Ù. => »ç½ÇÀº ¸ğµç Å¬·¡½ºÀÇ Á¶»óÀÎ ObjectÅ¬·¡½ºÀÇ ¸Ş¼­µåÀÎ toString()¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿´´Ù.
+	//Fruit í´ë˜ìŠ¤ë¥¼ ì„ ì–¸í•˜ì˜€ê³  Box í´ë˜ìŠ¤ì˜ ë©”ì„œë“œ ë‚´ìš©ì„ ì˜¤ë²„ë¼ì´ë”© í•˜ì˜€ë‹¤. => ì‚¬ì‹¤ì€ ëª¨ë“  í´ë˜ìŠ¤ì˜ ì¡°ìƒì¸ Objectí´ë˜ìŠ¤ì˜ ë©”ì„œë“œì¸ toString()ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì˜€ë‹¤.
 class Apple extends Fruit { public String toString() { return "Apple";}}
 class Grape extends Fruit { public String toString() { return "Grape";}}
-	//Apple¿Í Grape Å¬·¡½º´Â °¢°¢ FruitÅ¬·¡½º¸¦ »ó¼Ó¹Ş¾Ò°í Box Å¬·¡½ºÀÇ ¸Ş¼­µå ³»¿ëÀ» ¿À¹ö¶óÀÌµù ÇÏ¿´´Ù. À§¿Í ¸¶Âù°¡Áö, ObjectÅ¬·¡½ºÀÇ toString()¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÔ
+	//Appleì™€ Grape í´ë˜ìŠ¤ëŠ” ê°ê° Fruití´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ì•˜ê³  Box í´ë˜ìŠ¤ì˜ ë©”ì„œë“œ ë‚´ìš©ì„ ì˜¤ë²„ë¼ì´ë”© í•˜ì˜€ë‹¤. ìœ„ì™€ ë§ˆì°¬ê°€ì§€, Objectí´ë˜ìŠ¤ì˜ toString()ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•¨
 class Toy		          { public String toString() { return "Toy"  ;}}
-	//Toy Å¬·¡½º¸¦ ¼±¾ğ
+	//Toy í´ë˜ìŠ¤ë¥¼ ì„ ì–¸
 
 class FruitBoxEx1 {
 	public static void main(String[] args) {
-		Box<Fruit> fruitBox = new Box<Fruit>();	//Box Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö fruitBox¸¦ ¼±¾ğÇÏ°í ¾ÈÁ¤¼ºÀ» À§ÇØ Áö³×¸¯À¸·Î Å¸ÀÔº¯¼ö¸¦ Á¤ÀÇÇÏ¿´´Ù Å¸ÀÔ º¯¼ö´Â Fruit·Î ÇØ´ç Box<Fruit>°´Ã¼¿¡´Â FruitÅ¸ÀÔÀÇ °´Ã¼¸¸ ÀúÀåÇÒ ¼ö ÀÖ´Ù.
-		Box<Apple> appleBox = new Box<Apple>();	//À­³»¿ë°ú ¸¶Âù°¡Áö
+		Box<Fruit> fruitBox = new Box<Fruit>();	//Box íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ fruitBoxë¥¼ ì„ ì–¸í•˜ê³  ì•ˆì •ì„±ì„ ìœ„í•´ ì§€ë„¤ë¦­ìœ¼ë¡œ íƒ€ì…ë³€ìˆ˜ë¥¼ ì •ì˜í•˜ì˜€ë‹¤ íƒ€ì… ë³€ìˆ˜ëŠ” Fruitë¡œ í•´ë‹¹ Box<Fruit>ê°ì²´ì—ëŠ” Fruitíƒ€ì…ì˜ ê°ì²´ë§Œ ì €ì¥í•  ìˆ˜ ìˆë‹¤.
+		Box<Apple> appleBox = new Box<Apple>();	//ìœ—ë‚´ìš©ê³¼ ë§ˆì°¬ê°€ì§€
 		Box<Toy>   toyBox   = new Box<Toy>();
-//		Box<Grape> grapeBox = new Box<Apple>(); // ¿¡·¯. Å¸ÀÔ ºÒÀÏÄ¡
+//		Box<Grape> grapeBox = new Box<Apple>(); // ì—ëŸ¬. íƒ€ì… ë¶ˆì¼ì¹˜
 
-		fruitBox.add(new Fruit());	//ÇÏ´ÜÀÇ BoxÅ¬·¡½º¿¡ Áö³×¸¯À» ÅëÇÏ¿© Å¸ÀÔº¯¼ö¸¦ ¸í½ÃÇÏ¿´±â¿¡ Box<Fruit>Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ °¡¸®Å°´Â ÂüÁ¶º¯¼ö fruitBoxÀÇ add()¸Ş¼­µå È£Ãâ½Ã FruitÅ¸ÀÔÀÇ °´Ã¼¸¸ ÀúÀåÀÌ °¡´ÉÇÏ´Ù. 
-		fruitBox.add(new Apple()); 	//¸¶Âù°¡Áö·Î Apple ÀÎ½ºÅÏ½º¸¦ ÂüÁ¶º¯¼ö list°¡ °¡¸®Å°´Â ArrayList°´Ã¼¿¡ Ãß°¡ ÇÏ¿´´Ù. AppleÅ¬·¡½º´Â Fruit Å¬·¡½ºÀÇ ÀÚ¼ÕÀÌ¹Ç·Î Á¦³Ê¸¯ Å¸ÀÔº¯¼ö¿¡ À§¹è µÇÁö ¾Ê´Â´Ù. °¡Áö°í ÀÖ±â ¶§¹®
+		fruitBox.add(new Fruit());	//í•˜ë‹¨ì˜ Boxí´ë˜ìŠ¤ì— ì§€ë„¤ë¦­ì„ í†µí•˜ì—¬ íƒ€ì…ë³€ìˆ˜ë¥¼ ëª…ì‹œí•˜ì˜€ê¸°ì— Box<Fruit>í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ê°€ë¦¬í‚¤ëŠ” ì°¸ì¡°ë³€ìˆ˜ fruitBoxì˜ add()ë©”ì„œë“œ í˜¸ì¶œì‹œ Fruitíƒ€ì…ì˜ ê°ì²´ë§Œ ì €ì¥ì´ ê°€ëŠ¥í•˜ë‹¤. 
+		fruitBox.add(new Apple()); 	//ë§ˆì°¬ê°€ì§€ë¡œ Apple ì¸ìŠ¤í„´ìŠ¤ë¥¼ ì°¸ì¡°ë³€ìˆ˜ listê°€ ê°€ë¦¬í‚¤ëŠ” ArrayListê°ì²´ì— ì¶”ê°€ í•˜ì˜€ë‹¤. Appleí´ë˜ìŠ¤ëŠ” Fruit í´ë˜ìŠ¤ì˜ ìì†ì´ë¯€ë¡œ ì œë„ˆë¦­ íƒ€ì…ë³€ìˆ˜ì— ìœ„ë°° ë˜ì§€ ì•ŠëŠ”ë‹¤. ê°€ì§€ê³  ìˆê¸° ë•Œë¬¸
 
-		appleBox.add(new Apple());	//appleBox°¡ °¡¸®Å°´Â °´Ã¼ ¶ÇÇÑ Áö³×¸¯À» ÅëÇØ AppleÅ¸ÀÔÀÇ °´Ã¼¸¸ ÀúÀåÇÒ ¼ö ÀÖ´Ù.
+		appleBox.add(new Apple());	//appleBoxê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ ë˜í•œ ì§€ë„¤ë¦­ì„ í†µí•´ Appleíƒ€ì…ì˜ ê°ì²´ë§Œ ì €ì¥í•  ìˆ˜ ìˆë‹¤.
 		appleBox.add(new Apple());
-//		appleBox.add(new Toy()); // ¿¡·¯. Box<Apple>¿¡´Â Apple¸¸ ´ãÀ» ¼ö ÀÖÀ½
+//		appleBox.add(new Toy()); // ì—ëŸ¬. Box<Apple>ì—ëŠ” Appleë§Œ ë‹´ì„ ìˆ˜ ìˆìŒ
 
 		toyBox.add(new Toy());
-//		toyBox.add(new Apple()); // ¿¡·¯. Box<Toy>¿¡´Â AppleÀ» ´ãÀ» ¼ö ¾øÀ½
+//		toyBox.add(new Apple()); // ì—ëŸ¬. Box<Toy>ì—ëŠ” Appleì„ ë‹´ì„ ìˆ˜ ì—†ìŒ
 
 		System.out.println(fruitBox);
 		System.out.println(appleBox);
 		System.out.println(toyBox);
-	}  // mainÀÇ ³¡
+	}  // mainì˜ ë
 }
 
-class Box<T> {	//Box Å¬·¡½º¸¦ ¼±¾ğÇÏµÇ Áö³×¸¯À» ÀÌ¿ëÇÏ¿© Å¸ÀÔÀ» ¸í½ÃÇØ ³õÀ½
-	ArrayList<T> list = new ArrayList<T>();	//¸í½ÃÇÑ Å¸ÀÔÀÇ °´Ã¼¸¦ ´ãÀ» ¼ö ÀÖ´Â ArrayList °´Ã¼¸¦ »ı¼ºÇÏ°í ÂüÁ¶º¯¼ö list°¡ °¡¸®Å°µµ·Ï ÇÏ¿´´Ù.
-	void add(T item)  { list.add(item); }	// ¸Å°³º¯¼ö·Î ¹ŞÀº °´Ã¼¸¦ list°¡ °¡¸®Å°´Â ArrayList°´Ã¼¿¡ ÀúÀåÇÏ´Â ¸Ş¼­µå¸¦ ¼±¾ğÇÏ¿´´Ù. TÅ¸ÀÔÀ¸·Î ¹Ş¾Æ¾ß¸¸ ÀúÀåµÈ´Ù.
-	T get(int i)      { return list.get(i); }	//int Çü½ÄÀÇ ¸Å°³º¯¼ö i¸¦ ¹Ş¾Æ listÀÇ i¹øÁöÀÇ °ªÀ» ¹İÈ¯ÇÏ´Âµ¥ T Å¸ÀÔÀ¸·Î ¹İÈ¯µÈ´Ù.
-	int size() { return list.size(); }	//listÀÇ size¸¦ ¹İÈ¯ÇÏ´Â ¸Ş¼­µå
-	public String toString() { return list.toString();}	//listÀÇ ³»¿ëÀ» toString()¸Ş¼­µå·Î ¹İÈ¯ÇÑ´Ù.
+class Box<T> {	//Box í´ë˜ìŠ¤ë¥¼ ì„ ì–¸í•˜ë˜ ì§€ë„¤ë¦­ì„ ì´ìš©í•˜ì—¬ íƒ€ì…ì„ ëª…ì‹œí•´ ë†“ìŒ
+	ArrayList<T> list = new ArrayList<T>();	//ëª…ì‹œí•œ íƒ€ì…ì˜ ê°ì²´ë¥¼ ë‹´ì„ ìˆ˜ ìˆëŠ” ArrayList ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì°¸ì¡°ë³€ìˆ˜ listê°€ ê°€ë¦¬í‚¤ë„ë¡ í•˜ì˜€ë‹¤.
+	void add(T item)  { list.add(item); }	// ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ê°ì²´ë¥¼ listê°€ ê°€ë¦¬í‚¤ëŠ” ArrayListê°ì²´ì— ì €ì¥í•˜ëŠ” ë©”ì„œë“œë¥¼ ì„ ì–¸í•˜ì˜€ë‹¤. Tíƒ€ì…ìœ¼ë¡œ ë°›ì•„ì•¼ë§Œ ì €ì¥ëœë‹¤.
+	T get(int i)      { return list.get(i); }	//int í˜•ì‹ì˜ ë§¤ê°œë³€ìˆ˜ ië¥¼ ë°›ì•„ listì˜ ië²ˆì§€ì˜ ê°’ì„ ë°˜í™˜í•˜ëŠ”ë° T íƒ€ì…ìœ¼ë¡œ ë°˜í™˜ëœë‹¤.
+	int size() { return list.size(); }	//listì˜ sizeë¥¼ ë°˜í™˜í•˜ëŠ” ë©”ì„œë“œ
+	public String toString() { return list.toString();}	//listì˜ ë‚´ìš©ì„ toString()ë©”ì„œë“œë¡œ ë°˜í™˜í•œë‹¤.
 }

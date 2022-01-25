@@ -1,25 +1,25 @@
-package Thread;
+ï»¿package Thread;
 
 public class ThreadEx2 {
 
 	public static void main(String[] args) {
-		ThreadEx2_1 t1 = new ThreadEx2_1();	//¹Ø¿¡¼­ Á¤ÀÇÇÑ ThreadEx2_1Å¬·¡½º·Î ºÎÅÍ °´Ã¼¸¦ »ý¼ºÇÏ¿© ThreadEx2_1Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö t1¿¡ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
-		t1.start();	//ThreadÅ¬·¡½º¸¦ »ó¼Ó¹Þ¾Ò±â¿¡ ThreadÀÇ start()¸Þ¼­µå¸¦ ÅëÇÏ¿© °íÀÇ·Î ¹ß»ý½ÃÅ² ¿¹¿ÜÀÇ È£Ãâ½ºÅÃÀ» Ãâ·ÂÇÑ´Ù.
-					//È£Ãâ½ºÅÃÀÇ ¸Ç Ã¹ ¹øÀç ¸Þ¼­µå°¡ main¸Þ¼­µå°¡ ¾Æ´Ñ run()¸Þ¼­µåÀÌ°í ±× À§·Î throwException()¸Þ¼­µå°¡ È£ÃâµÈ´Ù.
+		ThreadEx2_1 t1 = new ThreadEx2_1();	//ë°‘ì—ì„œ ì •ì˜í•œ ThreadEx2_1í´ëž˜ìŠ¤ë¡œ ë¶€í„° ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ThreadEx2_1íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ t1ì— ì£¼ì†Œê°’ì„ ì €ìž¥í•œë‹¤.
+		t1.start();	//Threadí´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ì•˜ê¸°ì— Threadì˜ start()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ê³ ì˜ë¡œ ë°œìƒì‹œí‚¨ ì˜ˆì™¸ì˜ í˜¸ì¶œìŠ¤íƒì„ ì¶œë ¥í•œë‹¤.
+					//í˜¸ì¶œìŠ¤íƒì˜ ë§¨ ì²« ë²ˆìž¬ ë©”ì„œë“œê°€ mainë©”ì„œë“œê°€ ì•„ë‹Œ run()ë©”ì„œë“œì´ê³  ê·¸ ìœ„ë¡œ throwException()ë©”ì„œë“œê°€ í˜¸ì¶œëœë‹¤.
 	}
 
 }
 
-class ThreadEx2_1 extends Thread{	//Thread Å¬·¡½º¸¦ »ó¼Ó¹ÞÀº ThreadEx2_1 Å¬·¡½º¸¦ ¼±¾ðÇÑ´Ù.
-	public void run() {	//Thread Å¬·¡½ºÀÇ run()¸Þ¼­µå¸¦ ¿À¹ö¶óÀÌµùÇÏ¿© ÀçÁ¤ÀÇ ÇÑ´Ù.
-		throwException();	//throwException()¸Þ¼­µå¸¦ È£Ãâ
+class ThreadEx2_1 extends Thread{	//Thread í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ ThreadEx2_1 í´ëž˜ìŠ¤ë¥¼ ì„ ì–¸í•œë‹¤.
+	public void run() {	//Thread í´ëž˜ìŠ¤ì˜ run()ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”©í•˜ì—¬ ìž¬ì •ì˜ í•œë‹¤.
+		throwException();	//throwException()ë©”ì„œë“œë¥¼ í˜¸ì¶œ
 	}
 	
-	public void throwException() {	//¹ÝÈ¯°ªÀÌ ¾ø´Â throwException()¸Þ¼­µå¸¦ ¼±¾ðÇÑ´Ù.
-		try {	//¿¹¿ÜÃ³¸®¸¦ ÇÑ try¹®Àå 
-			throw new Exception();	//Exception() °´Ã¼¸¦ »ý¼ºÇÏ¿© throwÇÑ´Ù. °íÀÇ·Î ¿¹¿Ü ¹ß»ý
-		}catch(Exception e){	//¿¹¿Ü°¡ ¹ß»ýÇÑ´Ù¸é catch() ¸Þ¼­µå¿¡ Exception Å¸ÀÔÀÇ ¸Å°³º¯¼ö e¸¦ ´ëÀÔÇÏ°í
-			e.printStackTrace();	//¸Å°³º¯¼öÀÎ ÂüÁ¶º¯¼ö e°¡ °¡¸®Å°´Â °´Ã¼ÀÇ printStackTrace()¸Þ¼­µå¸¦ ÅëÇÏ¿© ¿À·ù³»¿ëÀ» Ãâ·ÂÇÑ´Ù.
+	public void throwException() {	//ë°˜í™˜ê°’ì´ ì—†ëŠ” throwException()ë©”ì„œë“œë¥¼ ì„ ì–¸í•œë‹¤.
+		try {	//ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•œ tryë¬¸ìž¥ 
+			throw new Exception();	//Exception() ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ throwí•œë‹¤. ê³ ì˜ë¡œ ì˜ˆì™¸ ë°œìƒ
+		}catch(Exception e){	//ì˜ˆì™¸ê°€ ë°œìƒí•œë‹¤ë©´ catch() ë©”ì„œë“œì— Exception íƒ€ìž…ì˜ ë§¤ê°œë³€ìˆ˜ eë¥¼ ëŒ€ìž…í•˜ê³ 
+			e.printStackTrace();	//ë§¤ê°œë³€ìˆ˜ì¸ ì°¸ì¡°ë³€ìˆ˜ eê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì˜ printStackTrace()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ì˜¤ë¥˜ë‚´ìš©ì„ ì¶œë ¥í•œë‹¤.
 		}
 	}
 }

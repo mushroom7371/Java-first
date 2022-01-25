@@ -1,12 +1,12 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 public class TypeCastingExam2 {
 	public static void main(String []args) {
-		int intValue; //Á¤¼öÇü int Å¸ÀÔÀÇ º¯¼ö intValue¸¦ ¼±¾ğÇÔ
+		int intValue; //ì •ìˆ˜í˜• int íƒ€ì…ì˜ ë³€ìˆ˜ intValueë¥¼ ì„ ì–¸í•¨
 		
-		long longValue = 5;	//Á¤¼öÇü long Å¸ÀÔÀÇ º¯¼ö longValue¸¦ ¼±¾ğÇÏ°í ¿©±â¿¡ 5¸¦ ´ëÀÔÇÔ.
+		long longValue = 5;	//ì •ìˆ˜í˜• long íƒ€ì…ì˜ ë³€ìˆ˜ longValueë¥¼ ì„ ì–¸í•˜ê³  ì—¬ê¸°ì— 5ë¥¼ ëŒ€ì…í•¨.
 		
-		intValue = (int)longValue; //º¯¼ö intValue¿¡ longÅ¸ÀÔÀÇ º¯¼ölongValue¸¦ ´ëÀÔÇÏ±âÀ§ÇØ Çüº¯È¯(int)¸¦ ÀÌ¿ë
+		intValue = (int)longValue; //ë³€ìˆ˜ intValueì— longíƒ€ì…ì˜ ë³€ìˆ˜longValueë¥¼ ëŒ€ì…í•˜ê¸°ìœ„í•´ í˜•ë³€í™˜(int)ë¥¼ ì´ìš©
 		
 		System.out.println(intValue);
 		

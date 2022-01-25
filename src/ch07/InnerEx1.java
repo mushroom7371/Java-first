@@ -1,22 +1,22 @@
-package ch07;
+ï»¿package ch07;
 
 class InnerEx1 {
 	class InstanceInner{
 		int iv = 100;
-		//static int cv = 100; ³»ºÎ Å¬½º¿¡¼­´Â static º¯¼ö¸¦ ¼±¾ğÇÒ ¼ö ¾ø´Ù.
-		final static int CONST = 200;	//staticÀÌÁö¸¸ »ó¼öÀÌ¹Ç·Î »ç¿ë °¡´ÉÇÏ´Ù.
+		//static int cv = 100; ë‚´ë¶€ í´ìŠ¤ì—ì„œëŠ” static ë³€ìˆ˜ë¥¼ ì„ ì–¸í•  ìˆ˜ ì—†ë‹¤.
+		final static int CONST = 200;	//staticì´ì§€ë§Œ ìƒìˆ˜ì´ë¯€ë¡œ ì‚¬ìš© ê°€ëŠ¥í•˜ë‹¤.
 	}
 	
 	static class StaticInner{
 		int iv = 100;
-		static int cv = 200;	//staticÅ¬·¡½º¸¸ static º¯¼ö¸¦ ¼±¾ğ ÇÒ ¼ö ÀÖ´Ù.
+		static int cv = 200;	//staticí´ë˜ìŠ¤ë§Œ static ë³€ìˆ˜ë¥¼ ì„ ì–¸ í•  ìˆ˜ ìˆë‹¤.
 	}
 	
 	void myMethod(){
 		class LocalInner{
 			int iv = 100;
-			//static int cv = 200;	//¸¶Âù°¡Áö·Î static Å¬·¡½º°¡ ¾Æ´Ï¹Ç·Î static º¯¼ö »ç¿ëÀÌ ºÒ°¡´É ÇÏ´Ù.
-			final static int CONST = 200; //»ó¼öÀÌ¹Ç·Î static »ç¿ëÀÌ °¡´ÉÇÏ´Ù.
+			//static int cv = 200;	//ë§ˆì°¬ê°€ì§€ë¡œ static í´ë˜ìŠ¤ê°€ ì•„ë‹ˆë¯€ë¡œ static ë³€ìˆ˜ ì‚¬ìš©ì´ ë¶ˆê°€ëŠ¥ í•˜ë‹¤.
+			final static int CONST = 200; //ìƒìˆ˜ì´ë¯€ë¡œ static ì‚¬ìš©ì´ ê°€ëŠ¥í•˜ë‹¤.
 		}
 	}
 }

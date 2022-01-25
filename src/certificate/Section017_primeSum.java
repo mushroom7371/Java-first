@@ -1,33 +1,33 @@
-package certificate;
+ï»¿package certificate;
 
 import java.util.Scanner;
 
 class Section017_primeSum {
-	//1ºÎÅÍ ÀÔ·Â¹ÞÀº ¼ö ±îÁö ¼Ò¼ö¸¦ ÆÇº°ÇÏ¿© ´õÇÏ±â
+	//1ë¶€í„° ìž…ë ¥ë°›ì€ ìˆ˜ ê¹Œì§€ ì†Œìˆ˜ë¥¼ íŒë³„í•˜ì—¬ ë”í•˜ê¸°
 	public static void main(String[] args) {
-		System.out.println("¼Ò¼öÀÇ ÇÕÀ» ±¸ÇÒ ¹üÀ§ ¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì†Œìˆ˜ì˜ í•©ì„ êµ¬í•  ë²”ìœ„ ìˆ«ìžë¥¼ ìž…ë ¥í•˜ì„¸ìš”.");
 		Scanner sc = new Scanner(System.in);
 		
-		int a, hap, k, j;	//a = ¹üÀ§, hap = ¼Ò¼öÀÇ ÇÕ, k = ¹üÀ§¾ÈÀÇ ¼Ò¼öµé, j = ³ª´­¼ö
+		int a, hap, k, j;	//a = ë²”ìœ„, hap = ì†Œìˆ˜ì˜ í•©, k = ë²”ìœ„ì•ˆì˜ ì†Œìˆ˜ë“¤, j = ë‚˜ëˆŒìˆ˜
 		a = sc.nextInt();
 		hap = 0;
-		k = 2;	//1Àº ¼Ò¼ö·Î ÆÇ´ÜÇÏÁö ¾Ê±â¿¡ 2ºÎÅÍ ½ÃÀÛ
+		k = 2;	//1ì€ ì†Œìˆ˜ë¡œ íŒë‹¨í•˜ì§€ ì•Šê¸°ì— 2ë¶€í„° ì‹œìž‘
 		
-		while(true) {	//break¹®À» ¸¸³ª±â Àü±îÁö ¹«ÇÑ¹Ýº¹
-			j = 2;	//³ª´©´Â ¼ö ¶ÇÇÑ 2ºÎÅÍ ½ÃÀÛ
+		while(true) {	//breakë¬¸ì„ ë§Œë‚˜ê¸° ì „ê¹Œì§€ ë¬´í•œë°˜ë³µ
+			j = 2;	//ë‚˜ëˆ„ëŠ” ìˆ˜ ë˜í•œ 2ë¶€í„° ì‹œìž‘
 			
-			while(k % j != 0) {	//¹üÀ§ ¾ÈÀÇ ¼ýÀÚ k°¡ j·Î ³ª´³À»¶§ ³ª¸ÓÁö°¡ 0ÀÌ ¾Æ´Ï¸é ¼Ò¼öÀÏ °¡´É¼ºÀÌ ÀÖÀ½
-				j++;	//j¸¦ 1 Áõ°¡½ÃÄÑ ÁÖ°í ³ª´³À»¶§ 0ÀÌ µÉ¶§ ±îÁö ¹Ýº¹ÇÑ´Ù.
+			while(k % j != 0) {	//ë²”ìœ„ ì•ˆì˜ ìˆ«ìž kê°€ jë¡œ ë‚˜ëˆ´ì„ë•Œ ë‚˜ë¨¸ì§€ê°€ 0ì´ ì•„ë‹ˆë©´ ì†Œìˆ˜ì¼ ê°€ëŠ¥ì„±ì´ ìžˆìŒ
+				j++;	//jë¥¼ 1 ì¦ê°€ì‹œì¼œ ì£¼ê³  ë‚˜ëˆ´ì„ë•Œ 0ì´ ë ë•Œ ê¹Œì§€ ë°˜ë³µí•œë‹¤.
 			}
 			
-			if( k == j) {	//k°¡ j¿Í °°¾ÆÁø´Ù¸é ¼Ò¼öÀÌ¹Ç·Î ÇÕÀ» ÀúÀåÇÒ º¯¼ö hap¿¡ k¸¦ ´õÇÑ´Ù.	°°Áö ¾Ê´Ù¸é ¾Æ¹«°Íµµ ¾ÈÇÔ
+			if( k == j) {	//kê°€ jì™€ ê°™ì•„ì§„ë‹¤ë©´ ì†Œìˆ˜ì´ë¯€ë¡œ í•©ì„ ì €ìž¥í•  ë³€ìˆ˜ hapì— kë¥¼ ë”í•œë‹¤.	ê°™ì§€ ì•Šë‹¤ë©´ ì•„ë¬´ê²ƒë„ ì•ˆí•¨
 				hap += k;
 			}
 			
-			if(k < a) {	//k´Â ¹üÀ§¾ÈÀÇ ¼ýÀÚÀÌ¹Ç·Î ÀÔ·Â¹ÞÀº ¹üÀ§ ¼öÀÎ aº¸´Ù ÀÛ´Ù¸é 1Áõ°¡ ½ÃÄÑ »ó´ÜÀÇ while¹®À¸·Î µ¹¾Æ°¡ ¹Ýº¹À» ½ÃÀÛÇÑ´Ù.
+			if(k < a) {	//këŠ” ë²”ìœ„ì•ˆì˜ ìˆ«ìžì´ë¯€ë¡œ ìž…ë ¥ë°›ì€ ë²”ìœ„ ìˆ˜ì¸ aë³´ë‹¤ ìž‘ë‹¤ë©´ 1ì¦ê°€ ì‹œì¼œ ìƒë‹¨ì˜ whileë¬¸ìœ¼ë¡œ ëŒì•„ê°€ ë°˜ë³µì„ ì‹œìž‘í•œë‹¤.
 				k++;
 			}else {
-				System.out.println("¼Ò¼öÀÇ ÇÕÀº : " + hap);
+				System.out.println("ì†Œìˆ˜ì˜ í•©ì€ : " + hap);
 				break;
 			}
 		}

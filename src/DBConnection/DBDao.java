@@ -1,4 +1,4 @@
-package DBConnection;
+ï»¿package DBConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,37 +6,37 @@ import java.sql.ResultSet;
 
 public class DBDao {
 	Connection conn;
-	//Connection Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö conn À» ¼±¾ğ
+	//Connection íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ conn ì„ ì„ ì–¸
 	
 	public DBDao() {
 		this.conn = new DBConn().getConn();
-		//»ı¼ºÀÚ¸¦ ÅëÇÏ¿© Å¬·¡½º º¯¼ö·Î ¼±¾ğÇÑ conn¿¡ DBConnÅ¬·¡½º·Î ºÎÅÍ °´Ã¼¸¦ »ı¼ºÇÏ¿© getConn()¸Ş¼­µå¸¦ È£ÃâÇÑ ¸®ÅÏ°ªÀ» ÀúÀåÇÑ´Ù.
-		//getConn()À¸·Î ¸®ÅÏ¹ŞÀº °ª¿¡´Â µ¥ÀÌÅÍº£ÀÌ½º¿¡ Á¢±Ù°¡´ÉÇÑ Á¤º¸°¡ ÀúÀåµÇ¾îÀÖ°í ÀÌ¸¬ÅëÇÏ¿© µ¥ÀÌÅÍº£ÀÌ½º¿Í ¿¬µ¿ÇÑ´Ù.
+		//ìƒì„±ìë¥¼ í†µí•˜ì—¬ í´ë˜ìŠ¤ ë³€ìˆ˜ë¡œ ì„ ì–¸í•œ connì— DBConní´ë˜ìŠ¤ë¡œ ë¶€í„° ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ getConn()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•œ ë¦¬í„´ê°’ì„ ì €ì¥í•œë‹¤.
+		//getConn()ìœ¼ë¡œ ë¦¬í„´ë°›ì€ ê°’ì—ëŠ” ë°ì´í„°ë² ì´ìŠ¤ì— ì ‘ê·¼ê°€ëŠ¥í•œ ì •ë³´ê°€ ì €ì¥ë˜ì–´ìˆê³  ì´ë¦í†µí•˜ì—¬ ë°ì´í„°ë² ì´ìŠ¤ì™€ ì—°ë™í•œë‹¤.
 	}
 	
 	public DBVo login(String mid, String pwd) {
-		//public À¸·Î Àü¿ª¿¡¼­ »ç¿ë°¡´ÉÇÑ StudentVo Å¸ÀÔÀÇ °ªÀ» ¹İÈ¯ÇÏ´Â login()¸Ş¼­µå¸¦ ¼±¾ğÇÏ°í, ¸Å°³º¯¼ö·Î´Â String Å¸ÀÔÀÇ mid, paw¸¦ ¹Ş´Â´Ù
+		//public ìœ¼ë¡œ ì „ì—­ì—ì„œ ì‚¬ìš©ê°€ëŠ¥í•œ StudentVo íƒ€ì…ì˜ ê°’ì„ ë°˜í™˜í•˜ëŠ” login()ë©”ì„œë“œë¥¼ ì„ ì–¸í•˜ê³ , ë§¤ê°œë³€ìˆ˜ë¡œëŠ” String íƒ€ì…ì˜ mid, pawë¥¼ ë°›ëŠ”ë‹¤
 		DBVo vo = null;
-		//¸®ÅÏÇÏ±â À§ÇÑ StudentVo Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö vo¸¦ ¼±¾ğÇÏ°í ÃÊ±â°ªÀ» null·Î ÁöÁ¤ÇÑ´Ù.
+		//ë¦¬í„´í•˜ê¸° ìœ„í•œ StudentVo íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ voë¥¼ ì„ ì–¸í•˜ê³  ì´ˆê¸°ê°’ì„ nullë¡œ ì§€ì •í•œë‹¤.
 		PreparedStatement ps = null;
-		//PreparedStatement Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í null°ªÀ¸·Î ÃÊ±âÈ­, PreparedStatement´Â sql¹®À» ½ÇÇàÇÏ±â À§ÇÑ ±â´ÉÀ» °¡Áø´Ù.
+		//PreparedStatement íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  nullê°’ìœ¼ë¡œ ì´ˆê¸°í™”, PreparedStatementëŠ” sqlë¬¸ì„ ì‹¤í–‰í•˜ê¸° ìœ„í•œ ê¸°ëŠ¥ì„ ê°€ì§„ë‹¤.
 		ResultSet rs = null;
-		//executeQuery·Î DB¿¡ ¸í·ÉÇÏ¸é µ¥ÀÌÅÍ¸¦ ResultSet °´Ã¼·Î µ¹·ÁÁÖ±â¿¡ ÀÌ¸¦ ÀúÀåÇÏ±âÀ§ÇÑ ResultSetÅ¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ¿´´Ù. 
+		//executeQueryë¡œ DBì— ëª…ë ¹í•˜ë©´ ë°ì´í„°ë¥¼ ResultSet ê°ì²´ë¡œ ëŒë ¤ì£¼ê¸°ì— ì´ë¥¼ ì €ì¥í•˜ê¸°ìœ„í•œ ResultSetíƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ì˜€ë‹¤. 
 		String sql = "select * from hr.student where mid=? and pwd=? ";
-		//sql ¹®À» ½ÇÇàÇÏ±â À§ÇÑ ¸í·É¾î¸¦ String Å¸ÀÔÀÇ sql º¯¼ö¿¡ ÀúÀåÇÔ
-		try {	//¿¹¿Ü°¡ ¹ß»ıÇÒ ¸¸ÇÑ ÁöÁ¡ ½ÃÀÛ
+		//sql ë¬¸ì„ ì‹¤í–‰í•˜ê¸° ìœ„í•œ ëª…ë ¹ì–´ë¥¼ String íƒ€ì…ì˜ sql ë³€ìˆ˜ì— ì €ì¥í•¨
+		try {	//ì˜ˆì™¸ê°€ ë°œìƒí•  ë§Œí•œ ì§€ì  ì‹œì‘
 			ps = conn.prepareStatement(sql);
-			//connÀÇ prepareStatement()¸Ş¼­µå¿¡ sql ¸í·É¾î¸¦ ´ã¾Æ ÁØºñÇÔ
+			//connì˜ prepareStatement()ë©”ì„œë“œì— sql ëª…ë ¹ì–´ë¥¼ ë‹´ì•„ ì¤€ë¹„í•¨
 			ps.setString(1, mid);
 			ps.setString(2, pwd);
-			//sql¹®ÀÇ Ã¹¹øÂ° ?¿¡ mid, µÎ¹øÂ° ?¿¡ pwd·Î ÀÔ·ÂÇÏ¿© ÁØ´Ù.
+			//sqlë¬¸ì˜ ì²«ë²ˆì§¸ ?ì— mid, ë‘ë²ˆì§¸ ?ì— pwdë¡œ ì…ë ¥í•˜ì—¬ ì¤€ë‹¤.
 			
 			rs = ps.executeQuery();
-			//ResultSet Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö rs¿¡ psÀÇ executeQuery()¸Ş¼­µå¸¦ ½ÇÇàÇÑ °á°ú¸¦ ÀúÀåÇÑ´Ù.
-			//executeQuery()¸¦ ÅëÇØ sql ¹®ÀÌ µ¥ÀÌÅÍº£ÀÌ½º¿¡ Àü´ŞµÇ¾î µ¥ÀÌÅÍº£ÀÌ½º´Â ÀÌ¸¦ ½ÇÇà ÇÏ°í ¾òÀº µ¥ÀÌÅÍ¸¦ ResultSet °´Ã¼·Î Àü´ŞÇÏ¿© ÁØ´Ù.
-			if(rs.next()) {	//rs¿¡ °ªÀÌ ÀÖ´Ù¸é
+			//ResultSet íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ rsì— psì˜ executeQuery()ë©”ì„œë“œë¥¼ ì‹¤í–‰í•œ ê²°ê³¼ë¥¼ ì €ì¥í•œë‹¤.
+			//executeQuery()ë¥¼ í†µí•´ sql ë¬¸ì´ ë°ì´í„°ë² ì´ìŠ¤ì— ì „ë‹¬ë˜ì–´ ë°ì´í„°ë² ì´ìŠ¤ëŠ” ì´ë¥¼ ì‹¤í–‰ í•˜ê³  ì–»ì€ ë°ì´í„°ë¥¼ ResultSet ê°ì²´ë¡œ ì „ë‹¬í•˜ì—¬ ì¤€ë‹¤.
+			if(rs.next()) {	//rsì— ê°’ì´ ìˆë‹¤ë©´
 				vo = new DBVo();
-				//¸â¹öº¯¼ö·Î ¼±¾ğµÈ vo¿¡ StudentVo() °´Ã¼¸¦ »ı¼ºÇÏ¿© ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
+				//ë©¤ë²„ë³€ìˆ˜ë¡œ ì„ ì–¸ëœ voì— StudentVo() ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ì£¼ì†Œê°’ì„ ì €ì¥í•œë‹¤.
 				vo.setMid(rs.getString("mid"));
 				vo.setIrum(rs.getString("irum"));
 				vo.setPhone(rs.getString("phone"));
@@ -44,11 +44,11 @@ public class DBDao {
 				vo.setEmail(rs.getString("email"));
 				vo.setPwd(rs.getString("pwd"));
 				vo.setGrade(rs.getInt("grade"));
-				//µ¥ÀÌÅÍº£ÀÌ½ºÀÇ sql¹® ½ÇÇà °á°ú·Î ¾òÀº µ¥ÀÌÅÍ°ªµé·Î °¢°¢ÀÇ À§Ä¡¿¡ ÀúÀåÇÑ´Ù.
+				//ë°ì´í„°ë² ì´ìŠ¤ì˜ sqlë¬¸ ì‹¤í–‰ ê²°ê³¼ë¡œ ì–»ì€ ë°ì´í„°ê°’ë“¤ë¡œ ê°ê°ì˜ ìœ„ì¹˜ì— ì €ì¥í•œë‹¤.
 			}
 		}catch(Exception ex) {
-			ex.printStackTrace();	//¿¹¿Ü ¹ß»ı½Ã ¿¹¿Ü³»¿ë Ãâ·Â
+			ex.printStackTrace();	//ì˜ˆì™¸ ë°œìƒì‹œ ì˜ˆì™¸ë‚´ìš© ì¶œë ¥
 		}
-		return vo;	//À§ÀÇ °úÁ¤À¸·Î ÀúÀåµÈ µ¥ÀÌÅÍµéÀÌ ÂüÁ¶º¯¼ö vo¿¡ ÀúÀåµÇ¾î ¹İÈ¯µÈ´Ù.
+		return vo;	//ìœ„ì˜ ê³¼ì •ìœ¼ë¡œ ì €ì¥ëœ ë°ì´í„°ë“¤ì´ ì°¸ì¡°ë³€ìˆ˜ voì— ì €ì¥ë˜ì–´ ë°˜í™˜ëœë‹¤.
 	}
 }

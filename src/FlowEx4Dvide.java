@@ -1,4 +1,4 @@
-import java.util.*;
+ï»¿import java.util.*;
 public class FlowEx4Dvide {
 
 	public static void main(String[] args) {
@@ -8,10 +8,10 @@ public class FlowEx4Dvide {
 		grade = hakjumMethod(score);
 		
 		
-		System.out.println("´ç½ÅÀÇ ÇÐÁ¡Àº "+grade+"ÀÔ´Ï´Ù.");
+		System.out.println("ë‹¹ì‹ ì˜ í•™ì ì€ "+grade+"ìž…ë‹ˆë‹¤.");
 	}
 		static int inputMethod(int score) {
-		System.out.print("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.>");
+		System.out.print("ì ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”.>");
 		Scanner scanner = new Scanner(System.in);
 		String tmp = scanner.nextLine();
 		score = Integer.parseInt(tmp);

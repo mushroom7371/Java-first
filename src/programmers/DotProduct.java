@@ -1,6 +1,6 @@
-package programmers;
+ï»¿package programmers;
 
-//³»Àû ±¸ÇÏ±â
+//ë‚´ì  êµ¬í•˜ê¸°
 class DotProduct {
 	private int solution(int[] a, int[] b) {
         int answer = 0;

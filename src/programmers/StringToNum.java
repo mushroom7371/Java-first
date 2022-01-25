@@ -1,16 +1,16 @@
-package programmers;
+ï»¿package programmers;
 
 class StringToNum {
 	private int solution(String s) {
 		int answer = 0;
 		String [] str = new String [] {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-		//¹Ù²Ü ¹®ÀÚµéÀ» String ¹è¿­¿¡ ´ã¾ÆµĞ´Ù. »ç½Ç »ó ³»ºÎ´Â String Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö strÀÌ String ¹è¿­ÀÇ ÁÖ¼Ò¸¦ °¡¸®Å°°í ±× ¹è¿­ÀÇ °¢°¡ÀÇ ¹øÁö°¡ StringÀ» °¡¸®Å²´Ù.
+		//ë°”ê¿€ ë¬¸ìë“¤ì„ String ë°°ì—´ì— ë‹´ì•„ë‘”ë‹¤. ì‚¬ì‹¤ ìƒ ë‚´ë¶€ëŠ” String íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ strì´ String ë°°ì—´ì˜ ì£¼ì†Œë¥¼ ê°€ë¦¬í‚¤ê³  ê·¸ ë°°ì—´ì˜ ê°ê°€ì˜ ë²ˆì§€ê°€ Stringì„ ê°€ë¦¬í‚¨ë‹¤.
 		
-		for(int i = 0; i < str.length; i++) {	//strÀÇ ±æÀÌ¸¸Å­ 1¾¿ Áõ°¡ÇÏ¸é¼­ ¹İº¹ÇÑ´Ù.
-			s = s.replaceAll(str[i], String.valueOf(i));	//s°¡ °¡¸®Å°´Â ¹®ÀÚ¿­ Áß str[i]¹øÁö¿¡ ÇØ´çÇÏ´Â ¹®ÀÚ¸¦ i·Î ´ëÃ¼ÇÑ´Ù.
+		for(int i = 0; i < str.length; i++) {	//strì˜ ê¸¸ì´ë§Œí¼ 1ì”© ì¦ê°€í•˜ë©´ì„œ ë°˜ë³µí•œë‹¤.
+			s = s.replaceAll(str[i], String.valueOf(i));	//sê°€ ê°€ë¦¬í‚¤ëŠ” ë¬¸ìì—´ ì¤‘ str[i]ë²ˆì§€ì— í•´ë‹¹í•˜ëŠ” ë¬¸ìë¥¼ ië¡œ ëŒ€ì²´í•œë‹¤.
 		}
 		
-		answer = Integer.parseInt(s);	//s´Â Strgin Å¸ÀÔÀÌ¹Ç·Î int Å¸ÀÔÀ¸·Î º¯È¯ ½ÃÄÑ ÁØ´Ù.
+		answer = Integer.parseInt(s);	//sëŠ” Strgin íƒ€ì…ì´ë¯€ë¡œ int íƒ€ì…ìœ¼ë¡œ ë³€í™˜ ì‹œì¼œ ì¤€ë‹¤.
 		
 		return answer;
 	 }

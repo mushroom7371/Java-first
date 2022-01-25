@@ -1,13 +1,13 @@
-package ch07;
+ï»¿package ch07;
 
 class Outer{
 	
-	int value = 10;	// Outer.this.value Outer Å¬·¡½ºÀÇ ¸â¹öº¯¼ö
+	int value = 10;	// Outer.this.value Outer í´ë˜ìŠ¤ì˜ ë©¤ë²„ë³€ìˆ˜
 	
 	class Inner{
-		int value = 20; //	this.value ³»ºÎ Å¬·¡½ºÀÎ Inner Å¬·¡½ºÀÇ ¸â¹öº¯¼ö
+		int value = 20; //	this.value ë‚´ë¶€ í´ë˜ìŠ¤ì¸ Inner í´ë˜ìŠ¤ì˜ ë©¤ë²„ë³€ìˆ˜
 		
-		void method1() {	//³»ºÎ Å¬·¡½ºÀÇ ¸Ş¼­µå
+		void method1() {	//ë‚´ë¶€ í´ë˜ìŠ¤ì˜ ë©”ì„œë“œ
 			int value = 30;
 			System.out.println("value = " + value);
 			System.out.println("this.value = " + this.value);
@@ -18,9 +18,9 @@ class Outer{
 
 public class InnerEx5 {
 	public static void main(String [] agrs) {
-		Outer outer = new Outer();	//Outer Å¬·¡½º·ÎºÎÅÍ ÀÎ½ºÅÏ½º »ı¼º
-		Outer.Inner inner = outer.new Inner();	//Outer Å¬·¡½ºÀÇ ³»ºÎ Å¬·¡½º¸¦ ÅëÇÑ ÀÎ½ºÅÏ½º »ı¼º
+		Outer outer = new Outer();	//Outer í´ë˜ìŠ¤ë¡œë¶€í„° ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
+		Outer.Inner inner = outer.new Inner();	//Outer í´ë˜ìŠ¤ì˜ ë‚´ë¶€ í´ë˜ìŠ¤ë¥¼ í†µí•œ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		
-		inner.method1();	//³»ºÎ Å¬·¡½ºÀÇ ¸Ş¼­µå È£Ãâ
+		inner.method1();	//ë‚´ë¶€ í´ë˜ìŠ¤ì˜ ë©”ì„œë“œ í˜¸ì¶œ
 	}
 }

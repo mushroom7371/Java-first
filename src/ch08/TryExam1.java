@@ -1,9 +1,9 @@
-package ch08;
+ï»¿package ch08;
 
 public class TryExam1 {
 
 	public static void main(String [] k) {
-		new TryExam1();  //º¯¼ö°¡ ¾øÀ½. 1È¸¼ºÀÓ.
+		new TryExam1();  //ë³€ìˆ˜ê°€ ì—†ìŒ. 1íšŒì„±ì„.
 	}
 	
 	
@@ -26,7 +26,7 @@ public class TryExam1 {
 		try {
 			d = su1/su2;
 		}catch(ArithmeticException ex) {
-			System.out.println("¿¬»ê¿À·ù...");
+			System.out.println("ì—°ì‚°ì˜¤ë¥˜...");
 		}
 		System.out.println("su1/su2 = " + d);
 	}
@@ -39,7 +39,7 @@ public class TryExam1 {
 		System.out.println("TryExam1.test3().");
 		
 		try {
-			throw new Exception("¿¡·¯");
+			throw new Exception("ì—ëŸ¬");
 		}catch(Exception ex) {
 			System.out.println(ex.getMessage());
 		}

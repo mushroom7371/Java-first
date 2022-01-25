@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -6,12 +6,12 @@ import java.util.Properties;
 
 class PropertiesEx2 {
 	public static void main(String[] args) {
-		// commandline¿¡¼­ inputfileÀ» ÁöÁ¤ÇØÁÖÁö ¾ÊÀ¸¸é ÇÁ·Î±×·¥À» Á¾·áÇÑ´Ù.
+		// commandlineì—ì„œ inputfileì„ ì§€ì •í•´ì£¼ì§€ ì•Šìœ¼ë©´ í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•œë‹¤.
 		if(args.length != 1) {
 			System.out.println("USAGE: java PropertiesEx2 INPUTFILENAME");
 			System.exit(0);
 		}
-		//ExpValidCheck ¿¹Á¦Ã³·³ exit()¸Ş¼­µå ¶§¹®ÀÎÁö ÀÌÈÄÀÇ ³»¿ëÀÌ µ¹Áö ¾Ê°í, ¹üÀ§ ¿À·ù°¡ ¹ß»ıÇÔ... ÀÌÀ¯°¡ ¹ºÁö ¸ğ¸£°ÚÀ½
+		//ExpValidCheck ì˜ˆì œì²˜ëŸ¼ exit()ë©”ì„œë“œ ë•Œë¬¸ì¸ì§€ ì´í›„ì˜ ë‚´ìš©ì´ ëŒì§€ ì•Šê³ , ë²”ìœ„ ì˜¤ë¥˜ê°€ ë°œìƒí•¨... ì´ìœ ê°€ ë­”ì§€ ëª¨ë¥´ê² ìŒ
 
 		Properties prop = new Properties();
 
@@ -20,7 +20,7 @@ class PropertiesEx2 {
 		try {
 			prop.load(new FileInputStream(inputFile));
 		} catch(IOException e) {
-			System.out.println("ÁöÁ¤µÈ ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ì§€ì •ëœ íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			System.exit(0);
 		}
 
@@ -43,10 +43,10 @@ class PropertiesEx2 {
 			sum += intValue;
 		}
 
-		System.out.println("ÀÌ¸§ :"  + name);		
-		System.out.println("ÃÖ´ë°ª :" + max);
-		System.out.println("ÃÖ¼Ò°ª :" + min);
-		System.out.println("ÇÕ°è :"  + sum);
-		System.out.println("Æò±Õ :"  + (sum*100.0/data.length)/100);
+		System.out.println("ì´ë¦„ :"  + name);		
+		System.out.println("ìµœëŒ€ê°’ :" + max);
+		System.out.println("ìµœì†Œê°’ :" + min);
+		System.out.println("í•©ê³„ :"  + sum);
+		System.out.println("í‰ê·  :"  + (sum*100.0/data.length)/100);
 	}
 }

@@ -1,11 +1,11 @@
-package ch03;
+ï»¿package ch03;
 
 public class Exercise3_7 {
 
 	/*
-	ÃâÁ¦ÀÏ : 20210204
-	³»¿ë : ¿¬½À¹®Á¦
-	Á¦ÃâÀÚ : ¹ÚÁØÈ­
+	ì¶œì œì¼ : 20210204
+	ë‚´ìš© : ì—°ìŠµë¬¸ì œ
+	ì œì¶œì : ë°•ì¤€í™”
 	*/
 	
 	public static void main(String[] args) {

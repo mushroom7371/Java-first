@@ -1,18 +1,18 @@
-package Study;
+ï»¿package Study;
 
 import java.util.Scanner;
 
 public class ReplaceAll {
 	public static void main(String[] args) {
-		//ÀÔ·Â¹ŞÀº ¹®ÀÚ¿¡¼­ ¼ıÀÚ¸¸ Ãâ·ÂÇÏ´Â ¹æ¹ı
+		//ì…ë ¥ë°›ì€ ë¬¸ìì—ì„œ ìˆ«ìë§Œ ì¶œë ¥í•˜ëŠ” ë°©ë²•
 		String str;
 		
-		System.out.print("¹®ÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ");
+		System.out.print("ë¬¸ìë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš” : ");
 		Scanner sc = new Scanner(System.in);
 		str = sc.nextLine();
 		
 		str = str.replaceAll("[^0-9]", "");
-		//String Å¬·¡½º¿¡¼­ Á¦°øÇÏ´Â replaceAll() ¸Ş¼­µå·Î Á¤±Ô½ÄÀ» ÀÌ¿ëÇÏ¿© ¼ıÀÚÀÌ¿ÜÀÇ ¹®ÀÚ¸¦ Á¦°ÅÇÑ´Ù.
+		//String í´ë˜ìŠ¤ì—ì„œ ì œê³µí•˜ëŠ” replaceAll() ë©”ì„œë“œë¡œ ì •ê·œì‹ì„ ì´ìš©í•˜ì—¬ ìˆ«ìì´ì™¸ì˜ ë¬¸ìë¥¼ ì œê±°í•œë‹¤.
 		
 		System.out.println(str);
 		

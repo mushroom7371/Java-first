@@ -1,4 +1,4 @@
-package ch05;
+ï»¿package ch05;
 
 public class ArrayEx3 {
 
@@ -8,7 +8,7 @@ public class ArrayEx3 {
 		for(int i = 0; i < arr.length; i++)
 			arr [i] = 1 + i;
 			
-			System.out.println("[º¯°æÀü]");
+			System.out.println("[ë³€ê²½ì „]");
 			System.out.println("arr.length = " + arr.length);
 			for(int i = 0; i < arr.length; i++)
 				System.out.println("arr["+i+"] = " + arr[i]);
@@ -20,7 +20,7 @@ public class ArrayEx3 {
 			
 			arr=tmp;
 			
-			System.out.println("[º¯°æÈÄ]");
+			System.out.println("[ë³€ê²½í›„]");
 			System.out.println("arr.length = " + arr.length);
 			for(int i = 0; i < arr.length; i++)
 				System.out.println("arr["+i+"] = " + arr[i]);

@@ -1,4 +1,4 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.util.Scanner;
 
@@ -6,15 +6,15 @@ public class Fibonacci {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("¿øÇÏ´Â Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì›í•˜ëŠ” ì •ìˆ˜ ì…ë ¥ : ");
 		
 		int num = sc.nextInt();
-		//¿øÇÏ´Â ÇÇº¸³ªÄ¡ ¼ö¿­ÀÇ Ç×À» ÀÔ·Â¹ŞÀ½
+		//ì›í•˜ëŠ” í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ì˜ í•­ì„ ì…ë ¥ë°›ìŒ
 		
 		
-		System.out.println("¹İº¹ºĞÀ» ÀÌ¿ëÇÑ ÇÇº¸³ªÄ¡ nÇ× ±¸ÇÏ±â");
+		System.out.println("ë°˜ë³µë¶„ì„ ì´ìš©í•œ í”¼ë³´ë‚˜ì¹˜ ní•­ êµ¬í•˜ê¸°");
 		int su1, su2, sum;
-		//¼ö¿­À» ±¸ÇÏ±â À§ÇÑ º¯¼ö ¼±¾ğ
+		//ìˆ˜ì—´ì„ êµ¬í•˜ê¸° ìœ„í•œ ë³€ìˆ˜ ì„ ì–¸
 		
 		su1 = 0;
 		su2 = 1;
@@ -26,11 +26,11 @@ public class Fibonacci {
 			sum = su1 + su2;
 			su1 = su2;
 			su2 = sum;
-			//Ã¹¹øÂ° Ç×°ú µÎ¹øÂ°Ç×À» °íÁ¤ÇÑ ÈÄ ¹Ğ¾î³»±â ½ÄÀ¸·Î ÇÇº¸³ªÄ¡ ¼ö¿­À» ±¸ÇÑ´Ù.
+			//ì²«ë²ˆì§¸ í•­ê³¼ ë‘ë²ˆì§¸í•­ì„ ê³ ì •í•œ í›„ ë°€ì–´ë‚´ê¸° ì‹ìœ¼ë¡œ í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ì„ êµ¬í•œë‹¤.
 		}
 		
 		System.out.println();
-		System.out.println("Àç±ÍÇÔ¼ö¸¦ ÀÌ¿ëÇÑ ÇÇº¸³ªÄ¡ nÇ× ±¸ÇÏ±â");
+		System.out.println("ì¬ê·€í•¨ìˆ˜ë¥¼ ì´ìš©í•œ í”¼ë³´ë‚˜ì¹˜ ní•­ êµ¬í•˜ê¸°");
 		
 		System.out.println(fibo(num));
 		

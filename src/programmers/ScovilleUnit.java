@@ -1,31 +1,31 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-//´õ ¸Ê°Ô
+//ë” ë§µê²Œ
 class ScovilleUnit {
 	private int solution(int [] scoville, int K) {
 		int answer = 0;
-		List<Integer> queue = new LinkedList();	//Integer Å¸ÀÔ¸¸ ÀúÀå °¡´ÉÇÑ ListÅ¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í LinkedList °´Ã¼ »ı¼ºÇÏ¿© ÀÌ ÁÖ¼Ò¸¦ °¡¸®Å°°Ô ÇÔ.
+		List<Integer> queue = new LinkedList();	//Integer íƒ€ì…ë§Œ ì €ì¥ ê°€ëŠ¥í•œ Listíƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  LinkedList ê°ì²´ ìƒì„±í•˜ì—¬ ì´ ì£¼ì†Œë¥¼ ê°€ë¦¬í‚¤ê²Œ í•¨.
 		
-		for(int i=0; i<scoville.length; i++){	//¸Å°³º¯¼ö·Î ¹ŞÀº int ¹è¿­À» ÀúÀåÇÏ±â À§ÇÑ ¹İº¹
+		for(int i=0; i<scoville.length; i++){	//ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ int ë°°ì—´ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ë°˜ë³µ
 			queue.add(scoville[i]);
 		}
 		
-		Collections.sort(queue);	//Á¤·Ä
+		Collections.sort(queue);	//ì •ë ¬
 		
-		while(queue.get(0) < K){	//¹İº¹ È½¼ö¸¦ ¸ğ¸£±â ¶§¹®¿¡ while¹® ¹İº¹, Á¦ÀÏ ÀÛÀº ½ºÄÚºôÁö¼ö°¡ kº¸´Ù ÀÛÀ¸¸é
-			if(queue.size() < 2) {	//ºñ±³ÇÒ Áö¼ö°¡ ¾ø´Ù¸é, Áï ÇÕ¼ºÀ» ÇÏ¿©µµ ½ºÄÚºôÁö¼ö°¡ kº¸´Ù ³·Àº°æ¿ì
+		while(queue.get(0) < K){	//ë°˜ë³µ íšŸìˆ˜ë¥¼ ëª¨ë¥´ê¸° ë•Œë¬¸ì— whileë¬¸ ë°˜ë³µ, ì œì¼ ì‘ì€ ìŠ¤ì½”ë¹Œì§€ìˆ˜ê°€ kë³´ë‹¤ ì‘ìœ¼ë©´
+			if(queue.size() < 2) {	//ë¹„êµí•  ì§€ìˆ˜ê°€ ì—†ë‹¤ë©´, ì¦‰ í•©ì„±ì„ í•˜ì—¬ë„ ìŠ¤ì½”ë¹Œì§€ìˆ˜ê°€ kë³´ë‹¤ ë‚®ì€ê²½ìš°
 				return -1;
 			}
-			int f1 = queue.remove(0);	//Á¦ÀÏ ¾È¸Å¿î À½½ÄÀ» ²¨³»¾î f1À¸·Î ´ëÀÔ
-			int f2 = queue.remove(0);	//µÎ¹øÂ°·Î ¾È¸Å¿î À½½ÄÀ» ²¨³»¾î f2·Î ´ëÀÔ
-			int newFood = f1 + (f2 * 2);	//À½½ÄÀ» ¼¯¾î ¸¸µç º¸´Ù ³ôÀº ½ºÄÚºôÁö¼ö¸¦ ÀúÀå
-			queue.add(newFood);	//LinkedList°´Ã¼¿¡ Ãß°¡
-			answer++;	//¼¯Àº È½¼ö Áõ°¡
-			Collections.sort(queue);	//Àç Á¤·Ä
+			int f1 = queue.remove(0);	//ì œì¼ ì•ˆë§¤ìš´ ìŒì‹ì„ êº¼ë‚´ì–´ f1ìœ¼ë¡œ ëŒ€ì…
+			int f2 = queue.remove(0);	//ë‘ë²ˆì§¸ë¡œ ì•ˆë§¤ìš´ ìŒì‹ì„ êº¼ë‚´ì–´ f2ë¡œ ëŒ€ì…
+			int newFood = f1 + (f2 * 2);	//ìŒì‹ì„ ì„ì–´ ë§Œë“  ë³´ë‹¤ ë†’ì€ ìŠ¤ì½”ë¹Œì§€ìˆ˜ë¥¼ ì €ì¥
+			queue.add(newFood);	//LinkedListê°ì²´ì— ì¶”ê°€
+			answer++;	//ì„ì€ íšŸìˆ˜ ì¦ê°€
+			Collections.sort(queue);	//ì¬ ì •ë ¬
 		}
 
 		return answer;

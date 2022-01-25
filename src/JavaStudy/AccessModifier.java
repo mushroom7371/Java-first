@@ -1,29 +1,29 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 class MyTv2{
 	
-	private boolean isPowerOn;	//private Á¦¾îÀÚ·Î ÀÎÇÏ¿© ÇöÀç Å¬·¡½º¿¡¼­¸¸ »ç¿ë°¡´É
+	private boolean isPowerOn;	//private ì œì–´ìžë¡œ ì¸í•˜ì—¬ í˜„ìž¬ í´ëž˜ìŠ¤ì—ì„œë§Œ ì‚¬ìš©ê°€ëŠ¥
 	private int channel;		
 	private int volume;			
-	private int prevChannel;	//ÀÌÀü channelÀ» ÀúÀåÇÏ±â À§ÇÑ º¯¼ö ¼±¾ð
+	private int prevChannel;	//ì´ì „ channelì„ ì €ìž¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜ ì„ ì–¸
 	
-	final int MAX_VOLUME = 100;		//»ó¼ö·Î ¼±¾ð ¹× ÃÊ±âÈ­ ÀÌ º¯¼öÀÇ °ªÀº º¯ÇÏÁö ¾Ê´Â´Ù.
+	final int MAX_VOLUME = 100;		//ìƒìˆ˜ë¡œ ì„ ì–¸ ë° ì´ˆê¸°í™” ì´ ë³€ìˆ˜ì˜ ê°’ì€ ë³€í•˜ì§€ ì•ŠëŠ”ë‹¤.
 	final int MIN_VOLUME = 0;		
 	final int MAX_CHANNEL = 100;	
 	final int MIN_CHANNEL = 1;		
 	
-	public void setChannel(int channel) {	//Å¸Å¬·¡½º¿¡¼­ private Á¦¾îÀÚ·Î ¼±¾ðÇÑ º¯¼ö¸¦ Á¢±ÙÇÏ°í ¹Ù²ãÁÖ±â À§ÇÑ ¸Þ¼­µå
-		if(channel > MAX_CHANNEL || channel < MIN_CHANNEL)	//¸Å°³º¯¼ö·Î ³Ñ°Ü¹ÞÀº °ªÀÇ À¯È¿¼ºÀ» ÆÇÇÑÇÏ±â À§ÇÑ Á¶°Ç¹®
-			return;	//¸Þ¼­µå¸¦ void Å¸ÀÔÀ¸·Î ¼±¾ðÇÏ¿´±â¿¡ return°ªÀÌ ¾ø´Ù.
+	public void setChannel(int channel) {	//íƒ€í´ëž˜ìŠ¤ì—ì„œ private ì œì–´ìžë¡œ ì„ ì–¸í•œ ë³€ìˆ˜ë¥¼ ì ‘ê·¼í•˜ê³  ë°”ê¿”ì£¼ê¸° ìœ„í•œ ë©”ì„œë“œ
+		if(channel > MAX_CHANNEL || channel < MIN_CHANNEL)	//ë§¤ê°œë³€ìˆ˜ë¡œ ë„˜ê²¨ë°›ì€ ê°’ì˜ ìœ íš¨ì„±ì„ íŒí•œí•˜ê¸° ìœ„í•œ ì¡°ê±´ë¬¸
+			return;	//ë©”ì„œë“œë¥¼ void íƒ€ìž…ìœ¼ë¡œ ì„ ì–¸í•˜ì˜€ê¸°ì— returnê°’ì´ ì—†ë‹¤.
 		
-		prevChannel = this.channel;	//ÀÌÀü channel·Î µ¹¾Æ°¡±â À§ÇØ ¹Ù²î±âÀüÀÎ ÇöÀç channelÀÇ °ªÀ» ÀúÀåÇÑ´Ù.
-		this.channel = channel;	//Á¶°Ç¹®¿¡ ºÎÇÕÇÏÁö ¾Ê´Â´Ù¸é MyTv2 Å¬·¡½ºÀÇ º¯¼ö channel¿¡ ¸Å°³º¯¼ö·Î ¹ÞÀº Á¤¼ö°ªÀ» ´ëÀÔÇÑ´Ù.
+		prevChannel = this.channel;	//ì´ì „ channelë¡œ ëŒì•„ê°€ê¸° ìœ„í•´ ë°”ë€Œê¸°ì „ì¸ í˜„ìž¬ channelì˜ ê°’ì„ ì €ìž¥í•œë‹¤.
+		this.channel = channel;	//ì¡°ê±´ë¬¸ì— ë¶€í•©í•˜ì§€ ì•ŠëŠ”ë‹¤ë©´ MyTv2 í´ëž˜ìŠ¤ì˜ ë³€ìˆ˜ channelì— ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ì •ìˆ˜ê°’ì„ ëŒ€ìž…í•œë‹¤.
 	}
 	public int getChannel() {
-		return this.channel;	//set¸Þ¼­µå·Î ¼³Á¤ÇÑ º¯¼öÀÇ °ªÀ» ÀÐ¾î¿À´Âµ¥ ÇÊ¿äÇÑ ¸Þ¼­µå Á¢±ÙÁ¦¾îÀÚ¸¦ publicÀ¸·Î ¼±¾ðÇÏ¿´±â¿¡ ¾îµð¼­µç »ç¿ë°¡´ÉÇÏ´Ù.
+		return this.channel;	//setë©”ì„œë“œë¡œ ì„¤ì •í•œ ë³€ìˆ˜ì˜ ê°’ì„ ì½ì–´ì˜¤ëŠ”ë° í•„ìš”í•œ ë©”ì„œë“œ ì ‘ê·¼ì œì–´ìžë¥¼ publicìœ¼ë¡œ ì„ ì–¸í•˜ì˜€ê¸°ì— ì–´ë””ì„œë“  ì‚¬ìš©ê°€ëŠ¥í•˜ë‹¤.
 	}
 	
-	public void setVolume(int volume) {	//À§ÀÇ ¸Þ¼­µå µé°ú µ¿ÀÏÇÑ ³»¿ë
+	public void setVolume(int volume) {	//ìœ„ì˜ ë©”ì„œë“œ ë“¤ê³¼ ë™ì¼í•œ ë‚´ìš©
 		if(volume > MAX_VOLUME || volume < MIN_VOLUME)
 		return;
 		
@@ -33,24 +33,24 @@ class MyTv2{
 		return this.volume;
 	}
 	
-	public void gotoPrevChannel() {	//ÀÌÀü Ã¤³Î·Î µ¹¾Æ°¡±â À§ÇÑ ¸Þ¼­µå
-		setChannel(prevChannel);	//º¯°æµÈ Ã¤³Î ÀÌÀüÀÇ Ã¤³ÎÀ» ¸Å°³º¯¼ö·Î ³Ö¾îÁØ´Ù.
+	public void gotoPrevChannel() {	//ì´ì „ ì±„ë„ë¡œ ëŒì•„ê°€ê¸° ìœ„í•œ ë©”ì„œë“œ
+		setChannel(prevChannel);	//ë³€ê²½ëœ ì±„ë„ ì´ì „ì˜ ì±„ë„ì„ ë§¤ê°œë³€ìˆ˜ë¡œ ë„£ì–´ì¤€ë‹¤.
 	}
 	
 }
 
 public class AccessModifier {
 	public static void main(String args []) {
-		MyTv2 t = new MyTv2();	// MyTv2 Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö t¸¦ ¼±¾ðÇÏ°í new ¸í·É¾î·Î MyTv2Å¬·¡½º·ÎºÎÅÍ »ý¼ºÇÑ ÀÎ½ºÅÏ½ºÀÇ ÁÖ¼Ò°ªÀ» ´ëÀÔÇÑ´Ù.
+		MyTv2 t = new MyTv2();	// MyTv2 íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ të¥¼ ì„ ì–¸í•˜ê³  new ëª…ë ¹ì–´ë¡œ MyTv2í´ëž˜ìŠ¤ë¡œë¶€í„° ìƒì„±í•œ ì¸ìŠ¤í„´ìŠ¤ì˜ ì£¼ì†Œê°’ì„ ëŒ€ìž…í•œë‹¤.
 		
-		t.setChannel(10);	//MyTv2 Å¬·¡½º¿¡¼­ channel°ú volumeÀº privateÁ¦¾îÀÚ·Î °°Àº Å¬·¡½º³»ºÎ¿¡¼­¸¸ »ç¿ëÇÏµµ·Ï ÇÏ¿´Áö¸¸
-							//getter setter ¸Þ¼­µå¸¦ ÅëÇÏ¿© Á¢±ÙÀÌ °¡´ÉÇÏ´Ù.
+		t.setChannel(10);	//MyTv2 í´ëž˜ìŠ¤ì—ì„œ channelê³¼ volumeì€ privateì œì–´ìžë¡œ ê°™ì€ í´ëž˜ìŠ¤ë‚´ë¶€ì—ì„œë§Œ ì‚¬ìš©í•˜ë„ë¡ í•˜ì˜€ì§€ë§Œ
+							//getter setter ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë‹¤.
 		System.out.println("CH:"+t.getChannel());
 		t.setVolume(20);
 		System.out.println("VOLUME:"+t.getVolume());
 		t.setChannel(20);
 		System.out.println("CH:"+t.getChannel());
-		t.gotoPrevChannel();	//ÀÌ ¸Þ¼­µå·Î ÀÎÇÏ¿© Ã¤³ÎÀÇ °ªÀÌ ÀÌÀüÀ¸·Î µÇµ¹¾Æ°£´Ù.
+		t.gotoPrevChannel();	//ì´ ë©”ì„œë“œë¡œ ì¸í•˜ì—¬ ì±„ë„ì˜ ê°’ì´ ì´ì „ìœ¼ë¡œ ë˜ëŒì•„ê°„ë‹¤.
 		System.out.println("CH:"+t.getChannel());
 		t.gotoPrevChannel();
 		System.out.println("CH:"+t.getChannel());

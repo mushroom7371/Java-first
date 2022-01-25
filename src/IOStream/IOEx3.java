@@ -1,4 +1,4 @@
-package IOStream;
+ï»¿package IOStream;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -9,34 +9,34 @@ public class IOEx3 {
 		byte[] inSrc = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 		byte[] outSrc = null;
 		byte[] temp = new byte[4];
-		//byte[] Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í °¢°¢ {}, null, Å©±â4 ÀÇ ¹è¿­À» ¼±¾ğÇÏ¿© ÁÖ¼Ò°ªÀ» ÀúÀåÇÔ.
+		//byte[] íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ê°ê° {}, null, í¬ê¸°4 ì˜ ë°°ì—´ì„ ì„ ì–¸í•˜ì—¬ ì£¼ì†Œê°’ì„ ì €ì¥í•¨.
 		
 		ByteArrayInputStream input = null;
 		ByteArrayOutputStream output = null;
-		//yteArrayIn(Out)putStream Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í null °ªÀ¸·Î ÃÊ±âÈ­
+		//yteArrayIn(Out)putStream íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  null ê°’ìœ¼ë¡œ ì´ˆê¸°í™”
 		
 		input = new ByteArrayInputStream(inSrc);
 		output = new ByteArrayOutputStream();
-		//°¢°¢ÀÇ ÂüÁ¶º¯¼ö¿¡ Å¸ÀÔ¿¡ ¸Â´Â °´Ã¼¸¦ »ı¼ºÇÏ¿© ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ¿´´Ù.(inputÀº ¸Å°³º¯¼ö·Î inSrc¸¦ ¹Ş¾Æ¼­ °´Ã¼¸¦ »ı¼º)
+		//ê°ê°ì˜ ì°¸ì¡°ë³€ìˆ˜ì— íƒ€ì…ì— ë§ëŠ” ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ì£¼ì†Œê°’ì„ ì €ì¥í•˜ì˜€ë‹¤.(inputì€ ë§¤ê°œë³€ìˆ˜ë¡œ inSrcë¥¼ ë°›ì•„ì„œ ê°ì²´ë¥¼ ìƒì„±)
 		
 		
 		System.out.println("input : " + Arrays.toString(inSrc));
-		//inputÀÇ ³»¿ëÀ» Ãâ·ÂÇÏµÇ inSrc°¡ °¡¸®Å°´Â ¹è¿­À» ¹®ÀÚ¿­·Î ¹Ù²ã Ãâ·Â
+		//inputì˜ ë‚´ìš©ì„ ì¶œë ¥í•˜ë˜ inSrcê°€ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì„ ë¬¸ìì—´ë¡œ ë°”ê¿” ì¶œë ¥
 		
-		try {	//while¹®¿¡¼­ ¿¹¿Ü°¡ ¹ß»ıÇÒ ¼ö ÀÖ±â¿¡ try/catch ¹®ÀåÀ¸·Î °¨½ÎµÎ¾ú´Ù.
-			while(input.available() > 0) {	//available()¸Ş¼­µå´Â ÇöÀç ÀĞÀ» ¼ö ÀÖ´Â ¹ÙÀÌÆ®¸¦ ¹İÈ¯ÇÏ´Âµ¥ Á¶°Ç½Ä ¾ÈÀÇ ÀÇ¹Ì´Â ÀĞÀ»¼ö ÀÖ´Â ¹ÙÀÌÆ®°¡ ÀÖ´Ù¸é°ú µ¿ÀÏÇÑ °á°ú¸¦ ¾ò´Â´Ù.
-				input.read(temp);	//input¿¡ ÀúÀåµÈ ¹è¿­ÀÇ ³»¿ëÀ» temp¿¡ ¼øÂ÷ÀûÀ¸·Î ÀúÀåÇÑ´Ù.
-				output.write(temp);	//temp¿¡ ÀúÀåµÈ ¹è¿­ÀÇ ³»¿ëÀ» output¿¡ ÀúÀåÇÑ´Ù.
+		try {	//whileë¬¸ì—ì„œ ì˜ˆì™¸ê°€ ë°œìƒí•  ìˆ˜ ìˆê¸°ì— try/catch ë¬¸ì¥ìœ¼ë¡œ ê°ì‹¸ë‘ì—ˆë‹¤.
+			while(input.available() > 0) {	//available()ë©”ì„œë“œëŠ” í˜„ì¬ ì½ì„ ìˆ˜ ìˆëŠ” ë°”ì´íŠ¸ë¥¼ ë°˜í™˜í•˜ëŠ”ë° ì¡°ê±´ì‹ ì•ˆì˜ ì˜ë¯¸ëŠ” ì½ì„ìˆ˜ ìˆëŠ” ë°”ì´íŠ¸ê°€ ìˆë‹¤ë©´ê³¼ ë™ì¼í•œ ê²°ê³¼ë¥¼ ì–»ëŠ”ë‹¤.
+				input.read(temp);	//inputì— ì €ì¥ëœ ë°°ì—´ì˜ ë‚´ìš©ì„ tempì— ìˆœì°¨ì ìœ¼ë¡œ ì €ì¥í•œë‹¤.
+				output.write(temp);	//tempì— ì €ì¥ëœ ë°°ì—´ì˜ ë‚´ìš©ì„ outputì— ì €ì¥í•œë‹¤.
 				//System.out.println("temp : " + Arrays.toString(temp));
 				
-				outSrc = output.toByteArray();	//null °ªÀ¸·Î ¼³Á¤ÇÑ outSrc¿¡ outputÀÇ µ¥ÀÌÅÍ¸¦ ¹è¿­·Î ¹Ù²Ù¾î ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ¿´´Ù.
-				printArrays(temp, outSrc);	//ÇÏ´Ü¿¡ Á¤ÀÇÇÑ ¸Ş¼­µå¸¦ ÅëÇÏ¿© ¹è¿­À» ¹®ÀÚ¿­·Î Ãâ·ÂÇÑ´Ù.
-				//tempÀÇ ±æÀÌ°¡ 4ÀÌ¹Ç·Î ¹İº¹ ½ÃÇà½Ã 0~9 ±îÁöÀÇ 10°³ÀÇ ¼ıÀÚ°¡ 4¾¿ ²÷¾îÁ®¼­ temp¿¡ ÀúÀåµÇ°í, 4¾¿ output¿¡ Ãß°¡°¡ µÈ´Ù.
-				//ÇÏÁö¸¸ ¸¶Áö¸· tempÀÇ Ãâ·Â ³»¿ëÀ» º¸¸é 8,9¿¡¼­ ³¡³ª´Â °ÍÀÌ ¾Æ´Ï¶ó 8,9,6,7, ·Î Ãâ·ÂÀÌ µÇ´Âµ¥
-				//ÀÌ´Â tempÀÇ ³»¿ëÀ» ¹İº¹¸¶´Ù »õ·Î ¾²´Â°ÍÀÌ ¾Æ´Ï¶ó µ¤¾î¾º¿ì´Â °ÍÀÌ±â¿¡ ±âÁ¸ÀÇ 4,5,6,7ÀÇ µŞÀÚ¸®°¡ ³²°Ô µÇ´Â °ÍÀÌ´Ù.
+				outSrc = output.toByteArray();	//null ê°’ìœ¼ë¡œ ì„¤ì •í•œ outSrcì— outputì˜ ë°ì´í„°ë¥¼ ë°°ì—´ë¡œ ë°”ê¾¸ì–´ ì£¼ì†Œê°’ì„ ì €ì¥í•˜ì˜€ë‹¤.
+				printArrays(temp, outSrc);	//í•˜ë‹¨ì— ì •ì˜í•œ ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ ë°°ì—´ì„ ë¬¸ìì—´ë¡œ ì¶œë ¥í•œë‹¤.
+				//tempì˜ ê¸¸ì´ê°€ 4ì´ë¯€ë¡œ ë°˜ë³µ ì‹œí–‰ì‹œ 0~9 ê¹Œì§€ì˜ 10ê°œì˜ ìˆ«ìê°€ 4ì”© ëŠì–´ì ¸ì„œ tempì— ì €ì¥ë˜ê³ , 4ì”© outputì— ì¶”ê°€ê°€ ëœë‹¤.
+				//í•˜ì§€ë§Œ ë§ˆì§€ë§‰ tempì˜ ì¶œë ¥ ë‚´ìš©ì„ ë³´ë©´ 8,9ì—ì„œ ëë‚˜ëŠ” ê²ƒì´ ì•„ë‹ˆë¼ 8,9,6,7, ë¡œ ì¶œë ¥ì´ ë˜ëŠ”ë°
+				//ì´ëŠ” tempì˜ ë‚´ìš©ì„ ë°˜ë³µë§ˆë‹¤ ìƒˆë¡œ ì“°ëŠ”ê²ƒì´ ì•„ë‹ˆë¼ ë®ì–´ì”Œìš°ëŠ” ê²ƒì´ê¸°ì— ê¸°ì¡´ì˜ 4,5,6,7ì˜ ë’·ìë¦¬ê°€ ë‚¨ê²Œ ë˜ëŠ” ê²ƒì´ë‹¤.
 				
-				//ÀÌ¸¦ ÇØ°áÇÏ±â À§ÇØ¼­´Â input.read(temp); output.write(temp);ÀÇ ³»¿ëÀ» 
-				//int len = input.read(temp); output.write(temp, 0, len); À¸·Î ¹Ù²Ù¾î µ¥ÀÌÅÍ°¡ ÀÖÀ»¶§±îÁöÀÇ ±æÀÌ¸¦ ¼³Á¤ÇØ ÁÖ¾î write()¿¡ ¸Å°³º¯¼ö·Î ³Ö¾îÁÖ¸é µÈ´Ù.
+				//ì´ë¥¼ í•´ê²°í•˜ê¸° ìœ„í•´ì„œëŠ” input.read(temp); output.write(temp);ì˜ ë‚´ìš©ì„ 
+				//int len = input.read(temp); output.write(temp, 0, len); ìœ¼ë¡œ ë°”ê¾¸ì–´ ë°ì´í„°ê°€ ìˆì„ë•Œê¹Œì§€ì˜ ê¸¸ì´ë¥¼ ì„¤ì •í•´ ì£¼ì–´ write()ì— ë§¤ê°œë³€ìˆ˜ë¡œ ë„£ì–´ì£¼ë©´ ëœë‹¤.
 			}
 		}catch(Exception ex) {
 			ex.printStackTrace();
@@ -44,7 +44,7 @@ public class IOEx3 {
 		
 	}
 	
-	static void printArrays(byte [] temp, byte [] outSrc) {	//static ¸Ş¼­µå·Î ¸Ş¸ğ¸®¿¡ Å¬·¡½º°¡ ¿Ã¶ó°¥¶§ ½ÇÇàµÇ¾î °´Ã¼ÀÇ »ı¼º ¾øÀÌ »ç¿ëÀÌ °¡´ÉÇÏ´Ù.
+	static void printArrays(byte [] temp, byte [] outSrc) {	//static ë©”ì„œë“œë¡œ ë©”ëª¨ë¦¬ì— í´ë˜ìŠ¤ê°€ ì˜¬ë¼ê°ˆë•Œ ì‹¤í–‰ë˜ì–´ ê°ì²´ì˜ ìƒì„± ì—†ì´ ì‚¬ìš©ì´ ê°€ëŠ¥í•˜ë‹¤.
 		System.out.println("temp : " + Arrays.toString(temp));
 		System.out.println("Output Source : " + Arrays.toString(outSrc));
 	}

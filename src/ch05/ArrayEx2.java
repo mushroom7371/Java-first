@@ -1,4 +1,4 @@
-package ch05;
+﻿package ch05;
 import java.util.Arrays;
 public class ArrayEx2 {
 

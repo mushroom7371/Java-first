@@ -1,4 +1,4 @@
-package IOStream;
+ï»¿package IOStream;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -8,25 +8,25 @@ public class IOEx1 {
 	public static void main(String[] args) {
 		byte [] inSrc = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 		byte [] outSrc = null;
-		//byte ¹è¿­ Å¸ÀÔÀ» ÀúÀåÇÏ´Â ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í inSrc¿¡´Â {}; ¾ÈÀÇ ³»¿ëÀ¸·Î ÃÊ±âÈ­, outputÀº null ·Î ÃÊ±âÈ­ÇÑ´Ù.
+		//byte ë°°ì—´ íƒ€ì…ì„ ì €ì¥í•˜ëŠ” ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  inSrcì—ëŠ” {}; ì•ˆì˜ ë‚´ìš©ìœ¼ë¡œ ì´ˆê¸°í™”, outputì€ null ë¡œ ì´ˆê¸°í™”í•œë‹¤.
 		
 		ByteArrayInputStream input = null;
 		ByteArrayOutputStream output = null;
-		//¹ÙÀÌÆ®¹è¿­ÀÇ µ¥ÀÌÅÍ¸¦ ÀÔ/Ãâ·Â ÇÏ´Âµ¥ »ç¿ëµÇ´Â ½ºÆ®¸² Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í null·Î ÃÊ±âÈ­ ÇÑ´Ù.
+		//ë°”ì´íŠ¸ë°°ì—´ì˜ ë°ì´í„°ë¥¼ ì…/ì¶œë ¥ í•˜ëŠ”ë° ì‚¬ìš©ë˜ëŠ” ìŠ¤íŠ¸ë¦¼ íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  nullë¡œ ì´ˆê¸°í™” í•œë‹¤.
 		
-		input = new ByteArrayInputStream(inSrc);	//¸Å°³º¯¼ö·Î inScr¸¦ ¹Ş´Â °´Ã¼¸¦ »ı¼ºÇÏ¿© ÁÖ¼Ò¸¦ ÂüÁ¶º¯¼ö¿¡ ÀúÀåÇÑ´Ù.
-		output = new ByteArrayOutputStream();	//Å¬·¡½º·Î ºÎÅÍ ¸Å°³º¯¼ö°¡ ¾øÀÌ °´Ã¼¸¦ »ı¼ºÇÏ¿© ÁÖ¼Ò¸¦ ÂüÁ¶º¯¼ö¿¡ ÀúÀåÇÑ´Ù.
+		input = new ByteArrayInputStream(inSrc);	//ë§¤ê°œë³€ìˆ˜ë¡œ inScrë¥¼ ë°›ëŠ” ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ì£¼ì†Œë¥¼ ì°¸ì¡°ë³€ìˆ˜ì— ì €ì¥í•œë‹¤.
+		output = new ByteArrayOutputStream();	//í´ë˜ìŠ¤ë¡œ ë¶€í„° ë§¤ê°œë³€ìˆ˜ê°€ ì—†ì´ ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ì£¼ì†Œë¥¼ ì°¸ì¡°ë³€ìˆ˜ì— ì €ì¥í•œë‹¤.
 		
-		int data = 0;	//Á¤¼öÅ¸ÀÔ º¯¼ö¸¦ ¼±¾ğ ÈÄ 0À¸·Î ÃÊ±âÈ­
+		int data = 0;	//ì •ìˆ˜íƒ€ì… ë³€ìˆ˜ë¥¼ ì„ ì–¸ í›„ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 		
-		while((data = input.read()) != -1) {	//¹İº¹À» ½ÃÇàÇÏ¿© º¯¼ö data¿¡ input¿¡ read()¸Ş¼­µå·Î ÀĞ¾î¿Ã °ªÀÌ ÀÖ´Ù¸é( ÀĞ¾î¿Ã µ¥ÀÌÅÍ°¡ ¾øÀ¸¸é -1À» ¹İÈ¯ÇÑ´Ù.)
-			output.write(data);	//±× µ¥ÀÌÅÍ¸¦ outputÀÇ write()¸Ş¼­µå¸¦ ÅëÇÏ¿© outputÀÌ °¡¸®Å°´Â °´Ã¼¿¡ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÑ´Ù.
+		while((data = input.read()) != -1) {	//ë°˜ë³µì„ ì‹œí–‰í•˜ì—¬ ë³€ìˆ˜ dataì— inputì— read()ë©”ì„œë“œë¡œ ì½ì–´ì˜¬ ê°’ì´ ìˆë‹¤ë©´( ì½ì–´ì˜¬ ë°ì´í„°ê°€ ì—†ìœ¼ë©´ -1ì„ ë°˜í™˜í•œë‹¤.)
+			output.write(data);	//ê·¸ ë°ì´í„°ë¥¼ outputì˜ write()ë©”ì„œë“œë¥¼ í†µí•˜ì—¬ outputì´ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì— ë°ì´í„°ë¥¼ ì €ì¥í•œë‹¤.
 		}
 		
-		outSrc = output.toByteArray();	//output¿¡ ÀúÀåµÈ °´Ã¼¸¦ Byte ¹è¿­·Î ¹İÈ¯ÇÏ¿© outSrc°¡ °¡¸®Å°´Â ¹è¿­¿¡ ÀúÀå
+		outSrc = output.toByteArray();	//outputì— ì €ì¥ëœ ê°ì²´ë¥¼ Byte ë°°ì—´ë¡œ ë°˜í™˜í•˜ì—¬ outSrcê°€ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì— ì €ì¥
 		
 		System.out.println("Input Source : " + Arrays.toString(inSrc));
 		System.out.println("OutPut Source : " + Arrays.toString(outSrc));
-		//À§ÀÇ °úÁ¤À¸·Î º¹»çµÈ ³»¿ëÀ» Ãâ·ÂÇÑ´Ù.
+		//ìœ„ì˜ ê³¼ì •ìœ¼ë¡œ ë³µì‚¬ëœ ë‚´ìš©ì„ ì¶œë ¥í•œë‹¤.
 	}
 }

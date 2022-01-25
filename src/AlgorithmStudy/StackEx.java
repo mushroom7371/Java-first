@@ -1,4 +1,4 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.io.InputStream;
 import java.util.Scanner;
@@ -7,51 +7,51 @@ public class StackEx {
 	private int maxSize;
 	private int top;
 	private Object [] stackArray;
-	//½ºÅÃ °´Ã¼¸¦ »ý¼º ½Ã ÇÊ¿äÇÑ º¯¼ö Á¤ÀÇ Å©±â, ÃÖ»ó´Ü, ÀÔ·ÂÇÒ µ¥ÀÌÅÍµîÀ» Á¤ÀÇÇÏ¿´À½
+	//ìŠ¤íƒ ê°ì²´ë¥¼ ìƒì„± ì‹œ í•„ìš”í•œ ë³€ìˆ˜ ì •ì˜ í¬ê¸°, ìµœìƒë‹¨, ìž…ë ¥í•  ë°ì´í„°ë“±ì„ ì •ì˜í•˜ì˜€ìŒ
 	
 	public StackEx(int maxSize){
 		this.maxSize = maxSize;
 		this.stackArray = new Object[maxSize];
 		this.top = -1;
-		//»ý¼ºÀÚ¸¦ ÅëÇØ¼­ °´Ã¼ »ý¼º½Ã Å¬·¡½º¿¡ Á¤ÀÇÇÑ º¯¼ö¿¡ À§¿Í °°Àº Á¤º¸·Î »ý¼ºÇÔ
-		//this.top ÀÌ -1ÀÎ °ÍÀº ºó ½ºÅÃÀÇ °æ¿ì ¹øÁö°¡ -1ÀÌ±â ¶§¹®
+		//ìƒì„±ìžë¥¼ í†µí•´ì„œ ê°ì²´ ìƒì„±ì‹œ í´ëž˜ìŠ¤ì— ì •ì˜í•œ ë³€ìˆ˜ì— ìœ„ì™€ ê°™ì€ ì •ë³´ë¡œ ìƒì„±í•¨
+		//this.top ì´ -1ì¸ ê²ƒì€ ë¹ˆ ìŠ¤íƒì˜ ê²½ìš° ë²ˆì§€ê°€ -1ì´ê¸° ë•Œë¬¸
 		
 	}
 	
 	public boolean empty() {
 		return (top == -1);
 	}
-	//½ºÅÃÀÌ ºñ¾îÀÖ´Ù¸é ¾Æ¹«°Íµµ ¾ø±â¿¡ ÃÊ±â°ªÀÎ -1·Î ¼³Á¤
+	//ìŠ¤íƒì´ ë¹„ì–´ìžˆë‹¤ë©´ ì•„ë¬´ê²ƒë„ ì—†ê¸°ì— ì´ˆê¸°ê°’ì¸ -1ë¡œ ì„¤ì •
 	
 	public boolean full() {
 		return (top == maxSize-1);
 	}
-	//½ºÅÃÀÌ °¡µæ Ã¡´Ù¸é topÀ» °´Ã¼ »ý¼º½Ã ÃÖÃÊ Å©±â·Î ¼³Á¤
+	//ìŠ¤íƒì´ ê°€ë“ ì°¼ë‹¤ë©´ topì„ ê°ì²´ ìƒì„±ì‹œ ìµœì´ˆ í¬ê¸°ë¡œ ì„¤ì •
 	
 	public boolean push(Object item) {
 		if(full()) {
 			System.out.println("stack full!");
 			return false;
 		}
-		//½ºÅÃÀÌ °¡µæÃ¡´Ù¸é ¹ÝÈ¯°ªÀ» false·Î ÇÏ°í ¾Æ¹«°Íµµ ÇÏÁö ¾Ê´Â´Ù.
+		//ìŠ¤íƒì´ ê°€ë“ì°¼ë‹¤ë©´ ë°˜í™˜ê°’ì„ falseë¡œ í•˜ê³  ì•„ë¬´ê²ƒë„ í•˜ì§€ ì•ŠëŠ”ë‹¤.
 		stackArray[++top] = item;
 		return true;
-		//°ø°£ÀÌ ³²¾ÆÀÖ´Ù¸é topÀÇ °ªÀ» ¸ÕÀú Áõ°¡½ÃÅ²ÈÄ ±× ¹øÁö¼öÀÇ ÁÖ¼Ò °ªÀ» ¸Å°³º¯¼ö·Î µé¾î¿Â itemÀÇ ÁÖ¼Ò·Î ÀúÀåÇÑ´Ù.
+		//ê³µê°„ì´ ë‚¨ì•„ìžˆë‹¤ë©´ topì˜ ê°’ì„ ë¨¼ì € ì¦ê°€ì‹œí‚¨í›„ ê·¸ ë²ˆì§€ìˆ˜ì˜ ì£¼ì†Œ ê°’ì„ ë§¤ê°œë³€ìˆ˜ë¡œ ë“¤ì–´ì˜¨ itemì˜ ì£¼ì†Œë¡œ ì €ìž¥í•œë‹¤.
 	}
 	
 	public Object pop() {
 		if(empty()) {
 			System.out.println("stack empty!");
 			return null;
-		//½ºÅÃÀÌ ºñ¾îÀÖ´Ù¸é ¾Æ¹«°Íµµ ÇÏÁö ¾Ê´Â´Ù.
+		//ìŠ¤íƒì´ ë¹„ì–´ìžˆë‹¤ë©´ ì•„ë¬´ê²ƒë„ í•˜ì§€ ì•ŠëŠ”ë‹¤.
 		}else {
 			Object item = stackArray[top];
 			stackArray[top] = null;
 			top--;
 			return item;
 		}
-		//½ºÅÃ¿¡ °ªÀÌ ÀúÀåµÇ¾îÀÖ´Ù¸é Object Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¿¡ ÇØ´ç½ºÅÃÀÇ ÃÖ»óÀ§ ÁÖ¼Ò¸¦ ÀúÀåÇÏ°í,
-		//ÇØ´ç ½ºÅÃÀÇ ÁÖ¼Ò°ªÀ» ÃÊ±âÈ­ ÇÑÈÄ ÇØ´ç ¹øÁö¼ö¸¦ °¨¼Ò½ÃÅ²´Ù.
+		//ìŠ¤íƒì— ê°’ì´ ì €ìž¥ë˜ì–´ìžˆë‹¤ë©´ Object íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ì— í•´ë‹¹ìŠ¤íƒì˜ ìµœìƒìœ„ ì£¼ì†Œë¥¼ ì €ìž¥í•˜ê³ ,
+		//í•´ë‹¹ ìŠ¤íƒì˜ ì£¼ì†Œê°’ì„ ì´ˆê¸°í™” í•œí›„ í•´ë‹¹ ë²ˆì§€ìˆ˜ë¥¼ ê°ì†Œì‹œí‚¨ë‹¤.
 	}
 	
 	public void stackPrint(StackEx stackEx) {
@@ -59,7 +59,7 @@ public class StackEx {
 			for(int i = top; i <= top; i--) {
 				if(i == -1)
 					break;
-				//½ºÅÃÀÇ °ªÀº FILOÀ¸·Î ¸Ç ¸¶Áö¸· ¼ø¼­ºÎÅÍ Ãâ·ÂÀ» ½Ç½ÃÇÏ°Ô µÈ´Ù.
+				//ìŠ¤íƒì˜ ê°’ì€ FILOìœ¼ë¡œ ë§¨ ë§ˆì§€ë§‰ ìˆœì„œë¶€í„° ì¶œë ¥ì„ ì‹¤ì‹œí•˜ê²Œ ëœë‹¤.
 				System.out.println("| " + stackEx.stackArray[i] + " |");
 				System.out.println("----------");
 			}
@@ -72,15 +72,15 @@ public class StackEx {
 		System.out.println("1. push");
 		System.out.println("2. pop");
 		System.out.println("3. STACK");
-		System.out.println("Q. Á¾·á");
+		System.out.println("Q. ì¢…ë£Œ");
 	}
-	//´Ü¼ø ¸Þ´º Ãâ·Â ¸Þ¼­µå
+	//ë‹¨ìˆœ ë©”ë‰´ ì¶œë ¥ ë©”ì„œë“œ
 	
 	public static void main(String[] args) {
 		InputStream a = System.in;
 		Scanner sc = new Scanner(a);
 		
-		System.out.println("½ºÅÃ size ÀÔ·Â : ");
+		System.out.println("ìŠ¤íƒ size ìž…ë ¥ : ");
 		int size = sc.nextInt();
 		StackEx arrayStack = new StackEx(size);
 		

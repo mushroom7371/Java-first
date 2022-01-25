@@ -1,24 +1,24 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.*;
 
 public class Bingo {
 
 	public static void main(String[] args) {
-		Set set = new HashSet();	//Set Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í ¿©±â¿¡ HashSetÅ¬·¡½º·ÎºÎÅÍ ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÑ ÈÄ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
+		Set set = new HashSet();	//Set íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ì—¬ê¸°ì— HashSetí´ë˜ìŠ¤ë¡œë¶€í„° ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•œ í›„ ì£¼ì†Œê°’ì„ ì €ì¥í•œë‹¤.
 		
-		int [][] board = new int[5][5];	//int Å¸ÀÔÀÇ Å©±â°¡ °¢°¢ 5ÀÎ 2Â÷¿ø ¹è¿­À» »ı¼ºÇÑ ÈÄ ÂüÁ¶º¯¼ö board¿¡ ÁÖ¼Ò¸¦ ÀúÀåÇÑ´Ù.
+		int [][] board = new int[5][5];	//int íƒ€ì…ì˜ í¬ê¸°ê°€ ê°ê° 5ì¸ 2ì°¨ì› ë°°ì—´ì„ ìƒì„±í•œ í›„ ì°¸ì¡°ë³€ìˆ˜ boardì— ì£¼ì†Œë¥¼ ì €ì¥í•œë‹¤.
 		
-		for(int i = 0; set.size() < 25; i++) {	//setÀÌ °¡¸®Å°´Â ÀÎ½ºÅÏ½ºÀÇ ±æÀÌ¸¸Å­ ¹İº¹ÇÑ´Ù. 2Â÷¿ø ¹è¿­ÀÌ¹Ç·Î 0¹øÁö 0¹øÁö~4¹øÁö, 1¹øÁö~0~4¹øÁö ½ÄÀ¸·Î 25¹øÀ» ¹İº¹
-			set.add((int)(Math.random()*50)+1 + "");	//setÀÇ ÀÎ½ºÅÏ½º¿¡ ³­¼ö°ªÀ» ÀúÀåÇÏ´Âµ¥ 1~50±îÁöÀÇ ¼ö¸¦ ÀÓÀÇ·Î ÀúÀåÇÑ´Ù.
+		for(int i = 0; set.size() < 25; i++) {	//setì´ ê°€ë¦¬í‚¤ëŠ” ì¸ìŠ¤í„´ìŠ¤ì˜ ê¸¸ì´ë§Œí¼ ë°˜ë³µí•œë‹¤. 2ì°¨ì› ë°°ì—´ì´ë¯€ë¡œ 0ë²ˆì§€ 0ë²ˆì§€~4ë²ˆì§€, 1ë²ˆì§€~0~4ë²ˆì§€ ì‹ìœ¼ë¡œ 25ë²ˆì„ ë°˜ë³µ
+			set.add((int)(Math.random()*50)+1 + "");	//setì˜ ì¸ìŠ¤í„´ìŠ¤ì— ë‚œìˆ˜ê°’ì„ ì €ì¥í•˜ëŠ”ë° 1~50ê¹Œì§€ì˜ ìˆ˜ë¥¼ ì„ì˜ë¡œ ì €ì¥í•œë‹¤.
 		}
 		
-		Iterator it = set.iterator();	// ÄÃ·º¼Ç¿¡ ÀúÀåµÈ ¿ä¼Ò¸¦ ºÒ·¯¿À±â À§ÇØ Iterator Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í setÀÇ iterator() ¸Ş¼­µå¸¦ È£ÃâÇÏ¿© ÀúÀåÇÏ¿´´Ù.
+		Iterator it = set.iterator();	// ì»¬ë ‰ì…˜ì— ì €ì¥ëœ ìš”ì†Œë¥¼ ë¶ˆëŸ¬ì˜¤ê¸° ìœ„í•´ Iterator íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  setì˜ iterator() ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ì €ì¥í•˜ì˜€ë‹¤.
 		
-		for(int i = 0; i < board.length; i++) {	//1Â÷¿ø ¹è¿­ÀÇ ±æÀÌ¸¸Å­ ¹İº¹
-			for(int j = 0; j <board[i].length; j++) {	//2Â÷¿ø ¹è¿­ÀÇ ±æÀÌ¸¸Å­ ¹İº¹
-				board [i][j] = Integer.parseInt(String.valueOf(it.next())); //itÀÇ next()¸Ş¼­µå·Î String °ªÀ» ÀĞ¾î¿À°í, ÀÌ¸¦ Integer Å¸ÀÔÀ¸·Î º¯È¯ÇÏ¿© boardÀÇ ÀÎ½ºÅÏ½º¿¡ ÀúÀåÇÑ´Ù.
-				System.out.print((board[i][j] < 10 ? "  " : " ") + board[i][j]);  //Ãâ·Â
+		for(int i = 0; i < board.length; i++) {	//1ì°¨ì› ë°°ì—´ì˜ ê¸¸ì´ë§Œí¼ ë°˜ë³µ
+			for(int j = 0; j <board[i].length; j++) {	//2ì°¨ì› ë°°ì—´ì˜ ê¸¸ì´ë§Œí¼ ë°˜ë³µ
+				board [i][j] = Integer.parseInt(String.valueOf(it.next())); //itì˜ next()ë©”ì„œë“œë¡œ String ê°’ì„ ì½ì–´ì˜¤ê³ , ì´ë¥¼ Integer íƒ€ì…ìœ¼ë¡œ ë³€í™˜í•˜ì—¬ boardì˜ ì¸ìŠ¤í„´ìŠ¤ì— ì €ì¥í•œë‹¤.
+				System.out.print((board[i][j] < 10 ? "  " : " ") + board[i][j]);  //ì¶œë ¥
 			}
 			System.out.println();
 		}

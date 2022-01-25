@@ -1,6 +1,6 @@
-package programmers;
+ï»¿package programmers;
 
-//Á¸ÀçÇÏÁö ¾Ê´Â ¼ıÀÚ ´õÇÏ±â
+//ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ìˆ«ì ë”í•˜ê¸°
 class NotExistsNum {
 	private int solution(int [] numbers) {
 		int answer = 0;
@@ -9,7 +9,7 @@ class NotExistsNum {
 			answer += numbers[i];
 		}
 		
-		answer = 45 - answer;	//0~9±îÁöÀÇ ÇÕÀº 45·Î °íÁ¤µÇ¾îÀÖ±â ¶§¹®
+		answer = 45 - answer;	//0~9ê¹Œì§€ì˜ í•©ì€ 45ë¡œ ê³ ì •ë˜ì–´ìˆê¸° ë•Œë¬¸
 		
 		return answer;
 	}

@@ -1,23 +1,23 @@
-package Study;
+ï»¿package Study;
 
 public class LogicalOperatorExam {
-	public boolean isAgeTwenties(int age) { //³í¸®Çü °ªÀ» ¹İÈ¯¹Ş°í ¸Å°³º¯¼ö·Î Á¤¼öÇü °ªÀ» °¡Áö´Â ¸Ş¼­µå¸¦ ¼±¾ğ
-		boolean isTwenties = false;			//³í¸®Çü º¯¼ö¸¦ ¼±¾ğÇÏ°í ÃÊ±âÈ­ÇÑ´Ù ÀÌ¶§ º¯¼ö´Â Áö¿ªº¯¼ö
+	public boolean isAgeTwenties(int age) { //ë…¼ë¦¬í˜• ê°’ì„ ë°˜í™˜ë°›ê³  ë§¤ê°œë³€ìˆ˜ë¡œ ì •ìˆ˜í˜• ê°’ì„ ê°€ì§€ëŠ” ë©”ì„œë“œë¥¼ ì„ ì–¸
+		boolean isTwenties = false;			//ë…¼ë¦¬í˜• ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ì´ˆê¸°í™”í•œë‹¤ ì´ë•Œ ë³€ìˆ˜ëŠ” ì§€ì—­ë³€ìˆ˜
 		
-		if( age >= 20 && age < 30) {		//Á¶°Ç¹®ÀÇ Á¶°Ç½Ä¿¡ ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¿© ¸Å°³º¯¼öÀÇ Á¶°ÇÀ» ÀÔ·ÂÇÑ´Ù
-			isTwenties = true;				//Á¶°ÇÀÌ ÂüÀÏ¶§ º¯¼ö¸¦ true·Î º¯°æ
+		if( age >= 20 && age < 30) {		//ì¡°ê±´ë¬¸ì˜ ì¡°ê±´ì‹ì— ì—°ì‚°ìë¥¼ ì´ìš©í•˜ì—¬ ë§¤ê°œë³€ìˆ˜ì˜ ì¡°ê±´ì„ ì…ë ¥í•œë‹¤
+			isTwenties = true;				//ì¡°ê±´ì´ ì°¸ì¼ë•Œ ë³€ìˆ˜ë¥¼ trueë¡œ ë³€ê²½
 		}
-		else {								//Á¶°ÇÀÌ ÂüÀÌ ¾Æ´Ò¶§
-			isTwenties = false;				//º¯¼ö¸¦ false·Î º¯°æ
+		else {								//ì¡°ê±´ì´ ì°¸ì´ ì•„ë‹ë•Œ
+			isTwenties = false;				//ë³€ìˆ˜ë¥¼ falseë¡œ ë³€ê²½
 		}
 			
-		return isTwenties;					//if¹®ÀÇ °á°ú·Î º¯¼ö¿¡ ÀúÀåµÈ °ªÀ» ¸Ş¼­µåÀÇ ¹İÈ¯°ªÀ¸·Î ¹İÈ¯
+		return isTwenties;					//ifë¬¸ì˜ ê²°ê³¼ë¡œ ë³€ìˆ˜ì— ì €ì¥ëœ ê°’ì„ ë©”ì„œë“œì˜ ë°˜í™˜ê°’ìœ¼ë¡œ ë°˜í™˜
 	}
 	
 	public static void main(String [] args) {
-		LogicalOperatorExam exam = new LogicalOperatorExam();	//Å¬·¡½º·Î ºÎÅÍ ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÏ°í ÁÖ¼Ò°ªÀ» ÂüÁ¶º¯¼ö¿¡ ÀúÀå
+		LogicalOperatorExam exam = new LogicalOperatorExam();	//í´ë˜ìŠ¤ë¡œ ë¶€í„° ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ê³  ì£¼ì†Œê°’ì„ ì°¸ì¡°ë³€ìˆ˜ì— ì €ì¥
 		
-		exam.isAgeTwenties(29);	//»ı¼ºµÈ ÀÎ½ºÅÏ½ºÀÇ ¸Ş¼­µå¸¦ È£ÃâÇÏ°í ¸Å°³º¯¼ö¿¡ °ªÀ» ÀÔ·Â
+		exam.isAgeTwenties(29);	//ìƒì„±ëœ ì¸ìŠ¤í„´ìŠ¤ì˜ ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ê³  ë§¤ê°œë³€ìˆ˜ì— ê°’ì„ ì…ë ¥
 		exam.isAgeTwenties(30);
 		
 	}

@@ -1,4 +1,4 @@
-package Practice;
+ï»¿package Practice;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -9,22 +9,22 @@ public class StackQueueEx {
 		Stack st = new Stack();
 		Queue q = new LinkedList();
 		
-		st.push("0"); //Stack stÀÇ push·Î µ¥ÀÌÅÍ¸¦ ÀúÀåÇÑ´Ù.
+		st.push("0"); //Stack stì˜ pushë¡œ ë°ì´í„°ë¥¼ ì €ì¥í•œë‹¤.
 		st.push("1");
 		st.push("2");
 		
-		q.offer("0"); //Queue qÀÇ offer·Î µ¥ÀÌÅÍ¸¦ ÀúÀåÇÑ´Ù.
+		q.offer("0"); //Queue qì˜ offerë¡œ ë°ì´í„°ë¥¼ ì €ì¥í•œë‹¤.
 		q.offer("1");
 		q.offer("2");
 		
 		System.out.println(" = Stack = ");
 		while(!st.empty()) {
-			System.out.println(st.pop());	//Stack stÀÇ pop()·Î ÃßÃâÇÑ´Ù.
+			System.out.println(st.pop());	//Stack stì˜ pop()ë¡œ ì¶”ì¶œí•œë‹¤.
 		}
 		
 		System.out.println(" = Queue = ");
 		while(!q.isEmpty()) {
-			System.out.println(q.poll());	//Queue qÀÇ poll()·Î ÃßÃâÇÑ´Ù.
+			System.out.println(q.poll());	//Queue qì˜ poll()ë¡œ ì¶”ì¶œí•œë‹¤.
 		}
 	}
 }

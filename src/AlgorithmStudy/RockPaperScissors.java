@@ -1,4 +1,4 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.util.Scanner;
 
@@ -12,34 +12,34 @@ public class RockPaperScissors {
 		String scom = null;
 		
 		if(com == 1 ) {
-			scom = "°¡À§";
+			scom = "ê°€ìœ„";
 		}else if(com == 2) {
-			scom = "¹ÙÀ§";
+			scom = "ë°”ìœ„";
 		}else if(com == 3) {
-			scom = "º¸";
+			scom = "ë³´";
 		}
 				
 		do {
-			System.out.print("°¡À§, ¹ÙÀ§, º¸ Áß ÇÏ³ª¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä. ");
+			System.out.print("ê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”. ");
 			suser = sc.next();
 			
-			if(suser.equals("°¡À§")) {
+			if(suser.equals("ê°€ìœ„")) {
 				user = 1;
-			}else if(suser.equals("¹ÙÀ§")) {
+			}else if(suser.equals("ë°”ìœ„")) {
 				user = 2;
-			}else if(suser.equals("º¸")) {
+			}else if(suser.equals("ë³´")) {
 				user = 3;
 			}
 			
-		}while(!(suser.equals("°¡À§") || suser.equals("¹ÙÀ§") || suser.equals("º¸")));
-			System.out.println("ÄÄÇ»ÅÍ´Â " + scom + " ÀÔ´Ï´Ù.");
+		}while(!(suser.equals("ê°€ìœ„") || suser.equals("ë°”ìœ„") || suser.equals("ë³´")));
+			System.out.println("ì»´í“¨í„°ëŠ” " + scom + " ì…ë‹ˆë‹¤.");
 		
 		if(user == com) {
-			System.out.println("ºñ°å½À´Ï´Ù.");
+			System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 		}else if((user - com) == 1 || (user - com) == -2 ) {
-			System.out.println("´ç½ÅÀÌ ÀÌ°å½À´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤.");
 		}else if((user - com) == -1 || (user - com) == 2) {
-			System.out.println("´ç½ÅÀÌ Á³½À´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì´ ì¡ŒìŠµë‹ˆë‹¤.");
 		}
 		
 	}

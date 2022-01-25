@@ -1,26 +1,26 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.Arrays;
 
-//¿¹»ê
+//ì˜ˆì‚°
 class Budget {
 	private int solution(int[] d, int budget) {
         int answer = 0;
         int sum = 0;
         
-        Arrays.sort(d);	//ºÎ¼­ÀÇ ½ÅÃ»±İ Á¤·Ä
+        Arrays.sort(d);	//ë¶€ì„œì˜ ì‹ ì²­ê¸ˆ ì •ë ¬
         
         for(int i = 0; i < d.length; i++) {
-        	sum += d[i];	//ÃÖ¼Ò ½ÅÃ»±İºÎÅÍ Â÷°îÂ÷°î ´õÇÑ´Ù.
+        	sum += d[i];	//ìµœì†Œ ì‹ ì²­ê¸ˆë¶€í„° ì°¨ê³¡ì°¨ê³¡ ë”í•œë‹¤.
         	
-        	if(sum > budget) {	//¿¹»êº¸´Ù ºÎ¼­ÀÇ ½ÅÃ»±İÀÇ ÇÕÀÌ Å©´Ù¸é
-        		answer = i;	//ÇØ´ç ¹øÁö¼ö¸¦ ÀúÀå ÈÄ ¹İº¹ ¸¶¹«¸®
+        	if(sum > budget) {	//ì˜ˆì‚°ë³´ë‹¤ ë¶€ì„œì˜ ì‹ ì²­ê¸ˆì˜ í•©ì´ í¬ë‹¤ë©´
+        		answer = i;	//í•´ë‹¹ ë²ˆì§€ìˆ˜ë¥¼ ì €ì¥ í›„ ë°˜ë³µ ë§ˆë¬´ë¦¬
         		break;
         	}
         }
         
-        if(sum <= budget) {	//¿¹»ê º¸´Ù ½ÅÃ»±İÀÇ ÇÕÀÌ Àû´Ù¸é
-        	answer = d.length;	//¹è¿­ÀÇ ±æÀÌ¸¸Å­ÀÇ ºÎ¼­¿¡ Áö¿ø°¡´É
+        if(sum <= budget) {	//ì˜ˆì‚° ë³´ë‹¤ ì‹ ì²­ê¸ˆì˜ í•©ì´ ì ë‹¤ë©´
+        	answer = d.length;	//ë°°ì—´ì˜ ê¸¸ì´ë§Œí¼ì˜ ë¶€ì„œì— ì§€ì›ê°€ëŠ¥
         }
         
         return answer;

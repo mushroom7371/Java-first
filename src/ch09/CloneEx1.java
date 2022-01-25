@@ -1,38 +1,38 @@
-package ch09;
+ï»¿package ch09;
 
-class Point implements Cloneable{	//Cloneable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½º¿¡¼­¸¸ clone()¸Þ¼­µå È£ÃâÀÌ °¡´ÉÇÏ´Ù.
+class Point implements Cloneable{	//Cloneable ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ëž˜ìŠ¤ì—ì„œë§Œ clone()ë©”ì„œë“œ í˜¸ì¶œì´ ê°€ëŠ¥í•˜ë‹¤.
 	int x, y;
 	
-	Point(int x, int y){	//»ý¼ºÀÚ¸¦ ÅëÇÏ¿© °´Ã¼ »ý¼º½Ã ¸â¹öº¯¼ö¸¦ ÀÎÀÚ°ªÀ¸·Î ÃÊ±âÈ­ÇÑ´Ù.
+	Point(int x, int y){	//ìƒì„±ìžë¥¼ í†µí•˜ì—¬ ê°ì²´ ìƒì„±ì‹œ ë©¤ë²„ë³€ìˆ˜ë¥¼ ì¸ìžê°’ìœ¼ë¡œ ì´ˆê¸°í™”í•œë‹¤.
 		this.x = x;
 		this.y = y;
 	}
 	
-	public String toString() {	//Object Å¬·¡½ºÀÇ toString() ¸Þ¼­µå¸¦ ¿À¹ö¶óÀÌµùÇÔ.
+	public String toString() {	//Object í´ëž˜ìŠ¤ì˜ toString() ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”©í•¨.
 		return "x = " + x + ", y = " + y;
 	}
 	
-	public Point clone() {	//°øº¯È¯ ¹ÝÈ¯Å¸ÀÔÀ» »ç¿ëÇØ¼­ Object Å¬·¡½ºÀÇ clone() ¸Þ¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿´´Ù. ´Ù¸¸ ¿øº» Å¬·¡½ºÀÇ Á¢±ÙÁ¦¾îÀÚÀÎ protected ¿¡¼­ publicÀ¸·Î º¯°æÇÑ´Ù.
+	public Point clone() {	//ê³µë³€í™˜ ë°˜í™˜íƒ€ìž…ì„ ì‚¬ìš©í•´ì„œ Object í´ëž˜ìŠ¤ì˜ clone() ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì˜€ë‹¤. ë‹¤ë§Œ ì›ë³¸ í´ëž˜ìŠ¤ì˜ ì ‘ê·¼ì œì–´ìžì¸ protected ì—ì„œ publicìœ¼ë¡œ ë³€ê²½í•œë‹¤.
 		Object obj = null;
 		
-		//clone() ¸Þ¼­µå¸¦ Á¤ÀÇ ÇÒ¶§´Â ²À try-catch¹®ÀåÀ¸·Î ¿¹¿ÜÃ³¸®¸¦ ÇØ¾ßµÈ´Ù. 
+		//clone() ë©”ì„œë“œë¥¼ ì •ì˜ í• ë•ŒëŠ” ê¼­ try-catchë¬¸ìž¥ìœ¼ë¡œ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•´ì•¼ëœë‹¤. 
 		try {
-			obj = super.clone();	//À§¿¡¼­ ¼±¾ðÇÑ ÂüÁ¶º¯¼ö obj´Â Á¶»óÅ¬·¡½ºÀÇ clone()¸Þ¼­µå¸¦ È£ÃâÇÏ¿© ¹ÝÈ¯µÈ °´Ã¼ÀÇ ÁÖ¼Ò¸¦ °¡¸®Å²´Ù.
+			obj = super.clone();	//ìœ„ì—ì„œ ì„ ì–¸í•œ ì°¸ì¡°ë³€ìˆ˜ objëŠ” ì¡°ìƒí´ëž˜ìŠ¤ì˜ clone()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ë°˜í™˜ëœ ê°ì²´ì˜ ì£¼ì†Œë¥¼ ê°€ë¦¬í‚¨ë‹¤.
 		}catch(CloneNotSupportedException ex) {
 			ex.printStackTrace();
 		}
 		
-		return (Point)obj;	//¹ÝÈ¯Å¸ÀÔÀ» Object¿¡¼­ Point·Î ¹Ù²å±â ¶§¹®¿¡ Çüº¯È¯À» ½Ç½ÃÇÏ¿´´Ù.
+		return (Point)obj;	//ë°˜í™˜íƒ€ìž…ì„ Objectì—ì„œ Pointë¡œ ë°”ê¿¨ê¸° ë•Œë¬¸ì— í˜•ë³€í™˜ì„ ì‹¤ì‹œí•˜ì˜€ë‹¤.
 	}
 }
 
 class CloneEx1 {
 	public static void main(String[] args) {
 		Point original = new Point(3, 5);
-		Point copy = original.clone();	//ÂüÁ¶º¯¼ö originalÀÌ °¡¸®Å°´Â °´Ã¼ÀÇ clone()¸Þ¼­µå¸¦ È£ÃâÇÏ¿© ¹ÝÈ¯µÈ °´Ã¼ÀÇ ÁÖ¼Ò°ªÀ» ÂüÁ¶º¯¼ö copy¿¡ ÀúÀåÇÑ´Ù. ¸Þ¼­µå¿¡¼­ Çüº¯È¯ÀÌ µÇ¾ú±â¿¡ µû·Î Çüº¯È¯ÀÌ ÇÊ¿ä ¾ø´Ù.
+		Point copy = original.clone();	//ì°¸ì¡°ë³€ìˆ˜ originalì´ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì˜ clone()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ë°˜í™˜ëœ ê°ì²´ì˜ ì£¼ì†Œê°’ì„ ì°¸ì¡°ë³€ìˆ˜ copyì— ì €ìž¥í•œë‹¤. ë©”ì„œë“œì—ì„œ í˜•ë³€í™˜ì´ ë˜ì—ˆê¸°ì— ë”°ë¡œ í˜•ë³€í™˜ì´ í•„ìš” ì—†ë‹¤.
 		
 		System.out.println(original);
 		System.out.println(copy);
-		//°´Ã¼³»ÀÇ ¿À¹ö¶óÀÌµù µÈ toString() ¸Þ¼­µå¸¦ È£ÃâÇÑ ¹ÝÈ¯°ª Ãâ·Â
+		//ê°ì²´ë‚´ì˜ ì˜¤ë²„ë¼ì´ë”© ëœ toString() ë©”ì„œë“œë¥¼ í˜¸ì¶œí•œ ë°˜í™˜ê°’ ì¶œë ¥
 	}
 }

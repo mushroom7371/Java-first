@@ -1,4 +1,4 @@
-package IOStream;
+ï»¿package IOStream;
 
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
@@ -9,17 +9,17 @@ class BufferedOutputStreamEx1 {
 	public static void main(String[] args) {
 		try {
 			FileOutputStream fos = new FileOutputStream("123.txt");
-			//123.txt ÆÄÀÏÀ» »ı¼ºÇÑ´Ù.
+			//123.txt íŒŒì¼ì„ ìƒì„±í•œë‹¤.
 			BufferedOutputStream bos = new BufferedOutputStream(fos, 5);
-			//ÂüÁ¶º¯¼ö bos´Â fos°¡ °¡¸®Å°´Â °´Ã¼ÀÇ Å©±â¸¦ 5·Î ¼³Á¤ÇÑ BufferdOutputStream °´Ã¼¸¦ »õ·Î »ı¼ºÇÏ¿© °¡¸®Å°µµ·Ï ÇÑ´Ù.
+			//ì°¸ì¡°ë³€ìˆ˜ bosëŠ” fosê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì˜ í¬ê¸°ë¥¼ 5ë¡œ ì„¤ì •í•œ BufferdOutputStream ê°ì²´ë¥¼ ìƒˆë¡œ ìƒì„±í•˜ì—¬ ê°€ë¦¬í‚¤ë„ë¡ í•œë‹¤.
 			
 			for(int i = '1'; i <= '9'; i++) {
 				bos.write(i);
-				//1~9±îÁöÀÇ ³»¿ëÀ» ÀÛ¼º
+				//1~9ê¹Œì§€ì˜ ë‚´ìš©ì„ ì‘ì„±
 			}
 			
 			bos.close();
-			//½ºÆ®¸²À» ´İ¾ÆÁØ´Ù.
+			//ìŠ¤íŠ¸ë¦¼ì„ ë‹«ì•„ì¤€ë‹¤.
 		}catch(IOException ex) {
 			ex.printStackTrace();
 		}

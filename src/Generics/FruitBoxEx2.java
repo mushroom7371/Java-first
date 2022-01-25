@@ -1,29 +1,29 @@
-package Generics;
+ï»¿package Generics;
 
 import java.util.ArrayList;
 
-class Fruit111 implements Eatable {	//Eatable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Fruit111Å¬·¡½º¸¦ ±¸ÇöÇÏ¿´´Ù.
-	public String toString() { return "Fruit";}	//ObjectÅ¬·¡½ºÀÇ toString()¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿© "Fruit"À» ¹İÈ¯ÇÏµµ·Ï ÇÏ¿´´Ù. (¸ğµç Å¬·¡½ºÀÇ Á¶»óÀº Object Å¬·¡½º¶ó °¡´É)
+class Fruit111 implements Eatable {	//Eatable ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ Fruit111í´ë˜ìŠ¤ë¥¼ êµ¬í˜„í•˜ì˜€ë‹¤.
+	public String toString() { return "Fruit";}	//Objectí´ë˜ìŠ¤ì˜ toString()ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì—¬ "Fruit"ì„ ë°˜í™˜í•˜ë„ë¡ í•˜ì˜€ë‹¤. (ëª¨ë“  í´ë˜ìŠ¤ì˜ ì¡°ìƒì€ Object í´ë˜ìŠ¤ë¼ ê°€ëŠ¥)
 }
-class Apple111 extends Fruit111 { public String toString() { return "Apple";}}	//Apple111 Å¬·¡½º¸¦ ¼±¾ğÇÏ¿´°í Fruit111À» »ó¼Ó¹Ş¾Ò´Ù. À§ÀÇ ³»¿ëÃ³·³ Fruit111 Å¬·¡½º´Â Eatable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ¿´±â¿¡ Apple111Å¬·¡½º ¶ÇÇÑ ÀÌ ÀÎÅÍÆäÀÌ½º°¡ ±¸ÇöµÈ »óÅÂ´Ù(°¡Áö°í ÀÖ´Ù)
+class Apple111 extends Fruit111 { public String toString() { return "Apple";}}	//Apple111 í´ë˜ìŠ¤ë¥¼ ì„ ì–¸í•˜ì˜€ê³  Fruit111ì„ ìƒì†ë°›ì•˜ë‹¤. ìœ„ì˜ ë‚´ìš©ì²˜ëŸ¼ Fruit111 í´ë˜ìŠ¤ëŠ” Eatable ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ì˜€ê¸°ì— Apple111í´ë˜ìŠ¤ ë˜í•œ ì´ ì¸í„°í˜ì´ìŠ¤ê°€ êµ¬í˜„ëœ ìƒíƒœë‹¤(ê°€ì§€ê³  ìˆë‹¤)
 class Grape111 extends Fruit111 { public String toString() { return "Grape";}}
-class Toy111		          { public String toString() { return "Toy"  ;}}	//À§ÀÇ Å¬·¡½º¿Í´Â ´Ù¸£°Ô »ó¼Ó¹ŞÀº ³»¿ëÀÌ ¾ø±â¿¡ toString() ¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿© °°Àº Å¬·¡½º Ã³·³ º¸ÀÌ³ª »ç½ÇÀº ¾Æ¹« ³»¿ë ¾ø´Ù.
+class Toy111		          { public String toString() { return "Toy"  ;}}	//ìœ„ì˜ í´ë˜ìŠ¤ì™€ëŠ” ë‹¤ë¥´ê²Œ ìƒì†ë°›ì€ ë‚´ìš©ì´ ì—†ê¸°ì— toString() ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì—¬ ê°™ì€ í´ë˜ìŠ¤ ì²˜ëŸ¼ ë³´ì´ë‚˜ ì‚¬ì‹¤ì€ ì•„ë¬´ ë‚´ìš© ì—†ë‹¤.
 
-interface Eatable {}	//ÀÎÅÍÆäÀÌ½º Å¬·¡½º, ¼±¾ğ¸¸ µÇ¾î ÀÖ°í ³»¿ëÀº ¾ø´Ù.
+interface Eatable {}	//ì¸í„°í˜ì´ìŠ¤ í´ë˜ìŠ¤, ì„ ì–¸ë§Œ ë˜ì–´ ìˆê³  ë‚´ìš©ì€ ì—†ë‹¤.
 
 class FruitBoxEx2 {
 	public static void main(String[] args) {
-		FruitBox11<Fruit111> fruitBox = new FruitBox11<Fruit111>();	//FruitBox11 Å¸ÀÔÀÇ fruitBox ÂüÁ¶º¯¼ö¿¡ FruitBox11°´Ã¼¸¦ »ı¼ºÇÏ°í ÁÖ¼Ò¸¦ ÀúÀåÇÏ¿´´Ù. FuritBox11¿¡´Â Fruit111 Å¸ÀÔ¸¸ ÀúÀå°¡´ÉÇÏ°Ô Áö³×¸¯À¸·Î ¼³Á¤ÇÏ¿´´Ù
+		FruitBox11<Fruit111> fruitBox = new FruitBox11<Fruit111>();	//FruitBox11 íƒ€ì…ì˜ fruitBox ì°¸ì¡°ë³€ìˆ˜ì— FruitBox11ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì£¼ì†Œë¥¼ ì €ì¥í•˜ì˜€ë‹¤. FuritBox11ì—ëŠ” Fruit111 íƒ€ì…ë§Œ ì €ì¥ê°€ëŠ¥í•˜ê²Œ ì§€ë„¤ë¦­ìœ¼ë¡œ ì„¤ì •í•˜ì˜€ë‹¤
 		FruitBox11<Apple111> appleBox = new FruitBox11<Apple111>();
 		FruitBox11<Grape111> grapeBox = new FruitBox11<Grape111>();
-//		FruitBox11<Grape> grapeBox = new FruitBox11<Apple>(); // ¿¡·¯. Å¸ÀÔ ºÒÀÏÄ¡
-//		FruitBox11<Toy>   toyBox    = new FruitBox11<Toy>();   // ¿¡·¯. FruitBox11´Â Áö³×¸¯À» ÅëÇØ ÀúÀåµÉ °´Ã¼ÀÇ Å¸ÀÔÀ» ÁöÁ¤ÇÏ¿´±â¿¡ ÀÎÅÍÆäÀÌ½º EatableÀ» ±¸ÇöÇÑ fruit111 Å¬·¡½º¸¦ »ó¼Ó¹ŞÀº Å¸ÀÔ¸¸ »ç¿ë°¡´ÉÇÏ´Ù. ÇØ´ç ³»¿ëÀº ÇÏ´Ü¿¡ Á¤ÀÇ
+//		FruitBox11<Grape> grapeBox = new FruitBox11<Apple>(); // ì—ëŸ¬. íƒ€ì… ë¶ˆì¼ì¹˜
+//		FruitBox11<Toy>   toyBox    = new FruitBox11<Toy>();   // ì—ëŸ¬. FruitBox11ëŠ” ì§€ë„¤ë¦­ì„ í†µí•´ ì €ì¥ë  ê°ì²´ì˜ íƒ€ì…ì„ ì§€ì •í•˜ì˜€ê¸°ì— ì¸í„°í˜ì´ìŠ¤ Eatableì„ êµ¬í˜„í•œ fruit111 í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ íƒ€ì…ë§Œ ì‚¬ìš©ê°€ëŠ¥í•˜ë‹¤. í•´ë‹¹ ë‚´ìš©ì€ í•˜ë‹¨ì— ì •ì˜
 
 		fruitBox.add(new Fruit111());
 		fruitBox.add(new Apple111());
 		fruitBox.add(new Grape111());
 		appleBox.add(new Apple111());
-//		appleBox.add(new Grape());  // ¿¡·¯. Grape´Â AppleÀÇ ÀÚ¼ÕÀÌ ¾Æ´Ô
+//		appleBox.add(new Grape());  // ì—ëŸ¬. GrapeëŠ” Appleì˜ ìì†ì´ ì•„ë‹˜
 		grapeBox.add(new Grape111());
 
 		System.out.println("fruitBox-"+fruitBox);
@@ -33,12 +33,12 @@ class FruitBoxEx2 {
 }
 
 class FruitBox11<T extends Fruit111 & Eatable> extends Box111<T> {}
-//FruitBox11 Å¬·¡½º¿¡´Â TÅ¸ÀÔ¸¸ ÀúÀåÇÒ¼ö ÀÖÀ¸³ª TÅ¸ÀÔÀº Fruit111 Å¬·¡½º¿Í Eatable ÀÎÅÍÆäÀÌ½º¸¦ and¿¬»êÀÚ·Î ÅëÇÏ¿© »ó¼Ó¹ŞÀ¸¹Ç·Î µÎ°³¸¦ µ¿½Ã¿¡ ¸¸Á·ÇÏ´Â Å¸ÀÔÀÌ µé¾î°£´Ù.
-//ÀÌ¶§ EatableÀº ÀÎÅÍÆäÀÌ½ºÁö¸¸ implements¸¦ »ç¿ëÇÑ °ÍÀÌ ¾Æ´Ñ°Ô Æ¯ÀÌÁ¡ÀÓ. ¶ÇÇÑ FruitBox11Å¬·¡½º ÀÚÃ¼´Â Box111Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â´Ù (Å¸ÀÔ º¯¼öÀÇ »ó¼Ó°ú Å¬·¡½ºÀÇ »ó¼ÓÀº ´Ù¸§. º¹ÀâÇÔ)
-//Å¸ÀÔº¯¼ö T´Â extends¸¦ »ç¿ëÇÏ¿´±â¿¡ Æ¯Á¤ Å¸ÀÔÀÇ ÀÚ¼Õµé¸¸ ´ëÀÔÇÒ ¼öÀÖ°Ô µÇ¾úÀ¸¸ç Áö³×¸¯À¸·Î Á¦ÇÑµÈ Å¸ÀÔÀ» ´Ù½Ã ÇÑ¹ø Á¦ÇÑ Çß´Ù°í º¼ ¼ö ÀÖ´Ù.
+//FruitBox11 í´ë˜ìŠ¤ì—ëŠ” Tíƒ€ì…ë§Œ ì €ì¥í• ìˆ˜ ìˆìœ¼ë‚˜ Tíƒ€ì…ì€ Fruit111 í´ë˜ìŠ¤ì™€ Eatable ì¸í„°í˜ì´ìŠ¤ë¥¼ andì—°ì‚°ìë¡œ í†µí•˜ì—¬ ìƒì†ë°›ìœ¼ë¯€ë¡œ ë‘ê°œë¥¼ ë™ì‹œì— ë§Œì¡±í•˜ëŠ” íƒ€ì…ì´ ë“¤ì–´ê°„ë‹¤.
+//ì´ë•Œ Eatableì€ ì¸í„°í˜ì´ìŠ¤ì§€ë§Œ implementsë¥¼ ì‚¬ìš©í•œ ê²ƒì´ ì•„ë‹Œê²Œ íŠ¹ì´ì ì„. ë˜í•œ FruitBox11í´ë˜ìŠ¤ ìì²´ëŠ” Box111í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ”ë‹¤ (íƒ€ì… ë³€ìˆ˜ì˜ ìƒì†ê³¼ í´ë˜ìŠ¤ì˜ ìƒì†ì€ ë‹¤ë¦„. ë³µì¡í•¨)
+//íƒ€ì…ë³€ìˆ˜ TëŠ” extendsë¥¼ ì‚¬ìš©í•˜ì˜€ê¸°ì— íŠ¹ì • íƒ€ì…ì˜ ìì†ë“¤ë§Œ ëŒ€ì…í•  ìˆ˜ìˆê²Œ ë˜ì—ˆìœ¼ë©° ì§€ë„¤ë¦­ìœ¼ë¡œ ì œí•œëœ íƒ€ì…ì„ ë‹¤ì‹œ í•œë²ˆ ì œí•œ í–ˆë‹¤ê³  ë³¼ ìˆ˜ ìˆë‹¤.
 
-class Box111<T> {	//TÅ¸ÀÔÀÌ ÀúÀåµÇ´Â Box111Å¬·¡½º
-	ArrayList<T> list = new ArrayList<T>();	//ArrayListÅ¸ÀÔÀÇ list ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í ArrayList°´Ã¼¸¦ »ı¼ºÇÏ¿© ÁÖ¼Ò°ªÀ» ÀúÀåÇÏµÇ ArrayList °´Ã¼´Â TÅ¸ÀÔÀÇ µ¥ÀÌÅÍ¸¸ ÀúÀå °¡´ÉÇÏ´Ù.
+class Box111<T> {	//Tíƒ€ì…ì´ ì €ì¥ë˜ëŠ” Box111í´ë˜ìŠ¤
+	ArrayList<T> list = new ArrayList<T>();	//ArrayListíƒ€ì…ì˜ list ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ArrayListê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ì£¼ì†Œê°’ì„ ì €ì¥í•˜ë˜ ArrayList ê°ì²´ëŠ” Tíƒ€ì…ì˜ ë°ì´í„°ë§Œ ì €ì¥ ê°€ëŠ¥í•˜ë‹¤.
 	void add(T item)  { list.add(item);      }
 	T get(int i)      { return list.get(i); }
 	int size()        { return list.size();  }

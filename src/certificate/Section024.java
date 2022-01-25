@@ -1,17 +1,17 @@
-package certificate;
+ï»¿package certificate;
 
 import java.util.Scanner;
 
 class Section024 {
-	//¼Ò¼öÁ¡ÀÌ Æ÷ÇÔµÈ 2Áø¼ö¸¦ 10Áø¼ö·Î º¯È¯
+	//ì†Œìˆ˜ì ì´ í¬í•¨ëœ 2ì§„ìˆ˜ë¥¼ 10ì§„ìˆ˜ë¡œ ë³€í™˜
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String a, munja;
 		double d, e;
-		//a = ÀÔ·Â¹ÞÀº 2Áø¼ö°¡ ÀúÀåµÉ º¯¼ö, b = 2Áø¼ö °¢ÀÚ¸´¼ö¿¡ ´ëÇÑ 10Áø¼öÀÇ ÇÕ°è°¡ ÀúÀåµÉ º¯¼ö
-		//c = 2Áø¼ö °¢ ÀÚ¸®¸¦ ÁöÁ¤ÇØ ÁÖ´Â º¯¼ö, 2Áø¼ö°¡ 10ÀÚ¸®ÀÌ¹Ç·Î c´Â 1ºÎÅÍ 10±îÁö Â÷·Ê·Î º¯°æµÊ
-		//d = 2Áø¼ö °¢ ÀÚ¸®ÀÇ °ªÀÌ ÀúÀå µÉ º¯¼ö
-		//e = 2Áø¼ö °¢ ÀÚ¸®ÀÇ °ª¿¡ ´ëÇÑ 10Áø¼ö °ªÀÌ ÀúÀåµÉ º¯¼ö
+		//a = ìž…ë ¥ë°›ì€ 2ì§„ìˆ˜ê°€ ì €ìž¥ë  ë³€ìˆ˜, b = 2ì§„ìˆ˜ ê°ìžë¦¿ìˆ˜ì— ëŒ€í•œ 10ì§„ìˆ˜ì˜ í•©ê³„ê°€ ì €ìž¥ë  ë³€ìˆ˜
+		//c = 2ì§„ìˆ˜ ê° ìžë¦¬ë¥¼ ì§€ì •í•´ ì£¼ëŠ” ë³€ìˆ˜, 2ì§„ìˆ˜ê°€ 10ìžë¦¬ì´ë¯€ë¡œ cëŠ” 1ë¶€í„° 10ê¹Œì§€ ì°¨ë¡€ë¡œ ë³€ê²½ë¨
+		//d = 2ì§„ìˆ˜ ê° ìžë¦¬ì˜ ê°’ì´ ì €ìž¥ ë  ë³€ìˆ˜
+		//e = 2ì§„ìˆ˜ ê° ìžë¦¬ì˜ ê°’ì— ëŒ€í•œ 10ì§„ìˆ˜ ê°’ì´ ì €ìž¥ë  ë³€ìˆ˜
 		
 		a = sc.nextLine();
 		double b = 0;

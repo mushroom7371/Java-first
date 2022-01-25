@@ -1,25 +1,25 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 public class MyClassExam {
 	public static void main(String args []) {
 		MyClass mc = new MyClass();
-		//MyClass Å¬·¡½º·Î ºÎÅÍ ÀÎ½ºÅÏ½º¸¦ »õ·Î »ý¼ºÇÏ°í MyClass Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö mc¿¡ ÀÎ½ºÅÏ½ºÀÇ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù
+		//MyClass í´ëž˜ìŠ¤ë¡œ ë¶€í„° ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒˆë¡œ ìƒì„±í•˜ê³  MyClass íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ mcì— ì¸ìŠ¤í„´ìŠ¤ì˜ ì£¼ì†Œê°’ì„ ì €ìž¥í•œë‹¤
 		
 		mc.method1();
-		//mc°¡ °¡¸®Å°´Â ÀÎ½ºÅÏ½ºÀÇ ¸Þ¼­µå method1()¸¦ È£ÃâÇÏ¿© ½ÇÇà ÇÏÁö¸¸ ¸®ÅÏ°ªÀÌ ¾ø´Ù
+		//mcê°€ ê°€ë¦¬í‚¤ëŠ” ì¸ìŠ¤í„´ìŠ¤ì˜ ë©”ì„œë“œ method1()ë¥¼ í˜¸ì¶œí•˜ì—¬ ì‹¤í–‰ í•˜ì§€ë§Œ ë¦¬í„´ê°’ì´ ì—†ë‹¤
 		
 		mc.method2(10);
-		//method2()¸¦ ½ÇÇàÇÏµÇ ¸Þ¼­µåÀÇ ¼±¾ð½Ã ¸Å°³º¯¼ö¿¡ int Å¸ÀÔÀÇ °ªÀ» ³Ö¾îÁÖ±â·Î ÇÏ¿´±â¿¡ °ªÀ» ÀÔ·ÂÇÔ
+		//method2()ë¥¼ ì‹¤í–‰í•˜ë˜ ë©”ì„œë“œì˜ ì„ ì–¸ì‹œ ë§¤ê°œë³€ìˆ˜ì— int íƒ€ìž…ì˜ ê°’ì„ ë„£ì–´ì£¼ê¸°ë¡œ í•˜ì˜€ê¸°ì— ê°’ì„ ìž…ë ¥í•¨
 		
 		int value = mc.method3();
 		System.out.println(value);
-		//method3()À» ½ÇÇàÇÏµÇ ¸Å°Üº¯¼ö °ªÀº ¾øÀ¸³ª ¸®ÅÏ°ªÀÌ Á¸Àç ÇÏ±â¿¡ ÀÌ¸¦ ´ã¾ÆÁÙ º¯¼ö°¡ ÇÊ¿äÇÔ
-		//int Å¸ÀÔ º¯¼ö value¸¦ ¼±¾ðÇÏ°í ¸Þ¼­µåÀÇ ¸®ÅÏ°ªÀ» ÀúÀåÇÏ¿© Ãâ·ÂÇÔ
+		//method3()ì„ ì‹¤í–‰í•˜ë˜ ë§¤ê²¨ë³€ìˆ˜ ê°’ì€ ì—†ìœ¼ë‚˜ ë¦¬í„´ê°’ì´ ì¡´ìž¬ í•˜ê¸°ì— ì´ë¥¼ ë‹´ì•„ì¤„ ë³€ìˆ˜ê°€ í•„ìš”í•¨
+		//int íƒ€ìž… ë³€ìˆ˜ valueë¥¼ ì„ ì–¸í•˜ê³  ë©”ì„œë“œì˜ ë¦¬í„´ê°’ì„ ì €ìž¥í•˜ì—¬ ì¶œë ¥í•¨
 		
 		int value2 = mc.method4(5, 10);
 		System.out.println(value2);
-		//mothod4()¸¦ ½ÇÇàÇÏµÇ ¸Å°Üº¯¼ö°¡ 2°³ ÀÌ°í ¸Å°³º¯¼öÀÇ ÇÕÀ» ¸®ÅÏÇÏ´Â ±â´ÉÀÌ ÀÖÀ¸¹Ç·Î
-		// Á¤¼ö Å¸ÀÔÀÇ º¯¼ö¸¦ ¼±¾ðÇÏ°í ¿©±â¿¡ ¸®ÅÏ°ªÀ» ÀúÀåÇÔ
+		//mothod4()ë¥¼ ì‹¤í–‰í•˜ë˜ ë§¤ê²¨ë³€ìˆ˜ê°€ 2ê°œ ì´ê³  ë§¤ê°œë³€ìˆ˜ì˜ í•©ì„ ë¦¬í„´í•˜ëŠ” ê¸°ëŠ¥ì´ ìžˆìœ¼ë¯€ë¡œ
+		// ì •ìˆ˜ íƒ€ìž…ì˜ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ì—¬ê¸°ì— ë¦¬í„´ê°’ì„ ì €ìž¥í•¨
 		
 	}
 }

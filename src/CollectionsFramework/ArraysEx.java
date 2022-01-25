@@ -1,54 +1,54 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
-import java.util.Arrays;	//Arrays Å¬·¡½º¸¦ »ç¿ëÇÏ±â À§ÇØ import ÇÏ¿´´Ù
+import java.util.Arrays;	//Arrays í´ë˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ import í•˜ì˜€ë‹¤
 
 public class ArraysEx {
 	public static void main(String arg [] ) {
-		int [] arr = {0, 1, 2, 3, 4,};	//1Â÷¿ø ¹è¿­À» »ı¼ºÇÏ°í ÃÊ±âÈ­ ÇÑ´Ù. arrÀº ÂüÁ¶º¯¼ö·Î »ı¼ºµÈ ¹è¿­ÀÇ ÁÖ¼Ò¸¦ °¡¸®Å²´Ù.
-		int [] [] arr2D = {{11, 12, 13}, {21, 22, 23}};	//2Â÷¿ø ¹è¿­À» »ı¼ºÇÏ°í ÃÊ±âÈ­ ÇÑ´Ù. ¸¶Âù°¡Áö·Î ÂüÁ¶º¯¼ö´Â ÁÖ¼Ò¸¦ °¡¸®Å°´Âµ¥ ÁÖ¼ÒÀÇ 1Â÷¿ø¹è¿­ÀÌ ´Ù½Ã 2Â÷¿ø¹è¿­ÀÇ ÁÖ¼Ò¸¦ °¡¸®Å²´Ù.
+		int [] arr = {0, 1, 2, 3, 4,};	//1ì°¨ì› ë°°ì—´ì„ ìƒì„±í•˜ê³  ì´ˆê¸°í™” í•œë‹¤. arrì€ ì°¸ì¡°ë³€ìˆ˜ë¡œ ìƒì„±ëœ ë°°ì—´ì˜ ì£¼ì†Œë¥¼ ê°€ë¦¬í‚¨ë‹¤.
+		int [] [] arr2D = {{11, 12, 13}, {21, 22, 23}};	//2ì°¨ì› ë°°ì—´ì„ ìƒì„±í•˜ê³  ì´ˆê¸°í™” í•œë‹¤. ë§ˆì°¬ê°€ì§€ë¡œ ì°¸ì¡°ë³€ìˆ˜ëŠ” ì£¼ì†Œë¥¼ ê°€ë¦¬í‚¤ëŠ”ë° ì£¼ì†Œì˜ 1ì°¨ì›ë°°ì—´ì´ ë‹¤ì‹œ 2ì°¨ì›ë°°ì—´ì˜ ì£¼ì†Œë¥¼ ê°€ë¦¬í‚¨ë‹¤.
 	
-		System.out.println("arr = " + Arrays.toString(arr));	//1Â÷¿ø ¹è¿­À» Ãâ·ÂÇÏ´Âµ¥ »ç¿ëÇÏ´Â ¸Ş¼­µå toString()
-		System.out.println("arr2D = " + Arrays.deepToString(arr2D));	//2Â÷¿ø ¹è¿­À» Ãâ·ÂÇÒ¶§´Â deepToString()¸Ş¼­µå¸¦ »ç¿ëÇØ¾ßµÈ´Ù.
+		System.out.println("arr = " + Arrays.toString(arr));	//1ì°¨ì› ë°°ì—´ì„ ì¶œë ¥í•˜ëŠ”ë° ì‚¬ìš©í•˜ëŠ” ë©”ì„œë“œ toString()
+		System.out.println("arr2D = " + Arrays.deepToString(arr2D));	//2ì°¨ì› ë°°ì—´ì„ ì¶œë ¥í• ë•ŒëŠ” deepToString()ë©”ì„œë“œë¥¼ ì‚¬ìš©í•´ì•¼ëœë‹¤.
 	
-		int [] arr2 = Arrays.copyOf(arr, arr.length);	//Arrays Å¬·¡½ºÀÇ copyOf() ¸Ş¼­µå¸¦ ÀÌ¿ëÇÑ ¹è¿­ º¹»ç.¹ØÀÇ ³»Àº ¹üÀ§¸¦ ÁÖ´À¶ó Ãß°¡ÇÔ
-		int [] arr3 = Arrays.copyOf(arr, 3);	//3¹øÂ° ¹øÁö¼ö±îÁö º¹»ç°¡ ¾Æ´Ï¶ó ±× Àü±îÁöÀÌ´Ù.
-		int [] arr4 = Arrays.copyOf(arr, 7);	//¹üÀ§¸¦ ³Ñ¾î¼­´Â ¹è¿­Àº 0À¸·Î Ã¤¿î´Ù.
-		int [] arr5 = Arrays.copyOfRange(arr, 2, 4); //¸¶Âù°¡Áö·Î 4¹øÂ° ¹øÁö°¡ ¾Æ´Ñ ±× ¾Õ±îÁö ¹è¿­À» º¹»çÇÑ´Ù.
+		int [] arr2 = Arrays.copyOf(arr, arr.length);	//Arrays í´ë˜ìŠ¤ì˜ copyOf() ë©”ì„œë“œë¥¼ ì´ìš©í•œ ë°°ì—´ ë³µì‚¬.ë°‘ì˜ ë‚´ì€ ë²”ìœ„ë¥¼ ì£¼ëŠë¼ ì¶”ê°€í•¨
+		int [] arr3 = Arrays.copyOf(arr, 3);	//3ë²ˆì§¸ ë²ˆì§€ìˆ˜ê¹Œì§€ ë³µì‚¬ê°€ ì•„ë‹ˆë¼ ê·¸ ì „ê¹Œì§€ì´ë‹¤.
+		int [] arr4 = Arrays.copyOf(arr, 7);	//ë²”ìœ„ë¥¼ ë„˜ì–´ì„œëŠ” ë°°ì—´ì€ 0ìœ¼ë¡œ ì±„ìš´ë‹¤.
+		int [] arr5 = Arrays.copyOfRange(arr, 2, 4); //ë§ˆì°¬ê°€ì§€ë¡œ 4ë²ˆì§¸ ë²ˆì§€ê°€ ì•„ë‹Œ ê·¸ ì•ê¹Œì§€ ë°°ì—´ì„ ë³µì‚¬í•œë‹¤.
 		int [] arr6 = Arrays.copyOfRange(arr, 0, 7);
 		
-		System.out.println("arr2 = " + Arrays.toString(arr2)); //Ãâ·Â
+		System.out.println("arr2 = " + Arrays.toString(arr2)); //ì¶œë ¥
 		System.out.println("arr3 = " + Arrays.toString(arr3));
 		System.out.println("arr4 = " + Arrays.toString(arr4));
 		System.out.println("arr5 = " + Arrays.toString(arr5));
 		System.out.println("arr6 = " + Arrays.toString(arr6));
 		
-		int [] arr7 = new int[5];	//±æÀÌ°¡ 5ÀÎ ¹è¿­À» »ı¼ºÇÏ¿´´Ù ÃÊ±âÈ­´Â ±âº»°ª 0 ÀÎ »óÅÂ
-		Arrays.fill(arr7, 9);	//fill()¸¦ »ç¿ëÇÏ¿© ¹è¿­ÀÇ ³»¿ëÀ» Ã¤¿ì´Âµ¥ 9·Î Ã¤¿ü´Ù
+		int [] arr7 = new int[5];	//ê¸¸ì´ê°€ 5ì¸ ë°°ì—´ì„ ìƒì„±í•˜ì˜€ë‹¤ ì´ˆê¸°í™”ëŠ” ê¸°ë³¸ê°’ 0 ì¸ ìƒíƒœ
+		Arrays.fill(arr7, 9);	//fill()ë¥¼ ì‚¬ìš©í•˜ì—¬ ë°°ì—´ì˜ ë‚´ìš©ì„ ì±„ìš°ëŠ”ë° 9ë¡œ ì±„ì› ë‹¤
 		System.out.println("arr7 = " + Arrays.toString(arr7));
 		
-		Arrays.setAll(arr7, i -> (int)(Math.random() * 6) + 1);	//i -> (int)(Math.random() * 6) + 1 °¡ ¶÷´Ù½ÄÀÌ¶ó°í ÇÏ´Âµ¥ Math.random¸¸ ³­¼ö Àû¿ëÀÎ°ÍÀ» ¾Ë°ÚÀ½.
+		Arrays.setAll(arr7, i -> (int)(Math.random() * 6) + 1);	//i -> (int)(Math.random() * 6) + 1 ê°€ ëŒë‹¤ì‹ì´ë¼ê³  í•˜ëŠ”ë° Math.randomë§Œ ë‚œìˆ˜ ì ìš©ì¸ê²ƒì„ ì•Œê² ìŒ.
 		System.out.println("arr7 = " + Arrays.toString(arr7));
 		
-		for(int i : arr7) {	//Çâ»óµÈ for ¹®À¸·Î ¼ø¼­´ë·Î µ¹¸é¼­ arr7ÀÇ °ªÀ» i¿¡ ÀúÀåÇÑ´Ù. 
-			char [] graph = new char[i];	//¿©±â¼­´Â ¹®ÀÚÇü ¹è¿­ À» ¼±¾ğÇÏ°í ±× ¹øÁö¿¡ ¼øÂ÷ÀûÀ¸·Î arr7ÀÇ °ªÀ» ÀúÀåÇÑ´Ù.
-			Arrays.fill(graph, '*'); //graph °¡ °¡¸®Å°´Â ¹®ÀÚÇü ¹è¿­¿¡ ÁÖ¼Ò¸¶´Ù arr7·Î »ı¼ºµÈ °ª¸¸Å­ *·Î Ã¤¿î´Ù.
-			System.out.println(new String(graph) + 1);	//´Ü¼øÈ÷ +1 À» ÇÏ¸é¼­ °æ°è¸¦ µÒ
+		for(int i : arr7) {	//í–¥ìƒëœ for ë¬¸ìœ¼ë¡œ ìˆœì„œëŒ€ë¡œ ëŒë©´ì„œ arr7ì˜ ê°’ì„ iì— ì €ì¥í•œë‹¤. 
+			char [] graph = new char[i];	//ì—¬ê¸°ì„œëŠ” ë¬¸ìí˜• ë°°ì—´ ì„ ì„ ì–¸í•˜ê³  ê·¸ ë²ˆì§€ì— ìˆœì°¨ì ìœ¼ë¡œ arr7ì˜ ê°’ì„ ì €ì¥í•œë‹¤.
+			Arrays.fill(graph, '*'); //graph ê°€ ê°€ë¦¬í‚¤ëŠ” ë¬¸ìí˜• ë°°ì—´ì— ì£¼ì†Œë§ˆë‹¤ arr7ë¡œ ìƒì„±ëœ ê°’ë§Œí¼ *ë¡œ ì±„ìš´ë‹¤.
+			System.out.println(new String(graph) + 1);	//ë‹¨ìˆœíˆ +1 ì„ í•˜ë©´ì„œ ê²½ê³„ë¥¼ ë‘ 
 		}
 		
-		String [] [] str2D = new String [] [] {{"aaa", "bbb"},{"AAA", "BBB"}};	//String Å¸ÀÔÀÇ 2Â÷¿ø ¹è¿­À» »ı¼ºÇÔ. 2Â÷¿ø¹è¿­Àº Çà·Ä°°¾Æ º¸ÀÌÁö¸¸ »ç½Ç ¾Æ´Ô ÁÖ¼Ò°ªÀÇ ÁÖ¼Ò°ªÀ» °¡¸®Å°´Â ÇüÅÂ
+		String [] [] str2D = new String [] [] {{"aaa", "bbb"},{"AAA", "BBB"}};	//String íƒ€ì…ì˜ 2ì°¨ì› ë°°ì—´ì„ ìƒì„±í•¨. 2ì°¨ì›ë°°ì—´ì€ í–‰ë ¬ê°™ì•„ ë³´ì´ì§€ë§Œ ì‚¬ì‹¤ ì•„ë‹˜ ì£¼ì†Œê°’ì˜ ì£¼ì†Œê°’ì„ ê°€ë¦¬í‚¤ëŠ” í˜•íƒœ
 		String [] [] str2D2 = new String [] [] {{"aaa", "bbb"},{"AAA", "BBB"}};
 		
-		System.out.println(Arrays.equals(str2D, str2D2));	//¹è¿­À» ºñ±³ÇÏ´Â ¸Ş¼­µå·Î ³»¿ëÀÌ °°À¸¸é true°¡ ¹İÈ¯µÇ¾î¾ß ÇÏÁö¸¸ 
-		System.out.println(Arrays.deepEquals(str2D, str2D2));	//2Â÷¿ø ¹è¿­ÀÇ ºñ±³´Â deepEquals()·Î ºñ±³ÇØ¾ßµÈ´Ù. deepToString°ú ºñ½ÁÇÑ »ç¿ë
+		System.out.println(Arrays.equals(str2D, str2D2));	//ë°°ì—´ì„ ë¹„êµí•˜ëŠ” ë©”ì„œë“œë¡œ ë‚´ìš©ì´ ê°™ìœ¼ë©´ trueê°€ ë°˜í™˜ë˜ì–´ì•¼ í•˜ì§€ë§Œ 
+		System.out.println(Arrays.deepEquals(str2D, str2D2));	//2ì°¨ì› ë°°ì—´ì˜ ë¹„êµëŠ” deepEquals()ë¡œ ë¹„êµí•´ì•¼ëœë‹¤. deepToStringê³¼ ë¹„ìŠ·í•œ ì‚¬ìš©
 	
-		char[] chArr = {'A', 'D', 'C', 'B', 'E'};	//¼ø¼­¸¦ »ı°¢ÇÏÁö ¾Ê°í ÀÓÀÇ·Î ¹®ÀÚ°ªÀ» ¹è¿­¿¡ ÀúÀåÇÔ
+		char[] chArr = {'A', 'D', 'C', 'B', 'E'};	//ìˆœì„œë¥¼ ìƒê°í•˜ì§€ ì•Šê³  ì„ì˜ë¡œ ë¬¸ìê°’ì„ ë°°ì—´ì— ì €ì¥í•¨
 		
 		System.out.println("chArr = " + Arrays.toString(chArr));
-		System.out.println("index of B = " + Arrays.binarySearch(chArr, 'B'));	//binarySearch() ¸Ş¼­µå·Î chArrÀÇ ¹®ÀÚB¸¦ Ã£¾Æ³»°í ½ÍÁö¸¸ ¿À·ù°¡ ¹ß»ıÇÑ´Ù. Á¤·ÄÀÌ µÇÁö ¾Ê¾Ò±â ¶§¹®.
+		System.out.println("index of B = " + Arrays.binarySearch(chArr, 'B'));	//binarySearch() ë©”ì„œë“œë¡œ chArrì˜ ë¬¸ìBë¥¼ ì°¾ì•„ë‚´ê³  ì‹¶ì§€ë§Œ ì˜¤ë¥˜ê°€ ë°œìƒí•œë‹¤. ì •ë ¬ì´ ë˜ì§€ ì•Šì•˜ê¸° ë•Œë¬¸.
 		System.out.println("== After sorting ==");
-		Arrays.sort(chArr);	//¹è¿­À» Á¤·ÄÇÑ´Ù. ¹®ÀÚÇüÅÂµµ À¯´ÏÄÚµå·Î Ç¥ÇöµÇ±â ¶§¹®¿¡ Á¤·ÄÀ» ÇÒ¼öÀÖ´Ù.
+		Arrays.sort(chArr);	//ë°°ì—´ì„ ì •ë ¬í•œë‹¤. ë¬¸ìí˜•íƒœë„ ìœ ë‹ˆì½”ë“œë¡œ í‘œí˜„ë˜ê¸° ë•Œë¬¸ì— ì •ë ¬ì„ í• ìˆ˜ìˆë‹¤.
 		System.out.println("chArr = " + Arrays.toString(chArr));
-		System.out.println("index of B = " + Arrays.binarySearch(chArr, 'B'));	//¼øÂ÷ÀûÀ¸·Î Á¤·ÄÀÌ ¿Ï·á µÈ ÈÄ binarySearch()·Î ¹è¿­ÀÇ ¹øÁö¼ö¸¦ Ã£À» ¼ö ÀÖ´Ù.
+		System.out.println("index of B = " + Arrays.binarySearch(chArr, 'B'));	//ìˆœì°¨ì ìœ¼ë¡œ ì •ë ¬ì´ ì™„ë£Œ ëœ í›„ binarySearch()ë¡œ ë°°ì—´ì˜ ë²ˆì§€ìˆ˜ë¥¼ ì°¾ì„ ìˆ˜ ìˆë‹¤.
 		
 	}
 }

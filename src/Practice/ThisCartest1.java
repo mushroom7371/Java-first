@@ -1,4 +1,4 @@
-package Practice;
+ï»¿package Practice;
 
 class ThisCar{
 	String color;
@@ -6,11 +6,11 @@ class ThisCar{
 	int door;
 	
 	ThisCar(){
-		this("white", "auto", 4);	//Car(String color, String geartype, int door)¸¦ È£Ãâ
+		this("white", "auto", 4);	//Car(String color, String geartype, int door)ë¥¼ í˜¸ì¶œ
 	}
 	
 	ThisCar(String color){
-		this(color, "auto", 4); //	String color ¿Í this(color...)ÀÇ colorÀº ±¸º°°¡´É
+		this(color, "auto", 4); //	String color ì™€ this(color...)ì˜ colorì€ êµ¬ë³„ê°€ëŠ¥
 	}
 	
 	ThisCar(String color, String geartype, int door){
@@ -24,11 +24,11 @@ class ThisCartest1 {
 
 	public static void main(String[] args) {
 		ThisCar c1 = new ThisCar();
-		ThisCar c2 = new ThisCar("blue"); // Car(String color)¸¦ ÀÇ¹Ì
+		ThisCar c2 = new ThisCar("blue"); // Car(String color)ë¥¼ ì˜ë¯¸
 		
-		System.out.println("c1ÀÇ color = " + c1.color 
+		System.out.println("c1ì˜ color = " + c1.color 
 							+ ", geartype = " + c1.geartype + ", door = " + c1.door);
-		System.out.println("c2ÀÇ color = " + c2.color 
+		System.out.println("c2ì˜ color = " + c2.color 
 				+ ", geartype = " + c2.geartype + ", door = " + c2.door);
 	}
 

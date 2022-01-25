@@ -1,12 +1,12 @@
-package Practice;
+ï»¿package Practice;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class IteratorEx1 {
 	public static void main(String [] args) {
-		ArrayList list = new ArrayList(); //ArrayList Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö list ¼±¾ğ
-		list.add("1");	//list ¹è¿­ ¾È¿¡ 1À» Ãß°¡ÇÔ
+		ArrayList list = new ArrayList(); //ArrayList íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ list ì„ ì–¸
+		list.add("1");	//list ë°°ì—´ ì•ˆì— 1ì„ ì¶”ê°€í•¨
 		list.add("2");
 		list.add("3");
 		list.add("4");

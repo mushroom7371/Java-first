@@ -1,4 +1,4 @@
-package ch07;
+ï»¿package ch07;
 
 class InnerEx2 {
 	class InstanceInner{}
@@ -6,16 +6,16 @@ class InnerEx2 {
 	
 	InstanceInner ii = new InstanceInner();
 	static StaticInner cv = new StaticInner();
-	//ÀÎ½ºÅÏ½º ¸â¹ö °£¿¡´Â ¼­·Î Á÷Á¢ Á¢±ÙÀÌ °¡´É
-	//static ¸â¹ö °£¿¡´Â ¼­·Î Á÷Á¢ Á¢±ÙÀÌ °¡´É
+	//ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„ ê°„ì—ëŠ” ì„œë¡œ ì§ì ‘ ì ‘ê·¼ì´ ê°€ëŠ¥
+	//static ë©¤ë²„ ê°„ì—ëŠ” ì„œë¡œ ì§ì ‘ ì ‘ê·¼ì´ ê°€ëŠ¥
 	
 	static void staticMethod() {
 		//InstanceInner obj1 = new InstanceInner();
-		//static ¸â¹ö¿¡¼­´Â ÀÎ½ºÅÏ½º ¸â¹ö¿¡ Á¢±ÙÀÌ ºÒ°¡´ÉÇÏ´Ù. staticÀ¸·Î ¼±¾ðµÈ ¸â¹ö´Â Å¬·¡½º°¡ ¸Þ¸ð¸®¿¡ ÀûÀçµÉ¶§ »ý¼ºµÇÁö¸¸
-		//ÀÎ½ºÅÏ½º ¸â¹ö´Â ÀÎ½ºÅÏ½º°¡ »ý¼ºÀÌ µÇ°í ³ª¼­¾ß »ç¿ë°¡´ÉÇÏ±â ¶§¹®ÀÌ´Ù.
+		//static ë©¤ë²„ì—ì„œëŠ” ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„ì— ì ‘ê·¼ì´ ë¶ˆê°€ëŠ¥í•˜ë‹¤. staticìœ¼ë¡œ ì„ ì–¸ëœ ë©¤ë²„ëŠ” í´ëž˜ìŠ¤ê°€ ë©”ëª¨ë¦¬ì— ì ìž¬ë ë•Œ ìƒì„±ë˜ì§€ë§Œ
+		//ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„ëŠ” ì¸ìŠ¤í„´ìŠ¤ê°€ ìƒì„±ì´ ë˜ê³  ë‚˜ì„œì•¼ ì‚¬ìš©ê°€ëŠ¥í•˜ê¸° ë•Œë¬¸ì´ë‹¤.
 		StaticInner obj2 = new StaticInner();
 		
-		//¸¸¾à Á¢±ÙÇÏ°í ½Í´Ù¸é ÀÎ½ºÅÏ½º ¸â¹ö¸¦ »ç¿ëÇÏ±â À§ÇØ °´Ã¼¸¦ »ý¼ºÇÑ ´ÙÀ½ Á¢±ÙÇØ¾ßµÈ´Ù.
+		//ë§Œì•½ ì ‘ê·¼í•˜ê³  ì‹¶ë‹¤ë©´ ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ ê°ì²´ë¥¼ ìƒì„±í•œ ë‹¤ìŒ ì ‘ê·¼í•´ì•¼ëœë‹¤.
 		InnerEx2 ie = new InnerEx2();
 		InstanceInner obj3 = ie.new InstanceInner();
 	}
@@ -23,9 +23,9 @@ class InnerEx2 {
 	void instanceMethod() {
 		InstanceInner obj1 = new InstanceInner();
 		StaticInner obj2 = new StaticInner();
-		//ÀÎ½ºÅÏ½º ¸Þ¼­µå¿¡¼­´Â ÀÎ½ºÅÏ½º¸â¹ö, static ¸â¹ö µÑ´Ù »ç¿ë°¡´ÉÇÏ´Ù.
-		//ÀÎ½ºÅÏ½º ¸Þ¼­µå¸¦ »ç¿ëÇÒ ¼ö ÀÖ´Ù´Â °ÍÀº ÀÌ¹Ì °´Ã¼°¡ ¸¸µé¾îÁ®ÀÖ±â ¶§¹®¿¡ ÇØ´ç °´Ã¼°¡ Á¸ÀçÇÏ¹Ç·Î ÀÎ½ºÅÏ½º¸â¹ö¿¡ Á¢±Ù ÇÒ ¼ö ÀÖ´Â °ÍÀÌ´Ù.
-		//LocalInner obj3 = new LocalInner(); ´ç¿¬ÇÏ°Ôµµ Å¸ ¸Þ¼­µå¿¡¼­ ¼±¾ðµÈ ³»ºÎ Å¬·¡½º´Â ¼±¾ðÀÌ ºÒ°¡´ÉÇÏ´Ù.
+		//ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œì—ì„œëŠ” ì¸ìŠ¤í„´ìŠ¤ë©¤ë²„, static ë©¤ë²„ ë‘˜ë‹¤ ì‚¬ìš©ê°€ëŠ¥í•˜ë‹¤.
+		//ì¸ìŠ¤í„´ìŠ¤ ë©”ì„œë“œë¥¼ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤ëŠ” ê²ƒì€ ì´ë¯¸ ê°ì²´ê°€ ë§Œë“¤ì–´ì ¸ìžˆê¸° ë•Œë¬¸ì— í•´ë‹¹ ê°ì²´ê°€ ì¡´ìž¬í•˜ë¯€ë¡œ ì¸ìŠ¤í„´ìŠ¤ë©¤ë²„ì— ì ‘ê·¼ í•  ìˆ˜ ìžˆëŠ” ê²ƒì´ë‹¤.
+		//LocalInner obj3 = new LocalInner(); ë‹¹ì—°í•˜ê²Œë„ íƒ€ ë©”ì„œë“œì—ì„œ ì„ ì–¸ëœ ë‚´ë¶€ í´ëž˜ìŠ¤ëŠ” ì„ ì–¸ì´ ë¶ˆê°€ëŠ¥í•˜ë‹¤.
 	}
 	
 	void myMethod() {

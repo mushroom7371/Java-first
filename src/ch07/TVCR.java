@@ -1,9 +1,9 @@
-package ch07;
+ï»¿package ch07;
 
-class TVCR extends Tv1 {	//´ÙÁß»ó¼ÓÀÌ ºÒ°¡´ÉÇÏ±â¿¡ ´ÜÀÏ »ó¼Ó ÈÄ Æ÷ÇÔ°ü°è¸¦ ¸Î¾ú´Ù.
-	VCR vcr = new VCR();	//Å¬·¡½º ³»ºÎ¿¡¼­ °´Ã¼¸¦ »ý¼ºÇÏ±â ¶§¹®¿¡ Æ÷ÇÔ°ü°è¿Í °°À¸¹Ç·Î ´ÙÁß»ó¼ÓÀÇ ´À³¦À» ³»¾ú´Ù.
+class TVCR extends Tv1 {	//ë‹¤ì¤‘ìƒì†ì´ ë¶ˆê°€ëŠ¥í•˜ê¸°ì— ë‹¨ì¼ ìƒì† í›„ í¬í•¨ê´€ê³„ë¥¼ ë§ºì—ˆë‹¤.
+	VCR vcr = new VCR();	//í´ëž˜ìŠ¤ ë‚´ë¶€ì—ì„œ ê°ì²´ë¥¼ ìƒì„±í•˜ê¸° ë•Œë¬¸ì— í¬í•¨ê´€ê³„ì™€ ê°™ìœ¼ë¯€ë¡œ ë‹¤ì¤‘ìƒì†ì˜ ëŠë‚Œì„ ë‚´ì—ˆë‹¤.
 	
-	void play() {	//¸Þ¼­µåÀÇ ³»¿ëÀº vcrÀÌ °¡¸®Å°´Â °´Ã¼ÀÇ ¸Þ¼­µå¸¦ È£ÃâÇÑ´Ù.
+	void play() {	//ë©”ì„œë“œì˜ ë‚´ìš©ì€ vcrì´ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì˜ ë©”ì„œë“œë¥¼ í˜¸ì¶œí•œë‹¤.
 		vcr.play();
 	}
 	
@@ -13,7 +13,7 @@ class TVCR extends Tv1 {	//´ÙÁß»ó¼ÓÀÌ ºÒ°¡´ÉÇÏ±â¿¡ ´ÜÀÏ »ó¼Ó ÈÄ Æ÷ÇÔ°ü°è¸¦ ¸Î¾ú´
 	
 }
 
-class Tv1{	//»ó¼Ó¹ÞÀ» Å¬·¡½º¿¡¼­ »ç¿ëÇÒ ºÎ¸ð Å¬·¡½º
+class Tv1{	//ìƒì†ë°›ì„ í´ëž˜ìŠ¤ì—ì„œ ì‚¬ìš©í•  ë¶€ëª¨ í´ëž˜ìŠ¤
 	boolean power;
 	int channel;
 	
@@ -22,12 +22,12 @@ class Tv1{	//»ó¼Ó¹ÞÀ» Å¬·¡½º¿¡¼­ »ç¿ëÇÒ ºÎ¸ð Å¬·¡½º
 	void channelDown() {--channel;}
 }
 
-class VCR{	//´ÙÁß »ó¼ÓÀ» ÀÌ¿ëÇÏ°í ½ÍÁö¸¸ ÀÚ¹Ù¿¡¼­´Â ´ÜÀÏ»ó¼ÓÀ» ¿øÄ¢À¸·Î ÇÑ´Ù.
+class VCR{	//ë‹¤ì¤‘ ìƒì†ì„ ì´ìš©í•˜ê³  ì‹¶ì§€ë§Œ ìžë°”ì—ì„œëŠ” ë‹¨ì¼ìƒì†ì„ ì›ì¹™ìœ¼ë¡œ í•œë‹¤.
 	boolean power;
 	int counter = 0;
 	
 	void power(){power = !power;}
-	//¸Þ¼­µå ³»¿ë »ý·«
+	//ë©”ì„œë“œ ë‚´ìš© ìƒëžµ
 	void play() {}
 	void stop()	{}
 	void rew() {}

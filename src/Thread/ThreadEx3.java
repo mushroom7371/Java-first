@@ -1,23 +1,23 @@
-package Thread;
+ï»¿package Thread;
 
 public class ThreadEx3 {
 
 	public static void main(String[] args) {
 		ThreadEx3_1 t1 = new ThreadEx3_1();
-		t1.run();	//t1.run()¸Ş¼­µå È£Ãâ
-		//¾²·¹µå°¡ »õ·Î »ı¼ºµÇÁö ¾Ê¾ÒÀ¸¸ç ´ÜÁö main¾²·¹µå°¡ È£ÃâµÇ°í ±× À§¿¡ run()¸Ş¼­µå¸¦ È£ÃâÇÏ¿´´Ù. run()¸Ş¼­µå°¡ È£ÃâµÇ¸é¼­ ´Ù½Ã throwException()¸Ş¼­µå¸¦ È£ÃâÇÔ
+		t1.run();	//t1.run()ë©”ì„œë“œ í˜¸ì¶œ
+		//ì“°ë ˆë“œê°€ ìƒˆë¡œ ìƒì„±ë˜ì§€ ì•Šì•˜ìœ¼ë©° ë‹¨ì§€ mainì“°ë ˆë“œê°€ í˜¸ì¶œë˜ê³  ê·¸ ìœ„ì— run()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì˜€ë‹¤. run()ë©”ì„œë“œê°€ í˜¸ì¶œë˜ë©´ì„œ ë‹¤ì‹œ throwException()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•¨
 	}
 
 }
 
-class ThreadEx3_1 extends Thread{	//Thread Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â ThreadEx3_1 Å¬·¡½º ¼±¾ğ
-	public void run() {	//ºÎ¸ğÅ¬·¡½º ThreadÀÇ ¾ÈÀÇ ¹İÈ¯°ªÀÌ ¾ø´Â run()¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿© ÀçÁ¤ÀÇÇÔ
-		throwException();	//throwException()¸Ş¼­µå¸¦ È£Ãâ
+class ThreadEx3_1 extends Thread{	//Thread í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” ThreadEx3_1 í´ë˜ìŠ¤ ì„ ì–¸
+	public void run() {	//ë¶€ëª¨í´ë˜ìŠ¤ Threadì˜ ì•ˆì˜ ë°˜í™˜ê°’ì´ ì—†ëŠ” run()ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì—¬ ì¬ì •ì˜í•¨
+		throwException();	//throwException()ë©”ì„œë“œë¥¼ í˜¸ì¶œ
 	}
 	
-	public void throwException() {	//¹İÈ¯°ªÀÌ ¾ø´Â throwException() ¸Ş¼­µå ¼±¾ğ
-		try {	//¿¹¿ÜÃ³¸®¸¦ À§ÇØ try¹®À» ÀÛ¼ºÇÔ
-			throw new Exception();	//Exception°´Ã¼¸¦ »õ·Î »ı¼ºÇÏ¿© throwÇÏ¿´´Ù.
+	public void throwException() {	//ë°˜í™˜ê°’ì´ ì—†ëŠ” throwException() ë©”ì„œë“œ ì„ ì–¸
+		try {	//ì˜ˆì™¸ì²˜ë¦¬ë¥¼ ìœ„í•´ tryë¬¸ì„ ì‘ì„±í•¨
+			throw new Exception();	//Exceptionê°ì²´ë¥¼ ìƒˆë¡œ ìƒì„±í•˜ì—¬ throwí•˜ì˜€ë‹¤.
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

@@ -1,75 +1,75 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.util.Scanner;
 
 public class BubbleSort {
-	static void swap(int[] a, int idx1, int idx2) {	//static ¸Þ¼­µå·Î Å¬·¡½º°¡ ¸Þ¸ð¸®¿¡ ¿Ã¶ó°¥¶§ »ý¼ºµÈ´Ù.
-		//¹öºí ¼ÒÆ®´Â Ä¡È¯À» ±âº»À¸·Î ÀÌ·ç¾î Áø´Ù.
-		int t = a[idx1];		//int Å¸ÀÔ º¯¼ö t¿¡ ¹è¿­ aÀÇ idx1¹øÁöÀÇ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÑ´Ù.
-		a[idx1] = a[idx2];		//¹è¿­ aÀÇ idx1 ¹øÁöÀÇ µ¥ÀÌÅÍ¸¦ a[idx2]ÀÇ µ¥ÀÌÅÍ·Î ¹Ù²Ù°í
-		a[idx2] = t;			//a[idx2]ÀÇ µ¥ÀÌÅÍ¸¦ tÀÇ µ¥ÀÌÅÍ·Î Ä¡È¯ÇÑ´Ù.
-		//°á±¹ 2°³ÀÇ µ¥ÀÌÅÍ °ªÀ» ¹Ù²Ù±â À§ÇØ ÀÓ½Ã º¯¼ö¸¦ ÀÌ¿ëÇÏ´Â ¼ÀÀÌ´Ù.
+	static void swap(int[] a, int idx1, int idx2) {	//static ë©”ì„œë“œë¡œ í´ëž˜ìŠ¤ê°€ ë©”ëª¨ë¦¬ì— ì˜¬ë¼ê°ˆë•Œ ìƒì„±ëœë‹¤.
+		//ë²„ë¸” ì†ŒíŠ¸ëŠ” ì¹˜í™˜ì„ ê¸°ë³¸ìœ¼ë¡œ ì´ë£¨ì–´ ì§„ë‹¤.
+		int t = a[idx1];		//int íƒ€ìž… ë³€ìˆ˜ tì— ë°°ì—´ aì˜ idx1ë²ˆì§€ì˜ ë°ì´í„°ë¥¼ ì €ìž¥í•œë‹¤.
+		a[idx1] = a[idx2];		//ë°°ì—´ aì˜ idx1 ë²ˆì§€ì˜ ë°ì´í„°ë¥¼ a[idx2]ì˜ ë°ì´í„°ë¡œ ë°”ê¾¸ê³ 
+		a[idx2] = t;			//a[idx2]ì˜ ë°ì´í„°ë¥¼ tì˜ ë°ì´í„°ë¡œ ì¹˜í™˜í•œë‹¤.
+		//ê²°êµ­ 2ê°œì˜ ë°ì´í„° ê°’ì„ ë°”ê¾¸ê¸° ìœ„í•´ ìž„ì‹œ ë³€ìˆ˜ë¥¼ ì´ìš©í•˜ëŠ” ì…ˆì´ë‹¤.
 	}
 	
-	//¹öºíÁ¤·Ä °³¼±1
+	//ë²„ë¸”ì •ë ¬ ê°œì„ 1
 	static void bubbleSort(int[] a, int n) {
-		for(int i = 0; i < n - 1; i++) {		//0¹øÁöºÎÅÍ ÀÎÀÚ°ªÀ¸·Î ¹ÞÀº n-1 Àü ±îÁö 1¾¿ Áõ°¡ÇÏ¸é¼­ ¹Ýº¹ÇÑ´Ù.
-			int exchg = 0;						//±³È¯ È½¼ö¸¦ È®ÀÎÇÒ º¯¼ö ¹Ýº¹¸¶´Ù ÃÊ±âÈ­ µÈ´Ù.
-			for(int j = n - 1; j > i ; j-- ) 	//µÞ ¹øÁöºÎÅÍ iº¸´Ù Å¬¶§ ±îÁö 1¾¿ °¨¼ÒÇÏ¸é¼­ ¹Ýº¹ÇÑ´Ù.
-				if(a[j - 1] > a[j]) {			//¸¸¾à ¹è¿­aÀÇ j-1¹øÁöÀÇ µ¥ÀÌÅÍ°¡ j¹øÁöÀÇ µ¥ÀÌÅÍ º¸´Ù Å©´Ù¸é Á¤·ÄÀÌ µÇÁö ¾Ê¾Ò±â¿¡ swap() ¸Þ¼­µå¸¦ ÀÌ¿ëÇÏ¿© À§Ä¡¸¦ º¯°æÇÑ´Ù.
+		for(int i = 0; i < n - 1; i++) {		//0ë²ˆì§€ë¶€í„° ì¸ìžê°’ìœ¼ë¡œ ë°›ì€ n-1 ì „ ê¹Œì§€ 1ì”© ì¦ê°€í•˜ë©´ì„œ ë°˜ë³µí•œë‹¤.
+			int exchg = 0;						//êµí™˜ íšŸìˆ˜ë¥¼ í™•ì¸í•  ë³€ìˆ˜ ë°˜ë³µë§ˆë‹¤ ì´ˆê¸°í™” ëœë‹¤.
+			for(int j = n - 1; j > i ; j-- ) 	//ë’· ë²ˆì§€ë¶€í„° ië³´ë‹¤ í´ë•Œ ê¹Œì§€ 1ì”© ê°ì†Œí•˜ë©´ì„œ ë°˜ë³µí•œë‹¤.
+				if(a[j - 1] > a[j]) {			//ë§Œì•½ ë°°ì—´aì˜ j-1ë²ˆì§€ì˜ ë°ì´í„°ê°€ jë²ˆì§€ì˜ ë°ì´í„° ë³´ë‹¤ í¬ë‹¤ë©´ ì •ë ¬ì´ ë˜ì§€ ì•Šì•˜ê¸°ì— swap() ë©”ì„œë“œë¥¼ ì´ìš©í•˜ì—¬ ìœ„ì¹˜ë¥¼ ë³€ê²½í•œë‹¤.
 					swap(a, j-1,j);
-					exchg++;					//±³È¯ÀÌ ¹ß»ýÇÒ ¶§¸¶´Ù Ä«¿îÆ®°¡ ¿Ã¶ó°£´Ù.
+					exchg++;					//êµí™˜ì´ ë°œìƒí•  ë•Œë§ˆë‹¤ ì¹´ìš´íŠ¸ê°€ ì˜¬ë¼ê°„ë‹¤.
 				}
-			if(exchg == 0) break;				//±³È¯ÀÌ ¹ß»ýÇÏÁö ¾Ê¾Ò´Ù¸é ÀÌ¹Ì Á¤·ÄÀÌ ¿Ï¼ºµÈ°Í ÀÌ¹Ç·Î ¹Ýº¹À» ÇÒ ÇÊ¿ä°¡ ¾ø´Ù.
+			if(exchg == 0) break;				//êµí™˜ì´ ë°œìƒí•˜ì§€ ì•Šì•˜ë‹¤ë©´ ì´ë¯¸ ì •ë ¬ì´ ì™„ì„±ëœê²ƒ ì´ë¯€ë¡œ ë°˜ë³µì„ í•  í•„ìš”ê°€ ì—†ë‹¤.
 		}
-		//¹Ýº¹¹®À» È°¿ëÇÏ¿© a¹è¿­ÀÇ j-1 ¹øÁö¼ö°¡ j ¹øÁö¼öÀÇ °ªº¸´Ù Å©´Ù¸é swap()¸Þ¼­µå¸¦ È°¿ëÇÏ¿© °ªÀ» Ä¡È¯ÇÏ´Â ÀÛ¾÷À» ½ÇÇàÇÑ´Ù.
+		//ë°˜ë³µë¬¸ì„ í™œìš©í•˜ì—¬ aë°°ì—´ì˜ j-1 ë²ˆì§€ìˆ˜ê°€ j ë²ˆì§€ìˆ˜ì˜ ê°’ë³´ë‹¤ í¬ë‹¤ë©´ swap()ë©”ì„œë“œë¥¼ í™œìš©í•˜ì—¬ ê°’ì„ ì¹˜í™˜í•˜ëŠ” ìž‘ì—…ì„ ì‹¤í–‰í•œë‹¤.
 	}
 	
-	//¹öºíÁ¤·Ä °³¼±2
+	//ë²„ë¸”ì •ë ¬ ê°œì„ 2
 	static void bubbleSortVer2(int[] a, int n) {
-		int k = 0;								//a[k] º¸´Ù ¾ÕÂÊÀº Á¤·ÄÀÌ ³¡³­ »óÅÂ, 0À¸·Î ÃÊ±âÈ­ ÇÑ ÀÌÀ¯´Â ÃÖÃÊ ¹Ýº¹½Ã ¸ðµç ¿ä¼Ò¸¦ È®ÀÎÇØ¾ß µÇ±â ¶§¹®
-		while(k < n-1) {						//k´Â ºñ±³ ´ë»ó ¹Ù·Î ÀÌÀüÀÇ ¹øÁö ÀÌ¹Ç·Î n-1 ±îÁö ¹Ýº¹À» Á¶°ÇÀ¸·Î ÁØ´Ù.
-			int last = n-1;						//last´Â °¢ ÆÐ½º¿¡¼­ ¸¶Áö¸·À¸·Î ±³È¯ÇÑ µÎ ¿ä¼ÒÁß ¿À¸¥ÂÊ ¿ä¼ÒÀÇ ÀÎµ¦½º¸¦ ÀúÀåÇÒ º¯¼ö
+		int k = 0;								//a[k] ë³´ë‹¤ ì•žìª½ì€ ì •ë ¬ì´ ëë‚œ ìƒíƒœ, 0ìœ¼ë¡œ ì´ˆê¸°í™” í•œ ì´ìœ ëŠ” ìµœì´ˆ ë°˜ë³µì‹œ ëª¨ë“  ìš”ì†Œë¥¼ í™•ì¸í•´ì•¼ ë˜ê¸° ë•Œë¬¸
+		while(k < n-1) {						//këŠ” ë¹„êµ ëŒ€ìƒ ë°”ë¡œ ì´ì „ì˜ ë²ˆì§€ ì´ë¯€ë¡œ n-1 ê¹Œì§€ ë°˜ë³µì„ ì¡°ê±´ìœ¼ë¡œ ì¤€ë‹¤.
+			int last = n-1;						//lastëŠ” ê° íŒ¨ìŠ¤ì—ì„œ ë§ˆì§€ë§‰ìœ¼ë¡œ êµí™˜í•œ ë‘ ìš”ì†Œì¤‘ ì˜¤ë¥¸ìª½ ìš”ì†Œì˜ ì¸ë±ìŠ¤ë¥¼ ì €ìž¥í•  ë³€ìˆ˜
 			for(int j = n-1; j > k; j--)
 				if(a[j - 1] > a[j]) {
-					swap(a, j-1,j);				//±³È¯ÇÒ ¼ö°¡ ÀÖ´Ù¸é ±³È¯ÇÏ°í
-					last = j;					//ºñ±³ ¿ä¼ÒÁß ¿À¸¥ÂÊÀÇ °ªÀ» last¿¡ ´ã´Â´Ù.
+					swap(a, j-1,j);				//êµí™˜í•  ìˆ˜ê°€ ìžˆë‹¤ë©´ êµí™˜í•˜ê³ 
+					last = j;					//ë¹„êµ ìš”ì†Œì¤‘ ì˜¤ë¥¸ìª½ì˜ ê°’ì„ lastì— ë‹´ëŠ”ë‹¤.
 				}
-			k = last;							//k¿¡ last¸¦ ÀúÀåÇÏ¹Ç·Î kÀÌÀüÀÇ °ªÀº ºñ±³ÇÏÁö ¾Ê´Â´Ù.
+			k = last;							//kì— lastë¥¼ ì €ìž¥í•˜ë¯€ë¡œ kì´ì „ì˜ ê°’ì€ ë¹„êµí•˜ì§€ ì•ŠëŠ”ë‹¤.
 		}
 	}
 	
-	//´Ü¼ø ¼±ÅÃ Á¤·Ä(¹è¿­ÀÇ °¡Àå ÀÛÀº ¿ä¼Ò¿Í Á¤·ÄÇÏÁö ¾ÊÀº ºÎºÐÀÇ Ã¹ ¿ä¼Ò¸¦ ºñ±³)
+	//ë‹¨ìˆœ ì„ íƒ ì •ë ¬(ë°°ì—´ì˜ ê°€ìž¥ ìž‘ì€ ìš”ì†Œì™€ ì •ë ¬í•˜ì§€ ì•Šì€ ë¶€ë¶„ì˜ ì²« ìš”ì†Œë¥¼ ë¹„êµ)
 	static void selectionSort(int [] a, int n) {
 		for(int i = 0; i < n-1; i++) {
-			int min = i;						//¹Ýº¹À» ÅëÇÏ¿© °¡Àå ÀÛÀº ¿ä¼ÒÀÇ ÀÎµ¦½º¸¦ ±â·ÏÇÔ.
+			int min = i;						//ë°˜ë³µì„ í†µí•˜ì—¬ ê°€ìž¥ ìž‘ì€ ìš”ì†Œì˜ ì¸ë±ìŠ¤ë¥¼ ê¸°ë¡í•¨.
 			for(int j = i + 1; j < n; j++)
-				if(a[j] < a[min])	//j¹øÁöÀÇ µ¥ÀÌÅÍ°¡ °¡Àå ÀÛÀº ¿ä¼ÒÀÎ a[min]º¸´Ù ÀÛ´Ù¸é
-					min = j;		//ÀÛÀº ¿ä¼ÒÀÇ ÀÎµ¦½º´Â j·Î ¼³Á¤ÇÑ´Ù.
-			swap(a, i, min);		//Ä¡È¯À» ÅëÇÏ¿© °ªÀ» ¹Ù²Û´Ù.
+				if(a[j] < a[min])	//jë²ˆì§€ì˜ ë°ì´í„°ê°€ ê°€ìž¥ ìž‘ì€ ìš”ì†Œì¸ a[min]ë³´ë‹¤ ìž‘ë‹¤ë©´
+					min = j;		//ìž‘ì€ ìš”ì†Œì˜ ì¸ë±ìŠ¤ëŠ” jë¡œ ì„¤ì •í•œë‹¤.
+			swap(a, i, min);		//ì¹˜í™˜ì„ í†µí•˜ì—¬ ê°’ì„ ë°”ê¾¼ë‹¤.
 		}
 	}
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("¹öºí Á¤·Ä(¹öÀü 1)");
-		System.out.print("¿ä¼Ú¼ö : ");
+		System.out.println("ë²„ë¸” ì •ë ¬(ë²„ì „ 1)");
+		System.out.print("ìš”ì†Ÿìˆ˜ : ");
 		int nx = sc.nextInt();
-		int[] x = new int[nx];		//Å°º¸µå·Î ÀÔ·Â¹ÞÀº ¼ýÀÚ¸¦ ¹è¿­ÀÇ Å©±â·Î ¼³Á¤ÇÑ´Ù.
+		int[] x = new int[nx];		//í‚¤ë³´ë“œë¡œ ìž…ë ¥ë°›ì€ ìˆ«ìžë¥¼ ë°°ì—´ì˜ í¬ê¸°ë¡œ ì„¤ì •í•œë‹¤.
 		
 		for(int i = 0; i < nx; i++) {
 			System.out.print("x[" + i + "] : ");
 			x[i] = sc.nextInt();
 		}
-		//¿ä¼Ú¼öÀÇ Å©±â¸¸Å­ ¹Ýº¹ÇÏ¿© Å°º¸µå·Î ÀÔ·Â¹ÞÀº °ªÀ» ¹è¿­¿¡ ÀúÀåÇÑ´Ù.
+		//ìš”ì†Ÿìˆ˜ì˜ í¬ê¸°ë§Œí¼ ë°˜ë³µí•˜ì—¬ í‚¤ë³´ë“œë¡œ ìž…ë ¥ë°›ì€ ê°’ì„ ë°°ì—´ì— ì €ìž¥í•œë‹¤.
 		
 		bubbleSort(x, nx);
 		
-		System.out.println("¿À¸§Â÷¼øÀ¸·Î Á¤·ÄÇß½À´Ï´Ù.");
+		System.out.println("ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í–ˆìŠµë‹ˆë‹¤.");
 		for(int i = 0; i < nx; i++) 
 			System.out.println("x[" + i + "] : " + x[i]);
-		//Á¤·ÄÀ» ¸¶Ä¡°í ³­ ÈÄ °ªÀ» Ãâ·ÂÇÑ´Ù.
+		//ì •ë ¬ì„ ë§ˆì¹˜ê³  ë‚œ í›„ ê°’ì„ ì¶œë ¥í•œë‹¤.
 	}
 	
 }

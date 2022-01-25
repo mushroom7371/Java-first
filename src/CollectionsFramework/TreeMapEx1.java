@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,70 +12,70 @@ import java.util.TreeMap;
 class TreeMapEx1 {
 	public static void main(String[] args) {
 		String [] data = {"A", "K", "A", "K", "D", "K", "A", "K", "K", "K", "Z", "D"};
-		//String Å¸ÀÔÀÇ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ´Â ¹è¿­À» »ı¼ºÇÏ°í ÂüÁ¶º¯¼ö¿¡ ÁÖ¼Ò°ªÀ» ´ã¾Ò´Ù.
+		//String íƒ€ì…ì˜ ë°ì´í„°ë¥¼ ì €ì¥í•˜ëŠ” ë°°ì—´ì„ ìƒì„±í•˜ê³  ì°¸ì¡°ë³€ìˆ˜ì— ì£¼ì†Œê°’ì„ ë‹´ì•˜ë‹¤.
 		
 		TreeMap map = new TreeMap();
-		//TreeMap °´Ã¼¸¦ »ı¼º
+		//TreeMap ê°ì²´ë¥¼ ìƒì„±
 		
-		for(int i = 0; i < data.length; i++) {	//data°¡ °¡¸®Å°´Â ¹è¿­ÀÇ Å©±â¸¸Å­ ¹İº¹
-			if(map.containsKey(data[i])) {	//ÇØ´ç °´Ã¼°¡ key°ªÀ¸·Î ¹İº¹ÁßÀÎ data[i]¹øÁöÀÇ °ªÀ» °¡Áö°í ÀÖ´Ù¸é
-				Integer value = (Integer)map.get(data[i]);	//º¯¼ö value¿¡ ÇØ´ç µ¥ÀÌÅÍ °ªÀ» ÀĞ¾î¿À°í Çüº¯È¯ ÇÏ¿© Å¸ÀÔÀ» ÀÏÄ¡ ½ÃÅ²ÈÄ °ªÀ» ÀúÀåÇÑ´Ù.
-				map.put(data[i], new Integer(value.intValue() + 1));	//mapÀÌ °¡¸®Å°´Â °´Ã¼(TreeMap)¿¡ data[i]ÀÇ °ªÀ» key°ªÀ¸·Î ÇÏ°í value°ªÀ¸·Î À§ÀÇ º¯¼ö¿¡ +1 ÇÑ °ªÀ» ÀúÀåÇÑ´Ù.
-			}else {	//key°ªÀ¸·Î data[i] ¹øÁöÀÇ µ¥ÀÌÅÍ°¡ ¾ø´Ù¸é
-				map.put(data[i], new Integer(1));	//ÇØ´ç °ªÀ» key°ªÀ¸·Î ÇÏ°í 1À» value°ªÀ¸·Î ÀúÀåÇÑ´Ù.
+		for(int i = 0; i < data.length; i++) {	//dataê°€ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì˜ í¬ê¸°ë§Œí¼ ë°˜ë³µ
+			if(map.containsKey(data[i])) {	//í•´ë‹¹ ê°ì²´ê°€ keyê°’ìœ¼ë¡œ ë°˜ë³µì¤‘ì¸ data[i]ë²ˆì§€ì˜ ê°’ì„ ê°€ì§€ê³  ìˆë‹¤ë©´
+				Integer value = (Integer)map.get(data[i]);	//ë³€ìˆ˜ valueì— í•´ë‹¹ ë°ì´í„° ê°’ì„ ì½ì–´ì˜¤ê³  í˜•ë³€í™˜ í•˜ì—¬ íƒ€ì…ì„ ì¼ì¹˜ ì‹œí‚¨í›„ ê°’ì„ ì €ì¥í•œë‹¤.
+				map.put(data[i], new Integer(value.intValue() + 1));	//mapì´ ê°€ë¦¬í‚¤ëŠ” ê°ì²´(TreeMap)ì— data[i]ì˜ ê°’ì„ keyê°’ìœ¼ë¡œ í•˜ê³  valueê°’ìœ¼ë¡œ ìœ„ì˜ ë³€ìˆ˜ì— +1 í•œ ê°’ì„ ì €ì¥í•œë‹¤.
+			}else {	//keyê°’ìœ¼ë¡œ data[i] ë²ˆì§€ì˜ ë°ì´í„°ê°€ ì—†ë‹¤ë©´
+				map.put(data[i], new Integer(1));	//í•´ë‹¹ ê°’ì„ keyê°’ìœ¼ë¡œ í•˜ê³  1ì„ valueê°’ìœ¼ë¡œ ì €ì¥í•œë‹¤.
 			}
 		}
 		
 		Iterator it = map.entrySet().iterator();
-		//ÇØ´ç °´Ã¼ÀÇ ÀüÃ¼ µ¥ÀÌÅÍ¸¦ ÀĞ¾îµéÀÌ±â À§ÇØ Iterator ÂüÁ¶º¯¼ö¸¦ ¼±¾ğÇÏ°í mapÀÇ iterator()¸Ş¼­µåÀÇ ¸®ÅÏ°á°úÀÎ °´Ã¼¸¦ ÂüÁ¶ÇÏ°Ô ÇÏ¿´´Ù.
+		//í•´ë‹¹ ê°ì²´ì˜ ì „ì²´ ë°ì´í„°ë¥¼ ì½ì–´ë“¤ì´ê¸° ìœ„í•´ Iterator ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  mapì˜ iterator()ë©”ì„œë“œì˜ ë¦¬í„´ê²°ê³¼ì¸ ê°ì²´ë¥¼ ì°¸ì¡°í•˜ê²Œ í•˜ì˜€ë‹¤.
 		
-		System.out.println("=== ±âº» Á¤·Ä ===");
+		System.out.println("=== ê¸°ë³¸ ì •ë ¬ ===");
 		
-		while(it.hasNext()) {	//ÂüÁ¶º¯¼ö itÀÌ °¡¸®Å°´Â °´Ã¼¿¡ µ¥ÀÌÅÍ°¡ ÀúÀåµÇ¾î ÀÖ´Ù¸é
-			Map.Entry entry = (Map.Entry)it.next();	//±× µ¥ÀÌÅÍ¸¦ Map.EntryÅ¸ÀÔÀÇ ÂüÁ¶º¯¼ö¿¡ ´ã°í,
-			int value = ((Integer)entry.getValue()).intValue();	//±× µ¥ÀÌÅÍ¸¦ Çüº¯È¯À» ÅëÇÏ¿© int Å¸ÀÔÀ¸·Î º¯°æÈÄ ±âº»Çü º¯¼ö value¿¡ ´ã´Â´Ù.
-			System.out.println(entry.getKey() + " : " + printBar('#', value) + " " + value);	//ÇÏ´Ü¿¡ Á¤ÀÇÇÑ static ¸Ş¼­µåÀÇ ³»¿ë´ë·Î Ãâ·ÂÀ» ½Ç½ÃÇÑ´Ù.
+		while(it.hasNext()) {	//ì°¸ì¡°ë³€ìˆ˜ itì´ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì— ë°ì´í„°ê°€ ì €ì¥ë˜ì–´ ìˆë‹¤ë©´
+			Map.Entry entry = (Map.Entry)it.next();	//ê·¸ ë°ì´í„°ë¥¼ Map.Entryíƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ì— ë‹´ê³ ,
+			int value = ((Integer)entry.getValue()).intValue();	//ê·¸ ë°ì´í„°ë¥¼ í˜•ë³€í™˜ì„ í†µí•˜ì—¬ int íƒ€ì…ìœ¼ë¡œ ë³€ê²½í›„ ê¸°ë³¸í˜• ë³€ìˆ˜ valueì— ë‹´ëŠ”ë‹¤.
+			System.out.println(entry.getKey() + " : " + printBar('#', value) + " " + value);	//í•˜ë‹¨ì— ì •ì˜í•œ static ë©”ì„œë“œì˜ ë‚´ìš©ëŒ€ë¡œ ì¶œë ¥ì„ ì‹¤ì‹œí•œë‹¤.
 		}
 		System.out.println();
-		//¿©±â ±îÁö°¡ ±âÁ¸ HashMapEx4ÀÇ ³»¿ë
+		//ì—¬ê¸° ê¹Œì§€ê°€ ê¸°ì¡´ HashMapEx4ì˜ ë‚´ìš©
 		
-		//mapÀ» ArrayList·Î º¯È¯ÇÑ ´ÙÀ½¿¡ Collections.sort()·Î Á¤·Ä
+		//mapì„ ArrayListë¡œ ë³€í™˜í•œ ë‹¤ìŒì— Collections.sort()ë¡œ ì •ë ¬
 		
 		Set set = map.entrySet();
 		List list = new ArrayList(set);
 		
 		//static void sort(List list, Comparator c)
-		Collections.sort(list, new ValueComparator());	//CollectionsÅ¬·¡½º°¡ Á¦°øÇÏ´Â Á¤·Ä¸Ş¼­µå¸¦ ÀÌ¿ëÇÏ¿© Á¤·Ä ÀÌ¶§ ValueComparatorÅ¬·¡½º °´Ã¼¸¦ ÀÌ¿ëÇÏ¿© ¼øÂ÷ Á¤·ÄÀÌ µÈ´Ù.
+		Collections.sort(list, new ValueComparator());	//Collectionsí´ë˜ìŠ¤ê°€ ì œê³µí•˜ëŠ” ì •ë ¬ë©”ì„œë“œë¥¼ ì´ìš©í•˜ì—¬ ì •ë ¬ ì´ë•Œ ValueComparatorí´ë˜ìŠ¤ ê°ì²´ë¥¼ ì´ìš©í•˜ì—¬ ìˆœì°¨ ì •ë ¬ì´ ëœë‹¤.
 		
 		it = list.iterator();
 		
-		System.out.println("=== °ªÀÇ Å©±â°¡ Å« ¼ø¼­·Î Á¤·Ä ===");
-		while(it.hasNext()){	//À§ÀÇ Ãâ·Â ³»¿ë°ú µ¿ÀÏ
+		System.out.println("=== ê°’ì˜ í¬ê¸°ê°€ í° ìˆœì„œë¡œ ì •ë ¬ ===");
+		while(it.hasNext()){	//ìœ„ì˜ ì¶œë ¥ ë‚´ìš©ê³¼ ë™ì¼
 			Map.Entry entry = (Map.Entry)it.next();
 			int value = ((Integer)entry.getValue()).intValue();
 			System.out.println(entry.getKey() + " : " + printBar('#', value) + " " + value);
 		}
 	}
 	
-	static class ValueComparator implements Comparator{	//Comparator ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½º
-		public int compare(Object o1, Object o2) {	//ÇØ´ç ÀÎÅÍÆäÀÌ½ºÀÇ Ãß»ó ¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿´´Ù.
-			if(o1 instanceof Map.Entry && o2 instanceof Map.Entry) {	//ÀÎÀÚ°ªÀ¸·Î ¹ŞÀº °´Ã¼°¡ Map.Entry Å¸ÀÔÀÇ ÀÎ½ºÅÏ½º¶ó¸é,
+	static class ValueComparator implements Comparator{	//Comparator ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ë˜ìŠ¤
+		public int compare(Object o1, Object o2) {	//í•´ë‹¹ ì¸í„°í˜ì´ìŠ¤ì˜ ì¶”ìƒ ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì˜€ë‹¤.
+			if(o1 instanceof Map.Entry && o2 instanceof Map.Entry) {	//ì¸ìê°’ìœ¼ë¡œ ë°›ì€ ê°ì²´ê°€ Map.Entry íƒ€ì…ì˜ ì¸ìŠ¤í„´ìŠ¤ë¼ë©´,
 				Map.Entry e1 = (Map.Entry)o1;
 				Map.Entry e2 = (Map.Entry)o2;
-				//Map.Entry Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö·Î ÂüÁ¶°¡ °¡´ÉÇÏµµ·Ï Çüº¯È¯ÇÏ¿© ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
+				//Map.Entry íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ë¡œ ì°¸ì¡°ê°€ ê°€ëŠ¥í•˜ë„ë¡ í˜•ë³€í™˜í•˜ì—¬ ì£¼ì†Œê°’ì„ ì €ì¥í•œë‹¤.
 				
 				int v1 = ((Integer)e1.getValue()).intValue();
 				int v2 = ((Integer)e2.getValue()).intValue();
-				//ÇØ´ç °´Ã¼ÀÇ value°ªÀ» ¹Ş¾Æ¿Í IntegerÅ¸ÀÔÀ¸·Î Çüº¯È¯ ÈÄ ´Ù½Ã int Å¸ÀÔÀ¸·Î µ¥ÀÌÅÍ¸¦ ÀúÀåÇÑ´Ù.
+				//í•´ë‹¹ ê°ì²´ì˜ valueê°’ì„ ë°›ì•„ì™€ Integeríƒ€ì…ìœ¼ë¡œ í˜•ë³€í™˜ í›„ ë‹¤ì‹œ int íƒ€ì…ìœ¼ë¡œ ë°ì´í„°ë¥¼ ì €ì¥í•œë‹¤.
 				
-				return v2 - v1;	//°ªÀÇ Â÷ÀÌ¸¦ ¹İÈ¯ÇÑ´Ù.
+				return v2 - v1;	//ê°’ì˜ ì°¨ì´ë¥¼ ë°˜í™˜í•œë‹¤.
 			}
 			
 			return -1;
 		}
 	}	//static class ValueCoparator implements Comparator{
 	
-	public static String printBar(char ch, int value) {	//±×·¡ÇÁ Çü½ÄÀ¸·Î Ãâ·ÂÇÏ±â À§ÇÑ ¸Ş¼­µå
+	public static String printBar(char ch, int value) {	//ê·¸ë˜í”„ í˜•ì‹ìœ¼ë¡œ ì¶œë ¥í•˜ê¸° ìœ„í•œ ë©”ì„œë“œ
 		char[] bar = new char[value];
 		
 		for(int i = 0; i < bar.length; i++)

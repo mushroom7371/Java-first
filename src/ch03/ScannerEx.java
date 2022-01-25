@@ -1,4 +1,4 @@
-package ch03;
+ï»¿package ch03;
 
 import java.util.Scanner;
 
@@ -6,18 +6,18 @@ import java.util.Scanner;
 		public static void main(String[] args)	{
 			Scanner Scanner = new Scanner(System.in);
 			
-			System.out.print("Ã¹¹øÂ° Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.>");
+			System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”.>");
 			String input = Scanner.nextLine();
 			int num1 = Integer.parseInt(input);
 				
-			System.out.println("ÀÔ·Â³»¿ë :"+input);
+			System.out.println("ìž…ë ¥ë‚´ìš© :"+input);
 			System.out.printf("num1=%d%n", num1);
 			
-			System.out.print("µÎ¹øÂ° Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.>");
+			System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”.>");
 			String input1 = Scanner.nextLine();
 			int num2 = Integer.parseInt(input1);
 				
-			System.out.println("ÀÔ·Â³»¿ë :"+input1);
+			System.out.println("ìž…ë ¥ë‚´ìš© :"+input1);
 			System.out.printf("num2=%d%n", num2);
 		}
 	}

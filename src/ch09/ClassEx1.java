@@ -1,4 +1,4 @@
-package ch09;
+ï»¿package ch09;
 
 final class Card2{
 	String kind;
@@ -23,8 +23,8 @@ class ClassEx1 {
 		Card2 c = new Card2("HEART", 1);
 		Card2 c2 = null;
 	
-		try{	//Class °´Ã¼¸¦ ÀÌ¿ëÇØ¼­ °´Ã¼¸¦ »ı¼ºÇÏ´Âµ¥ newInstace()¸Ş¼­µå´Â ¿äÁò Àß ¾È¾²ÀÎ´Ù°í ÇÔ
-				//¶ÇÇÑ try¹®ÀåÀ¸·Î ¹­Áö ¾ÊÀ¸¸é »ç¿ëÀÌ ºÒ°¡´ÉÇÏ¿© ¹®Àå¾È¿¡ Æ÷ÇÔ½ÃÅ´
+		try{	//Class ê°ì²´ë¥¼ ì´ìš©í•´ì„œ ê°ì²´ë¥¼ ìƒì„±í•˜ëŠ”ë° newInstace()ë©”ì„œë“œëŠ” ìš”ì¦˜ ì˜ ì•ˆì“°ì¸ë‹¤ê³  í•¨
+				//ë˜í•œ tryë¬¸ì¥ìœ¼ë¡œ ë¬¶ì§€ ì•Šìœ¼ë©´ ì‚¬ìš©ì´ ë¶ˆê°€ëŠ¥í•˜ì—¬ ë¬¸ì¥ì•ˆì— í¬í•¨ì‹œí‚´
 			Card2 c3 = Card2.class.newInstance();
 			c2 = c3;	
 		}catch(Exception ex) {
@@ -32,7 +32,7 @@ class ClassEx1 {
 		}	
 		
 		Class cObj = c.getClass();
-		//»ı¼ºµÈ °´Ã¼·Î ºÎÅÍ Å¬·¡½ºÀÇ Á¤º¸¸¦ ¾ò±âÀ§ÇØ ÂüÁ¶ÇÔ
+		//ìƒì„±ëœ ê°ì²´ë¡œ ë¶€í„° í´ë˜ìŠ¤ì˜ ì •ë³´ë¥¼ ì–»ê¸°ìœ„í•´ ì°¸ì¡°í•¨
 		
 		System.out.println(c);
 		System.out.println(c2);

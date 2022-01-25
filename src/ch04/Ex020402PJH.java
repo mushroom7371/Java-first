@@ -1,31 +1,31 @@
-package ch04;
+ï»¿package ch04;
 
 class Ex020402PJH	{
 	public static void main(String[] args)	{
 		
 		/*
-		³»¿ë : ÀÚ¹ÙÀÇ Á¤¼® p98 Ç¥3-6 ±¸Çö
-		ºñ°í : printf¿¡ x%y ÀÔ·Â½Ã ¿À·ù·Î Ãâ·ÂÀ» ¸øÇÔ
+		ë‚´ìš© : ìë°”ì˜ ì •ì„ p98 í‘œ3-6 êµ¬í˜„
+		ë¹„ê³  : printfì— x%y ì…ë ¥ì‹œ ì˜¤ë¥˜ë¡œ ì¶œë ¥ì„ ëª»í•¨
 		*/
 		
-		double f1 = 10.0d;   //À¯ÇÑ¼ö
-		double f2 = 0.0d;    //À¯ÇÑ¼ö 
+		double f1 = 10.0d;   //ìœ í•œìˆ˜
+		double f2 = 0.0d;    //ìœ í•œìˆ˜ 
 
-		System.out.printf("x=%.1f y=%.1f x/y=%f x(³ª¸ÓÁö ¿¬»êÀÚ)y=%f%n", f1, f2, f1/f2, f1%f2);
+		System.out.printf("x=%.1f y=%.1f x/y=%f x(ë‚˜ë¨¸ì§€ ì—°ì‚°ì)y=%f%n", f1, f2, f1/f2, f1%f2);
 		
-		double a1 = 10.0d;  // À¯ÇÑ¼ö
+		double a1 = 10.0d;  // ìœ í•œìˆ˜
 		double a2 = 1/0d;   // infinity
 		
-		System.out.printf("x=%.1f y=%f x/y=%.1f x(³ª¸ÓÁö ¿¬»êÀÚ)y=%.1f%n", a1, a2, a1/a2, a1%a2);
+		System.out.printf("x=%.1f y=%f x/y=%.1f x(ë‚˜ë¨¸ì§€ ì—°ì‚°ì)y=%.1f%n", a1, a2, a1/a2, a1%a2);
 		
 		double b1 = 1/0d;   // infiniy
-		double b2 = 10.0d;  // À¯ÇÑ¼ö
+		double b2 = 10.0d;  // ìœ í•œìˆ˜
 		
-		System.out.printf("x=%f y=%.1f x/y=%f x(³ª¸ÓÁö ¿¬»êÀÚ)y=%f%n", b1, b2, b1/b2, b1%b2);
+		System.out.printf("x=%f y=%.1f x/y=%f x(ë‚˜ë¨¸ì§€ ì—°ì‚°ì)y=%f%n", b1, b2, b1/b2, b1%b2);
 		
 		double c1 = 1/0d;   //infinity
 		double c2 = 1/0d;   //infinity
-		System.out.printf("x=%f y=%f x/y=%f x(³ª¸ÓÁö ¿¬»êÀÚ)y=%f%n", c1, c2, c1/c2, c1%c2);
+		System.out.printf("x=%f y=%f x/y=%f x(ë‚˜ë¨¸ì§€ ì—°ì‚°ì)y=%f%n", c1, c2, c1/c2, c1%c2);
 		
 	}
 }

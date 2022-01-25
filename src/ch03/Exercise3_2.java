@@ -1,11 +1,11 @@
-package ch03;
+ï»¿package ch03;
 
 public class Exercise3_2 {
 
 	/*
-	ÃâÁ¦ÀÏ : 20210204
-	³»¿ë : ¿¬½À¹®Á¦ »ç°ú¸¦ ´ãÀ» ÇÊ¿äÇÑ ¹Ù±¸´Ï ±¸ÇÏ±â
-	Á¦ÃâÀÚ : ¹ÚÁØÈ­
+	ì¶œì œì¼ : 20210204
+	ë‚´ìš© : ì—°ìŠµë¬¸ì œ ì‚¬ê³¼ë¥¼ ë‹´ì„ í•„ìš”í•œ ë°”êµ¬ë‹ˆ êµ¬í•˜ê¸°
+	ì œì¶œì : ë°•ì¤€í™”
 	*/
 	
 	public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class Exercise3_2 {
 		int sizeOfBucket = 10;
 		int numOfBucket = ( numOfApples/sizeOfBucket + 1  );
 		
-		System.out.println("ÇÊ¿äÇÑ ¹Ù±¸´ÏÀÇ ¼ö :"+numOfBucket);
+		System.out.println("í•„ìš”í•œ ë°”êµ¬ë‹ˆì˜ ìˆ˜ :"+numOfBucket);
 		
 
 	}

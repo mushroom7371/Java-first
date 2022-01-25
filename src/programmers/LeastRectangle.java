@@ -1,16 +1,16 @@
-package programmers;
+ï»¿package programmers;
 
-//ÃÖ¼Ò Á÷»ç°¢Çü
+//ìµœì†Œ ì§ì‚¬ê°í˜•
 class LeastRectangle {
 	private int solution(int [][] sizes) {
 		int answer = 0;
         int width = 0;
         int height = 0; 
         
-        //¼¼·Î°¡ °¡·Îº¸´Ù ±ä ¸íÇÔÀ» ´¯ÇôÁÖ´Â ¹İº¹¹®
+        //ì„¸ë¡œê°€ ê°€ë¡œë³´ë‹¤ ê¸´ ëª…í•¨ì„ ëˆ•í˜€ì£¼ëŠ” ë°˜ë³µë¬¸
         for(int i = 0; i < sizes.length; i++) {
             for(int j = 0; j < sizes[i].length / 2; j++) {
-                if(sizes[i][j] < sizes[i][j + 1]) {	//Ä¡È¯À» ÅëÇØ °ªÀ» ¹Ù²Û´Ù.
+                if(sizes[i][j] < sizes[i][j + 1]) {	//ì¹˜í™˜ì„ í†µí•´ ê°’ì„ ë°”ê¾¼ë‹¤.
                     int tempNum = sizes[i][j];
                     sizes[i][j] = sizes[i][j + 1];
                     sizes[i][j + 1] = tempNum;
@@ -18,7 +18,7 @@ class LeastRectangle {
             }
         }
 
-        // °¡·Î, ¼¼·Î ÃÖ´ñ°ªÀ» ¸¸Á·ÇÏ´Â °ªÀ» width, height¿¡ °¢°¢ ÇÒ´çÇÑ´Ù.
+        // ê°€ë¡œ, ì„¸ë¡œ ìµœëŒ“ê°’ì„ ë§Œì¡±í•˜ëŠ” ê°’ì„ width, heightì— ê°ê° í• ë‹¹í•œë‹¤.
         for(int i = 0; i < sizes.length; i++) {
             for(int j = 0; j < sizes[i].length / 2; j++) {
                 if(sizes[i][j] > width) {
@@ -31,7 +31,7 @@ class LeastRectangle {
             }
         }
 
-        // °¡·Î ¼¼·Î¸¦ °öÇÏ¿© answer¿¡ ÀúÀå
+        // ê°€ë¡œ ì„¸ë¡œë¥¼ ê³±í•˜ì—¬ answerì— ì €ì¥
         answer = width * height;
         return answer;
 	}

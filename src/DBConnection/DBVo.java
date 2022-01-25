@@ -1,8 +1,8 @@
-package DBConnection;
+ï»¿package DBConnection;
 
 
-public class DBVo {	//µ¥ÀÌÅÍ º£ÀÌ½º·Î ºÎÅÍ ¾òÀº µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ±âÀ§ÇÑ Å¬·¡½º
-	String mid;	//º¸Åë º¸¾ÈÀ» À§ÇØ private Á¦¾îÀÚ¸¦ ÅëÇÏ¿© Á¢±ÙÀº Á¦ÇÑÇÑ´Ù.
+public class DBVo {	//ë°ì´í„° ë² ì´ìŠ¤ë¡œ ë¶€í„° ì–»ì€ ë°ì´í„°ë¥¼ ì €ì¥í•˜ê¸°ìœ„í•œ í´ë˜ìŠ¤
+	String mid;	//ë³´í†µ ë³´ì•ˆì„ ìœ„í•´ private ì œì–´ìë¥¼ í†µí•˜ì—¬ ì ‘ê·¼ì€ ì œí•œí•œë‹¤.
 	String irum;
 	String phone;
 	String address;
@@ -11,7 +11,7 @@ public class DBVo {	//µ¥ÀÌÅÍ º£ÀÌ½º·Î ºÎÅÍ ¾òÀº µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ±âÀ§ÇÑ Å¬·¡½º
 	int grade;
 	
 	
-	//µ¥ÀÌÅÍ °ªÀ» ¾ò¾î¿À°í, ÀúÀåÇÏ±â À§ÇÑ getter, setter ¸Ş¼­µåµé
+	//ë°ì´í„° ê°’ì„ ì–»ì–´ì˜¤ê³ , ì €ì¥í•˜ê¸° ìœ„í•œ getter, setter ë©”ì„œë“œë“¤
 	public String getAddress() {
 		return address;
 	}

@@ -1,4 +1,4 @@
-package Practice;
+ï»¿package Practice;
 
 import java.util.*;
 
@@ -15,11 +15,11 @@ public class FlowEx7Dvide {
 
 	static int inputMethod1(int user) {
 
-		System.out.print("°¡À§(1),¹ÙÀ§(2),º¸(3) Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.print("ê°€ìœ„(1),ë°”ìœ„(2),ë³´(3) ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		
 		Scanner scanner = new Scanner(System.in);
 		user = scanner.nextInt();
-		System.out.println("´ç½ÅÀº "+ user + "ÀÔ´Ï´Ù.");
+		System.out.println("ë‹¹ì‹ ì€ "+ user + "ì…ë‹ˆë‹¤.");
 		
 		return user;
 
@@ -30,7 +30,7 @@ public class FlowEx7Dvide {
 		Scanner scanner = new Scanner(System.in);
 		com = (int)(Math.random()*3) + 1;
 		
-		System.out.println("ÄÄÀº "+ com + "ÀÔ´Ï´Ù.");
+		System.out.println("ì»´ì€ "+ com + "ì…ë‹ˆë‹¤.");
 		
 		return com;
 	}
@@ -38,13 +38,13 @@ public class FlowEx7Dvide {
 	static void switchMethod(int user,int com)	{
 		switch(user-com)	{
 		case 2: case -1:
-			System.out.println("´ç½ÅÀÌ Á³½À´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì´ ì¡ŒìŠµë‹ˆë‹¤.");
 			break;
 		case 1: case -2:
-			System.out.println("´ç½ÅÀÌ ÀÌ°å½À´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤.");
 			break;
 		case 0:
-			System.out.println("ºñ°å½À´Ï´Ù.");
+			System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 			break;
 		}
 	}
@@ -52,25 +52,25 @@ public class FlowEx7Dvide {
 
 /*
 inputMethod();
-System.out.print("°¡À§(1),¹ÙÀ§(2),º¸(3) Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+System.out.print("ê°€ìœ„(1),ë°”ìœ„(2),ë³´(3) ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 
 Scanner scanner = new Scanner(System.in);
 int user = scanner.nextInt();
 int com = (int)(Math.random()*3) + 1;
 
-System.out.println("´ç½ÅÀº "+ user + "ÀÔ´Ï´Ù.");
-System.out.println("ÄÄÀº "+ com + "ÀÔ´Ï´Ù.");
+System.out.println("ë‹¹ì‹ ì€ "+ user + "ì…ë‹ˆë‹¤.");
+System.out.println("ì»´ì€ "+ com + "ì…ë‹ˆë‹¤.");
 
 switchMethod();
 switch(user-com)	{
 case 2: case -1:
-	System.out.println("´ç½ÅÀÌ Á³½À´Ï´Ù.");
+	System.out.println("ë‹¹ì‹ ì´ ì¡ŒìŠµë‹ˆë‹¤.");
 	break;
 case 1: case -2:
-	System.out.println("´ç½ÅÀÌ ÀÌ°å½À´Ï´Ù.");
+	System.out.println("ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤.");
 	break;
 case 0:
-	System.out.println("ºñ°å½À´Ï´Ù.");
+	System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 	break;
 }
 

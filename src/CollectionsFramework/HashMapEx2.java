@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -11,39 +11,39 @@ public class HashMapEx2 {
 
 	public static void main(String[] args) {
 		
-		HashMap map = new HashMap();	//HashMap Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¿¡ HashMap Å¬·¡½º·ÎºÎÅÍ ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÏ¿© ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
-		map.put("±èÀÚ¹Ù", new Integer(100));	//map¿¡ key °ª°ú value°ªÀ» ÀúÀåÇÑ´Ù.
-		map.put("ÀÌÀÚ¹Ù", new Integer(100));
-		map.put("¹ÚÀÚ¹Ù", new Integer(80));
-		map.put("ÃÖÀÚ¹Ù", new Integer(90));
+		HashMap map = new HashMap();	//HashMap íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ì— HashMap í´ë˜ìŠ¤ë¡œë¶€í„° ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ì—¬ ì£¼ì†Œê°’ì„ ì €ì¥í•œë‹¤.
+		map.put("ê¹€ìë°”", new Integer(100));	//mapì— key ê°’ê³¼ valueê°’ì„ ì €ì¥í•œë‹¤.
+		map.put("ì´ìë°”", new Integer(100));
+		map.put("ë°•ìë°”", new Integer(80));
+		map.put("ìµœìë°”", new Integer(90));
 		
-		Set set = map.entrySet();	//Set Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö setÀ» ¼±¾ğÇÏ°í mapÀÇ µ¥ÀÌÅÍ¸¦ ¿£Æ®¸® ÇüÅÂ(Å°¿Í °ªÀ» °áÇÕ)·Î ÀúÀåÇÑ´Ù.
-		Iterator it = set.iterator();	//setÀÇ iterator()¸Ş¼­µå¸¦ È£ÃâÇÏ¿© ¸®ÅÏ¹ŞÀº °ªÀ» Iterator Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö it¿¡ ÀúÀåÇÑ´Ù.
-										//Iterator¸¦ »ç¿ëÇÏ¿© °ªÀ» ÀĞ¾îµéÀÏ ÁØºñ¸¦ ÇÑ´Ù.
+		Set set = map.entrySet();	//Set íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ setì„ ì„ ì–¸í•˜ê³  mapì˜ ë°ì´í„°ë¥¼ ì—”íŠ¸ë¦¬ í˜•íƒœ(í‚¤ì™€ ê°’ì„ ê²°í•©)ë¡œ ì €ì¥í•œë‹¤.
+		Iterator it = set.iterator();	//setì˜ iterator()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ë¦¬í„´ë°›ì€ ê°’ì„ Iterator íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ itì— ì €ì¥í•œë‹¤.
+										//Iteratorë¥¼ ì‚¬ìš©í•˜ì—¬ ê°’ì„ ì½ì–´ë“¤ì¼ ì¤€ë¹„ë¥¼ í•œë‹¤.
 
-		while(it.hasNext()) { //ÂüÁ¶º¯¼ö itÀÌ °¡¸®Å°´Â ÀÎ½ºÅÏ½º¿¡ ´ÙÀ½ °ªÀÌ ÀÖÀ»¶§±îÁö ¹İº¹
-			Map.Entry e = (Map.Entry)it.next();	//Map.EntryÅ¸ÀÔÀÇ ÂüÁ¶º¯¼ö¿¡ it.next()¸¦ Çüº¯È¯ ÇÏ¿© ÀúÀåÇÑ´Ù.
-			System.out.println("ÀÌ¸§ : " + e.getKey() + ", Á¡¼ö : " + e.getValue());
-			//entry ÇüÅÂ·Î ÀúÀåµÈ °ªÀ» Ãâ·Â
+		while(it.hasNext()) { //ì°¸ì¡°ë³€ìˆ˜ itì´ ê°€ë¦¬í‚¤ëŠ” ì¸ìŠ¤í„´ìŠ¤ì— ë‹¤ìŒ ê°’ì´ ìˆì„ë•Œê¹Œì§€ ë°˜ë³µ
+			Map.Entry e = (Map.Entry)it.next();	//Map.Entryíƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ì— it.next()ë¥¼ í˜•ë³€í™˜ í•˜ì—¬ ì €ì¥í•œë‹¤.
+			System.out.println("ì´ë¦„ : " + e.getKey() + ", ì ìˆ˜ : " + e.getValue());
+			//entry í˜•íƒœë¡œ ì €ì¥ëœ ê°’ì„ ì¶œë ¥
 		}
 		
-		set = map.keySet();	//ÂüÁ¶º¯¼ö set¿¡ kdySet()¸Ş¼­µå·Î ¹İÈ¯µÈ ¸ğµç Å° °ªÀ» ¹İÈ¯ÇÑ´Ù. ¸®ÅÏ Å¸ÀÔÀÌ SetÀÌ±â¿¡ ÂüÁ¶º¯¼öÀÇ Å¸ÀÔ°ú ÀÏÄ¡ÇÑ´Ù.
-		System.out.println("Âü°¡ÀÚ ¸í´Ü = " + set);
+		set = map.keySet();	//ì°¸ì¡°ë³€ìˆ˜ setì— kdySet()ë©”ì„œë“œë¡œ ë°˜í™˜ëœ ëª¨ë“  í‚¤ ê°’ì„ ë°˜í™˜í•œë‹¤. ë¦¬í„´ íƒ€ì…ì´ Setì´ê¸°ì— ì°¸ì¡°ë³€ìˆ˜ì˜ íƒ€ì…ê³¼ ì¼ì¹˜í•œë‹¤.
+		System.out.println("ì°¸ê°€ì ëª…ë‹¨ = " + set);
 		
-		Collection values = map.values();	//Collection Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö¿¡ ÂüÁ¶º¯¼ö mapÀÌ °¡¸®Å°´Â HashMap °´Ã¼¿¡ ÀúÀåµÈ ¸ğµç °ªÀ» Collection ÇüÅÂ·Î ¹İÈ¯
-		it = values.iterator();	//Iterator´Â ÀçÈ°¿ëÀÌ ¾ÈµÇ¹Ç·Î ´Ù½Ã °ªÀ» ÀúÀåÇØ µĞ´Ù.
+		Collection values = map.values();	//Collection íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ì— ì°¸ì¡°ë³€ìˆ˜ mapì´ ê°€ë¦¬í‚¤ëŠ” HashMap ê°ì²´ì— ì €ì¥ëœ ëª¨ë“  ê°’ì„ Collection í˜•íƒœë¡œ ë°˜í™˜
+		it = values.iterator();	//IteratorëŠ” ì¬í™œìš©ì´ ì•ˆë˜ë¯€ë¡œ ë‹¤ì‹œ ê°’ì„ ì €ì¥í•´ ë‘”ë‹¤.
 		
 		int total = 0;
 		
-		while(it.hasNext()) {	//it¿¡ ´ÙÀ½°ªÀÌ ÀÖÀ»¶§ ±îÁö ¹İº¹
-			Integer i = (Integer)it.next();	//itÀÇ ´ÙÀ½ µ¥ÀÌÅÍ¸¦ Integer Å¸ÀÔÀ¸·Î Çüº¯È¯ ÇÏ¿© º¯¼öi¿¡ ÀúÀå
-			total = total + i.intValue();	//total º¯¼ö¿¡ iÀÇ °ªÀ» ÀúÀåÇÑ´Ù.
+		while(it.hasNext()) {	//itì— ë‹¤ìŒê°’ì´ ìˆì„ë•Œ ê¹Œì§€ ë°˜ë³µ
+			Integer i = (Integer)it.next();	//itì˜ ë‹¤ìŒ ë°ì´í„°ë¥¼ Integer íƒ€ì…ìœ¼ë¡œ í˜•ë³€í™˜ í•˜ì—¬ ë³€ìˆ˜iì— ì €ì¥
+			total = total + i.intValue();	//total ë³€ìˆ˜ì— iì˜ ê°’ì„ ì €ì¥í•œë‹¤.
 		}
 		
-		System.out.println("ÃÑÁ¡ : " + total);
-		System.out.println("Æò±Õ : " + (float)total/set.size());
-		System.out.println("ÃÖ°íÁ¡¼ö : " + Collections.max(values));
-		System.out.println("ÃÖÀúÁ¡¼ö : " + Collections.min(values));
+		System.out.println("ì´ì  : " + total);
+		System.out.println("í‰ê·  : " + (float)total/set.size());
+		System.out.println("ìµœê³ ì ìˆ˜ : " + Collections.max(values));
+		System.out.println("ìµœì €ì ìˆ˜ : " + Collections.min(values));
 	}
 
 }

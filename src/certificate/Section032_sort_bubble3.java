@@ -1,42 +1,42 @@
-package certificate;
+ï»¿package certificate;
 
 import java.util.Scanner;
 
 class Section032_sort_bubble3 {
-	//¹öºí Á¤·Ä Áß°£Á¾·á
+	//ë²„ë¸” ì •ë ¬ ì¤‘ê°„ì¢…ë£Œ
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n, sw, cnt, k;
-		//n = ÀÔ·Â¹ÞÀº ¼ýÀÚÀÇ °¹¼ö, sw = ÀÚ·á±³È¯ ¿©ºÎ¸¦ ÆÇ´ÜÇÒ ½ºÀ§Ä¡ º¯¼ö, cnt = ÀÚ·á ±³È¯ È½¼ö, k = Ä¡È¯À» À§ÇÑ º¯¼ö
+		//n = ìž…ë ¥ë°›ì€ ìˆ«ìžì˜ ê°¯ìˆ˜, sw = ìžë£Œêµí™˜ ì—¬ë¶€ë¥¼ íŒë‹¨í•  ìŠ¤ìœ„ì¹˜ ë³€ìˆ˜, cnt = ìžë£Œ êµí™˜ íšŸìˆ˜, k = ì¹˜í™˜ì„ ìœ„í•œ ë³€ìˆ˜
 		int [] data = new int[10];
-		//Á¤·ÄÇÒ ¼ýÀÚ°¡ ÀúÀåµÉ ¹è¿­
+		//ì •ë ¬í•  ìˆ«ìžê°€ ì €ìž¥ë  ë°°ì—´
 		
-		n = -1;	//0~9±îÁöÀÇ ¹øÁö¼ö¿¡ ÀúÀåÇÏ±â À§ÇØ -1·Î ÃÊ±âÈ­
+		n = -1;	//0~9ê¹Œì§€ì˜ ë²ˆì§€ìˆ˜ì— ì €ìž¥í•˜ê¸° ìœ„í•´ -1ë¡œ ì´ˆê¸°í™”
 		
 		do {
-			n++;	//nÀº 0¹øÁö ºÎÅÍ ½ÃÀÛÇÔ
+			n++;	//nì€ 0ë²ˆì§€ ë¶€í„° ì‹œìž‘í•¨
 			data[n] = sc.nextInt();
 		} while (n < 9);
 		
-		cnt = 0;	//º¯È¯ÀÌ ÀÌ·ïÁöÁö ¾ÊÀº »óÅÂ 0À¸·Î ÃÊ±âÈ­
+		cnt = 0;	//ë³€í™˜ì´ ì´ë¤„ì§€ì§€ ì•Šì€ ìƒíƒœ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 		
 		for (int i = 1; i <= 9; i++) {
-			sw = 0;	//½ºÀ§Ä¡ º¯¼ö´Â 0°ú 1 µÎ°¡ÁöÀÇ °æ¿ì·Î ÆÇ´Ü ¹Ýº¹À» ½ÃÀÛÇÒ ¶§ ¸¶´Ù 0À¸·Î ÃÊ±âÈ­ µÈ´Ù.
-			for (int j = 0; j <= (9 - i); j++) {	//±âÁ¸Àº ¹öºíÁ¤·ÄÀÇ ¿ø¸®¿Í °°À½
-				if (data[j] > data[j + 1]) {	//ºñ±³½Ã Å« µ¥ÀÌÅÍ¸¦ µÚ·Î ¿Å±â´Â Ä¡È¯
+			sw = 0;	//ìŠ¤ìœ„ì¹˜ ë³€ìˆ˜ëŠ” 0ê³¼ 1 ë‘ê°€ì§€ì˜ ê²½ìš°ë¡œ íŒë‹¨ ë°˜ë³µì„ ì‹œìž‘í•  ë•Œ ë§ˆë‹¤ 0ìœ¼ë¡œ ì´ˆê¸°í™” ëœë‹¤.
+			for (int j = 0; j <= (9 - i); j++) {	//ê¸°ì¡´ì€ ë²„ë¸”ì •ë ¬ì˜ ì›ë¦¬ì™€ ê°™ìŒ
+				if (data[j] > data[j + 1]) {	//ë¹„êµì‹œ í° ë°ì´í„°ë¥¼ ë’¤ë¡œ ì˜®ê¸°ëŠ” ì¹˜í™˜
 					k = data[j];
 					data[j] = data[j + 1];
 					data[j + 1] = k;
-					cnt++;	//ÇÑ¹øÀÇ ±³È¯ÀÌ ÀÌ·ïÁö¸é ±³È¯ È½¼ö°¡ Ãß°¡ µÈ´Ù.
-					sw = 1;	//¿©±â ±îÁö ³»·Á¿Ô´Ù´Â °ÍÀº ±³È¯ÀÌ ÀÌ·ïÁ³´Ù´Â ÀÇ¹Ì.
-							//¸¸¾à ±³È¯ÀÌ µÇÁö ¾Ê¾Ò´Ù¸é ¿©±â±îÁö ³»·Á¿ÀÁö ¾Ê¾Ò°í swº¯¼ö´Â 0À¸·Î ÃÊ±âÈ­ µÈ »óÅÂÀÏ °ÍÀÌ´Ù.
+					cnt++;	//í•œë²ˆì˜ êµí™˜ì´ ì´ë¤„ì§€ë©´ êµí™˜ íšŸìˆ˜ê°€ ì¶”ê°€ ëœë‹¤.
+					sw = 1;	//ì—¬ê¸° ê¹Œì§€ ë‚´ë ¤ì™”ë‹¤ëŠ” ê²ƒì€ êµí™˜ì´ ì´ë¤„ì¡Œë‹¤ëŠ” ì˜ë¯¸.
+							//ë§Œì•½ êµí™˜ì´ ë˜ì§€ ì•Šì•˜ë‹¤ë©´ ì—¬ê¸°ê¹Œì§€ ë‚´ë ¤ì˜¤ì§€ ì•Šì•˜ê³  swë³€ìˆ˜ëŠ” 0ìœ¼ë¡œ ì´ˆê¸°í™” ëœ ìƒíƒœì¼ ê²ƒì´ë‹¤.
 				}
 			}
-			if (sw == 0)	//±³È¯ÀÌ µÇÁö ¾ÊÀº »óÅÂ°¡ ÂüÀÌ¶ó¸é, ´õÀÌ»óÀÇ ¹Ýº¹¾øÀÌ ÃÖ»óÀ§ for¹®À» ºüÁ®³ª¿Â´Ù.
+			if (sw == 0)	//êµí™˜ì´ ë˜ì§€ ì•Šì€ ìƒíƒœê°€ ì°¸ì´ë¼ë©´, ë”ì´ìƒì˜ ë°˜ë³µì—†ì´ ìµœìƒìœ„ forë¬¸ì„ ë¹ ì ¸ë‚˜ì˜¨ë‹¤.
 				break;
 		}
 		
-		System.out.printf("%d ", cnt);	//Ãâ·Â
+		System.out.printf("%d ", cnt);	//ì¶œë ¥
 		for (int x = 0; x <= 9; x++)
 			System.out.printf("%d ", data[x]);
 		sc.close();

@@ -1,4 +1,4 @@
-package programmers;
+﻿package programmers;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,21 +7,21 @@ import java.util.List;
 class DivisorNum {
 	private int [] solution(int [] arr, int divisor) {
 		int [] answer = {};
-		List<Integer> list = new ArrayList<Integer>();	//나누어 떨어지는 수를 담을 ArrayList 객체
+		List<Integer> list = new ArrayList<Integer>();	//?????⑥댁?? ?瑜??댁 ArrayList 媛泥?
 		
-		for(int i = 0; i < arr.length; i++) {	//주어진 배열의 크기만큼 1씩 증가하면서 반복
-			if(arr[i] % divisor == 0) {	//해당 번지에 있는 데이터가 divisor로 나눠 떨어진다면
-				list.add(arr[i]);	//해당 데이터를 ArrayList에 담는다
+		for(int i = 0; i < arr.length; i++) {	//二쇱댁? 諛곗댁 ?ш린留??1??利媛?硫댁 諛蹂?
+			if(arr[i] % divisor == 0) {	//?대?踰吏? ?? ?곗댄곌? divisor濡 ?? ?⑥댁??ㅻ㈃
+				list.add(arr[i]);	//?대??곗댄곕? ArrayList? ?대??
 			}
 		}
 		
-		Collections.sort(list);	//정렬
+		Collections.sort(list);	//???
 		
-		if(list.size() == 0) {	//list에 데이터가 담겨있지 않다면,
-			answer = new int []	{-1};	//int 배열에 -1을 담아 반환
-		}else {	//데이터가 담겨있다면,
-			answer = new int [list.size()];	//참조변수 answer는 새로 생성한 list의 크기와 같은 배열을 가리키도록 하고,
-			for(int i = 0; i < list.size(); i++) {	//그 배열에 list에 담긴 데이터를 순차적으로 저장한다.
+		if(list.size() == 0) {	//list? ?곗댄곌? ?닿꺼?吏 ??ㅻ㈃,
+			answer = new int []	{-1};	//int 諛곗댁 -1? ?댁 諛?
+		}else {	//?곗댄곌? ?닿꺼??ㅻ㈃,
+			answer = new int [list.size()];	//李몄“蹂? answer? ?濡 ??깊 list? ?ш린? 媛? 諛곗댁 媛由ыㅻ濡 ?怨,
+			for(int i = 0; i < list.size(); i++) {	//洹?諛곗댁 list? ?닿릿 ?곗댄곕? ?李⑥?쇰? ??ν??
 				answer[i] = list.get(i);
 			}
 		}

@@ -1,4 +1,4 @@
-package ch11;
+ï»¿package ch11;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class MyVector implements List {
-	Object [] data = null;	//°´Ã¼¸¦ ´ã±â À§ÇÑ °´Ã¼¹è¿­À» ¼±¾ğ
-	int capacity = 0;	//¿ë·®
-	int size = 0;		//Å©±â
+	Object [] data = null;	//ê°ì²´ë¥¼ ë‹´ê¸° ìœ„í•œ ê°ì²´ë°°ì—´ì„ ì„ ì–¸
+	int capacity = 0;	//ìš©ëŸ‰
+	int size = 0;		//í¬ê¸°
 	
-	MyVector(int capacity){	//»ı¼ºÀÚ¸¦ ÅëÇÑ ÃÊ±âÈ­ ÀÎÀÚ°ªÀ¸·Î ¹è¿­ÀÇ Å©±â°ú ¿ë·®À» ¼³Á¤ÇÑ´Ù.
+	MyVector(int capacity){	//ìƒì„±ìë¥¼ í†µí•œ ì´ˆê¸°í™” ì¸ìê°’ìœ¼ë¡œ ë°°ì—´ì˜ í¬ê¸°ê³¼ ìš©ëŸ‰ì„ ì„¤ì •í•œë‹¤.
 		if(capacity < 0)
-			throw new IllegalArgumentException("À¯È¿ÇÏÁö ¾ÊÀº °ªÀÔ´Ï´Ù :. " + capacity);
+			throw new IllegalArgumentException("ìœ íš¨í•˜ì§€ ì•Šì€ ê°’ì…ë‹ˆë‹¤ :. " + capacity);
 		this.capacity = capacity;
 		data = new Object[capacity];
 	}
@@ -23,7 +23,7 @@ public class MyVector implements List {
 	}
 	
 	public boolean add(Object obj) {
-		// »õ·Î¿î °´Ã¼¸¦ ÀúÀåÇÏ±â Àü¿¡ ÀúÀåÇÒ °ø°£À» È®º¸ÇÑ´Ù.
+		// ìƒˆë¡œìš´ ê°ì²´ë¥¼ ì €ì¥í•˜ê¸° ì „ì— ì €ì¥í•  ê³µê°„ì„ í™•ë³´í•œë‹¤.
 		ensureCapacity(size+1);
 		data[size++] = obj; 
 		return true;
@@ -31,7 +31,7 @@ public class MyVector implements List {
 	
 	public Object get(int index) {
 		if(index < 0 || index >= size) 
-			throw new IndexOutOfBoundsException("¹üÀ§¸¦ ¹ş¾î³µ½À´Ï´Ù.");
+			throw new IndexOutOfBoundsException("ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤.");
 
 		return data[index];
 	}
@@ -40,16 +40,16 @@ public class MyVector implements List {
 		Object oldObj = null;
 
 		if(index < 0 || index >= size) 
-			throw new IndexOutOfBoundsException("¹üÀ§¸¦ ¹ş¾î³µ½À´Ï´Ù.");
+			throw new IndexOutOfBoundsException("ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤.");
 
 		oldObj = data[index];
 
-		// »èÁ¦ÇÏ°íÀÚ ÇÏ´Â °´Ã¼°¡ ¸¶Áö¸· °´Ã¼°¡ ¾Æ´Ï¶ó¸é, ¹è¿­º¹»ç¸¦ ÅëÇØ ºóÀÚ¸®¸¦ Ã¤¿öÁà¾ß ÇÑ´Ù.
+		// ì‚­ì œí•˜ê³ ì í•˜ëŠ” ê°ì²´ê°€ ë§ˆì§€ë§‰ ê°ì²´ê°€ ì•„ë‹ˆë¼ë©´, ë°°ì—´ë³µì‚¬ë¥¼ í†µí•´ ë¹ˆìë¦¬ë¥¼ ì±„ì›Œì¤˜ì•¼ í•œë‹¤.
 		if(index != size-1) {
 			System.arraycopy(data, index+1, data, index, size-index-1);
 		}
 
-        // ¸¶Áö¸· µ¥ÀÌÅÍ¸¦ null·Î ÇÑ´Ù. ¹è¿­Àº 0 ºÎÅÍ ½ÃÀÛÇÏ¹Ç·Î ¸¶Áö¸· ¿ä¼Ò´Â index°¡ size-1ÀÌ´Ù.
+        // ë§ˆì§€ë§‰ ë°ì´í„°ë¥¼ nullë¡œ í•œë‹¤. ë°°ì—´ì€ 0 ë¶€í„° ì‹œì‘í•˜ë¯€ë¡œ ë§ˆì§€ë§‰ ìš”ì†ŒëŠ” indexê°€ size-1ì´ë‹¤.
 		data[size-1] = null;	
 		size--;
 		return oldObj;
@@ -70,7 +70,7 @@ public class MyVector implements List {
 	}
 	
 	private void setCapacity(int capacity) {
-		if(this.capacity==capacity) return; // Å©±â°¡ °°À¸¸é º¯°æÇÏÁö ¾Ê´Â´Ù.
+		if(this.capacity==capacity) return; // í¬ê¸°ê°€ ê°™ìœ¼ë©´ ë³€ê²½í•˜ì§€ ì•ŠëŠ”ë‹¤.
 
 		Object[] tmp = new Object[capacity];
 		System.arraycopy(data,0, tmp, 0, size);

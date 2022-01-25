@@ -1,18 +1,18 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.ArrayList;
 
-//¼öÆ÷ÀÚ ¸ğÀÇ°í»ç
+//ìˆ˜í¬ì ëª¨ì˜ê³ ì‚¬
 class NoAnswerMath {
 	private int [] solution(int [] answers) {
-		int [] score = {0, 0, 0};	//¸ÂÃá °¹¼ö¸¦ ÀúÀåÇÒ ¹è¿­
-        int [] noAnswer1 = new int [answers.length];	//¼öÆ÷ÀÚ 1,2,3 µéÀÇ ´äÀÌ ´ã±æ ¹è¿­
+		int [] score = {0, 0, 0};	//ë§ì¶˜ ê°¯ìˆ˜ë¥¼ ì €ì¥í•  ë°°ì—´
+        int [] noAnswer1 = new int [answers.length];	//ìˆ˜í¬ì 1,2,3 ë“¤ì˜ ë‹µì´ ë‹´ê¸¸ ë°°ì—´
         int [] noAnswer2 = new int [answers.length];
         int [] noAnswer3 = new int [answers.length];
-        ArrayList<Integer> temp = new ArrayList();	//ÃÖ°íÁ¡ ÀÎ¿øÀÌ ´ã±æ ÀÓ½Ã list
-        int max = 0;	//Á¤´ä °¹¼ö ÃÖ´ë
+        ArrayList<Integer> temp = new ArrayList();	//ìµœê³ ì  ì¸ì›ì´ ë‹´ê¸¸ ì„ì‹œ list
+        int max = 0;	//ì •ë‹µ ê°¯ìˆ˜ ìµœëŒ€
         
-        for(int i = 0; i < answers.length; i++) {	//1¹ø ¼öÆ÷ÀÚÀÇ ´ä ÆĞÅÏ
+        for(int i = 0; i < answers.length; i++) {	//1ë²ˆ ìˆ˜í¬ìì˜ ë‹µ íŒ¨í„´
         	if(i % 5 == 0) {
         		noAnswer1[i] = 1;        		
         	}else if(i % 5 == 1) {
@@ -26,7 +26,7 @@ class NoAnswerMath {
         	}
         }
         
-        for(int i = 0; i < answers.length; i++) {	//2¹ø ¼öÆ÷ÀÚÀÇ ´ä ÆĞÅÏ
+        for(int i = 0; i < answers.length; i++) {	//2ë²ˆ ìˆ˜í¬ìì˜ ë‹µ íŒ¨í„´
         	if(i % 8 == 0 || i % 8 == 2 || i % 8 == 4 || i % 8 == 6) {
         		noAnswer2[i] = 2;        		
         	}else if(i % 8 == 1) {
@@ -40,7 +40,7 @@ class NoAnswerMath {
         	}
         }
         
-        for(int i = 0; i < answers.length; i++) {	//3¹ø ¼öÆ÷ÀÚÀÇ ´ä ÆĞÅÏ
+        for(int i = 0; i < answers.length; i++) {	//3ë²ˆ ìˆ˜í¬ìì˜ ë‹µ íŒ¨í„´
         	if(i % 10 == 0 || i % 10 == 1) {
         		noAnswer3[i] = 3;        		
         	}else if(i % 10 == 2 || i % 10 == 3) {
@@ -54,7 +54,7 @@ class NoAnswerMath {
         	}
         }
         
-        for(int i = 0; i < answers.length; i++) {	//Á¤´ä°ú ºñ±³ÇÏ¿© ¼öÆ÷ÀÚÀÇ ¸ÂÃá °¹¼ö¸¦ ÀúÀåÇÑ´Ù.
+        for(int i = 0; i < answers.length; i++) {	//ì •ë‹µê³¼ ë¹„êµí•˜ì—¬ ìˆ˜í¬ìì˜ ë§ì¶˜ ê°¯ìˆ˜ë¥¼ ì €ì¥í•œë‹¤.
         	if(noAnswer1[i] == answers[i]) {
         		score[0]++;
         	}
@@ -66,13 +66,13 @@ class NoAnswerMath {
         	}
         }
         
-        for(int i = 0; i < 3; i++) {	//ÃÖ°íÁ¡À» Ã£´Â ¹İº¹
+        for(int i = 0; i < 3; i++) {	//ìµœê³ ì ì„ ì°¾ëŠ” ë°˜ë³µ
         	if(score[i] > max) {
         		max = score[i];
         	}
         }
         
-        for(int i = 0; i < 3; i++) {	//ÃÖ°íÁ¡À» ¹ŞÀº ÀÎ¿øÀÌ Áßº¹ µÉ ¼ö ÀÖÀ¸¹Ç·Î list¿¡ Ãß°¡
+        for(int i = 0; i < 3; i++) {	//ìµœê³ ì ì„ ë°›ì€ ì¸ì›ì´ ì¤‘ë³µ ë  ìˆ˜ ìˆìœ¼ë¯€ë¡œ listì— ì¶”ê°€
         	if(score[i] == max) {
         		temp.add(i+1);
         	}

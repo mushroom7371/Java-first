@@ -1,22 +1,22 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.Stack;
 
 class Crane {
 	private int solution(int [][] board, int[] moves) {
         int answer = 0;
-        Stack<Integer> stack = new Stack<>();	//ÀÎÇüÀ» ´ãÀ» ½ºÅÃ ¹Ù±¸´Ï
+        Stack<Integer> stack = new Stack<>();	//ì¸í˜•ì„ ë‹´ì„ ìŠ¤íƒ ë°”êµ¬ë‹ˆ
         
-        for(int i = 0; i < moves.length; i++){	//Å©·¹ÀÎÀÇ ÀÌµ¿ È½¼ö ¸¸Å­ ¹İº¹
-            for(int j = 0; j < board.length; j++){	//°İÀÚÀÇ ±æÀÌ¸¸Å­ ¹İº¹
-                if(board[j][moves[i]-1] != 0 ) {  //jÇàÀÇ Å©·¹ÀÎ À§Ä¡ ¿­¿¡ ÀÎÇüÀÌ Á¸ÀçÇÑ´Ù¸é                 
-                    if(!stack.empty() && stack.peek() == board[j][moves[i]-1]){	//¹Ù±¸´Ï°¡ ºñ¾îÀÖÁö ¾Ê°í, ¸Ç À§ÀÇ ÀÎÇüÀÌ Å©·¹ÀÎÀ¸·Î »ÌÀº ÀÎÇü°ú °°À¸¸é
-                        answer++;	//ÀÎÇüÀÌ Á¦°ÅµÈ È½¼ö Áõ°¡
-                        stack.pop();	//¹Ù±¸´Ï¿¡ ÀÖ´Â ÀÎÇüÀº ¾ø¾ÖÁØ´Ù
-                        board[j][moves[i]-1] = 0;	//Å©·¹ÀÎÀ¸·Î »ÌÀº ÀÎÇüµµ ¾ø¾ÖÁØ´Ù.
+        for(int i = 0; i < moves.length; i++){	//í¬ë ˆì¸ì˜ ì´ë™ íšŸìˆ˜ ë§Œí¼ ë°˜ë³µ
+            for(int j = 0; j < board.length; j++){	//ê²©ìì˜ ê¸¸ì´ë§Œí¼ ë°˜ë³µ
+                if(board[j][moves[i]-1] != 0 ) {  //jí–‰ì˜ í¬ë ˆì¸ ìœ„ì¹˜ ì—´ì— ì¸í˜•ì´ ì¡´ì¬í•œë‹¤ë©´                 
+                    if(!stack.empty() && stack.peek() == board[j][moves[i]-1]){	//ë°”êµ¬ë‹ˆê°€ ë¹„ì–´ìˆì§€ ì•Šê³ , ë§¨ ìœ„ì˜ ì¸í˜•ì´ í¬ë ˆì¸ìœ¼ë¡œ ë½‘ì€ ì¸í˜•ê³¼ ê°™ìœ¼ë©´
+                        answer++;	//ì¸í˜•ì´ ì œê±°ëœ íšŸìˆ˜ ì¦ê°€
+                        stack.pop();	//ë°”êµ¬ë‹ˆì— ìˆëŠ” ì¸í˜•ì€ ì—†ì• ì¤€ë‹¤
+                        board[j][moves[i]-1] = 0;	//í¬ë ˆì¸ìœ¼ë¡œ ë½‘ì€ ì¸í˜•ë„ ì—†ì• ì¤€ë‹¤.
                         break;
                     }else{
-                        stack.push(board[j][moves[i]-1]);	//ÀÌ¿ÜÀÇ °æ¿ì¿¡´Â ÀÎÇüÀ» ¹Ù±¸´Ï·Î ¿Å±ä ÈÄ 0À¸·Î ¾ø¾ÖÁØ´Ù.                 
+                        stack.push(board[j][moves[i]-1]);	//ì´ì™¸ì˜ ê²½ìš°ì—ëŠ” ì¸í˜•ì„ ë°”êµ¬ë‹ˆë¡œ ì˜®ê¸´ í›„ 0ìœ¼ë¡œ ì—†ì• ì¤€ë‹¤.                 
                         board[j][moves[i]-1] = 0;
                         break;
                     }

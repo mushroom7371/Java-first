@@ -1,16 +1,16 @@
-package programmers;
+ï»¿package programmers;
 
 class NationOf124 {
 	public String solution(int n) {
 		String answer = "";
 		int countNum = n;
 
-        while(countNum > 0){ //ÁÖ¾îÁø º¯¼ö°¡ ¾ç¼öÀÏ °æ¿ì¸¸ ¹İº¹
-            if (countNum % 3 == 0){	//3À¸·Î ³ª´³À»¶§ ³ª¸ÓÁö°¡ 0ÀÌ¶ó¸é
-                answer = "4" + answer;	//Á¤´ä¿¡ ¾Õ¿¡ 4¸¦ ´õÇÑ´Ù.
-            }else if(countNum % 3 == 1){	//³ª¸ÓÁö°¡ 1ÀÌ¶ó¸é
+        while(countNum > 0){ //ì£¼ì–´ì§„ ë³€ìˆ˜ê°€ ì–‘ìˆ˜ì¼ ê²½ìš°ë§Œ ë°˜ë³µ
+            if (countNum % 3 == 0){	//3ìœ¼ë¡œ ë‚˜ëˆ´ì„ë•Œ ë‚˜ë¨¸ì§€ê°€ 0ì´ë¼ë©´
+                answer = "4" + answer;	//ì •ë‹µì— ì•ì— 4ë¥¼ ë”í•œë‹¤.
+            }else if(countNum % 3 == 1){	//ë‚˜ë¨¸ì§€ê°€ 1ì´ë¼ë©´
                 answer = "1" + answer;
-            }else{	//³ª¸ÓÁö°¡ 2¶ó¸é
+            }else{	//ë‚˜ë¨¸ì§€ê°€ 2ë¼ë©´
                 answer = "2" + answer;
             }
             countNum /=3;

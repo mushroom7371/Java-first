@@ -1,4 +1,4 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.util.Scanner;
 
@@ -10,20 +10,20 @@ public class GragdeEx {
 		
 		do {
 			
-			System.out.print("0Á¡¿¡¼­ 100Á¡ »çÀÌÀÇ Á¡¼ö¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä. : ");
+			System.out.print("0ì ì—ì„œ 100ì  ì‚¬ì´ì˜ ì ìˆ˜ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”. : ");
 			grade = sc.nextInt();
 			
 		}while(!(grade > 0 && grade <= 100));
 			if(grade >= 90 && grade <= 100) {
-				System.out.println(grade + "Á¡Àº A ÇĞÁ¡ ÀÔ´Ï´Ù.");
+				System.out.println(grade + "ì ì€ A í•™ì  ì…ë‹ˆë‹¤.");
 			}else if(grade >= 80 && grade <90) {
-				System.out.println(grade + "Á¡Àº B ÇĞÁ¡ ÀÔ´Ï´Ù.");
+				System.out.println(grade + "ì ì€ B í•™ì  ì…ë‹ˆë‹¤.");
 			}else if(grade >= 70 && grade <80) {
-				System.out.println(grade + "Á¡Àº C ÇĞÁ¡ ÀÔ´Ï´Ù.");
+				System.out.println(grade + "ì ì€ C í•™ì  ì…ë‹ˆë‹¤.");
 			}else if(grade >= 60 && grade < 70) {
-				System.out.println(grade + "Á¡Àº D ÇĞÁ¡ ÀÔ´Ï´Ù.");
+				System.out.println(grade + "ì ì€ D í•™ì  ì…ë‹ˆë‹¤.");
 			}else {
-				System.out.println(grade + "Á¡Àº F ÇĞÁ¡ ÀÔ´Ï´Ù.");
+				System.out.println(grade + "ì ì€ F í•™ì  ì…ë‹ˆë‹¤.");
 			}
 	}
 }

@@ -1,27 +1,27 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 public class MyClass {
 	
 	public void method1() {
-		System.out.println("method1ÀÌ ½ÇÇàµÊ");
-		//¸Å°³º¯¼ö¿Í ¸®ÅÏ°ªÀÌ ¾ø´Â ¸Ş¼­µå
+		System.out.println("method1ì´ ì‹¤í–‰ë¨");
+		//ë§¤ê°œë³€ìˆ˜ì™€ ë¦¬í„´ê°’ì´ ì—†ëŠ” ë©”ì„œë“œ
 	}
 	
 	public void method2(int x) {
-		System.out.println( x + "¸¦ ÀÌ¿ëÇÏ´Â method2");
-		//¸Å°³º¯¼ö´Â int Å¸ÀÔÀ¸·Î ÀÖÀ¸³ª ¸®ÅÏ°ªÀÌ ¾ø´Â ¸Ş¼­µå·Î ¸Ş¼­µå ¾Õ¿¡ void °¡ µÊ
+		System.out.println( x + "ë¥¼ ì´ìš©í•˜ëŠ” method2");
+		//ë§¤ê°œë³€ìˆ˜ëŠ” int íƒ€ì…ìœ¼ë¡œ ìˆìœ¼ë‚˜ ë¦¬í„´ê°’ì´ ì—†ëŠ” ë©”ì„œë“œë¡œ ë©”ì„œë“œ ì•ì— void ê°€ ë¨
 	}
 	
 	public int method3() {
-		System.out.println("method3ÀÌ ½ÇÇàµÊ");
-		//¸Å°³º¯¼ö°¡ ¾øÀ¸³ª ¸®ÅÏ°ªÀÌ Á¤¼öÇüÀÎ ¸Ş¼­µå·Î ¸Ş¼­µå ÀÌ¸§ ¾Õ¿¡ int °¡ µÊ
+		System.out.println("method3ì´ ì‹¤í–‰ë¨");
+		//ë§¤ê°œë³€ìˆ˜ê°€ ì—†ìœ¼ë‚˜ ë¦¬í„´ê°’ì´ ì •ìˆ˜í˜•ì¸ ë©”ì„œë“œë¡œ ë©”ì„œë“œ ì´ë¦„ ì•ì— int ê°€ ë¨
 		
 		return 10;
 	}
 	
 	public int method4(int x, int y) {
-		System.out.println(x +"¿Í " + y +"¸¦ ÀÌ¿ëÇÑ method4");
-		//¸Å°³º¯¼ö°¡ int Å¸ÀÔÀ¸·Î 2°³ ÀÖÀ¸¸ç ±¸ÇöºÎ¿¡¼­ ´õÇÏ´Â ±â´ÉÀÇ °á°ú°ªÀ» ¸®ÅÏÇÏ´Â ¸Ş¼­µå
+		System.out.println(x +"ì™€ " + y +"ë¥¼ ì´ìš©í•œ method4");
+		//ë§¤ê°œë³€ìˆ˜ê°€ int íƒ€ì…ìœ¼ë¡œ 2ê°œ ìˆìœ¼ë©° êµ¬í˜„ë¶€ì—ì„œ ë”í•˜ëŠ” ê¸°ëŠ¥ì˜ ê²°ê³¼ê°’ì„ ë¦¬í„´í•˜ëŠ” ë©”ì„œë“œ
 		
 		return x + y;
 		

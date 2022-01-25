@@ -1,4 +1,4 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 public class AbstractStudy {
 	public static void main(String [] args) {
@@ -7,30 +7,30 @@ public class AbstractStudy {
 	}
 	
 	static void attackSomething(Weapon weapon) {
-		//attackSomething ¸Þ¼­µåÀÇ ¸Å°³º¯¼ö·Î Weapon Å¸ÀÔÀ» ÁöÁ¤ÇÔÀ¸·Î½á Weapon Å¬·¡½º·Î ºÎÅÍ
-		//ÆÄ»ýµÈ ¸ðµç Å¬·¡½ºÀÇ °´Ã¼¸¦ »ç¿ëÇÒ ¼ö ÀÖ°Ô µÊ. Weapon Å¬·¡½º¸¦ »ó¼Ó ¹Þ¾Ò´Ù´Â °ÍÀº ÀÎ½ºÅÏ½ºÈ­ µÉ½Ã
-		//WeaponÀÇ ÀÎ½ºÅÏ½º ¶ÇÇÑ ¸¸µé¾îÁ®¼­ °¡Áö°í ÀÖ´Ù´Â ¸»ÀÌ¹Ç·Î °¡Áö°í ÀÖ´Â °ÍÀ» ÂüÁ¶ÇÏ´Â µ¥¿¡ ¹®Á¦°¡ ¾øÀ½.
-		//¶ÇÇÑ ¹«±â¸¦ Ãß°¡ÇÒ ½Ã WeaponÀ» »ó¼Ó¹Þ°Ô ÇÏ´Â Å¬·¡½º¸¸ ¸¸µé¾î ÁÖ¸é µÇ±â¿¡ °£ÆíÇÔ.
+		//attackSomething ë©”ì„œë“œì˜ ë§¤ê°œë³€ìˆ˜ë¡œ Weapon íƒ€ìž…ì„ ì§€ì •í•¨ìœ¼ë¡œì¨ Weapon í´ëž˜ìŠ¤ë¡œ ë¶€í„°
+		//íŒŒìƒëœ ëª¨ë“  í´ëž˜ìŠ¤ì˜ ê°ì²´ë¥¼ ì‚¬ìš©í•  ìˆ˜ ìžˆê²Œ ë¨. Weapon í´ëž˜ìŠ¤ë¥¼ ìƒì† ë°›ì•˜ë‹¤ëŠ” ê²ƒì€ ì¸ìŠ¤í„´ìŠ¤í™” ë ì‹œ
+		//Weaponì˜ ì¸ìŠ¤í„´ìŠ¤ ë˜í•œ ë§Œë“¤ì–´ì ¸ì„œ ê°€ì§€ê³  ìžˆë‹¤ëŠ” ë§ì´ë¯€ë¡œ ê°€ì§€ê³  ìžˆëŠ” ê²ƒì„ ì°¸ì¡°í•˜ëŠ” ë°ì— ë¬¸ì œê°€ ì—†ìŒ.
+		//ë˜í•œ ë¬´ê¸°ë¥¼ ì¶”ê°€í•  ì‹œ Weaponì„ ìƒì†ë°›ê²Œ í•˜ëŠ” í´ëž˜ìŠ¤ë§Œ ë§Œë“¤ì–´ ì£¼ë©´ ë˜ê¸°ì— ê°„íŽ¸í•¨.
 		weapon.attack();
 	}
 }
 
 abstract class Weapon{
-	//°øÅëÀ¸·Î »ç¿ëµÉ Å¬·¡½ºÀÌ±â ¶§¹®¿¡ Ãß»ó Å¬·¡½º·Î ÀÛ¼ºÇÔ.
+	//ê³µí†µìœ¼ë¡œ ì‚¬ìš©ë  í´ëž˜ìŠ¤ì´ê¸° ë•Œë¬¸ì— ì¶”ìƒ í´ëž˜ìŠ¤ë¡œ ìž‘ì„±í•¨.
 	abstract void attack();
-	//attack() ¸Þ¼­µå´Â ¹«±â¿¡ µû¶ó ¹æ¹ýÀÌ ´Þ¶óÁú °ÍÀÌ¹Ç·Î Ãß»ó¸Þ¼­µå·Î ³²°ÜµÒ ±¸ÇöºÎ´Â °¢ »ó¼Ó¹Þ´Â Å¬·¡½º¿¡¼­ ¸¶ÀúÇÔ
+	//attack() ë©”ì„œë“œëŠ” ë¬´ê¸°ì— ë”°ë¼ ë°©ë²•ì´ ë‹¬ë¼ì§ˆ ê²ƒì´ë¯€ë¡œ ì¶”ìƒë©”ì„œë“œë¡œ ë‚¨ê²¨ë‘  êµ¬í˜„ë¶€ëŠ” ê° ìƒì†ë°›ëŠ” í´ëž˜ìŠ¤ì—ì„œ ë§ˆì €í•¨
 }
 
-class Knife extends Weapon {	//Ä®Àº ¹«±âÀÇ Á¾·ùÀÌ¹Ç·Î Weapon Å¬·¡½º¸¦ »ó¼Ó¹Þ´Â´Ù.
+class Knife extends Weapon {	//ì¹¼ì€ ë¬´ê¸°ì˜ ì¢…ë¥˜ì´ë¯€ë¡œ Weapon í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ”ë‹¤.
 	void attack() {
-		//»ó¼Ó¹ÞÀº Ãß»ó¸Þ¼­µåÀÇ ±¸ÇöºÎ¸¦ ¿Ï¼ºÇÔ. Ä®ÀÌ±â ¶§¹®¿¡ Âî¸¥´Ù¸¦ ±¸ÇöÇÔ.
-		System.out.println("Ä®·Î Âî¸¨´Ï´Ù.");
+		//ìƒì†ë°›ì€ ì¶”ìƒë©”ì„œë“œì˜ êµ¬í˜„ë¶€ë¥¼ ì™„ì„±í•¨. ì¹¼ì´ê¸° ë•Œë¬¸ì— ì°Œë¥¸ë‹¤ë¥¼ êµ¬í˜„í•¨.
+		System.out.println("ì¹¼ë¡œ ì°Œë¦…ë‹ˆë‹¤.");
 	}
 }
 
-class Gun extends Weapon{	//ÃÑÀº ¹«±âÀÇ Á¾·ùÀÌ¹Ç·Î Weapon Å¬·¡½º¸¦ »ó¼Ó¹Þ´Â´Ù.
+class Gun extends Weapon{	//ì´ì€ ë¬´ê¸°ì˜ ì¢…ë¥˜ì´ë¯€ë¡œ Weapon í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ”ë‹¤.
 	void attack() {
-		//»ó¼Ó¹ÞÀº Ãß»ó¸Þ¼­µåÀÇ ±¸ÇöºÎ¸¦ ¿Ï¼ºÇÔ. ÃÑÀÌ±â ¶§¹®¿¡ ½î´Â°ÍÀ» ±¸ÇöÇÔ.
-		System.out.println("ÃÑÀ¸·Î ½õ´Ï´Ù.");
+		//ìƒì†ë°›ì€ ì¶”ìƒë©”ì„œë“œì˜ êµ¬í˜„ë¶€ë¥¼ ì™„ì„±í•¨. ì´ì´ê¸° ë•Œë¬¸ì— ì˜ëŠ”ê²ƒì„ êµ¬í˜„í•¨.
+		System.out.println("ì´ìœ¼ë¡œ ì©ë‹ˆë‹¤.");
 	}
 }

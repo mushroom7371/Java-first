@@ -1,4 +1,4 @@
-package ch04;
+﻿package ch04;
 
 public class Exercise4_4 {
 
@@ -19,7 +19,7 @@ public class Exercise4_4 {
 			}
 			System.out.println(num);
 			}
-		System.out.println("ī��Ʈ Ƚ�� : " + count);
+		System.out.println("카운트 횟수 : " + count);
 	}
 
 }

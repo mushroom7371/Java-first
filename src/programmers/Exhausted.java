@@ -1,31 +1,31 @@
-package programmers;
+ï»¿package programmers;
 
-//ÇÇ·Îµµ
+//í”¼ë¡œë„
 class Exhausted {
 	boolean [] visit;
     int [][] dungeons;
     int max = 0;
     
     private int solution(int k, int [][] dungeons) {
-        this.dungeons=dungeons;	//¸â¹ö º¯¼öÀÌÀÚ ÂüÁ¶º¯¼öÀÎ dungeons°¡ ÀÎÀÚ·Î ¹ŞÀº dungeons º¯¼ö°¡ °¡¸®Å°´Â ¹è¿­À» °¡¸®Å°µµ·Ï ÇÑ´Ù.
-        visit = new boolean[dungeons.length];	//¹æ¹® ¿©ºÎ¸¦ ÀúÀåÇÒ boolean ¹è¿­ ¼±¾ğ
-        for(int i = 0; i < dungeons.length; i++) {	//dungeons°¡ °¡¸®Å°´Â ¹è¿­ÀÇ Å©±â¸¸Å­ 1¾¿ Áõ°¡ÇÏ¸é¼­ ¹İº¹
-        	if(k >= dungeons[i][0]) {	//ÁÖ¾îÁø ÇÇ·Îµµ°¡ ¹è¿­ÀÇ °¢ ¹øÁöÀÇ ÃÖ¼ÒÇÊ¿äµµ º¸´Ù Å©´Ù¸é
-        		dfs(i, k, 1); //dfs()¸Ş¼­µå¸¦ È£ÃâÇÑ´Ù.
+        this.dungeons=dungeons;	//ë©¤ë²„ ë³€ìˆ˜ì´ì ì°¸ì¡°ë³€ìˆ˜ì¸ dungeonsê°€ ì¸ìë¡œ ë°›ì€ dungeons ë³€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì„ ê°€ë¦¬í‚¤ë„ë¡ í•œë‹¤.
+        visit = new boolean[dungeons.length];	//ë°©ë¬¸ ì—¬ë¶€ë¥¼ ì €ì¥í•  boolean ë°°ì—´ ì„ ì–¸
+        for(int i = 0; i < dungeons.length; i++) {	//dungeonsê°€ ê°€ë¦¬í‚¤ëŠ” ë°°ì—´ì˜ í¬ê¸°ë§Œí¼ 1ì”© ì¦ê°€í•˜ë©´ì„œ ë°˜ë³µ
+        	if(k >= dungeons[i][0]) {	//ì£¼ì–´ì§„ í”¼ë¡œë„ê°€ ë°°ì—´ì˜ ê° ë²ˆì§€ì˜ ìµœì†Œí•„ìš”ë„ ë³´ë‹¤ í¬ë‹¤ë©´
+        		dfs(i, k, 1); //dfs()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•œë‹¤.
         	}
         }
         return max;
     }
  
     private void dfs(int cur, int tired, int depth) {
-        visit[cur]=true;	//cur ¹øÁöÀÇ °ªÀ» true·Î ¼³Á¤
-        tired -= dungeons[cur][1];	//ÃÖ´ë ÇÇ·Îµµ¿¡¼­ cur¹øÁö ´øÀüÀÇ ¼Ò¸ğ ÇÊ¿äµµ¸¦ »«´Ù.
-        for(int i = 0; i < dungeons.length; i++) {	//dungeonsÀÇ Å©±â¹İÅ­ 1¾¿ Áõ°¡ÇÏ¸ç ¹İº¹
-        	if(!visit[i] && dungeons[i][0] <= tired) {	//i¹øÁö ´øÀüÀ» ¹æ¹®ÇÏÁö ¾Ê¾Ò°í, ÇÇ·Îµµº¸´Ù ¼Ò¸ğ ÇÊ¿äµµ°¡ ÀÛ´Ù¸é
-        		dfs(i,tired,depth+1);	//dfs() ¸Ş¼­µå¸¦ ´Ù½Ã È£ÃâÇÏ°í, ÀÎÀÚ°ªÀ» Á¶Á¤ÇÑ´Ù.
+        visit[cur]=true;	//cur ë²ˆì§€ì˜ ê°’ì„ trueë¡œ ì„¤ì •
+        tired -= dungeons[cur][1];	//ìµœëŒ€ í”¼ë¡œë„ì—ì„œ curë²ˆì§€ ë˜ì „ì˜ ì†Œëª¨ í•„ìš”ë„ë¥¼ ëº€ë‹¤.
+        for(int i = 0; i < dungeons.length; i++) {	//dungeonsì˜ í¬ê¸°ë°˜í¼ 1ì”© ì¦ê°€í•˜ë©° ë°˜ë³µ
+        	if(!visit[i] && dungeons[i][0] <= tired) {	//ië²ˆì§€ ë˜ì „ì„ ë°©ë¬¸í•˜ì§€ ì•Šì•˜ê³ , í”¼ë¡œë„ë³´ë‹¤ ì†Œëª¨ í•„ìš”ë„ê°€ ì‘ë‹¤ë©´
+        		dfs(i,tired,depth+1);	//dfs() ë©”ì„œë“œë¥¼ ë‹¤ì‹œ í˜¸ì¶œí•˜ê³ , ì¸ìê°’ì„ ì¡°ì •í•œë‹¤.
         	}
         }
-        max = Math.max(depth,max);	//ÃÖ´ë Å½Çè ´øÀü¼ö¸¦ ÀúÀå
-        visit[cur]=false;	//¹æ¹® ¿©ºÎ¸¦ false·Î µÇµ¹¸°´Ù.
+        max = Math.max(depth,max);	//ìµœëŒ€ íƒí—˜ ë˜ì „ìˆ˜ë¥¼ ì €ì¥
+        visit[cur]=false;	//ë°©ë¬¸ ì—¬ë¶€ë¥¼ falseë¡œ ë˜ëŒë¦°ë‹¤.
     }
 }

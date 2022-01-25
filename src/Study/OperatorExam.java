@@ -1,27 +1,27 @@
-package Study;
+ï»¿package Study;
 
 public class OperatorExam {
 	public boolean[] calculate(int a, int b) {	
-		//¹üÀ§°¡ ³ÐÀº Á¢±ÙÁ¦¾îÀÚ publicÀ» »ç¿ëÇÏ¿© ³í¸®Çü Å¸ÀÔÀÇ ¹è¿­À» ¹ÝÈ¯°ªÀ¸·Î °¡Áö´Â
-		//¸Þ¼­µå calculate¸¦ ¼±¾ð calculate´Â Á¤¼öÇü Å¸ÀÔÀÇ ¸Å°³º¯¼ö µÎ°³¸¦ °¡Áø´Ù.
+		//ë²”ìœ„ê°€ ë„“ì€ ì ‘ê·¼ì œì–´ìž publicì„ ì‚¬ìš©í•˜ì—¬ ë…¼ë¦¬í˜• íƒ€ìž…ì˜ ë°°ì—´ì„ ë°˜í™˜ê°’ìœ¼ë¡œ ê°€ì§€ëŠ”
+		//ë©”ì„œë“œ calculateë¥¼ ì„ ì–¸ calculateëŠ” ì •ìˆ˜í˜• íƒ€ìž…ì˜ ë§¤ê°œë³€ìˆ˜ ë‘ê°œë¥¼ ê°€ì§„ë‹¤.
 		
-		boolean c = a > b;	//³í¸®Çü Å¸ÀÔ º¯¼ö c¸¦ ¼±¾ðÇÏ°í ºñ±³¿¬»êÀÚ·Î ¸Å°³º¯¼ö¸¦ ºñ±³
+		boolean c = a > b;	//ë…¼ë¦¬í˜• íƒ€ìž… ë³€ìˆ˜ cë¥¼ ì„ ì–¸í•˜ê³  ë¹„êµì—°ì‚°ìžë¡œ ë§¤ê°œë³€ìˆ˜ë¥¼ ë¹„êµ
 		
 		boolean d = a == b;
 		
 		boolean e = a != b;
 		
-		boolean ret[] = {c, d, e};	//³í¸®Çü Å¸ÀÔÀÇ ¹è¿­ ÂüÁ¶º¯¼ö retÀ» ¼±¾ðÇÏ°í c,d,eÀÇ ÁÖ¼Ò°ªÀ» ÀúÀåÇÔ
+		boolean ret[] = {c, d, e};	//ë…¼ë¦¬í˜• íƒ€ìž…ì˜ ë°°ì—´ ì°¸ì¡°ë³€ìˆ˜ retì„ ì„ ì–¸í•˜ê³  c,d,eì˜ ì£¼ì†Œê°’ì„ ì €ìž¥í•¨
 		
-		return ret;	//¸Þ¼­µåÀÇ ¹ÝÈ¯°ªÀÌ ÂüÁ¶º¯¼ö retÀÓ
+		return ret;	//ë©”ì„œë“œì˜ ë°˜í™˜ê°’ì´ ì°¸ì¡°ë³€ìˆ˜ retìž„
 	}
 	
 	public static void main(String[] args) {
-		int a = (int)(Math.random() * 10);	//Á¤¼öÇü Å¸ÀÔ º¯¼öa¸¦ ¼±¾ðÇÏ°í 0~1ÀÇ ½Ç¼ö°ªÀ» ¹ÝÈ¯ÇÏ´Â ¸Þ¼­µå
-											//10À» °öÇÏ¿© 1~9·Î ¹üÀ§¸¦ ¼³Á¤ÇÏ¸ç ÀÌ¸¦ Á¤¼öÇüÀ¸·Î Çüº¯È¯ÇÑ´Ù.
+		int a = (int)(Math.random() * 10);	//ì •ìˆ˜í˜• íƒ€ìž… ë³€ìˆ˜aë¥¼ ì„ ì–¸í•˜ê³  0~1ì˜ ì‹¤ìˆ˜ê°’ì„ ë°˜í™˜í•˜ëŠ” ë©”ì„œë“œ
+											//10ì„ ê³±í•˜ì—¬ 1~9ë¡œ ë²”ìœ„ë¥¼ ì„¤ì •í•˜ë©° ì´ë¥¼ ì •ìˆ˜í˜•ìœ¼ë¡œ í˜•ë³€í™˜í•œë‹¤.
 		int b = (int)(Math.random() * 10);
 		
-		new OperatorExam().calculate(a, b);	//Å¬·¡½º·Î ºÎÅÍ ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÏ°í ÀÎ½ºÅÏÀÇÀÇ ¸Þ¼­µå¸¦ È£ÃâÇÑ´Ù.
+		new OperatorExam().calculate(a, b);	//í´ëž˜ìŠ¤ë¡œ ë¶€í„° ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ê³  ì¸ìŠ¤í„´ì˜ì˜ ë©”ì„œë“œë¥¼ í˜¸ì¶œí•œë‹¤.
 
 	}
 

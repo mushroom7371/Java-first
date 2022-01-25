@@ -1,16 +1,16 @@
-package programmers;
+ï»¿package programmers;
 
 class StringPush {
 	private String solution(String s, int n) {
 		String answer = "";
 		 
-        for(int i = 0; i < s.length(); i++){	//sÀÇ ±æÀÌ¸¸Å­ 1¾¿ Áõ°¡ÇÏ¸ç ¹Ýº¹
+        for(int i = 0; i < s.length(); i++){	//sì˜ ê¸¸ì´ë§Œí¼ 1ì”© ì¦ê°€í•˜ë©° ë°˜ë³µ
         	char ch = s.charAt(i);
             
-        	if(Character.isLowerCase(ch)){		//¼Ò¹®ÀÚÀÇ °æ¿ì
+        	if(Character.isLowerCase(ch)){		//ì†Œë¬¸ìžì˜ ê²½ìš°
         		ch = (char)((ch-'a'+n)%26 + 'a');
         	}
-        	else if(Character.isUpperCase(ch)){ //´ë¹®ÀÚÀÇ °æ¿ì
+        	else if(Character.isUpperCase(ch)){ //ëŒ€ë¬¸ìžì˜ ê²½ìš°
         		ch = (char)((ch-'A'+n)%26 + 'A');
         	
         	} answer += ch;

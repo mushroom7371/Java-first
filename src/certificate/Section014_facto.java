@@ -1,11 +1,11 @@
-package certificate;
+ï»¿package certificate;
 
 class Section014_facto {
-	//Àç±ÍÇÔ¼ö°¡ ¾Æ´Ñ ÆÑÅä¸®¾ó 1! +...+ 10! ±îÁöÀÇ ÇÕ
+	//ì¬ê·€í•¨ìˆ˜ê°€ ì•„ë‹Œ íŒ©í† ë¦¬ì–¼ 1! +...+ 10! ê¹Œì§€ì˜ í•©
 	public static void main(String[] args) {
 		int i = 1;
 		int j = 1;
-		int sum = 1;	//1Ç×Àº °Ç³Ê¶Ù¹Ç·Î 1·Î ¼³Á¤
+		int sum = 1;	//1í•­ì€ ê±´ë„ˆë›°ë¯€ë¡œ 1ë¡œ ì„¤ì •
 		
 		do {
 			i++;

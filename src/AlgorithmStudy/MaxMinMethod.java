@@ -1,15 +1,15 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 public class MaxMinMethod {
 	public static void main(String [] args) {
 		MaxMinMethod mmm = new MaxMinMethod();
-		//MaxMinMetho Å¬·¡½ºÀÇ public Á¦¾îÀÚ·Î ¼±¾ðÇÑ max4() ¸Þ¼­µå¸¦ »ç¿ëÇÏ±â À§ÇÏ¿© °´Ã¼¸¦ »ý¼ºÇÑ´Ù.
+		//MaxMinMetho í´ëž˜ìŠ¤ì˜ public ì œì–´ìžë¡œ ì„ ì–¸í•œ max4() ë©”ì„œë“œë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•˜ì—¬ ê°ì²´ë¥¼ ìƒì„±í•œë‹¤.
 		
 		int max = mmm.max4(632, 28956, 34, 185);
-		//¸¸¾à max4() °´Ã¼¸¦ »ý¼ºÇÏÁö ¾Ê°í »ç¿ëÇÑ´Ù¸é ÀÌ ¸Þ¼­µå´Â »ç¿ëÀÌ ºÒ°¡´É ÇÏ´Ù.
+		//ë§Œì•½ max4() ê°ì²´ë¥¼ ìƒì„±í•˜ì§€ ì•Šê³  ì‚¬ìš©í•œë‹¤ë©´ ì´ ë©”ì„œë“œëŠ” ì‚¬ìš©ì´ ë¶ˆê°€ëŠ¥ í•˜ë‹¤.
 		int min = min3(28956, 34, 185);
-		//min3() ¸Þ¼­µå´Â static Á¦¾îÀÚ·Î ¼±¾ðÇÏ¿´±â¿¡ Å¬·¡½º°¡ ¸Þ¸ð¸®¿¡ ¿Ã¶ó°¥¶§ »ý¼ºµÈ´Ù.
-		//±×·¯¹Ç·Î µû·Î °´Ã¼¸¦ »ý¼ºÇÏÁö ¾Ê¾Æµµ »ç¿ë°¡´ÉÇÏ´Ù. À§ÀÇ publicÀ¸·Î ¼±¾ðÇÑ ¸Þ¼­µå¿Í ´Ù¸£´Ù.
+		//min3() ë©”ì„œë“œëŠ” static ì œì–´ìžë¡œ ì„ ì–¸í•˜ì˜€ê¸°ì— í´ëž˜ìŠ¤ê°€ ë©”ëª¨ë¦¬ì— ì˜¬ë¼ê°ˆë•Œ ìƒì„±ëœë‹¤.
+		//ê·¸ëŸ¬ë¯€ë¡œ ë”°ë¡œ ê°ì²´ë¥¼ ìƒì„±í•˜ì§€ ì•Šì•„ë„ ì‚¬ìš©ê°€ëŠ¥í•˜ë‹¤. ìœ„ì˜ publicìœ¼ë¡œ ì„ ì–¸í•œ ë©”ì„œë“œì™€ ë‹¤ë¥´ë‹¤.
 		
 		System.out.println(max);
 		System.out.println(min);
@@ -17,19 +17,19 @@ public class MaxMinMethod {
 	}
 
 	public int max4(int a, int b, int c, int d) {
-		//¸Þ¼­µåÀÇ ¸Å°³º¯¼ö·Î ÀÔ·Â¹ÞÀº °ªÀÇ ÃÖ´ë°ªÀ» ±¸ÇÏ´Â ¸Þ¼­µå ¸®ÅÏ°ªÀ» int·Î °¡Áø´Ù.
-		int max = a;	//max°ªÀ» ±¸ÇÏ±â À§ÇØ ¼±¾ðÇÑ º¯¼ö·Î ÃÊ±â°ªÀ» ¸Å°³º¯¼ö·Î ¹ÞÀº ¼ö Áß ÇÏ³ª·Î °¡Áö°Ô ÇÑ´Ù.
+		//ë©”ì„œë“œì˜ ë§¤ê°œë³€ìˆ˜ë¡œ ìž…ë ¥ë°›ì€ ê°’ì˜ ìµœëŒ€ê°’ì„ êµ¬í•˜ëŠ” ë©”ì„œë“œ ë¦¬í„´ê°’ì„ intë¡œ ê°€ì§„ë‹¤.
+		int max = a;	//maxê°’ì„ êµ¬í•˜ê¸° ìœ„í•´ ì„ ì–¸í•œ ë³€ìˆ˜ë¡œ ì´ˆê¸°ê°’ì„ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ìˆ˜ ì¤‘ í•˜ë‚˜ë¡œ ê°€ì§€ê²Œ í•œë‹¤.
 		
-		if(max < b) { max = b;}	//max¿Í b Áß b°¡ ´õ Å©´Ù¸é, b°¡ ÃÖ´ë°ªÀÌ µÉ°ÍÀÌ±â¿¡ maxÀÇ °ªÀ» ÃÖ´ë°ªÀ¸·Î ¼³Á¤ÇÑ´Ù. ¾Æ´Ï¶ó¸é ¾Æ¹«µ¿ÀÛÀ» ÇÏÁö ¾Ê´Â´Ù.
+		if(max < b) { max = b;}	//maxì™€ b ì¤‘ bê°€ ë” í¬ë‹¤ë©´, bê°€ ìµœëŒ€ê°’ì´ ë ê²ƒì´ê¸°ì— maxì˜ ê°’ì„ ìµœëŒ€ê°’ìœ¼ë¡œ ì„¤ì •í•œë‹¤. ì•„ë‹ˆë¼ë©´ ì•„ë¬´ë™ìž‘ì„ í•˜ì§€ ì•ŠëŠ”ë‹¤.
 		if(max < c) { max = c;}
 		if(max < d)	{ max = d;}		
 		
 		return max;
-		//À§ÀÇ Á¶°Ç¹®À» °ÅÄ¡°í ³»·Á¿Â °ªÀÌ ÃÖ´ë°ªÀÌ µÇ¾î ÀÌ¸¦ ¹ÝÈ¯ÇÑ´Ù.
+		//ìœ„ì˜ ì¡°ê±´ë¬¸ì„ ê±°ì¹˜ê³  ë‚´ë ¤ì˜¨ ê°’ì´ ìµœëŒ€ê°’ì´ ë˜ì–´ ì´ë¥¼ ë°˜í™˜í•œë‹¤.
 	}
 	
-	static int min3(int a, int b, int c) {	//staticÀ¸·Î ¼±¾ðÇÑ ¸Þ¼­µå °´Ã¼ »ý¼ºÀÌ ÇÊ¿ä¾ø´Ù.
-		int min = a;	//max4¸Þ¼­µå¿Í ¹Ý´ë·Î ÃÖ¼Ò°ªÀ» È®ÀÎÇÏ±â À§ÇÑ ¸Þ¼­µå
+	static int min3(int a, int b, int c) {	//staticìœ¼ë¡œ ì„ ì–¸í•œ ë©”ì„œë“œ ê°ì²´ ìƒì„±ì´ í•„ìš”ì—†ë‹¤.
+		int min = a;	//max4ë©”ì„œë“œì™€ ë°˜ëŒ€ë¡œ ìµœì†Œê°’ì„ í™•ì¸í•˜ê¸° ìœ„í•œ ë©”ì„œë“œ
 		
 		if(min > b) { min = b;}
 		if(min > c) { min = c;}

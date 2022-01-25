@@ -1,9 +1,9 @@
-package ch07;
+ï»¿package ch07;
 
 public class DeckTest {
 	public static void main(String [] args) {
-		Deck d = new Deck(); // Deck Å¸ÀÔÀÇ ÀÎ½ºÅÏ½º¸¦ »õ·Î »ý¼ºÇÏ¿© ÂüÁ¶º¯¼ö d¿¡ ÁÖ¼Ò°ªÀ» ´ëÀÔÇÔ.
-		Card c = d.pick(0);	// Card Å¸ÀÔÀÇ º¯¼ö c¿¡ dÀÇ pick()¸Þ¼­µå¸¦ È£ÃâÇÏ¿© 0¹øÁöÀÇ Ä«µå °´Ã¼ÀÇ ÁÖ¼Ò¸¦ ´ã´Â´Ù.
+		Deck d = new Deck(); // Deck íƒ€ìž…ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒˆë¡œ ìƒì„±í•˜ì—¬ ì°¸ì¡°ë³€ìˆ˜ dì— ì£¼ì†Œê°’ì„ ëŒ€ìž…í•¨.
+		Card c = d.pick(0);	// Card íƒ€ìž…ì˜ ë³€ìˆ˜ cì— dì˜ pick()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ 0ë²ˆì§€ì˜ ì¹´ë“œ ê°ì²´ì˜ ì£¼ì†Œë¥¼ ë‹´ëŠ”ë‹¤.
 		System.out.println(c);
 		
 		d.shuffle();
@@ -13,8 +13,8 @@ public class DeckTest {
 	}
 }
 	
-	class Card{	//Card¸¦ ¸¸µé±âÀ§ÇÑ Å¬·¡½º
-		//Ä«µåÀÇ ¼Ó¼ºÀ» Á¤ÀÇÇÏ¿´´Ù. »ó¼ö·Î ¼±¾ðÇÑ °ÍÀº staticÀ¸·Î ¼±¾ðÇÏ¿© Å¬·¡½º°¡ ¸Þ¸ð¸®¿¡ ÀûÀçµÉ¶§ ÃÖÃÊÇÑ¹ø »ý¼ºµÈ´Ù.
+	class Card{	//Cardë¥¼ ë§Œë“¤ê¸°ìœ„í•œ í´ëž˜ìŠ¤
+		//ì¹´ë“œì˜ ì†ì„±ì„ ì •ì˜í•˜ì˜€ë‹¤. ìƒìˆ˜ë¡œ ì„ ì–¸í•œ ê²ƒì€ staticìœ¼ë¡œ ì„ ì–¸í•˜ì—¬ í´ëž˜ìŠ¤ê°€ ë©”ëª¨ë¦¬ì— ì ìž¬ë ë•Œ ìµœì´ˆí•œë²ˆ ìƒì„±ëœë‹¤.
 		static final int KIND_MAX = 4;
 		static final int NUM_MAX = 13;
 		
@@ -25,47 +25,47 @@ public class DeckTest {
 		int kind;
 		int number;
 		
-		Card(){	//»ý¼ºÀÚ¸¦ ÅëÇÏ¿© ¸Å°³º¯¼ö°¡ ¾øÀ»½Ã º¯¼ö kind¿¡´Â SPADE(4)¸¦, number¿¡´Â 1À» ÀÔ·ÂÇÑ´Ù.
+		Card(){	//ìƒì„±ìžë¥¼ í†µí•˜ì—¬ ë§¤ê°œë³€ìˆ˜ê°€ ì—†ì„ì‹œ ë³€ìˆ˜ kindì—ëŠ” SPADE(4)ë¥¼, numberì—ëŠ” 1ì„ ìž…ë ¥í•œë‹¤.
 			this(SPADE,1);
 		}
 		
-		Card(int kind, int number){	//¸Å°³º¯¼ö°¡ ÀÖ´Ù¸é °¢°¢ÀÇ º¯¼ö¸¦ ´ëÀÔÇÑ´Ù.
+		Card(int kind, int number){	//ë§¤ê°œë³€ìˆ˜ê°€ ìžˆë‹¤ë©´ ê°ê°ì˜ ë³€ìˆ˜ë¥¼ ëŒ€ìž…í•œë‹¤.
 			this.kind = kind;
 			this.number = number;
 		}
 		
 		public String toString() {
 			String [] kinds = {"", "CLOVER", "HEART", "DIAMOND", "SPADE"};
-			//¹è¿­·Î ¼³Á¤ÇÏµÇ Ã¹¹øÂ° ¹øÁö¿£ ºó¹®ÀÚ¿­("")À» ÁöÁ¤ÇÏ¿© ¹øÁö¼öÀÇ °ªÀ» Á÷°üÀûÀ¸·Î ÆÇ´ÜÇÏ±â ½±°Ô ÇÏ¿´´Ù.
+			//ë°°ì—´ë¡œ ì„¤ì •í•˜ë˜ ì²«ë²ˆì§¸ ë²ˆì§€ì—” ë¹ˆë¬¸ìžì—´("")ì„ ì§€ì •í•˜ì—¬ ë²ˆì§€ìˆ˜ì˜ ê°’ì„ ì§ê´€ì ìœ¼ë¡œ íŒë‹¨í•˜ê¸° ì‰½ê²Œ í•˜ì˜€ë‹¤.
 			String numbers = "0123456789XJQK";
-			//Ä«µåÀÇ ¼ýÀÚ¸¦ ÁöÁ¤ÇÔ ¸¶Âù°¡Áö·Î charAt()¸Þ¼­µå·Î ¼ýÀÚ¸¦ »Ì¾Æ³¾°Å±â ¶§¹®¿¡ 0¹øÁö¿£ 0À» ´ëÀÔÇÏµµ·Ï ÇÏ¿´´Ù.
+			//ì¹´ë“œì˜ ìˆ«ìžë¥¼ ì§€ì •í•¨ ë§ˆì°¬ê°€ì§€ë¡œ charAt()ë©”ì„œë“œë¡œ ìˆ«ìžë¥¼ ë½‘ì•„ë‚¼ê±°ê¸° ë•Œë¬¸ì— 0ë²ˆì§€ì—” 0ì„ ëŒ€ìž…í•˜ë„ë¡ í•˜ì˜€ë‹¤.
 			return "kind : " + kinds[this.kind] + ", num : " + numbers.charAt(this.number);
 		}
 	}
 	
 	class Deck{
-		final int CARD_NUM = 52;	//Ä«µå ¹­À½ÀÇ ¼ö¸¦ À§ÇØ »ó¼ö·Î ¼±¾ð
-		Card cardArr[] = new Card[CARD_NUM];	//Card Å¬·¡½º¸¦ Æ÷ÇÔ°ü°è·Î Deck Å¬·¡½º¿¡¼­ Àç»ç¿ëÇÔ
-		//Ä«µåÀÇ ¼ö´Â À§¿¡¼­ ¼±¾ðÇÑ 52°¡ µÇ°í »ý¼ºÇÑ °´Ã¼¸¦ CardÅ¸ÀÔÀÇ ÂüÁ¶º¯¼ö cardArrÀÌ °¡¸®Å°µµ·Ï ÇÏ¿´´Ù.
+		final int CARD_NUM = 52;	//ì¹´ë“œ ë¬¶ìŒì˜ ìˆ˜ë¥¼ ìœ„í•´ ìƒìˆ˜ë¡œ ì„ ì–¸
+		Card cardArr[] = new Card[CARD_NUM];	//Card í´ëž˜ìŠ¤ë¥¼ í¬í•¨ê´€ê³„ë¡œ Deck í´ëž˜ìŠ¤ì—ì„œ ìž¬ì‚¬ìš©í•¨
+		//ì¹´ë“œì˜ ìˆ˜ëŠ” ìœ„ì—ì„œ ì„ ì–¸í•œ 52ê°€ ë˜ê³  ìƒì„±í•œ ê°ì²´ë¥¼ Cardíƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ cardArrì´ ê°€ë¦¬í‚¤ë„ë¡ í•˜ì˜€ë‹¤.
 		
-		Deck() {	//»ý¼ºÀÚ¸¦ ÅëÇÏ¿© ÃÊ±âÈ­¸¦ ÁøÇàÇÔ.
+		Deck() {	//ìƒì„±ìžë¥¼ í†µí•˜ì—¬ ì´ˆê¸°í™”ë¥¼ ì§„í–‰í•¨.
 			int i = 0;
 			
-			for(int k = Card.KIND_MAX; k > 0; k--)	//Ä«µåÀÇ Á¾·ù Å©±â¿¡¼­ ½ÃÀÛ(4)ÇØ¼­ 1±îÁö °¨¼ÒÇÏ¸ç ¹Ýº¹ÇÑ´Ù.
-				for(int n = 0; n < Card.NUM_MAX; n++)	//Ä«µåÀÇ ¼ýÀÚ¸¸Å­ Áõ°¡ÇÏ¸ç ¹Ýº¹ÇÑ´Ù.
-					cardArr[i++] = new Card(k, n+1);	//cardArrÀÇ °¢°¢ÀÇ ¹øÁö¿¡ »ý¼ºÇÑ Ä«µåÀÇ ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ°í Áõ°¡½ÃÄÑ ¹Ýº¹ÇÑ´Ù.
+			for(int k = Card.KIND_MAX; k > 0; k--)	//ì¹´ë“œì˜ ì¢…ë¥˜ í¬ê¸°ì—ì„œ ì‹œìž‘(4)í•´ì„œ 1ê¹Œì§€ ê°ì†Œí•˜ë©° ë°˜ë³µí•œë‹¤.
+				for(int n = 0; n < Card.NUM_MAX; n++)	//ì¹´ë“œì˜ ìˆ«ìžë§Œí¼ ì¦ê°€í•˜ë©° ë°˜ë³µí•œë‹¤.
+					cardArr[i++] = new Card(k, n+1);	//cardArrì˜ ê°ê°ì˜ ë²ˆì§€ì— ìƒì„±í•œ ì¹´ë“œì˜ ì£¼ì†Œê°’ì„ ì €ìž¥í•˜ê³  ì¦ê°€ì‹œì¼œ ë°˜ë³µí•œë‹¤.
 		}
 		
-		Card pick(int index) {	//¸Å°³º¯¼ö¸¦ Âü°íÇÏ¿© Ä«µåÀÇ ¹øÁö¼ö¿¡ ÇØ´çÇÏ´Â °ªÀ» ¹ÝÈ¯ÇÑ´Ù.
+		Card pick(int index) {	//ë§¤ê°œë³€ìˆ˜ë¥¼ ì°¸ê³ í•˜ì—¬ ì¹´ë“œì˜ ë²ˆì§€ìˆ˜ì— í•´ë‹¹í•˜ëŠ” ê°’ì„ ë°˜í™˜í•œë‹¤.
 			return cardArr[index];
 		}
 		
-		Card pick() {	//¸Å°³º¯¼ö°¡ ¾ø´Ù¸é ÀÓÀÇÀÇ Ä«µå¸¦ ¹ÝÈ¯ÇÏ±â À§ÇØ ´Ù½Ã pick()¸Þ¼­µå¸¦ È£ÃâÇÑ´Ù.
+		Card pick() {	//ë§¤ê°œë³€ìˆ˜ê°€ ì—†ë‹¤ë©´ ìž„ì˜ì˜ ì¹´ë“œë¥¼ ë°˜í™˜í•˜ê¸° ìœ„í•´ ë‹¤ì‹œ pick()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•œë‹¤.
 			int index = (int)(Math.random() * CARD_NUM);
 			return pick(index);
 		}
 		
-		void shuffle() {	//Ä¡È¯À» ÅëÇÏ¿© Ä«µå¸¦ ¼¯¾îÁØ´Ù.
+		void shuffle() {	//ì¹˜í™˜ì„ í†µí•˜ì—¬ ì¹´ë“œë¥¼ ì„žì–´ì¤€ë‹¤.
 			for(int i = 0; i < cardArr.length; i++) {
 				int r = (int)(Math.random() * CARD_NUM);
 				

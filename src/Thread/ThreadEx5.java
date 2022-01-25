@@ -1,21 +1,21 @@
-package Thread;
+ï»¿package Thread;
 
 public class ThreadEx5 {
 	
-	static long startTime = 0;	//static À¸·Î ÀÎÇÏ¿© ¸Ş¸ğ¸®¿¡ Å¬·¡½º¿¡ ÀûÀçµÉ¶§ »ı¼ºµÇ´Â long Å¸ÀÔ º¯¼ö¸¦ ¼±¾ğÇÏ°í 0À¸·Î ÃÊ±âÈ­
+	static long startTime = 0;	//static ìœ¼ë¡œ ì¸í•˜ì—¬ ë©”ëª¨ë¦¬ì— í´ë˜ìŠ¤ì— ì ì¬ë ë•Œ ìƒì„±ë˜ëŠ” long íƒ€ì… ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  0ìœ¼ë¡œ ì´ˆê¸°í™”
 
 	public static void main(String[] args) {
 		ThreadEx5_1 th1 = new ThreadEx5_1();
-		//ThreadEx5_1 Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö th1À» ¼±¾ğÇÏ°í ThreadEx5_1 Å¬·¡½º·Î ºÎÅÍ °´Ã¼¸¦ »ı¼ºÇÏ¿© ±× ÁÖ¼Ò°ªÀ» ÂüÁ¶º¯¼ö¿¡ ÀúÀåÇÔ
+		//ThreadEx5_1 íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ th1ì„ ì„ ì–¸í•˜ê³  ThreadEx5_1 í´ë˜ìŠ¤ë¡œ ë¶€í„° ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ê·¸ ì£¼ì†Œê°’ì„ ì°¸ì¡°ë³€ìˆ˜ì— ì €ì¥í•¨
 		th1.start();
-		//th1 ¾²·¹µå¸¦ ½ÇÇàÇÔ.
+		//th1 ì“°ë ˆë“œë¥¼ ì‹¤í–‰í•¨.
 		startTime = System.currentTimeMillis();
 		
 		for(int i = 0; i < 300; i++)
 			System.out.printf("%s", new String("-"));
 		
-		System.out.print("¼Ò¿ä½Ã°£ : " + (System.currentTimeMillis() - ThreadEx5.startTime));
-		//th1 ¾²·¹µå°¡ ½ÇÇàµÇ¸é¼­ °°ÀÌ main ¸Ş¼­µåÀÇ for¹®À» ¹İº¹ÇÔ Áï µÎ°³ÀÇ ¾²·¹µå°¡ ÀÛ¾÷À» ³ª´©¾î ½ÇÇà
+		System.out.print("ì†Œìš”ì‹œê°„ : " + (System.currentTimeMillis() - ThreadEx5.startTime));
+		//th1 ì“°ë ˆë“œê°€ ì‹¤í–‰ë˜ë©´ì„œ ê°™ì´ main ë©”ì„œë“œì˜ forë¬¸ì„ ë°˜ë³µí•¨ ì¦‰ ë‘ê°œì˜ ì“°ë ˆë“œê°€ ì‘ì—…ì„ ë‚˜ëˆ„ì–´ ì‹¤í–‰
 	}
 
 }
@@ -25,6 +25,6 @@ class ThreadEx5_1 extends Thread{
 		for(int i = 0; i < 300; i++)
 			System.out.printf("%s", new String("|"));
 		
-		System.out.print("¼Ò¿ä½Ã°£2 : " + (System.currentTimeMillis() - ThreadEx5.startTime));
+		System.out.print("ì†Œìš”ì‹œê°„2 : " + (System.currentTimeMillis() - ThreadEx5.startTime));
 	}
 }

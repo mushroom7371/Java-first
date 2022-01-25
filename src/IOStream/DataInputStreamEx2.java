@@ -1,4 +1,4 @@
-package IOStream;
+ï»¿package IOStream;
 
 import java.io.DataInputStream;
 import java.io.EOFException;
@@ -13,21 +13,21 @@ class DataInputStreamEx2 {
 		
 		FileInputStream fis = null;
 		DataInputStream dis = null;
-		//InputStreamÀ» ÀÌ¿ëÇÏ¿© dat ÆÄÀÏÀÇ ³»¿ëÀ» ÀĞ¾îµéÀÏ »çÀüÁØºñ
+		//InputStreamì„ ì´ìš©í•˜ì—¬ dat íŒŒì¼ì˜ ë‚´ìš©ì„ ì½ì–´ë“¤ì¼ ì‚¬ì „ì¤€ë¹„
 		
 		try {
 			fis = new FileInputStream("score.dat");
 			dis = new DataInputStream(fis);
-			//score.datÆÄÀÏÀ» ºÒ·¯¿Â´Ù.
+			//score.datíŒŒì¼ì„ ë¶ˆëŸ¬ì˜¨ë‹¤.
 			
 			while(true) {
 				score = dis.readInt();
 				System.out.println(score);
 				sum = sum + score;
-				//ÇØ´ç ÆÄÀÏÀÇ ¹è¿­ scoreÀÌ °¡¸®Å°´Â °´Ã¼¿¡¼­ Á¤¼ö°ªÀ» ÀĞ¾î¿Â´Ù.
+				//í•´ë‹¹ íŒŒì¼ì˜ ë°°ì—´ scoreì´ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì—ì„œ ì •ìˆ˜ê°’ì„ ì½ì–´ì˜¨ë‹¤.
 			}
 		}catch(EOFException e) {
-			System.out.println("Á¡¼öÀÇ ÃÑÇÕÀº " + sum + " ÀÔ´Ï´Ù.");
+			System.out.println("ì ìˆ˜ì˜ ì´í•©ì€ " + sum + " ì…ë‹ˆë‹¤.");
 		}catch(IOException ie) {
 			ie.printStackTrace();
 		}finally {

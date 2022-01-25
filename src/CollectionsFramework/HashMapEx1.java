@@ -1,4 +1,4 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -6,32 +6,32 @@ import java.util.Scanner;
 public class HashMapEx1 {
 
 	public static void main(String[] args) {
-		HashMap map = new HashMap();	//HashMap Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö mapÀ» ¼±¾ğÇÏ°í ¿©±â¿¡ »õ·Î ¸¸µç HashMap °´Ã¼ÀÇ ÁÖ¼Ò¸¦ ÀúÀåÇÑ´Ù.
+		HashMap map = new HashMap();	//HashMap íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ mapì„ ì„ ì–¸í•˜ê³  ì—¬ê¸°ì— ìƒˆë¡œ ë§Œë“  HashMap ê°ì²´ì˜ ì£¼ì†Œë¥¼ ì €ì¥í•œë‹¤.
 		
-		map.put("myId", "1234");	//HashMapÀÇ put()¸Ş¼­µå¸¦ ÀÌ¿ëÇÏ¿© key°ª°ú value°ªÀ» ¹­¾î °´Ã¼·Î ÀúÀå
+		map.put("myId", "1234");	//HashMapì˜ put()ë©”ì„œë“œë¥¼ ì´ìš©í•˜ì—¬ keyê°’ê³¼ valueê°’ì„ ë¬¶ì–´ ê°ì²´ë¡œ ì €ì¥
 		map.put("asdf", "1111");
-		map.put("asdf", "1234");	//MapÀÇ key°ªÀº Áßº¹À» Çã¿ëÇÏÁö ¾Ê´Â unique°ªÀÌ¹Ç·Î ¸¶Áö¸·¿¡ »ı¼ºµÈ "asdf"ÀÇ value °ªÀÎ"1234"°¡ µ¤¾î¾º¿öÁø´Ù.
+		map.put("asdf", "1234");	//Mapì˜ keyê°’ì€ ì¤‘ë³µì„ í—ˆìš©í•˜ì§€ ì•ŠëŠ” uniqueê°’ì´ë¯€ë¡œ ë§ˆì§€ë§‰ì— ìƒì„±ëœ "asdf"ì˜ value ê°’ì¸"1234"ê°€ ë®ì–´ì”Œì›Œì§„ë‹¤.
 		
-		Scanner sc = new Scanner(System.in);	//Å°º¸µå·Î ÀÔ·Â¹ŞÀº °ªÀ» »ç¿ëÇÏ±â À§ÇØ Scanner °´Ã¼¸¦ »ı¼ºÇÏ¿© ÂüÁ¶º¯¼ö¿¡ ÁÖ¼Ò¸¦ ´ã¾Ò´Ù
+		Scanner sc = new Scanner(System.in);	//í‚¤ë³´ë“œë¡œ ì…ë ¥ë°›ì€ ê°’ì„ ì‚¬ìš©í•˜ê¸° ìœ„í•´ Scanner ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ì°¸ì¡°ë³€ìˆ˜ì— ì£¼ì†Œë¥¼ ë‹´ì•˜ë‹¤
 		
-		while(true) {	//¹İº¹¹® whileÀÇ Á¶°Ç°ªÀÌ trueÀÌ¹Ç·Î ¹«ÇÑÈ÷ ¹İº¹ÇÑ´Ù.
-			System.out.println("id¿Í password¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
+		while(true) {	//ë°˜ë³µë¬¸ whileì˜ ì¡°ê±´ê°’ì´ trueì´ë¯€ë¡œ ë¬´í•œíˆ ë°˜ë³µí•œë‹¤.
+			System.out.println("idì™€ passwordë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”");
 			System.out.print("id : ");
-			String id = sc.nextLine().trim();	//String Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö id¸¦ ¼±¾ğÇÏ°í, Scanner °´Ã¼ÀÇ nextLine()¸Ş¼­µå·Î ¹®ÀÚ¿­À» ¹Ş¾Æ¿Â ÈÄ, trim()¸Ş¼­µå·Î °ø¹éÀ» Á¦°ÅÇÑ ÈÄ ÀÌ °ªÀ» ÀúÀåÇÑ´Ù.
+			String id = sc.nextLine().trim();	//String íƒ€ì…ì˜ ì°¸ì¡°ë³€ìˆ˜ idë¥¼ ì„ ì–¸í•˜ê³ , Scanner ê°ì²´ì˜ nextLine()ë©”ì„œë“œë¡œ ë¬¸ìì—´ì„ ë°›ì•„ì˜¨ í›„, trim()ë©”ì„œë“œë¡œ ê³µë°±ì„ ì œê±°í•œ í›„ ì´ ê°’ì„ ì €ì¥í•œë‹¤.
 			
 			System.out.print("password : ");
-			String password = sc.nextLine().trim(); //À§¿Í ¸¶Âù°¡Áö
+			String password = sc.nextLine().trim(); //ìœ„ì™€ ë§ˆì°¬ê°€ì§€
 			System.out.println();
 			
-			if(!map.containsKey(id)) {	//ÂüÁ¶º¯¼ö id°¡ °¡¸®Å°´Â °ªÀÌ mapÀÌ key°ªÀ¸·Î °¡Áø µ¥ÀÌÅÍ°¡ ¾Æ´Ò°æ¿ì
-				System.out.println("ÀÔ·ÂÇÏ½Å id°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä..");
-				continue;	//while ¹®À¸·Î ´Ù½Ã µ¹¾Æ°£´Ù.
+			if(!map.containsKey(id)) {	//ì°¸ì¡°ë³€ìˆ˜ idê°€ ê°€ë¦¬í‚¤ëŠ” ê°’ì´ mapì´ keyê°’ìœ¼ë¡œ ê°€ì§„ ë°ì´í„°ê°€ ì•„ë‹ê²½ìš°
+				System.out.println("ì…ë ¥í•˜ì‹  idê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”..");
+				continue;	//while ë¬¸ìœ¼ë¡œ ë‹¤ì‹œ ëŒì•„ê°„ë‹¤.
 			}else {
-				if(!(map.get(id)).equals(password)){	//ÀÔ·Â ¹ŞÀº idÀÇ value °ªÀÌ ÀÔ·Â¹ŞÀº password¿Í ´Ù¸£´Ù¸é
-					System.out.println("id¿Í password°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-				}else {	//°°´Ù¸é
-					System.out.println("¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£°¡ ÀÏÄ¡ÇÕ´Ï´Ù.");
-					break;	//while ¹İº¹¹®À» ºüÁ®³ª¿Â´Ù.
+				if(!(map.get(id)).equals(password)){	//ì…ë ¥ ë°›ì€ idì˜ value ê°’ì´ ì…ë ¥ë°›ì€ passwordì™€ ë‹¤ë¥´ë‹¤ë©´
+					System.out.println("idì™€ passwordê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
+				}else {	//ê°™ë‹¤ë©´
+					System.out.println("ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ê°€ ì¼ì¹˜í•©ë‹ˆë‹¤.");
+					break;	//while ë°˜ë³µë¬¸ì„ ë¹ ì ¸ë‚˜ì˜¨ë‹¤.
 				}
 			}
 			

@@ -1,20 +1,20 @@
-package ch04;
+ï»¿package ch04;
 
 	import java.util.Scanner;
 public class LeapYear {
 	public static void main(String[] args) {
-		/*À±³â Á¶°Ç
-		 * 4·Î ³ª´² ¶³¾îÁö´Â ÇØ
-		 * ±× Áß 100À» ³ª´² ¶³¾îÁöÁö ¾Ê´Â ÇØ
-		 * 400À¸·Î ³ª´² ¶³¾îÁö´Â ÇØ
+		/*ìœ¤ë…„ ì¡°ê±´
+		 * 4ë¡œ ë‚˜ëˆ  ë–¨ì–´ì§€ëŠ” í•´
+		 * ê·¸ ì¤‘ 100ì„ ë‚˜ëˆ  ë–¨ì–´ì§€ì§€ ì•ŠëŠ” í•´
+		 * 400ìœ¼ë¡œ ë‚˜ëˆ  ë–¨ì–´ì§€ëŠ” í•´
 		*/	
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("ÇØ´ç ¿¬µµ¸¦ ¼±ÅÃÇÏ¼¼¿ä.");
+		System.out.println("í•´ë‹¹ ì—°ë„ë¥¼ ì„ íƒí•˜ì„¸ìš”.");
 		String input = scanner.nextLine();
 		int num = Integer.parseInt(input);
 		
-		if(num%4 == 0 && num%100 != 0 || num%400 == 0) {System.out.println("À±³â ÀÔ´Ï´Ù.");}
-		else	{System.out.println("À±³âÀÌ ¾Æ´Õ´Ï´Ù.");}
+		if(num%4 == 0 && num%100 != 0 || num%400 == 0) {System.out.println("ìœ¤ë…„ ì…ë‹ˆë‹¤.");}
+		else	{System.out.println("ìœ¤ë…„ì´ ì•„ë‹™ë‹ˆë‹¤.");}
 		
 		}
 

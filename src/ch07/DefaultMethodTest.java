@@ -1,17 +1,17 @@
-package ch07;
+ï»¿package ch07;
 
 interface MyInterface{
-	//default ¸Þ¼­µå ÀÛ¼º Ãß»ó¸Þ¼­µå¿Í´Â ´Ù¸£°Ô ¸öÅë{}À» °°ÀÌ ¼±¾ðÇØ ÁØ´Ù.
-	//Á¢±ÙÁ¦ÇÑÀÚ´Â publicÀÌ³ª »ý·« °¡´ÉÇÏ´Ù.
-	//default ¸Þ¼­µå ÀÛ¼ºÀÌÀ¯´Â ¿Ï¼ºµÈ ÀÎÅÍÆäÀÌ½º¿¡¼­ Ãß»ó¸Þ¼­µå¸¦ Ãß°¡ÇÒ ½Ã ÀÌ¸¦ ±¸ÇöÇÑ ¸ðµç Å¬·¡½º¿¡¼­ Ãß»ó¸Þ¼­µå¸¦ ±¸ÇöÇØ¾ß µÇ±â ¶§¹®¿¡
-	//ÀÌ¸¦ ¹æÁöÇÏ°íÀÚ ¸¸µé¾î Á³´Ù. Ãß»ó¸Þ¼­µå°¡ ¾Æ´Ï¹Ç·Î ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½º¸¦ º¯°æÇÏÁö ¾Ê¾Æµµ µÈ´Ù.
+	//default ë©”ì„œë“œ ìž‘ì„± ì¶”ìƒë©”ì„œë“œì™€ëŠ” ë‹¤ë¥´ê²Œ ëª¸í†µ{}ì„ ê°™ì´ ì„ ì–¸í•´ ì¤€ë‹¤.
+	//ì ‘ê·¼ì œí•œìžëŠ” publicì´ë‚˜ ìƒëžµ ê°€ëŠ¥í•˜ë‹¤.
+	//default ë©”ì„œë“œ ìž‘ì„±ì´ìœ ëŠ” ì™„ì„±ëœ ì¸í„°íŽ˜ì´ìŠ¤ì—ì„œ ì¶”ìƒë©”ì„œë“œë¥¼ ì¶”ê°€í•  ì‹œ ì´ë¥¼ êµ¬í˜„í•œ ëª¨ë“  í´ëž˜ìŠ¤ì—ì„œ ì¶”ìƒë©”ì„œë“œë¥¼ êµ¬í˜„í•´ì•¼ ë˜ê¸° ë•Œë¬¸ì—
+	//ì´ë¥¼ ë°©ì§€í•˜ê³ ìž ë§Œë“¤ì–´ ì¡Œë‹¤. ì¶”ìƒë©”ì„œë“œê°€ ì•„ë‹ˆë¯€ë¡œ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ëž˜ìŠ¤ë¥¼ ë³€ê²½í•˜ì§€ ì•Šì•„ë„ ëœë‹¤.
 	default void method1() {
 		System.out.println("method1() in MyInterface");
 	}
 	default void method2() {
 		System.out.println("method2() in MyInterface");
 	}
-	//static ¸Þ¼­µå ¶ÇÇÑ Á¢±ÙÁ¦ÇÑÀÚ´Â public ÀÌ³ª »ý·«°¡´ÉÇÏ´Ù.
+	//static ë©”ì„œë“œ ë˜í•œ ì ‘ê·¼ì œí•œìžëŠ” public ì´ë‚˜ ìƒëžµê°€ëŠ¥í•˜ë‹¤.
 	static void staticMethod() {
 		System.out.println("staticMethod() in MyInterface");
 	}
@@ -27,15 +27,15 @@ interface MyInterface2{
 }
 
 class Parent1{
-	//method2() ¸Þ¼­µå´Â À§ÀÇ ÀÎÅÍÆäÀÌ½º¿Í ¹«°üÇÑ ºÎ¸ðÅ¬·¡½ºÀÇ ¸Þ¼­µåÀÌ´Ù.
+	//method2() ë©”ì„œë“œëŠ” ìœ„ì˜ ì¸í„°íŽ˜ì´ìŠ¤ì™€ ë¬´ê´€í•œ ë¶€ëª¨í´ëž˜ìŠ¤ì˜ ë©”ì„œë“œì´ë‹¤.
 	public void method2() {
 		System.out.println("method2() in Parent");
 	}
 }
 
 class Child1 extends Parent1 implements MyInterface, MyInterface2{
-	//Parent1 Å¬·¡½º¸¦ »ó¼Ó¹Þ°í µÎ°³ÀÇ ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ¿´´Ù.
-	//method1() ¸Þ¼­µå´Â ÀÎÅÍÆäÀÌ½º¿¡ Á¤ÀÇµÇ¾î ÀÖÁö¸¸, ¿À¹ö¶óÀÌµå ÇÑ °ÍÀÌ¹Ç·Î °´Ã¼ »ý¼ºÈÄ ¸Þ¼­µå È£Ãâ½Ã ¾Æ·¡¿Í °°Àº Ãâ·Â ¸Þ½ÃÁö°¡ Ãâ·ÂµÈ´Ù.
+	//Parent1 í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ê³  ë‘ê°œì˜ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ì˜€ë‹¤.
+	//method1() ë©”ì„œë“œëŠ” ì¸í„°íŽ˜ì´ìŠ¤ì— ì •ì˜ë˜ì–´ ìžˆì§€ë§Œ, ì˜¤ë²„ë¼ì´ë“œ í•œ ê²ƒì´ë¯€ë¡œ ê°ì²´ ìƒì„±í›„ ë©”ì„œë“œ í˜¸ì¶œì‹œ ì•„ëž˜ì™€ ê°™ì€ ì¶œë ¥ ë©”ì‹œì§€ê°€ ì¶œë ¥ëœë‹¤.
 	public void method1() {
 		System.out.println("method1() in Child");
 	}
@@ -45,11 +45,11 @@ public class DefaultMethodTest {
 	public static void main(String [] args) {
 		Child1 c = new Child1();
 		c.method1();
-		//c °¡ °¡¸®Å°´Â °´Ã¼¿¡¼­ ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ¿´°í Ãß»ó¸Þ¼­µåÀÎ method1() ¸Þ¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿© ÇØ´ç ³»¿ëÀÌ Ãâ·ÂµÈ´Ù.
+		//c ê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì—ì„œ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ì˜€ê³  ì¶”ìƒë©”ì„œë“œì¸ method1() ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì—¬ í•´ë‹¹ ë‚´ìš©ì´ ì¶œë ¥ëœë‹¤.
 		c.method2();
-		//c °¡ °¡¸®Å°´Â °´Ã¼¿¡¼­ ºÎ¸ð Å¬·¡½º·Î ºÎÅÍ »ó¼Ó¹ÞÀº ¸Þ¼­µå¸¦ È£ÃâÇÏ°Ô µÈ´Ù.
+		//c ê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì—ì„œ ë¶€ëª¨ í´ëž˜ìŠ¤ë¡œ ë¶€í„° ìƒì†ë°›ì€ ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ê²Œ ëœë‹¤.
 		MyInterface.staticMethod();
 		MyInterface2.staticMethod();
-		//ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÀ» ÇÏÁö ¾Ê¾ÒÀ½¿¡µµ ºÒ±¸ÇÏ°í(°´Ã¼»ý¼ºÀÌ ¾ÈµÇ¾ú´Ù.) staticÀ¸·Î ¼±¾ðµÈ ¸Þ¼­µå°¡ È£ÃâµÇ¾î ÇØ´ç ³»¿ëÀÌ Ãâ·ÂµÈ´Ù.
+		//ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„ì„ í•˜ì§€ ì•Šì•˜ìŒì—ë„ ë¶ˆêµ¬í•˜ê³ (ê°ì²´ìƒì„±ì´ ì•ˆë˜ì—ˆë‹¤.) staticìœ¼ë¡œ ì„ ì–¸ëœ ë©”ì„œë“œê°€ í˜¸ì¶œë˜ì–´ í•´ë‹¹ ë‚´ìš©ì´ ì¶œë ¥ëœë‹¤.
 	}
 }

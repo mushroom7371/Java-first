@@ -1,4 +1,4 @@
-package ch09;
+ï»¿package ch09;
 
 import java.util.Arrays;
 
@@ -6,12 +6,12 @@ class CloneEx2 {
 	public static void main(String[] args) {
 		int [] arr = {1, 2, 3, 4, 5};
 		int [] arrClone = arr.clone();
-		//¹è¿­µµ °´Ã¼ÀÌ¹Ç·Î Object Å¬·¡½º¸¦ »ó¼Ó¹Ş°í, Cloneable ÀÎÅÍÆäÀÌ½º¿Í SerializableÀÎÅÍÆäÀÌ½º°¡ ±¸ÇöµÇ¾î ÀÖ´Ù.
-		//¶ÇÇÑ clone() ¸Ş¼­µåÀÇ protected ¶ÇÇÑ publicÀ¸·Î ¿À¹ö¶óÀÌµù µÇ¾îÀÖÀ¸¸ç ¿øº»°ú °°Àº ¹İÈ¯Å¸ÀÔÀ» ¹İÈ¯ÇÏ¿© Çüº¯È¯ÀÌ ÇÊ¿ä¾ø´Ù.
+		//ë°°ì—´ë„ ê°ì²´ì´ë¯€ë¡œ Object í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ê³ , Cloneable ì¸í„°í˜ì´ìŠ¤ì™€ Serializableì¸í„°í˜ì´ìŠ¤ê°€ êµ¬í˜„ë˜ì–´ ìˆë‹¤.
+		//ë˜í•œ clone() ë©”ì„œë“œì˜ protected ë˜í•œ publicìœ¼ë¡œ ì˜¤ë²„ë¼ì´ë”© ë˜ì–´ìˆìœ¼ë©° ì›ë³¸ê³¼ ê°™ì€ ë°˜í™˜íƒ€ì…ì„ ë°˜í™˜í•˜ì—¬ í˜•ë³€í™˜ì´ í•„ìš”ì—†ë‹¤.
 		arrClone[0] = 6;
 		int [] arrClone2 = new int[arr.length];
 		System.arraycopy(arr, 0, arrClone2, 0, arr.length);
-		//arraycoyp() ¸Ş¼­µå¸¦ ÅëÇØ¼­ ¹è¿­ º¹»ç¸¦ ÇÒ¼öµµ ÀÖ´Ù. clone()¸Ş¼­µå¸¦ »ç¿ëÇÑ °Í°ú ¶È°°´Ù.
+		//arraycoyp() ë©”ì„œë“œë¥¼ í†µí•´ì„œ ë°°ì—´ ë³µì‚¬ë¥¼ í• ìˆ˜ë„ ìˆë‹¤. clone()ë©”ì„œë“œë¥¼ ì‚¬ìš©í•œ ê²ƒê³¼ ë˜‘ê°™ë‹¤.
 		
 		System.out.println(Arrays.toString(arr));
 		System.out.println(Arrays.toString(arrClone));

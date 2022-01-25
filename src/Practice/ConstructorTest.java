@@ -1,4 +1,4 @@
-package Practice;
+ï»¿package Practice;
 
 class Data1{
 	int value;
@@ -9,15 +9,15 @@ class Data2{
 	
 	Data2(int x){
 		value = x;
-	}	//ÀÌ¹Ì »ı¼ºÀÚ°¡ Á¤ÀÇ µÇ¾î ÀÖÀ½ ±×·¡¼­ ÀÎ½ºÅÏ½º »ı¼º½Ã ÀÔ·Â ÇÊ¿ä
-	//Data2(){} ÀÌ¿Í °°ÀÌ Ãß°¡·Î »ı¼ºÀÚ¸¦ Á¤ÀÇ ÇØµµ µÊ
+	}	//ì´ë¯¸ ìƒì„±ìê°€ ì •ì˜ ë˜ì–´ ìˆìŒ ê·¸ë˜ì„œ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±ì‹œ ì…ë ¥ í•„ìš”
+	//Data2(){} ì´ì™€ ê°™ì´ ì¶”ê°€ë¡œ ìƒì„±ìë¥¼ ì •ì˜ í•´ë„ ë¨
 }
 
 public class ConstructorTest {
 	public static void main(String[] args) {
 		Data1 d1 = new Data1();
-		// Data2 d2 = new Data2(); Data2 Å¬·¡½º¿¡¼­ »ı¼ºÀÚ°¡ ÀÌ¹Ì Á¤ÀÇ µÇ¾îÀÖ¾î¼­ ¿À·ù°¡³²
-		Data2 d3 = new Data2(10); // ÀÌ¿Í °°ÀÌ ÀÎ½ºÅÏ½º »ı¼º ½Ã »ı¼ºÀÚ¸¦ ÀÔ·ÂÇØ¾ßµÊ
+		// Data2 d2 = new Data2(); Data2 í´ë˜ìŠ¤ì—ì„œ ìƒì„±ìê°€ ì´ë¯¸ ì •ì˜ ë˜ì–´ìˆì–´ì„œ ì˜¤ë¥˜ê°€ë‚¨
+		Data2 d3 = new Data2(10); // ì´ì™€ ê°™ì´ ì¸ìŠ¤í„´ìŠ¤ ìƒì„± ì‹œ ìƒì„±ìë¥¼ ì…ë ¥í•´ì•¼ë¨
 		
 		System.out.println(d1.value);
 		System.out.println(d3.value);

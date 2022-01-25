@@ -1,13 +1,13 @@
-package programmers;
+ï»¿package programmers;
 
-//¾ø´Â ¼ıÀÚ ±¸ÇÏ±â
+//ì—†ëŠ” ìˆ«ì êµ¬í•˜ê¸°
 class SumNotExistNum {
-	//ÀÎÀÚ °ªÀ¸·Î ÂüÁ¶º¯¼ö°¡ µé¾î¿À¸ç int °ªÀ» °¡Áö´Â 1Â÷¿ø ¹è¿­À» °¡¸®Å²´Ù.
+	//ì¸ì ê°’ìœ¼ë¡œ ì°¸ì¡°ë³€ìˆ˜ê°€ ë“¤ì–´ì˜¤ë©° int ê°’ì„ ê°€ì§€ëŠ” 1ì°¨ì› ë°°ì—´ì„ ê°€ë¦¬í‚¨ë‹¤.
 	private int solution(int [] numbers) {
-		int answer = 45;	//0~9±îÁöÀÇ ¼ıÀÚÀÇ ÃÑ ÇÕÀº 45
+		int answer = 45;	//0~9ê¹Œì§€ì˜ ìˆ«ìì˜ ì´ í•©ì€ 45
 		
-		for(int number : numbers) {	//Çâ»óµÈ for ¹®À» ÀÌ¿ëÇÏ¿© ¹è¿­¿¡ ´ã±ä ¿ä¼ÒµéÀ» int Å¸ÀÔ º¯¼ö number¿¡ ´ã¾Æ
-			answer = answer - number;	//¹İº¹¸¶´Ù ÃÑÇÕÀÎ answer¿¡¼­ numberÀÇ °ªÀ» Á¦°Å ÇÑ´Ù.
+		for(int number : numbers) {	//í–¥ìƒëœ for ë¬¸ì„ ì´ìš©í•˜ì—¬ ë°°ì—´ì— ë‹´ê¸´ ìš”ì†Œë“¤ì„ int íƒ€ì… ë³€ìˆ˜ numberì— ë‹´ì•„
+			answer = answer - number;	//ë°˜ë³µë§ˆë‹¤ ì´í•©ì¸ answerì—ì„œ numberì˜ ê°’ì„ ì œê±° í•œë‹¤.
 		}
 		
 		return answer;

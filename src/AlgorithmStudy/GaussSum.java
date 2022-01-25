@@ -1,4 +1,4 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.util.Scanner;
 
@@ -7,13 +7,13 @@ public class GaussSum {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+		System.out.println("ì •ìˆ˜ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
 		int n = sc.nextInt();
 		
 		int sum = (n * (n + 1))/2;
 
 	
-		System.out.println("1¿¡¼­ n±îÁöÀÇ ÇÕÀº : " + sum);
+		System.out.println("1ì—ì„œ nê¹Œì§€ì˜ í•©ì€ : " + sum);
 
 	}
 

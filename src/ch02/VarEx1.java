@@ -1,18 +1,18 @@
-package ch02;
+ï»¿package ch02;
 
 /*
- * º¯¼ö ¼±¾ğ°ú ÃÊ±âÈ­ °ü·Ã ¿¬½À
+ * ë³€ìˆ˜ ì„ ì–¸ê³¼ ì´ˆê¸°í™” ê´€ë ¨ ì—°ìŠµ
  */
 class VarEx1 {
 	public static void main(String[] args)	{
-		int year = 0;	//year º¯¼ö ¼±¾ğ ¹× ÃÊ±âÈ­
-		int age	= 14;	//age º¯¼ö ¼±¾ğ ¹× ÃÊ±âÈ­
+		int year = 0;	//year ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
+		int age	= 14;	//age ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
 		
 		System.out.println(year);   
 		System.out.println(age);	
 		
-		year = age + 2000;  //º¯¼ö age¿¡ 2000À» ´õÇØ¼­ º¯¼ö year¿¡ ÀúÀå
-		age = age + 1;	//º¯¼ö age¿¡ ÀúÀåµÈ °ª¿¡ 1 ´õÇÏ±â
+		year = age + 2000;  //ë³€ìˆ˜ ageì— 2000ì„ ë”í•´ì„œ ë³€ìˆ˜ yearì— ì €ì¥
+		age = age + 1;	//ë³€ìˆ˜ ageì— ì €ì¥ëœ ê°’ì— 1 ë”í•˜ê¸°
 		
 		System.out.println(year);
 		System.out.println(age);

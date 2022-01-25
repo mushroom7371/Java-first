@@ -1,12 +1,12 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.util.Scanner;
 
 public class Recur {
-	static void recur(int n) {	//static ¸Ş¼­µå·Î ÀÎÇÏ¿© °´Ã¼ »ı¼º¾øÀÌ ¸ŞÀÎ¸Ş¼­µå¿¡¼­ »ç¿ë°¡´É
-		if(n > 0) {	//ÀÔ·Â¹ŞÀº ¸Å°³º¯¼ö°¡ 0º¸´Ù Å©´Ù¸é
-			recur(n - 1);	//´Ù½Ã ÀÚ±â ÀÚ½ÅÀÇ ¸Ş¼­µå¸¦ È£ÃâÇÏµÇ ¸Å°³º¯¼öÀÇ °ªÀ» -1 ÇÏ¿© ÀÔ·Â
-			System.out.println(n);	//À§ÀÇ ¸Ş¼­µå°¡ ¼±ÇàµÇ¾î¾ß ºñ·Î¼Ò ½ÇÇàµÈ´Ù.
+	static void recur(int n) {	//static ë©”ì„œë“œë¡œ ì¸í•˜ì—¬ ê°ì²´ ìƒì„±ì—†ì´ ë©”ì¸ë©”ì„œë“œì—ì„œ ì‚¬ìš©ê°€ëŠ¥
+		if(n > 0) {	//ì…ë ¥ë°›ì€ ë§¤ê°œë³€ìˆ˜ê°€ 0ë³´ë‹¤ í¬ë‹¤ë©´
+			recur(n - 1);	//ë‹¤ì‹œ ìê¸° ìì‹ ì˜ ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ë˜ ë§¤ê°œë³€ìˆ˜ì˜ ê°’ì„ -1 í•˜ì—¬ ì…ë ¥
+			System.out.println(n);	//ìœ„ì˜ ë©”ì„œë“œê°€ ì„ í–‰ë˜ì–´ì•¼ ë¹„ë¡œì†Œ ì‹¤í–‰ëœë‹¤.
 			recur(n - 2);
 		}
 	}
@@ -14,7 +14,7 @@ public class Recur {
 	public static void main(String args []) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int x = sc.nextInt();
 		
 		recur(x);

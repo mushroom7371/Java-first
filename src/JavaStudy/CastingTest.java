@@ -1,45 +1,45 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
 public class CastingTest {
-	public static void action(Robot r) {	//Robot Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö rÀ» ¸Å°³º¯¼ö·Î °¡Áø´Ù.
-		if(r instanceof DanceRobot ) {	// ¸Å°³º¯¼ö·Î ÀÔ·Â¹ÞÀº ÂüÁ¶º¯¼ö r(Robot Å¸ÀÔÀÌ´Ù)ÀÌ °¡¸®Å°´Â ÀÎ½ºÅÏ½º°¡ DanceRobot ÀÎ½ºÅÏ½º ÀÌ¸é
-			DanceRobot dr = (DanceRobot)r;	//DanceRobot Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö drÀ» ¼±¾ðÇÏ°í, Robot Å¸ÀÔÀÇ ÀÎ½ºÅÏ½º¸¦ DanceTobot Å¸ÀÔÀ¸·Î Çüº¯È¯ ÇÏ¿© ÀÌ ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ°Ú´Ù´Â ÀÇ¹Ì.
-			dr.dance();	// DanceRobotÀÇ ÀÎ½ºÅÏ½º°¡ °¡Áø dance() ¸Þ¼­µå¸¦ ½ÇÇà.
-		}else if(r instanceof SingRobot) {	//»ó±â ³»¿ë°ú °°À½.
+	public static void action(Robot r) {	//Robot íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ rì„ ë§¤ê°œë³€ìˆ˜ë¡œ ê°€ì§„ë‹¤.
+		if(r instanceof DanceRobot ) {	// ë§¤ê°œë³€ìˆ˜ë¡œ ìž…ë ¥ë°›ì€ ì°¸ì¡°ë³€ìˆ˜ r(Robot íƒ€ìž…ì´ë‹¤)ì´ ê°€ë¦¬í‚¤ëŠ” ì¸ìŠ¤í„´ìŠ¤ê°€ DanceRobot ì¸ìŠ¤í„´ìŠ¤ ì´ë©´
+			DanceRobot dr = (DanceRobot)r;	//DanceRobot íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ drì„ ì„ ì–¸í•˜ê³ , Robot íƒ€ìž…ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ DanceTobot íƒ€ìž…ìœ¼ë¡œ í˜•ë³€í™˜ í•˜ì—¬ ì´ ì£¼ì†Œê°’ì„ ì €ìž¥í•˜ê² ë‹¤ëŠ” ì˜ë¯¸.
+			dr.dance();	// DanceRobotì˜ ì¸ìŠ¤í„´ìŠ¤ê°€ ê°€ì§„ dance() ë©”ì„œë“œë¥¼ ì‹¤í–‰.
+		}else if(r instanceof SingRobot) {	//ìƒê¸° ë‚´ìš©ê³¼ ê°™ìŒ.
 			SingRobot sr = (SingRobot)r;
 			sr.sing();
-		}else if(r instanceof DrawRobot) {	//»ó±â ³»¿ë°ú °°À½.
+		}else if(r instanceof DrawRobot) {	//ìƒê¸° ë‚´ìš©ê³¼ ê°™ìŒ.
 			DrawRobot drr = (DrawRobot)r;
 			drr.draw();
 		}
 	}
 	
-	public static void main(String args []) {	//	¸ÞÀÎ ½ÃÀÛ
+	public static void main(String args []) {	//	ë©”ì¸ ì‹œìž‘
 		Robot [] arr = {new DanceRobot(), new SingRobot(), new DrawRobot() };
-		//Robot Å¸ÀÔÀÇ ¹è¿­À» »ý¼ºÇÏ°í ÂüÁ¶º¯¼ö arr¿¡ »ý¼ºµÈ ¹è¿­ÀÇ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
-		//ÃÊ±âÈ­ ºÎºÐÀº °¢°¢ÀÇ Å¬·¡½º·Î ºÎÅÍ ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÏ°í, ±× ÁÖ¼Ò°ªÀ» ¼øÂ÷ÀûÀ¸·Î ¹è¿­¿¡ ÀúÀåÇÑ´Ù.
-		for(int i = 0; i < arr.length; i++) {	//arrÀÌ ÂüÁ¶ÇÏ´Â ¹è¿­ÀÇ ±æÀÌ¸¸Å­ 1¾¿ Áõ°¡ÇÏ¿© ¹Ýº¹ÇÑ´Ù.
-			action(arr[i]);	//action() ¸Þ¼­µå¸¦ È£ÃâÇÏ°í ¸Å°³º¯¼ö·Î ÂüÁ¶º¯¼ö arr[i]ÀÌ °¡¸®Å°´Â ÀÎ½ºÅÏ½º¸¦ ´ëÀÔÇÑ´Ù.
+		//Robot íƒ€ìž…ì˜ ë°°ì—´ì„ ìƒì„±í•˜ê³  ì°¸ì¡°ë³€ìˆ˜ arrì— ìƒì„±ëœ ë°°ì—´ì˜ ì£¼ì†Œê°’ì„ ì €ìž¥í•œë‹¤.
+		//ì´ˆê¸°í™” ë¶€ë¶„ì€ ê°ê°ì˜ í´ëž˜ìŠ¤ë¡œ ë¶€í„° ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ê³ , ê·¸ ì£¼ì†Œê°’ì„ ìˆœì°¨ì ìœ¼ë¡œ ë°°ì—´ì— ì €ìž¥í•œë‹¤.
+		for(int i = 0; i < arr.length; i++) {	//arrì´ ì°¸ì¡°í•˜ëŠ” ë°°ì—´ì˜ ê¸¸ì´ë§Œí¼ 1ì”© ì¦ê°€í•˜ì—¬ ë°˜ë³µí•œë‹¤.
+			action(arr[i]);	//action() ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ê³  ë§¤ê°œë³€ìˆ˜ë¡œ ì°¸ì¡°ë³€ìˆ˜ arr[i]ì´ ê°€ë¦¬í‚¤ëŠ” ì¸ìŠ¤í„´ìŠ¤ë¥¼ ëŒ€ìž…í•œë‹¤.
 		}
-	}//	¸ÞÀÎ ³¡
+	}//	ë©”ì¸ ë
 }
 
-class Robot {}	//Robot Å¬·¡½º¸¦ ¼±¾ð. ÀÌ Å¬·¡½º´Â ´Ü¼ø ºÎ¸ð Å¬·¡½º ¿ªÇÒÀ» ÇÑ´Ù.
+class Robot {}	//Robot í´ëž˜ìŠ¤ë¥¼ ì„ ì–¸. ì´ í´ëž˜ìŠ¤ëŠ” ë‹¨ìˆœ ë¶€ëª¨ í´ëž˜ìŠ¤ ì—­í• ì„ í•œë‹¤.
 
-class DanceRobot extends Robot{	//Robot Å¬·¡½º¸¦ »ó¼Ó¹ÞÀº Å¬·¡½º
+class DanceRobot extends Robot{	//Robot í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ í´ëž˜ìŠ¤
 	void dance() {
-		System.out.println("ÃãÀ» Ãä´Ï´Ù.");	//DanceRobot¸¸ °¡Áø ±â´É ¸Þ¼­µå
+		System.out.println("ì¶¤ì„ ì¶¥ë‹ˆë‹¤.");	//DanceRobotë§Œ ê°€ì§„ ê¸°ëŠ¥ ë©”ì„œë“œ
 	}
 }
 
-class SingRobot extends Robot{	//Robot Å¬·¡½º¸¦ »ó¼Ó¹ÞÀº Å¬·¡½º
+class SingRobot extends Robot{	//Robot í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ í´ëž˜ìŠ¤
 	void sing() {
-		System.out.println("³ë·¡¸¦ ºÎ¸¨´Ï´Ù.");	//SingRobot¸¸ °¡Áø ±â´É ¸Þ¼­µå
+		System.out.println("ë…¸ëž˜ë¥¼ ë¶€ë¦…ë‹ˆë‹¤.");	//SingRobotë§Œ ê°€ì§„ ê¸°ëŠ¥ ë©”ì„œë“œ
 	}
 }
 
-class DrawRobot extends Robot{	//Robot Å¬·¡½º¸¦ »ó¼Ó¹ÞÀº Å¬·¡½º
+class DrawRobot extends Robot{	//Robot í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ í´ëž˜ìŠ¤
 	void draw() {
-		System.out.println("±×¸²À» ±×¸³´Ï´Ù.");	//DrawRobot¸¸ °¡Áø ±â´É ¸Þ¼­µå
+		System.out.println("ê·¸ë¦¼ì„ ê·¸ë¦½ë‹ˆë‹¤.");	//DrawRobotë§Œ ê°€ì§„ ê¸°ëŠ¥ ë©”ì„œë“œ
 	}
 }

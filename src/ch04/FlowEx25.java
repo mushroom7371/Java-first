@@ -1,11 +1,11 @@
-package ch04;
+ï»¿package ch04;
 
 	import java.util.Scanner;
 public class FlowEx25 {
 	
 	public static void main(String[] args) {
 		int num = 0; int sum = 0; int result = 0;
-		System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		
 		Scanner scanner = new Scanner(System.in);
 		String tmp = scanner.nextLine();

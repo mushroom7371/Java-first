@@ -1,19 +1,19 @@
-package certificate;
+ï»¿package certificate;
 
 class Section010_sum_type2 {
-	//¼ø¼­¿¡ ÀÇÇÑ 1-2+3-4...+99-100ÇÕ ±¸ÇÏ±â
+	//ìˆœì„œì— ì˜í•œ 1-2+3-4...+99-100í•© êµ¬í•˜ê¸°
 	public static void main(String[] args) {
 		int i = 0;
 		int sum = 0;
 		
-		while(true) {	//¹«ÇÑ¹Ýº¹
+		while(true) {	//ë¬´í•œë°˜ë³µ
 			i++;
 			sum += i;
 			
-			if(i >= 99) {	//Ç×ÀÌ 99°¡ µÇ¸é Ãâ·ÂÈÄ ¹Ýº¹ Á¾·á
+			if(i >= 99) {	//í•­ì´ 99ê°€ ë˜ë©´ ì¶œë ¥í›„ ë°˜ë³µ ì¢…ë£Œ
 				System.out.println(sum);
 				break;
-			}else {	//¾Æ´Ï¶ó¸é Ç×ÀÇ ¼ýÀÚ¸¦ Áõ°¡ÇÏ°í »«´Ù. ÀÌÈÄ ´Ù½Ã while¹® Ã³À½À¸·Î µ¹¾Æ°¨
+			}else {	//ì•„ë‹ˆë¼ë©´ í•­ì˜ ìˆ«ìžë¥¼ ì¦ê°€í•˜ê³  ëº€ë‹¤. ì´í›„ ë‹¤ì‹œ whileë¬¸ ì²˜ìŒìœ¼ë¡œ ëŒì•„ê°
 				i++;
 				sum -= i;
 			}

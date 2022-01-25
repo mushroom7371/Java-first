@@ -1,9 +1,9 @@
-package CollectionsFramework;
+ï»¿package CollectionsFramework;
 
 public class MainRunner {
 	    public static void main(String[] args)	{
-	        ArrayListExex arraylist = new ArrayListExex();	//ArrayList Å¬·¡½º·Î ºÎÅÍ °´Ã¼¸¦ »ı¼ºÇÏ¿© ÁÖ¼Ò°ªÀ» ÂüÁ¶º¯¼ö¿¡ ÀúÀåÇÑ´Ù.
-	        arraylist.addLast(3);	//arraylist ÀÎÆ®ÅÏ½º¿¡ »ı¼ºµÈ ¸Ş¼­µå¸¦À» È£ÃâÇÑ´Ù.
+	        ArrayListExex arraylist = new ArrayListExex();	//ArrayList í´ë˜ìŠ¤ë¡œ ë¶€í„° ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬ ì£¼ì†Œê°’ì„ ì°¸ì¡°ë³€ìˆ˜ì— ì €ì¥í•œë‹¤.
+	        arraylist.addLast(3);	//arraylist ì¸íŠ¸í„´ìŠ¤ì— ìƒì„±ëœ ë©”ì„œë“œë¥¼ì„ í˜¸ì¶œí•œë‹¤.
 	        arraylist.addLast(5);
 	        arraylist.add(1, 4);
 	        arraylist.addFirst(10);

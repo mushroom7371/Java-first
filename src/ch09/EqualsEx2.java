@@ -1,21 +1,21 @@
-package ch09;
+ï»¿package ch09;
 
 class Person{
 	long id;
 	
-	//ObjectÅ¬·¡½ºÀÇ equals ¸Þ¼­µå¸¦ ¿À¹ö¶óÀÌµù ÇÏ¿´´Ù.
-	public boolean equals(Object obj) {	//ÀÎÀÚ°ªÀ¸·Î µé¾î¿À´Â ÂüÁ¶º¯¼ö´Â Object Å¸ÀÔÀÌ°í
-		if(obj instanceof Person)	//ÂüÁ¶º¯¼ö°¡ °¡¸®Å°´Â °´Ã¼°¡ Person Å¸ÀÔÀÇ °´Ã¼·Î ¸¸µé¾î Áø °ÍÀÌ¶ó¸é
-									//ÇÑ¸¶µð·Î Person Å¬·¡½º·Î ºÎÅÍ ¸¸µé¾îÁø °´Ã¼ÀÌ¸ç ¸ðµç Å¬·¡½º´Â ObjectÅ¬·¡½º¸¦ »ó¼Ó¹Þ±â¿¡
-									//Á¶°ÇÀÌ ÂüÀÌ¶ó¸é ÇØ´ç °´Ã¼´Â Person Å¬·¡½º·Î ºÎÅÍ ¸¸µé¾îÁø °´Ã¼ÀÌ´Ù.
-			return id == ((Person)obj).id; //Person Å¬·¡½ºÀÇ º¯¼ö id °ªÀ»(this) ÂüÁ¶º¯¼ö°¡ °¡¸®Å°´Â º¯¼ö°ªÀ¸·Î ¼³Á¤ÇÑ´Ù.
-											//´Ù¸¸ ÇØ´ç ÂüÁ¶º¯¼ö´Â Person Å¬·¡½º·Î ºÎÅÍ ¸¸µé¾îÁø °´Ã¼¸¦ °¡¸®Å°Áö¸¸ Object Å¸ÀÔÀÌ¹Ç·Î
-											//³»¿ë¹°À» »ç¿ëÇÏ±â À§ÇØ¼­´Â Çüº¯È¯ ÀÛ¾÷À» ÅëÇÏ¿© Á¢±ÙÇØ¾ß »ç¿ë°¡´ÉÇÏ´Ù.
+	//Objectí´ëž˜ìŠ¤ì˜ equals ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ì˜€ë‹¤.
+	public boolean equals(Object obj) {	//ì¸ìžê°’ìœ¼ë¡œ ë“¤ì–´ì˜¤ëŠ” ì°¸ì¡°ë³€ìˆ˜ëŠ” Object íƒ€ìž…ì´ê³ 
+		if(obj instanceof Person)	//ì°¸ì¡°ë³€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ê°€ Person íƒ€ìž…ì˜ ê°ì²´ë¡œ ë§Œë“¤ì–´ ì§„ ê²ƒì´ë¼ë©´
+									//í•œë§ˆë””ë¡œ Person í´ëž˜ìŠ¤ë¡œ ë¶€í„° ë§Œë“¤ì–´ì§„ ê°ì²´ì´ë©° ëª¨ë“  í´ëž˜ìŠ¤ëŠ” Objectí´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ê¸°ì—
+									//ì¡°ê±´ì´ ì°¸ì´ë¼ë©´ í•´ë‹¹ ê°ì²´ëŠ” Person í´ëž˜ìŠ¤ë¡œ ë¶€í„° ë§Œë“¤ì–´ì§„ ê°ì²´ì´ë‹¤.
+			return id == ((Person)obj).id; //Person í´ëž˜ìŠ¤ì˜ ë³€ìˆ˜ id ê°’ì„(this) ì°¸ì¡°ë³€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜ê°’ìœ¼ë¡œ ì„¤ì •í•œë‹¤.
+											//ë‹¤ë§Œ í•´ë‹¹ ì°¸ì¡°ë³€ìˆ˜ëŠ” Person í´ëž˜ìŠ¤ë¡œ ë¶€í„° ë§Œë“¤ì–´ì§„ ê°ì²´ë¥¼ ê°€ë¦¬í‚¤ì§€ë§Œ Object íƒ€ìž…ì´ë¯€ë¡œ
+											//ë‚´ìš©ë¬¼ì„ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œëŠ” í˜•ë³€í™˜ ìž‘ì—…ì„ í†µí•˜ì—¬ ì ‘ê·¼í•´ì•¼ ì‚¬ìš©ê°€ëŠ¥í•˜ë‹¤.
 		else
 			return false;
 	}
 	
-	Person(long id){	//°´Ã¼¸¦ »ý¼ºÇÒ¶§ ÀÎÀÚ°ªÀ¸·Î ¹Þ´Â ¼ýÀÚ¸¦ ¸â¹öº¯¼ö id °ªÀ¸·Î ÀúÀåÇÑ´Ù.
+	Person(long id){	//ê°ì²´ë¥¼ ìƒì„±í• ë•Œ ì¸ìžê°’ìœ¼ë¡œ ë°›ëŠ” ìˆ«ìžë¥¼ ë©¤ë²„ë³€ìˆ˜ id ê°’ìœ¼ë¡œ ì €ìž¥í•œë‹¤.
 		this.id = id;
 	}
 }
@@ -26,15 +26,15 @@ public class EqualsEx2 {
 		Person p1 = new Person(8011081111222L);
 		Person p2 = new Person(8011081111222L);
 		
-		if(p1==p2) //p1,p2ÀÇ º¯¼ö idÀÇ °ªÀº °°À¸³ª p1Àº Person Å¬·¡½º·Î ºÎÅÍ »ý¼ºµÈ ÀÎ½ºÅÏ½ºÀÇ ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ´Â °ø°£ÀÌ°í p2¶ÇÇÑ ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ´Â °ø°£ÀÌ¿©¼­ ¼­·Î ´Ù¸£´Ù.
-			System.out.println("p1°ú p2´Â °°Àº »ç¶÷ÀÔ´Ï´Ù.");
+		if(p1==p2) //p1,p2ì˜ ë³€ìˆ˜ idì˜ ê°’ì€ ê°™ìœ¼ë‚˜ p1ì€ Person í´ëž˜ìŠ¤ë¡œ ë¶€í„° ìƒì„±ëœ ì¸ìŠ¤í„´ìŠ¤ì˜ ì£¼ì†Œê°’ì„ ì €ìž¥í•˜ëŠ” ê³µê°„ì´ê³  p2ë˜í•œ ì£¼ì†Œê°’ì„ ì €ìž¥í•˜ëŠ” ê³µê°„ì´ì—¬ì„œ ì„œë¡œ ë‹¤ë¥´ë‹¤.
+			System.out.println("p1ê³¼ p2ëŠ” ê°™ì€ ì‚¬ëžŒìž…ë‹ˆë‹¤.");
 		else
-			System.out.println("p1°ú p2´Â ´Ù¸¥ »ç¶÷ÀÔ´Ï´Ù.");		
+			System.out.println("p1ê³¼ p2ëŠ” ë‹¤ë¥¸ ì‚¬ëžŒìž…ë‹ˆë‹¤.");		
 		
-		if(p1.equals(p2))  //equals´Â À§ÀÇ ¿¹½Ã¿Í ´Ù¸£°Ô ¹®ÀÚ¿­ °ªÀ» ºñ±³ÇÏ±â¿¡(ÀÌ °æ¿ì¿¡´Â ÂüÁ¶º¯¼ö°¡ °¡¸®Å°´Â °´Ã¼ÀÇ ÁÖ¼Ò°ªÀÌ µÈ´Ù.)
-							//p1°ú p2ÀÇ ¹®ÀÚ¿­ °ªÀÌ °°À¸¹Ç·Î(°°Àº °´Ã¼¸¦ °¡¸®Å°¹Ç·Î) °°Àº »ç¶÷ÀÌ¶ó°í Ãâ·ÂµÈ´Ù
-			System.out.println("p1°ú p2´Â °°Àº »ç¶÷ÀÔ´Ï´Ù.");
+		if(p1.equals(p2))  //equalsëŠ” ìœ„ì˜ ì˜ˆì‹œì™€ ë‹¤ë¥´ê²Œ ë¬¸ìžì—´ ê°’ì„ ë¹„êµí•˜ê¸°ì—(ì´ ê²½ìš°ì—ëŠ” ì°¸ì¡°ë³€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì˜ ì£¼ì†Œê°’ì´ ëœë‹¤.)
+							//p1ê³¼ p2ì˜ ë¬¸ìžì—´ ê°’ì´ ê°™ìœ¼ë¯€ë¡œ(ê°™ì€ ê°ì²´ë¥¼ ê°€ë¦¬í‚¤ë¯€ë¡œ) ê°™ì€ ì‚¬ëžŒì´ë¼ê³  ì¶œë ¥ëœë‹¤
+			System.out.println("p1ê³¼ p2ëŠ” ê°™ì€ ì‚¬ëžŒìž…ë‹ˆë‹¤.");
 		else
-			System.out.println("p1°ú p2´Â ´Ù¸¥ »ç¶÷ÀÔ´Ï´Ù.");	
+			System.out.println("p1ê³¼ p2ëŠ” ë‹¤ë¥¸ ì‚¬ëžŒìž…ë‹ˆë‹¤.");	
 	}
 }

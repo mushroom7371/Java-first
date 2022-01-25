@@ -1,24 +1,24 @@
-package Practice;
+ï»¿package Practice;
 
 class Document {
-	static int count = 0;	// int Å¸ÀÔÀÇ Å¬·¡½º º¯¼ö¸¦ ¼±¾ğÇÏ°í 0À¸·Î ÃÊ±âÈ­
-	String name;	//	String Å¸ÀÔÀÇ ÀÎ½ºÅÏ½º º¯¼ö¸¦ ¼±¾ğ ÃÊ±âÈ­ null
+	static int count = 0;	// int íƒ€ì…ì˜ í´ë˜ìŠ¤ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  0ìœ¼ë¡œ ì´ˆê¸°í™”
+	String name;	//	String íƒ€ì…ì˜ ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ë¥¼ ì„ ì–¸ ì´ˆê¸°í™” null
 	
 	Document(){
-		this("Á¦¸ñ¾øÀ½" + ++count);	// ÀÎ½ºÅÏ½º »ı¼º½Ã Å¬·¡½ºº¯¼ö°¡ Ä«¿îÆ® µÇ¾î ÀúÀåµÊ
+		this("ì œëª©ì—†ìŒ" + ++count);	// ì¸ìŠ¤í„´ìŠ¤ ìƒì„±ì‹œ í´ë˜ìŠ¤ë³€ìˆ˜ê°€ ì¹´ìš´íŠ¸ ë˜ì–´ ì €ì¥ë¨
 	}
 	
 	Document(String name){
 		this.name = name;
-		System.out.println("ÀÌ ¹®¼­ÀÇ Á¦¸ñÀº " + this.name + "ÀÔ´Ï´Ù.");	//Á¦¸ñ ÀÔ·Â½Ã ±×´ë·Î Ãâ·Â
+		System.out.println("ì´ ë¬¸ì„œì˜ ì œëª©ì€ " + this.name + "ì…ë‹ˆë‹¤.");	//ì œëª© ì…ë ¥ì‹œ ê·¸ëŒ€ë¡œ ì¶œë ¥
 	}
 }
 
 class DocumentTest{
 	public static void main(String [] args) {
-		Document d1 = new Document();	// 0¿¡¼­ Áõ°¨ »ı¼ºÀÚ·Î ÀÎÇÏ¿© 1·Î Ä«¿îÆ®µÇ¾î Ãâ·Â
+		Document d1 = new Document();	// 0ì—ì„œ ì¦ê° ìƒì„±ìë¡œ ì¸í•˜ì—¬ 1ë¡œ ì¹´ìš´íŠ¸ë˜ì–´ ì¶œë ¥
 		Document d2 = new Document("name");
-		Document d3 = new Document();	// 1¿¡¼­ 2·Î
-		Document d4 = new Document();	// 2¿¡¼­ 3À¸·Î
+		Document d3 = new Document();	// 1ì—ì„œ 2ë¡œ
+		Document d4 = new Document();	// 2ì—ì„œ 3ìœ¼ë¡œ
 	}
 }

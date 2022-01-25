@@ -1,24 +1,24 @@
-package JavaStudy;
+ï»¿package JavaStudy;
 
-import java.util.Scanner;	//java.util ¿¡ ÀÖ´Â Scanner¸¦ import ÇÏ°Ú´Ù
+import java.util.Scanner;	//java.util ì— ìžˆëŠ” Scannerë¥¼ import í•˜ê² ë‹¤
 
 public class DoWhileExam {
 	public static void main(String [] args) {
 		
-		int value = 0;	//Á¤¼ö Å¸ÀÔÀÇ º¯¼ö¸¦ ¼±¾ðÇÏ°í ÃÊ±âÈ­
+		int value = 0;	//ì •ìˆ˜ íƒ€ìž…ì˜ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ì´ˆê¸°í™”
 		Scanner scan = new Scanner(System.in);
-		// Scanner Å¸ÀÔÀÇ ÂüÁ¶º¯¼ö scanÀ» ¼±¾ðÇÏ°í ¿©±â¿¡´Â ÁÖ¼Ò°ªÀÌ ÀúÀåµÈ´Ù.
-		// ±× ÁÖ¼Ò°ªÀº new·Î ÀÎÇÏ¿© Scanner Å¬·¡½º·Î ºÎÅÍ »ý¼ºµÈ ÀÎ½ºÅÏ½ºÀÇ ÁÖ¼Ò°ªÀÌ´Ù.
-		// »õ·Î »ý±ä ÀÎ½ºÅÏ½º¿¡´Â Å°º¸µå·Î ºÎÅÍ °ªÀ» ÀÔ·Â¹Þ´Â ±â´ÉÀÌ ÀÖ´Ù.
+		// Scanner íƒ€ìž…ì˜ ì°¸ì¡°ë³€ìˆ˜ scanì„ ì„ ì–¸í•˜ê³  ì—¬ê¸°ì—ëŠ” ì£¼ì†Œê°’ì´ ì €ìž¥ëœë‹¤.
+		// ê·¸ ì£¼ì†Œê°’ì€ newë¡œ ì¸í•˜ì—¬ Scanner í´ëž˜ìŠ¤ë¡œ ë¶€í„° ìƒì„±ëœ ì¸ìŠ¤í„´ìŠ¤ì˜ ì£¼ì†Œê°’ì´ë‹¤.
+		// ìƒˆë¡œ ìƒê¸´ ì¸ìŠ¤í„´ìŠ¤ì—ëŠ” í‚¤ë³´ë“œë¡œ ë¶€í„° ê°’ì„ ìž…ë ¥ë°›ëŠ” ê¸°ëŠ¥ì´ ìžˆë‹¤.
 		
-		do { //ÇÑ¹øÀº ½ÇÇàµÇ´Â ºÎºÐ
-			value = scan.nextInt();	// º¯¼ö value ¿¡ scanÀÌ °¡¸®Å°´Â ÀÎ½ºÅÏ½ºÀÇ nextInt() ¸Þ¼­µå¸¦ È£ÃâÇÏ°í ÀúÀåÇÑ´Ù
-			System.out.println(value);	//Ãâ·Â
+		do { //í•œë²ˆì€ ì‹¤í–‰ë˜ëŠ” ë¶€ë¶„
+			value = scan.nextInt();	// ë³€ìˆ˜ value ì— scanì´ ê°€ë¦¬í‚¤ëŠ” ì¸ìŠ¤í„´ìŠ¤ì˜ nextInt() ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ê³  ì €ìž¥í•œë‹¤
+			System.out.println(value);	//ì¶œë ¥
 		}while(value != 10);
-		//whileÀº Á¶°ÇÀÌ true ÀÏ¶§ °è¼Ó ¹Ýº¹ÇÏ¹Ç·Î 'value°¡ 10ÀÌ ¾Æ´Ï´Ù' °¡ ÂüÀÎ°æ¿ì
-		//Áï 10ÀÌ ¾Æ´Ï¸é °è¼Ó do·Î ¿Ã¶ó°¡°í, 'value°¡ 10ÀÌ ¾Æ´Ï´Ù'°¡ °ÅÁþÀÎ °æ¿ì
-		//Áï 10ÀÌ¸é Áß´ÜÇÏ°Ô µÈ´Ù.
+		//whileì€ ì¡°ê±´ì´ true ì¼ë•Œ ê³„ì† ë°˜ë³µí•˜ë¯€ë¡œ 'valueê°€ 10ì´ ì•„ë‹ˆë‹¤' ê°€ ì°¸ì¸ê²½ìš°
+		//ì¦‰ 10ì´ ì•„ë‹ˆë©´ ê³„ì† doë¡œ ì˜¬ë¼ê°€ê³ , 'valueê°€ 10ì´ ì•„ë‹ˆë‹¤'ê°€ ê±°ì§“ì¸ ê²½ìš°
+		//ì¦‰ 10ì´ë©´ ì¤‘ë‹¨í•˜ê²Œ ëœë‹¤.
 		
-		System.out.println("¹Ýº¹¹® Á¾·á");
+		System.out.println("ë°˜ë³µë¬¸ ì¢…ë£Œ");
 	}
 }

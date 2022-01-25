@@ -1,4 +1,4 @@
-package ch05;
+ï»¿package ch05;
 
 public class ArrayEx11 {
 
@@ -17,7 +17,7 @@ public class ArrayEx11 {
 		}
 
 		for(int i = 0; i <numArr.length; i++) {
-			System.out.println( i + "ÀÇ °¹¼ö" + counter[i]);
+			System.out.println( i + "ì˜ ê°¯ìˆ˜" + counter[i]);
 		}
 	}
 

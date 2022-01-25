@@ -1,22 +1,22 @@
-package certificate;
+ï»¿package certificate;
 
 class Section039_right_triangle {
-	//2Â÷¿ø ¹è¿­À» ÅëÇÑ Á÷°¢ »ï°¢Çü Ç¥Çö
+	//2ì°¨ì› ë°°ì—´ì„ í†µí•œ ì§ê° ì‚¼ê°í˜• í‘œí˜„
 
 	public static void main(String[] args) {
 		int i, j, k;
-		//i = Ã¹¹øÂ° ¹è¿­ÀÇ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ±â À§ÇÑ ¹øÁö¼ö º¯¼ö, j = µÎ ¹øÂ° ¹è¿­ÀÇ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ±â À§ÇÑ ¹øÁö¼ö º¯¼ö
+		//i = ì²«ë²ˆì§¸ ë°°ì—´ì˜ ë°ì´í„°ë¥¼ ì €ìž¥í•˜ê¸° ìœ„í•œ ë²ˆì§€ìˆ˜ ë³€ìˆ˜, j = ë‘ ë²ˆì§¸ ë°°ì—´ì˜ ë°ì´í„°ë¥¼ ì €ìž¥í•˜ê¸° ìœ„í•œ ë²ˆì§€ìˆ˜ ë³€ìˆ˜
 		int a[][] = new int[5][5];
-		//2Â÷¿ø ¹è¿­ ¼±¾ð ¹× Å©±â ¼³Á¤. ÂüÁ¶º¯¼ö a´Â 1Â÷¿ø ¹è¿­À» °¡¸®Å°°í ±× ¹è¿­ÀÇ °¢ ¹øÁö¼ö°¡ ´Ù½Ã °¢°¢ ´Ù¸¥ Å©±â 5ÀÇ ¹è¿­À» °¡¸®Å²´Ù.
-		k = 0;	//¹è¿­¿¡ ÀúÀåÇÒ µ¥ÀÌÅÍ
+		//2ì°¨ì› ë°°ì—´ ì„ ì–¸ ë° í¬ê¸° ì„¤ì •. ì°¸ì¡°ë³€ìˆ˜ aëŠ” 1ì°¨ì› ë°°ì—´ì„ ê°€ë¦¬í‚¤ê³  ê·¸ ë°°ì—´ì˜ ê° ë²ˆì§€ìˆ˜ê°€ ë‹¤ì‹œ ê°ê° ë‹¤ë¥¸ í¬ê¸° 5ì˜ ë°°ì—´ì„ ê°€ë¦¬í‚¨ë‹¤.
+		k = 0;	//ë°°ì—´ì— ì €ìž¥í•  ë°ì´í„°
 		
-		for (i = 0; i <= 4; i++) {	//¹è¿­ÀÇ Å©±â ¸¸Å­ ¹Ýº¹
-			for (j = 0; j <= i; j++) {	//j <= iÀ¸·Î ÀÎÇÏ¿© ¸¶Ä¡ ¿ÞÂÊÀ¸·Î ½ò¸° ÇüÅÂ·Î µ¥ÀÌÅÍ°¡ ¹è¿­¿¡ ÀúÀåµÈ´Ù.
+		for (i = 0; i <= 4; i++) {	//ë°°ì—´ì˜ í¬ê¸° ë§Œí¼ ë°˜ë³µ
+			for (j = 0; j <= i; j++) {	//j <= iìœ¼ë¡œ ì¸í•˜ì—¬ ë§ˆì¹˜ ì™¼ìª½ìœ¼ë¡œ ì ë¦° í˜•íƒœë¡œ ë°ì´í„°ê°€ ë°°ì—´ì— ì €ìž¥ëœë‹¤.
 				k++;
 				a[i][j] = k;
 			}
 		}
-		for (int x = 0; x <= 4; x++) {	//Ãâ·Â¿ë ¹Ýº¹¹®
+		for (int x = 0; x <= 4; x++) {	//ì¶œë ¥ìš© ë°˜ë³µë¬¸
 			for (int y = 0; y <= 4; y++)
 				System.out.printf("%3d", a[x][y]);
 			System.out.printf("\n");

@@ -1,11 +1,11 @@
-package AlgorithmStudy;
+ï»¿package AlgorithmStudy;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class MaxOfArrayRand {
 
-	static int maxOf(int[]a) {	// ÀÌÀü MaxOfArray Å¬·¡½º¿¡¼­ ´ëºÎºĞÀÇ ³»¿ëÀ» ¼³¸íÇÔ
+	static int maxOf(int[]a) {	// ì´ì „ MaxOfArray í´ë˜ìŠ¤ì—ì„œ ëŒ€ë¶€ë¶„ì˜ ë‚´ìš©ì„ ì„¤ëª…í•¨
 		int max = a[0];
 		
 		for(int i = 1; i < a.length; i++) 
@@ -16,23 +16,23 @@ public class MaxOfArrayRand {
 	}
 	
 	public static void main(String[] args) {
-		Random rand = new Random();	//Random Å¬·¡½º¸¦ »ç¿ëÇÏ±â À§ÇØ ÀÎ½ºÅÏ½ºÈ­ ÇÏ¿© ÂüÁ¶º¯¼ö¿¡ ÁÖ¼Ò¸¦ ´ã¾Ò´Ù
+		Random rand = new Random();	//Random í´ë˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ ì¸ìŠ¤í„´ìŠ¤í™” í•˜ì—¬ ì°¸ì¡°ë³€ìˆ˜ì— ì£¼ì†Œë¥¼ ë‹´ì•˜ë‹¤
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Å°ÀÇ ÃÖ´ë°ªÀ» ±¸ÇÕ´Ï´Ù.");
-		System.out.print("ÀÎ¿ø ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.println("í‚¤ì˜ ìµœëŒ€ê°’ì„ êµ¬í•©ë‹ˆë‹¤.");
+		System.out.print("ì¸ì› ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int num = sc.nextInt();
 		
-		int [] height = new int[num];	//Å°º¸µå·Î ÀÔ·Â¹ŞÀº Á¤¼öÀÇ Å©±â¸¸Å­ÀÇ ±æÀÌ¸¦ °¡Áø ¹è¿­À» ¼±¾ğ
+		int [] height = new int[num];	//í‚¤ë³´ë“œë¡œ ì…ë ¥ë°›ì€ ì •ìˆ˜ì˜ í¬ê¸°ë§Œí¼ì˜ ê¸¸ì´ë¥¼ ê°€ì§„ ë°°ì—´ì„ ì„ ì–¸
 		
-		System.out.println("Å° °ªÀº ¾Æ·¡¿Í °°½À´Ï´Ù.");
+		System.out.println("í‚¤ ê°’ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.");
 		
 		for(int i = 0; i < height.length; i++) {
-			height[i] = 100 +  rand.nextInt(90);	//RandomÅ¬·¡½ºÀÇ nextInt¸¦ »ç¿ëÇÏ¿© 0~89(0~n-1)±îÁöÀÇ ³­¼ö¸¦ ±¸ÇÑ´Ù.
-			System.out.println( i + "¹øÂ° »ç¶÷ÀÇ Å° : " + height[i]);
+			height[i] = 100 +  rand.nextInt(90);	//Randomí´ë˜ìŠ¤ì˜ nextIntë¥¼ ì‚¬ìš©í•˜ì—¬ 0~89(0~n-1)ê¹Œì§€ì˜ ë‚œìˆ˜ë¥¼ êµ¬í•œë‹¤.
+			System.out.println( i + "ë²ˆì§¸ ì‚¬ëŒì˜ í‚¤ : " + height[i]);
 		}
 		
-		System.out.println("°¡Àå Å« »ç¶÷ÀÇ Å°´Â : " + maxOf(height) + " ÀÔ´Ï´Ù.");
+		System.out.println("ê°€ì¥ í° ì‚¬ëŒì˜ í‚¤ëŠ” : " + maxOf(height) + " ì…ë‹ˆë‹¤.");
 	}
 
 }
