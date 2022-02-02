@@ -19,9 +19,9 @@ class StringSortMyMind {
 		List<String> list = new ArrayList<String>(Arrays.asList(strings));
 		for(int i = 0; i < answer.length; i++) {
 			for(int j = 0; j < list.size(); j++) {
-				if(list.get(i).substring(n, n+1).equals(answer[i])) {
-					answer[i] = list.get(i);
-					list.remove(list.get(i));
+				if(list.get(j).substring(n, n+1).equals(answer[i])) {
+					answer[i] = list.get(j);
+					list.remove(list.get(j));
 					break;
 				}
 			}
