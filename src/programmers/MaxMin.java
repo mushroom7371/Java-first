@@ -1,27 +1,24 @@
 package programmers;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 //최댓값과 최솟값
 class MaxMin {
-	static String solution(String s) {
+	private String solution(String s) {
 		String answer = "";
-		int max = 0;
-		int min = 0;
-		List<String> al = new ArrayList<String>();
+		List<Integer> al = new ArrayList<Integer>();	//자른 숫자를 저장할 ArrayList 객체
+		String [] strArr = s.split(" ");	//공백을 기준으로 문자를 자르고 각각의 데이터를 배열에 저장한다.
 		
-		for(int i = 0; i < s.length(); i++) {
-			//공백을 제외하고 문자열을 뽑아내는데, 십의자리 또는 백의자리 수와 같은 문자는?
+		for(int i = 0; i < strArr.length; i++) {
+			al.add(Integer.parseInt(strArr[i]));	//String 타입을 가른것이므로 int타입으로 바꿔 ArrayList에 저장한다.
 		}
 		
-		System.out.println(al.toString());
+		Collections.sort(al);	//정렬
+		
+		answer = al.get(0) + " " + al.get(al.size()-1);	//정렬로 인하여 최솟값은 0번지 데이터, 최댓값은 마지막 번지의 데이터가 된다.
 		
 		return answer;
-	}
-	
-	public static void main(String[] args) {
-		String s = "1 4 2 6 8 15";
-		solution(s);
 	}
 }
