@@ -1,5 +1,6 @@
 package programmers;
 
+//JadenCase 문자열 만들기
 class JadenCase {
 	static String solution(String s) {
 		String answer = "";
