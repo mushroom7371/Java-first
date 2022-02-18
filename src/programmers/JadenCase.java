@@ -4,39 +4,38 @@ package programmers;
 class JadenCase {
 	static String solution(String s) {
 		String answer = "";
-		String [] str = s.split(" ");
+		String str = s.trim();
+		String [] strArr = str.split("\\s+");
 		
-		for(int i = 0; i < str.length; i++) {
+		for(int i = 0; i < strArr.length; i++) {
 			String tmp = "";
-			char isNum = str[i].charAt(0);
+			char isNum = strArr[i].charAt(0);
 			
 			if(isNum >= '0' && isNum <= '9') {
 				tmp += isNum;
-				for(int j = 1; j < str[i].length(); j++) {
-					tmp += Character.toLowerCase(str[i].charAt(j));
+				for(int j = 1; j < strArr[i].length(); j++) {
+					tmp += Character.toLowerCase(strArr[i].charAt(j));
 				}			
 			}else {
 				tmp += Character.toUpperCase(isNum);
-				for(int j = 1; j < str[i].length(); j++) {
-					tmp += Character.toLowerCase(str[i].charAt(j));
+				for(int j = 1; j < strArr[i].length(); j++) {
+					tmp += Character.toLowerCase(strArr[i].charAt(j));
 				}
 			}
 			
-			if(i != str.length -1) {
+			if(i != strArr.length -1) {
 				answer += tmp + " ";
 			}else {
 				answer += tmp;
 			}
 			
 		}
-		
-		System.out.println(answer);
 
 		return answer;
 	}
 	
 	public static void main(String[] args) {
-		String s = "for the last week";
+		String s = "  for   the    last week   ";
 //		String s = "a a a a a a a a a a ";
 //		String s = "tomato";
 		solution(s);
