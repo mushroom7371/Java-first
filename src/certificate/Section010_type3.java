@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section010_type3 {
 	//부호가 바뀌는 항의 곱구하기 (-1)*2*(-3)*...*100

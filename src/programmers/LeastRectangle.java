@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //최소 직사각형
 class LeastRectangle {

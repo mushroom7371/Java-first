@@ -1,4 +1,4 @@
-﻿package ch07;
+package ch07;
 
 class InnerEx2 {
 	class InstanceInner{}

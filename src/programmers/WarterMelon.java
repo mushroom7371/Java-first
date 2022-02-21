@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //수박수박수박수
 class WarterMelon {

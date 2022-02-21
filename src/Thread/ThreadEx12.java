@@ -1,4 +1,4 @@
-﻿package Thread;
+package Thread;
 
 class ThreadEx12 {
 	public static void main(String args[]) {

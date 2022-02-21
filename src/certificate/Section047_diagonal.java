@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section047_diagonal {
 	//대각선으로 배열 채우기

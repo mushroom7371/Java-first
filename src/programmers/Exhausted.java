@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //피로도
 class Exhausted {

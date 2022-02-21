@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section046_snail {
 	//2차원 배열 달팽이 모양으로 채우기

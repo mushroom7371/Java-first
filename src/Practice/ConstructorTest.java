@@ -1,4 +1,4 @@
-﻿package Practice;
+package Practice;
 
 class Data1{
 	int value;

@@ -1,4 +1,4 @@
-﻿package AlgorithmStudy;
+package AlgorithmStudy;
 
 import java.util.Arrays;
 

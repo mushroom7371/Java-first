@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section012 {
 	//수열 -(1/2) + (2/3) - (3/4) +... -(99/100) 구하기

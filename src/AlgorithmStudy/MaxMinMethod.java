@@ -1,4 +1,4 @@
-﻿package AlgorithmStudy;
+package AlgorithmStudy;
 
 public class MaxMinMethod {
 	public static void main(String [] args) {

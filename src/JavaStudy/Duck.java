@@ -1,4 +1,4 @@
-﻿package JavaStudy;
+package JavaStudy;
 
 public class Duck extends Bird {
 	//Duck 클래스는 Bird 클래스로 부터 상속을 받는다. 상속을 받기에 부모클래스의 기능을 사용할 수있다.

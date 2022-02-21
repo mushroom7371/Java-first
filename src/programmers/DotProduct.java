@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //내적 구하기
 class DotProduct {

@@ -1,4 +1,4 @@
-﻿package ch05;
+package ch05;
 
 import java.util.*;    // Scanner를 사용하기 위해 추가
 //String 파라메터 제어방법

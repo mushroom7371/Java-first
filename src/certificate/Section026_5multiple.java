@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section026_5multiple {
 	//5의 배수의 개수와 합

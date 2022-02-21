@@ -1,4 +1,4 @@
-﻿package Thread;
+package Thread;
 
 public class ThreadEx1 {
 	//쓰레드 구현방법2가지에 대한 차이. Thread클래스 상속 or Runnable 인터페이스 구현

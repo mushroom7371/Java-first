@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section010_sum_type1 {
 	//스위치 변수를 이용한 1-2+3-4...+99-100합 구하기

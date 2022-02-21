@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //부족한 금액 계산하기
 class LackOfMoney {

@@ -1,4 +1,4 @@
-﻿package JavaStudy;
+package JavaStudy;
 
 public abstract class Bird {
 		//추상 메서드를 만들기 위해서는 클래스 또한 추상 클래스로 만들어야 한다.

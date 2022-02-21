@@ -1,4 +1,4 @@
-﻿package ch02;
+package ch02;
 
 /*
  * 변수 선언과 초기화 관련 연습

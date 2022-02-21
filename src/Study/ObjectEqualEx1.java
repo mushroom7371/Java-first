@@ -1,4 +1,4 @@
-﻿package Study;
+package Study;
 
 public class ObjectEqualEx1 {
 	public static void main(String [] args) {

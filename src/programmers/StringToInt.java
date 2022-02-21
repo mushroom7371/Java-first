@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //문자열s를 숫자로 변환한 결과를 반환하는 함수, solution 완성
 /*제한 조건

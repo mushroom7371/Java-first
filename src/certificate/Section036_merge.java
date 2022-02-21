@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section036_merge {
 	//데이터 병합	두 배열의 데이터 합치기 0은 제외 중복은 하나로

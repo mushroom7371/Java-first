@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //??ㅻ ?
 class HarshadNumber {

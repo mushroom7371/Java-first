@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section059_99 {
 	//구구단 do while문	(반복 횟수를 알고있는데 while문을 쓸 이유가 있나 싶다.)

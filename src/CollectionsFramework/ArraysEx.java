@@ -1,4 +1,4 @@
-﻿package CollectionsFramework;
+package CollectionsFramework;
 
 import java.util.Arrays;	//Arrays 클래스를 사용하기 위해 import 하였다
 

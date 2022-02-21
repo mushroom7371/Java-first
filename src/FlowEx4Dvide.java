@@ -1,4 +1,4 @@
-﻿import java.util.*;
+import java.util.*;
 public class FlowEx4Dvide {
 
 	public static void main(String[] args) {

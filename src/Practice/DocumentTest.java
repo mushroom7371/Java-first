@@ -1,4 +1,4 @@
-﻿package Practice;
+package Practice;
 
 class Document {
 	static int count = 0;	// int 타입의 클래스 변수를 선언하고 0으로 초기화

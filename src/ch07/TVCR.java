@@ -1,4 +1,4 @@
-﻿package ch07;
+package ch07;
 
 class TVCR extends Tv1 {	//다중상속이 불가능하기에 단일 상속 후 포함관계를 맺었다.
 	VCR vcr = new VCR();	//클래스 내부에서 객체를 생성하기 때문에 포함관계와 같으므로 다중상속의 느낌을 내었다.

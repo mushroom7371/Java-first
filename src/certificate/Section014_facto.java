@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section014_facto {
 	//재귀함수가 아닌 팩토리얼 1! +...+ 10! 까지의 합

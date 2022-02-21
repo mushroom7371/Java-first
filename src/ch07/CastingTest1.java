@@ -1,4 +1,4 @@
-﻿package ch07;
+package ch07;
 
 public class CastingTest1 {
 	public static void main(String [] args) {

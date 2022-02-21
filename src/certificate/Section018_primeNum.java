@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section018_primeNum {
 	//배열에 저장된 소수들의 갯수 구하기(배열의 크기가 변하면 내부의 내용도 변해야 된다. length로 하는게 나을듯)

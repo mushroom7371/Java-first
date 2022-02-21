@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section040_array_type1 {
 	//배열 ㄹ 모양으로 채우기

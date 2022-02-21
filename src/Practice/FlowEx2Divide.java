@@ -1,4 +1,4 @@
-﻿package Practice;
+package Practice;
 
 import java.util.*; // Scanner클래스를 사용하기 위해 추가
 

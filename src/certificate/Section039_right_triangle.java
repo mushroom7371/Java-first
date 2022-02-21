@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section039_right_triangle {
 	//2차원 배열을 통한 직각 삼각형 표현

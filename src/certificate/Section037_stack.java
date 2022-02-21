@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 import java.util.Scanner;
 //스택 구현 Overflow, Underflow 출력

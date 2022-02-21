@@ -1,4 +1,4 @@
-﻿package JavaStudy;
+package JavaStudy;
 
 public class TypeCastingExam2 {
 	public static void main(String []args) {

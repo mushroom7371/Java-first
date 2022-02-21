@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //정수 제곱근 판별
 class SquareRoot {

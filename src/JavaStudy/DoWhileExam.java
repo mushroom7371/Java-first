@@ -1,4 +1,4 @@
-﻿package JavaStudy;
+package JavaStudy;
 
 import java.util.Scanner;	//java.util 에 있는 Scanner를 import 하겠다
 

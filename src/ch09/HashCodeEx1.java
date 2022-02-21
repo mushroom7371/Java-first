@@ -1,4 +1,4 @@
-﻿package ch09;
+package ch09;
 
 class HashCodeEx1 {
 	public static void main(String[] args) {

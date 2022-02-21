@@ -1,4 +1,4 @@
-﻿package AlgorithmStudy;
+package AlgorithmStudy;
 
 public class FactorialTest {
 	static long factorial(int n) {	//static 메서드로 메모리에 클래스가 적재될때 생성됨 객체 생성없이 사용가능

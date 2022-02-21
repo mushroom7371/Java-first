@@ -1,4 +1,4 @@
-﻿package ch09;
+package ch09;
 
 class StringEx1 {
 	public static void main(String[] args) {

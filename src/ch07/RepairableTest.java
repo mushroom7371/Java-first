@@ -1,4 +1,4 @@
-﻿package ch07;
+package ch07;
 
 public class RepairableTest {
 	public static void main(String [] agrs) {

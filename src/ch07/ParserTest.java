@@ -1,4 +1,4 @@
-﻿package ch07;
+package ch07;
 
 interface Parseable{
 	//인터페이스 작성,,, 멤버변수는 public static final 상수로만, 메서드는 public abstract 로 선언해야됨

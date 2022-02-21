@@ -1,4 +1,4 @@
-﻿package AlgorithmStudy;
+package AlgorithmStudy;
 
 import java.util.Scanner; // 키보드로 부터 입력 받을 값을 사용하기 위한 Scanner 클래스를 불러온다.
 

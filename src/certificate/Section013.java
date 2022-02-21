@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section013 {
 	//수열 1+2+4+7+11+16+...의 20번째 합구하기

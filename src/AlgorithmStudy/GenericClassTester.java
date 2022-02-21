@@ -1,4 +1,4 @@
-﻿package AlgorithmStudy;
+package AlgorithmStudy;
 
 import java.lang.reflect.GenericSignatureFormatError;
 

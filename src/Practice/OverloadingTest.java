@@ -1,4 +1,4 @@
-﻿package Practice;
+package Practice;
 
 class MyMath3{
 	int add(int a, int b) {

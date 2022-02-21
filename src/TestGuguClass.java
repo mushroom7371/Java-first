@@ -1,4 +1,4 @@
-﻿class Gugu	{
+class Gugu	{
 	
 	static void guguMethod() {
 		for(int i = 2; i <= 9; i++) {

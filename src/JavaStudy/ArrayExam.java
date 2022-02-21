@@ -1,4 +1,4 @@
-﻿package JavaStudy;
+package JavaStudy;
 
 public class ArrayExam {
 	public int[] makeArray() {	//정수값을 담는 배열을 return받는 메서드를 선언한다.

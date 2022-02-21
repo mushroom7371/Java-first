@@ -1,4 +1,4 @@
-﻿package JavaStudy;
+package JavaStudy;
 
 public class abstractExam {
 	//Marine, Tank, DropShip 클래스 모두 각각의 기능 코드를 넣어 줄 수 있지만 코드가 번잡해 지고 길어진다

@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section010_sum {
 	//while문을 이용한 1~100 합구하기

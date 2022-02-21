@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //전화번호 뒷자리를 제외한 번호 *로 마스킹 하기
 class MakinPhoneNumber {

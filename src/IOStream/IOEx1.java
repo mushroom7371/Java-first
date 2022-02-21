@@ -1,4 +1,4 @@
-﻿package IOStream;
+package IOStream;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

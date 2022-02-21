@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section041_array_dia {
 	//배열 다이아 모양으로 만들어 출력하기 (정사각형 모양이 아닐경우는 어떨지 생각해보기)

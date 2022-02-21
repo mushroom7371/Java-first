@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //자릿수 더하기
 class DigitSum {

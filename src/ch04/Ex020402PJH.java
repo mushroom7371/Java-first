@@ -1,4 +1,4 @@
-﻿package ch04;
+package ch04;
 
 class Ex020402PJH	{
 	public static void main(String[] args)	{

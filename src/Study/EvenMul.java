@@ -1,4 +1,4 @@
-﻿package Study;
+package Study;
 
 public class EvenMul {
 	public static void main(String[] args) {

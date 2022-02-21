@@ -1,4 +1,4 @@
-﻿package ch11;
+package ch11;
 
 import java.util.Collection;
 import java.util.Iterator;

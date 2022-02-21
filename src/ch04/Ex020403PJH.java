@@ -1,4 +1,4 @@
-﻿package ch04;
+package ch04;
 
 class Ex020403PJH	{
 	//10진 정수를 2진수로 변환하는 메서드

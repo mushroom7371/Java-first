@@ -1,4 +1,4 @@
-﻿package Study;
+package Study;
 
 public class LogicalOperatorExam {
 	public boolean isAgeTwenties(int age) { //논리형 값을 반환받고 매개변수로 정수형 값을 가지는 메서드를 선언

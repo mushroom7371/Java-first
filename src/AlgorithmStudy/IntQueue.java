@@ -1,4 +1,4 @@
-﻿package AlgorithmStudy;
+package AlgorithmStudy;
 
 //public으로 class를 작성하여 같은 패키지 내에서라면 어디서든 사용 가능하다.
 public class IntQueue {

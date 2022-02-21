@@ -1,4 +1,4 @@
-﻿package ch07;
+package ch07;
 
 class DrawShape {
 	public static void main(String [] args) {

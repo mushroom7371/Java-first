@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //n개의 최소공배수
 class LeastCommonMultiple {

@@ -1,4 +1,4 @@
-﻿package AlgorithmStudy;
+package AlgorithmStudy;
 import java.util.Scanner;
 //원하는 갯수의 데이터를 입력 받아 요솟수가 N인 배열에 마지막 N개를 저장
 

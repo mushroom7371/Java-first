@@ -1,4 +1,4 @@
-﻿package JavaStudy;
+package JavaStudy;
 
 class MyTv2{
 	

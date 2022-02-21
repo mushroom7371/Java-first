@@ -1,4 +1,4 @@
-﻿import java.util.*;    // Scanner를 사용하기 위해 추가
+import java.util.*;    // Scanner를 사용하기 위해 추가
 
 class ScannerExDivide { 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section038_2dArray {
 	//2차원 배열 숫자 순서도

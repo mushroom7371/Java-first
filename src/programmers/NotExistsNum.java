@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //존재하지 않는 숫자 더하기
 class NotExistsNum {

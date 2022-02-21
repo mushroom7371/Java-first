@@ -1,4 +1,4 @@
-﻿package ch06;
+package ch06;
 
 class FlowEx22 {
 	public static void main(String[] args) { 

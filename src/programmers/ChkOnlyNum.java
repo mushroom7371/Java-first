@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //문자열 다루기 기본
 class ChkOnlyNum {

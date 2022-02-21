@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section010_sum1 {
 	//do-while문을 이용한 1~99 홀수 합 구하기

@@ -1,4 +1,4 @@
-﻿package ch06;
+package ch06;
 
 	class Card	{
 		String kind;

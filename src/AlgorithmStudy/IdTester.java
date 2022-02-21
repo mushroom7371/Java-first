@@ -1,4 +1,4 @@
-﻿package AlgorithmStudy;
+package AlgorithmStudy;
 
 class Id {
 	private static int counter = 0;		// 아이디를 몇 개 부여했는지 저장, static 변수로 클래스가 메모리에 적재될때 최초 한번 생성되며 인스턴스와 상관없이 호출 가능하다.

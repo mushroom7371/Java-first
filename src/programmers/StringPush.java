@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 class StringPush {
 	private String solution(String s, int n) {

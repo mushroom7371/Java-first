@@ -1,4 +1,4 @@
-﻿package ch09;
+package ch09;
 
 class Person{
 	long id;

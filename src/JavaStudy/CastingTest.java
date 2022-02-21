@@ -1,4 +1,4 @@
-﻿package JavaStudy;
+package JavaStudy;
 
 public class CastingTest {
 	public static void action(Robot r) {	//Robot 타입의 참조변수 r을 매개변수로 가진다.

@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //2016?
 public class YearOf2016 {

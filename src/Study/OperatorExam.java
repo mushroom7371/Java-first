@@ -1,4 +1,4 @@
-﻿package Study;
+package Study;
 
 public class OperatorExam {
 	public boolean[] calculate(int a, int b) {	

@@ -1,4 +1,4 @@
-﻿package CollectionsFramework;
+package CollectionsFramework;
 
 import java.util.*;	// java util 폴더내의 모든 클래스를 사용하기 위해서 import함
 

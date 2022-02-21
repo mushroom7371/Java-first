@@ -1,4 +1,4 @@
-﻿package Study;
+package Study;
 
 public class LogicalOperatorExam1 {
 	public boolean isAgeDiscountable(int age) {	//매개변수로 정수값을 가지고 반환을 논리형으로 받는 메서드를 선언

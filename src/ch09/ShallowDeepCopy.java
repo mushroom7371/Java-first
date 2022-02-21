@@ -1,4 +1,4 @@
-﻿package ch09;
+package ch09;
 
 class Circle implements Cloneable{	//복제를 위해 인터페이스 Cloneable를 구현
 	Point1 p;	//Point1 타입의 참조변수 선언

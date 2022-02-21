@@ -1,4 +1,4 @@
-﻿package Study;
+package Study;
 
 import java.util.Calendar;
 

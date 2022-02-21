@@ -1,4 +1,4 @@
-﻿package Study;
+package Study;
 
 public class StringBuffer_Builder {
 	public static void main(String[] args) {

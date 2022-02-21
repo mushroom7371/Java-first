@@ -1,4 +1,4 @@
-﻿package CollectionsFramework;
+package CollectionsFramework;
 
 import static java.util.Collections.*;	//컬렉션 클래스의 메서드를 사용하기 위해 static으로 import하였다.
 import java.util.ArrayList;

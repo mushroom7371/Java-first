@@ -1,4 +1,4 @@
-﻿package ch09;
+package ch09;
 
 class Point implements Cloneable{	//Cloneable 인터페이스를 구현한 클래스에서만 clone()메서드 호출이 가능하다.
 	int x, y;

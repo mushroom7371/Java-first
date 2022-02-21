@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //신규아이디 추천
 class NewId {

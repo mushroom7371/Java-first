@@ -1,4 +1,4 @@
-﻿package Practice;
+package Practice;
 
 class ThisCar{
 	String color;

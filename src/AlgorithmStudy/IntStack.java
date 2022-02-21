@@ -1,4 +1,4 @@
-﻿package AlgorithmStudy;
+package AlgorithmStudy;
 
 public class IntStack {
 	private int max;	//?ㅽ ?⑸

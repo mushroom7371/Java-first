@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section015_fibo {
 	//피보나치 합

@@ -1,4 +1,4 @@
-﻿
+
 class TestGuguOutput {
 
 	public static void main(String[] args) {

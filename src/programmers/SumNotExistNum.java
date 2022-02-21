@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //없는 숫자 구하기
 class SumNotExistNum {

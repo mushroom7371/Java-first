@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 class Average {
 	private double solution(int[] arr) {

@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //소수 만들기
 class PrimePlus {

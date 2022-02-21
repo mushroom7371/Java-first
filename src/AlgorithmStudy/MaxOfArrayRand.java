@@ -1,4 +1,4 @@
-﻿package AlgorithmStudy;
+package AlgorithmStudy;
 
 import java.util.Random;
 import java.util.Scanner;

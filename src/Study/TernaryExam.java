@@ -1,4 +1,4 @@
-﻿package Study;
+package Study;
 
 import java.util.Calendar;	//자바 유틸의 캘린더 클래스를 쓸수있게 받아옴?
 

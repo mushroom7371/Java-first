@@ -1,4 +1,4 @@
-﻿package certificate;
+package certificate;
 
 class Section010_sum_type2 {
 	//순서에 의한 1-2+3-4...+99-100합 구하기

@@ -1,4 +1,4 @@
-﻿package DBConnection;
+package DBConnection;
 
 
 public class DBVo {	//데이터 베이스로 부터 얻은 데이터를 저장하기위한 클래스

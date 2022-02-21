@@ -1,4 +1,4 @@
-﻿package ch05;
+package ch05;
 
 public class ArrayConjugation1 {
 	public static void main(String [] args) {

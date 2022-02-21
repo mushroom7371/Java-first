@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //괄호 변환
 class ParenthesesChange {

@@ -1,4 +1,4 @@
-﻿package JavaStudy;
+package JavaStudy;
 
 public class SongExam {
 	public static void main(String [] args) {

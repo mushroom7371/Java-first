@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //서울에서 김서방 찾기
 class FindKim {

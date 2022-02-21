@@ -1,4 +1,4 @@
-﻿package Generics;
+package Generics;
 
 enum Direction { EAST, SOUTH, WEST, NORTH }
 //열거형 정의 Direction은 열거형의 이름이고 {}안의 내용은 상수이름이다.

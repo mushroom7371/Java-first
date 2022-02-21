@@ -1,4 +1,4 @@
-﻿package Thread;
+package Thread;
 
 public class ThreadEx2 {
 

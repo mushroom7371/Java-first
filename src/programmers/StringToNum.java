@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 class StringToNum {
 	private int solution(String s) {

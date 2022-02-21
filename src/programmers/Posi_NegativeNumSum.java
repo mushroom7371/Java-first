@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 //음양 더하기
 class Posi_NegativeNumSum {

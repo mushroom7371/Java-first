@@ -1,4 +1,4 @@
-﻿package programmers;
+package programmers;
 
 class NationOf124 {
 	public String solution(int n) {

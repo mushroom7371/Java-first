@@ -1,4 +1,4 @@
-﻿package ch08;
+package ch08;
 
 public class TryExam1 {
 

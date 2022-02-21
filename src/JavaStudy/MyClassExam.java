@@ -1,4 +1,4 @@
-﻿package JavaStudy;
+package JavaStudy;
 
 public class MyClassExam {
 	public static void main(String args []) {

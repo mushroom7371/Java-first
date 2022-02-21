@@ -1,4 +1,4 @@
-﻿package ch07;
+package ch07;
 
 interface MyInterface{
 	//default 메서드 작성 추상메서드와는 다르게 몸통{}을 같이 선언해 준다.
