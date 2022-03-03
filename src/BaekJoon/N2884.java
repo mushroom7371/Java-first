@@ -9,7 +9,7 @@ public class N2884 {
 
         String time = sc.nextLine();    //시간을 키보드로 부터 "00 00" 와 같은 문자열 형식으로 받는다
 
-        sc.close(); //sc변수에 Scanner 객체가 담겨있으므로 가비지 컬렉션의 제외 대상이 된다.
+        sc.close(); //참조변수 sc가 Scanner 객체를 가리키고 있는 상태라 가비지 컬렉션의 제외 대상이 된다.
         //System.in을 통해 OS에서 제공한 표준 입력을 계속 잡고 있게 되며, OS의 자원을 되돌리기 위해 닫아준다.
 
         String [] timeArr = time.split(" ");    //공백을 기준으로 시간, 분으로 나눠 배열에 저장한다.
