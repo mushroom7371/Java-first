@@ -12,10 +12,12 @@ public class N4344 {
         double avg; //평균
         int sum = 0;    //합
         int student = 0;    //평균은 넘는 학생 수
-        String [] scoreArr; //학생 수와 점수가 담길 배열 선언
+        String [] scoreArr; //학생 수와 점수가 담길 배열을 가리킬 참조변수 선언
 
         for(int i = 0; i < num; i++){   //테스트 케이스 수 만큼 1씩 증가하면서 반복
-            scoreArr = br.readLine().split(" ");    //입력 받은 문자를 공백을 기준으로 나누어 배열에 저장하고 참조변수 scoreArr가 가리키도록 함
+            scoreArr = br.readLine().split(" ");
+            //입력 받은 문자를 공백을 기준으로 나누어 배열에 저장하고 참조변수 scoreArr가 가리키도록 함
+            //split()메서드 내부를 확인해 보면 기준으로 나눈 데이터의 갯수를 크기로 가지는 String 타입의 배열을 생성하여 순차적으로 저장후 이를 반환한다.
 
             for(int j = 1; j < scoreArr.length; j++){   //첫번째 번지의 데이터는 학생 수이므로 이를 제외한 나머지 번지를 반복
                 sum += Integer.parseInt(scoreArr[j]);   //문자열로 저장되어 있기에 int형으로 변환 후 더한다.
@@ -35,7 +37,6 @@ public class N4344 {
 
             //재사용을 위한 변수 초기화
             sum = 0;
-            avg = 0;
             student = 0;
         }
 
