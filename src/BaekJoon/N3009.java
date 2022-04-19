@@ -22,16 +22,16 @@ public class N3009 {
 
         br.close();
 
-        if(x[0] == x[1]){
-            answerX = x[2];
+        if(x[0] == x[1]){   //0번지, 1번지의 데이터가 같다면
+            answerX = x[2]; //구하는 좌표의 x값은 2번지 데이터가 된다.
         }else if(x[0] == x[2]){
             answerX = x[1];
         }else{
             answerX = x[0];
         }
 
-        if(y[0] == y[1]){
-            answerY = y[2];
+        if(y[0] == y[1]){   //0번지, 1번지의 데이터가 같다면
+            answerY = y[2]; //구하는 좌표의 x값은 2번지 데이터가 된다.
         }else if(y[0] == y[2]){
             answerY = y[1];
         }else{
