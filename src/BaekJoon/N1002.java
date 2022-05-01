@@ -9,20 +9,20 @@ public class N1002 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        int N = Integer.parseInt(br.readLine());
-        List<Integer> coordinatesArray = new ArrayList<>();
-        String [] coordinatesStringArray;
-        double centerDistance = 0;
-        double radius1 = 0;
-        double radius2 = 0;
+        int N = Integer.parseInt(br.readLine());    //테스트 케이스
+        List<Integer> coordinatesArray = new ArrayList<>(); //좌표를 담을 list
+        String [] coordinatesStringArray;   //좌표 입력이 String이므로 임시로 담을 배열
+        double centerDistance = 0;  //원의 중심 사이의 거리
+        double radius1 = 0; //반지름1
+        double radius2 = 0; //반지름2
 
         for(int i = 0; i < N; i++){
-            coordinatesStringArray = br.readLine().split(" ");
-            for(int j = 0; j < coordinatesStringArray.length; j++){
+            coordinatesStringArray = br.readLine().split(" ");  //공백을 기준으로 자른 후 배열에 저장
+            for(int j = 0; j < coordinatesStringArray.length; j++){ //좌표들을 숫자로 형변환 하여 list에 저장
                 coordinatesArray.add(Integer.parseInt(coordinatesStringArray[j]));
             }
             centerDistance = Math.sqrt(Math.pow(coordinatesArray.get(0) - coordinatesArray.get(3),2) + Math.pow(coordinatesArray.get(1) - coordinatesArray.get(4),2));
-            /**/
+            //제곱과 제곱근을 이용한 중심사이의 거리 산출 및 가독성을 위해 변수에 좌표 담기
             int x1 = coordinatesArray.get(0);
             int y1 = coordinatesArray.get(1);
             int r1 = coordinatesArray.get(2);
