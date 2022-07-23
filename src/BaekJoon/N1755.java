@@ -9,6 +9,7 @@ import java.util.List;
 //숫자놀이
 public class N1755 {
     public static void main(String[] args) throws IOException {
+        //노가다 성이 짙은 방식으로 풀었다.
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int [] rangeOfNumberArray = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
@@ -18,23 +19,23 @@ public class N1755 {
         List<String> resultNumberList = new ArrayList<>();
         int count = 0;
 
-        for(int i = start; i <= end; i++){
-            if(i < 10){
+        for(int i = start; i <= end; i++){  //start 숫자부터 end 숫자까지
+            if(i < 10){ //한자리 수라면 numberStringList() 메서드를 통해 해당 int 숫자를 단어로 바꾼다
                 numberStringList.add(integerToString(i));
-            }else{
+            }else{  //2자리 수라면 공백을 기준으로 단어로 바꾼다
                 numberStringList.add(integerToString(i/10) + " " + integerToString(i%10));
             }
         }
 
-        Collections.sort(numberStringList);
+        Collections.sort(numberStringList); //정렬 후
 
         for(int i = 0; i < numberStringList.size(); i++){
-            String [] tempArray = numberStringList.get(i).split(" ");
+            String [] tempArray = numberStringList.get(i).split(" ");   //공백을 기준으로 나눠 String 배열에 저장하고,
             String tempNumber = "";
 
-            if(tempArray.length == 1){
+            if(tempArray.length == 1){  //한자리 숫자라면
                 tempNumber = stringToInteger(tempArray[0]);
-            }else{
+            }else{  //두자리 숫자라면 stringToInteger()를 통해 두 숫자를 String타입으로 받고 이어 붙힘
                 tempNumber = stringToInteger(tempArray[0]) + stringToInteger(tempArray[1]);
             }
 
@@ -42,13 +43,13 @@ public class N1755 {
         }
 
         for(int i = 0; i < resultNumberList.size(); i++){
-            count++;
+            count++;    //10개 마다 끊어서 출력 할 예정으로 반복마다 count를 증가 시키고
 
-            if(count < 10){
+            if(count < 10){ //열번째 숫자가 아니라면 공백으로 이어붙힘
                 bw.write(resultNumberList.get(i) + " ");
-            }else{
+            }else{  //10번째 숫자라면 한 줄 넘김
                 bw.write(resultNumberList.get(i) + "\n");
-                count = 0;
+                count = 0;  //count는 다시 0으로 설정
             }
         }
 
@@ -57,8 +58,9 @@ public class N1755 {
         bw.close();
 
     }
-
-    static String integerToString(int number) {
+    
+    //static으로 선언하여 클래스가 메모리에 적재 될 때 생성되어 객체 없이 사용 가능함.
+    static String integerToString(int number) { //int타입의 숫자를 영어 단어로 바꿀 메서드
         String result = "";
 
         switch (number){
@@ -87,7 +89,7 @@ public class N1755 {
         return result;
     }
 
-    static String stringToInteger(String number) {
+    static String stringToInteger(String number) {  //영어 단어로 된 숫자를 String 숫자로 바꿀 메서드
         String result = "";
 
         switch (number){
