@@ -42,4 +42,49 @@ public class N9625 {
 
     }
 
+//    public static void main(String[] args) throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+//        int testCase = Integer.parseInt(br.readLine());
+//        int [] countArray = new int[2];
+//        String str = "A";
+//
+//        for(int i = 0; i < testCase; i++){
+//            String tempStr = changeStr(str);
+//
+//            str = tempStr;
+//        }
+//
+//        for(int i = 0; i < str.length(); i++){
+//            if(str.charAt(i) == 'A'){
+//                countArray[0]++;
+//            }else if(str.charAt(i) == 'B'){
+//                countArray[1]++;
+//            }
+//        }
+//
+//        br.close();
+//        bw.write(countArray[0] + " " + countArray[1]);
+//        bw.flush();
+//        bw.close();
+//
+//    }
+//
+//    static String changeStr(String str){
+//        String result = "";
+//
+//        for(int j = 0; j < str.length(); j++){
+//            if(str.charAt(j) == 'A'){
+//                result += "B";
+//            }else if(str.charAt(j) == 'B'){
+//                result += "BA";
+//            }
+//        }
+//
+//        return result;
+//    }
+
 }
+
+
+
