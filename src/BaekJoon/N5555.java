@@ -16,8 +16,9 @@ public class N5555 {
             String ringStr = br.readLine();
 
             for(int j = 0; j < 10; j++){    //반지에 쓰여진 문자가 10개이므로 10번 반복
-                ringStr = ringStr + ringStr.charAt(0);  //반지에 쓰여진 문자의 첫번째 글자를 맨 뒤로 보내고
+                ringStr = ringStr + ringStr.charAt(0);  //반지에 쓰여진 문자의 첫번째 글자를 맨 뒤에 추가
                 ringStr = ringStr.substring(1, 11); //subString() 메서드를 이용하여 두번재 문자부터 마지막 문자까지로 재설정함
+                //여기서 참조변수 ringStr은 기존의 String을 가리키는게 아니라 마지막 결과의 문자열을 가리키게 됨. 안쓰게 되는 String은 아마 가비지 컬럭터로 처리되지 않을까 함(질문 해야겠음)
                 //=> 첫번째 글자를 맨 뒤로 옮기는 것과 동일하게 되며 subString() 사용시 주의점은 2번째 인자값 전까지 가른다는 것 즉 11번지 전인 1~10번지까지가 된다.
 
                 if(ringStr.contains(targetStr)){    //반복중 하나라도 targetStr를 포함한다면 카운팅 후 반복 종료 다음 케이스로 넘어감
