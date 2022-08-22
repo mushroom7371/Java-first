@@ -44,4 +44,6 @@ public class SinchonSummerAlgorithmCampContest_C {
     public static void main(String[] args) throws IOException {
         new SinchonSummerAlgorithmCampContest_C().solution();
     }
+    
+    //merge 틀어짐 테스트
 }
