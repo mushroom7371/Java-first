@@ -44,7 +44,7 @@ public class N1076 {
         return "9";
     }
 
-    int changeResistForMulti(String resist) {
+    long changeResistForMulti(String resist) {
         switch (resist) {
             case "black" :
                 return 1;
