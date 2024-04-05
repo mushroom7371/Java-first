@@ -13,12 +13,9 @@ public class N28061 {
         int[] trees = new int[numberOfTree];
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < numberOfTree; i++) {
-            trees[i] = Integer.parseInt(st.nextToken()) - (numberOfTree - i);
-        }
-
         int max = 0;
         for (int i = 0; i < numberOfTree; i++) {
+            trees[i] = Integer.parseInt(st.nextToken()) - (numberOfTree - i);
             if (trees[i] > max) {
                 max = trees[i];
             }
