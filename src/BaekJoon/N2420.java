@@ -10,8 +10,8 @@ public class N2420 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        long a = Long.parseLong(st.nextToken());;
-        long b = Long.parseLong(st.nextToken());;
+        long a = Long.parseLong(st.nextToken());
+        long b = Long.parseLong(st.nextToken());
 
         long result = Math.abs(a - b);
         bw.write(String.valueOf(result));
