@@ -2,6 +2,7 @@ package BaekJoon;
 
 import java.io.*;
 
+//Goodbye, Code Jam
 public class N29738 {
 
     void solution() throws IOException {
