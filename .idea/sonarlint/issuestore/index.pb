@@ -59,3 +59,7 @@ H
 src/BaekJoon/N31867.java,a\d\ad1818693d687e721426cbaf9c848afe3434b071
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+H
+src/BaekJoon/N30033.java,1\b\1b3cc5657f45e95f5336b80017afc891c74bffab
+H
+src/BaekJoon/N26561.java,2\8\28e0b19ddc4dea1b50441ad4ca8500e7368e2453
