@@ -5,8 +5,6 @@ import java.math.BigInteger;
 
 //선택 가능성이 가장 높은 자료형
 public class N32278 {
-
-    //todo 직접 구현해보기
     void solution() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
